@@ -2,34 +2,21 @@
 
 import { useEffect, useState, useCallback } from 'react'
 import { useLessonProgress } from '@/hooks/useLessonProgress'
-import { ToastProvider, useToast } from '@/components/ui/Toast'
+import { useToast } from '@/components/ui/Toast'
 import LessonSidebar from '@/components/layout/LessonSidebar'
-import HeroSection from '@/components/lesson/HeroSection'
-import ObjectivesGrid from '@/components/lesson/ObjectivesGrid'
-import LetterGrid from '@/components/lesson/LetterGrid'
-import UniqueLetters from '@/components/lesson/UniqueLetters'
-import PronunciationTips from '@/components/lesson/PronunciationTips'
-import FlashcardGrid from '@/components/lesson/FlashcardGrid'
-import MatchingGame from '@/components/lesson/MatchingGame'
-import SpellingBee from '@/components/lesson/SpellingBee'
-import SortingActivity from '@/components/lesson/SortingActivity'
-import DialogueSection from '@/components/lesson/DialogueSection'
-import CulturalNotes from '@/components/lesson/CulturalNotes'
-import LightningRound from '@/components/lesson/LightningRound'
-import KnowledgeQuiz from '@/components/lesson/KnowledgeQuiz'
-import LessonL12Content from '@/components/lessonL12/LessonPage'
-import LessonL13Content from '@/components/lessonL13/LessonPage'
-import { SECTIONS } from '@/lib/lesson-data'
-import { useParams } from 'next/navigation'
+import HeroSection from './HeroSection'
+import ObjectivesGrid from './ObjectivesGrid'
+import PhraseGrid from './PhraseGrid'
+import FlashcardGrid from './FlashcardGrid'
+import MatchingGame from './MatchingGame'
+import SortingActivity from './SortingActivity'
+import DialogueSection from './DialogueSection'
+import CulturalNotes from './CulturalNotes'
+import KnowledgeQuiz from './KnowledgeQuiz'
+import { SECTIONS_L13 } from '@/lib/lesson-data-L13'
 
-function LessonContent() {
-  const params = useParams()
-  const lessonId = params.lessonId as string
-
-  // Route to specific lessons
-  if (lessonId === 'L1.2') return <LessonL12Content />
-  if (lessonId === 'L1.3') return <LessonL13Content />
-  const { sectionStates, progressPct, markVisited, markCompleted, setQuizScore } = useLessonProgress(lessonId)
+export default function LessonL13Content() {
+  const { sectionStates, progressPct, markVisited, markCompleted, setQuizScore } = useLessonProgress('L1.3')
   const [activeSection, setActiveSection] = useState('welcome')
   const { showToast } = useToast()
 
@@ -53,7 +40,7 @@ function LessonContent() {
       { rootMargin: '-30% 0px -60% 0px' },
     )
 
-    SECTIONS.forEach((sec) => {
+    SECTIONS_L13.forEach((sec) => {
       const el = document.getElementById(sec.id)
       if (el) observer.observe(el)
     })
@@ -69,7 +56,6 @@ function LessonContent() {
     }
   }, [markVisited])
 
-  // Scroll to top and mark welcome visited on mount
   useEffect(() => {
     window.scrollTo(0, 0)
     markVisited('welcome')
@@ -77,19 +63,11 @@ function LessonContent() {
 
   const handleMatchingComplete = useCallback(() => {
     markCompleted('matching-game')
-    showToast('You matched 10/10! Perfect!', 'success')
+    showToast('Perfect match! All pairs found!', 'success')
   }, [markCompleted, showToast])
 
-  const handleBeeComplete = useCallback(() => {
-    markCompleted('spelling-bee')
-  }, [markCompleted])
-
   const handleSortingComplete = useCallback(() => {
-    markCompleted('letter-sorting')
-  }, [markCompleted])
-
-  const handleLightningComplete = useCallback(() => {
-    markCompleted('lightning-round')
+    markCompleted('number-sorting')
   }, [markCompleted])
 
   const handleQuizComplete = useCallback(
@@ -108,33 +86,23 @@ function LessonContent() {
         progressPct={progressPct}
         sectionStates={sectionStates}
         activeSection={activeSection}
+        sections={SECTIONS_L13}
+        lessonLabel="Lesson 1.3"
       />
 
       <div className="lg:ml-[280px]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8 space-y-6">
           <HeroSection />
           <div className="section-card bg-white"><ObjectivesGrid /></div>
-          <div className="section-card bg-blue-50/40 border-blue-100"><LetterGrid /></div>
-          <div className="section-card bg-purple-50/40 border-purple-100"><UniqueLetters /></div>
-          <div className="section-card bg-amber-50/30 border-amber-100"><PronunciationTips /></div>
-          <div className="section-card bg-indigo-50/30 border-indigo-100"><FlashcardGrid /></div>
+          <div className="section-card bg-orange-50/30 border-orange-100"><PhraseGrid /></div>
+          <div className="section-card bg-amber-50/30 border-amber-100"><FlashcardGrid /></div>
           <div className="section-card bg-emerald-50/30 border-emerald-100"><MatchingGame onComplete={handleMatchingComplete} /></div>
-          <div className="section-card bg-amber-50/30 border-amber-100"><SpellingBee onComplete={handleBeeComplete} /></div>
           <div className="section-card bg-blue-50/30 border-blue-100"><SortingActivity onComplete={handleSortingComplete} /></div>
           <div className="section-card bg-purple-50/30 border-purple-100"><DialogueSection /></div>
           <div className="section-card bg-rose-50/30 border-rose-100"><CulturalNotes /></div>
-          <div className="section-card bg-orange-50/30 border-orange-100"><LightningRound onComplete={handleLightningComplete} /></div>
           <div className="section-card bg-indigo-50/40 border-indigo-100"><KnowledgeQuiz onComplete={handleQuizComplete} /></div>
         </div>
       </div>
     </>
-  )
-}
-
-export default function LessonPage() {
-  return (
-    <ToastProvider>
-      <LessonContent />
-    </ToastProvider>
   )
 }
