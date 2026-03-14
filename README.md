@@ -96,4 +96,4 @@ public/
 
 ## License
 
-Private — Discovery Collective
+© 2026 Eili Sierra. All rights reserved.
