@@ -7,11 +7,13 @@ import LessonSidebar from '@/components/layout/LessonSidebar'
 import HeroSection from './HeroSection'
 import ObjectivesGrid from './ObjectivesGrid'
 import PhraseGrid from './PhraseGrid'
+import PronunciationTips from './PronunciationTips'
 import FlashcardGrid from './FlashcardGrid'
 import MatchingGame from './MatchingGame'
 import SortingActivity from './SortingActivity'
 import DialogueSection from './DialogueSection'
 import CulturalNotes from './CulturalNotes'
+import NumberDictation from './NumberDictation'
 import KnowledgeQuiz from './KnowledgeQuiz'
 import { SECTIONS_L13 } from '@/lib/lesson-data-L13'
 
@@ -70,6 +72,11 @@ export default function LessonL13Content() {
     markCompleted('number-sorting')
   }, [markCompleted])
 
+  const handleDictationComplete = useCallback(() => {
+    markCompleted('number-dictation')
+    showToast('Great listening skills!', 'success')
+  }, [markCompleted, showToast])
+
   const handleQuizComplete = useCallback(
     (score: number, max: number) => {
       setQuizScore(score, max)
@@ -95,11 +102,13 @@ export default function LessonL13Content() {
           <HeroSection />
           <div className="section-card bg-white"><ObjectivesGrid /></div>
           <div className="section-card bg-orange-50/30 border-orange-100"><PhraseGrid /></div>
+          <div className="section-card bg-yellow-50/30 border-yellow-100"><PronunciationTips /></div>
           <div className="section-card bg-amber-50/30 border-amber-100"><FlashcardGrid /></div>
           <div className="section-card bg-emerald-50/30 border-emerald-100"><MatchingGame onComplete={handleMatchingComplete} /></div>
           <div className="section-card bg-blue-50/30 border-blue-100"><SortingActivity onComplete={handleSortingComplete} /></div>
           <div className="section-card bg-purple-50/30 border-purple-100"><DialogueSection /></div>
           <div className="section-card bg-rose-50/30 border-rose-100"><CulturalNotes /></div>
+          <div className="section-card bg-orange-50/40 border-orange-100"><NumberDictation onComplete={handleDictationComplete} /></div>
           <div className="section-card bg-indigo-50/40 border-indigo-100"><KnowledgeQuiz onComplete={handleQuizComplete} /></div>
         </div>
       </div>

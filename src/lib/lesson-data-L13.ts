@@ -107,11 +107,13 @@ export const SECTIONS_L13 = [
   { id: 'numbers-21-100', label: 'Numbers 21–100' },
   { id: 'telling-time', label: 'Telling Time' },
   { id: 'age-calendar', label: 'Age, Days & Months' },
+  { id: 'pronunciation-tips', label: 'Pronunciation Tips' },
   { id: 'flashcards', label: 'Flashcards' },
   { id: 'matching-game', label: 'Matching Game' },
   { id: 'number-sorting', label: 'Sort the Numbers' },
   { id: 'dialogues', label: 'Real-World Dialogues' },
   { id: 'cultural', label: 'Cultural Insights' },
+  { id: 'number-dictation', label: 'Number Dictation' },
   { id: 'knowledge-check', label: 'Knowledge Check' },
 ]
 
