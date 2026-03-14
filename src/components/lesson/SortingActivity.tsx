@@ -72,7 +72,7 @@ export default function SortingActivity({ onComplete }: { onComplete?: () => voi
   const correctCount = Object.values(results).filter(Boolean).length
 
   return (
-    <section id="letter-sorting" className="mb-10">
+    <section id="letter-sorting">
       <h2 className="text-2xl font-bold font-[family-name:var(--font-inter)] mb-2">Letter Sorting</h2>
       <p className="text-gray-600 mb-4">Drag items into the correct category, or click to select then click a bucket.</p>
 

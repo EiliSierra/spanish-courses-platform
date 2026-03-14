@@ -154,7 +154,7 @@ export default function LightningRound({ onComplete }: { onComplete?: () => void
     if (pct >= 80) spawnConfetti(window.innerWidth / 2, 200, 30)
 
     return (
-      <section id="lightning-round" className="mb-10">
+      <section id="lightning-round" className="">
         <h2 className="text-2xl font-bold font-[family-name:var(--font-inter)] mb-5">Lightning Round</h2>
         <div className="bg-white rounded-xl border border-gray-200 p-8 text-center">
           <div className="text-5xl mb-3">{pct >= 80 ? '🌟' : pct >= 50 ? '💪' : '👂'}</div>
@@ -192,7 +192,7 @@ export default function LightningRound({ onComplete }: { onComplete?: () => void
   // Start screen
   if (screen === 'start') {
     return (
-      <section id="lightning-round" className="mb-10">
+      <section id="lightning-round" className="">
         <h2 className="text-2xl font-bold font-[family-name:var(--font-inter)] mb-2">Lightning Round</h2>
         <p className="text-gray-600 mb-5">Test your ear! You&apos;ll hear a letter — pick the right one before time runs out.</p>
         <div className="bg-white rounded-xl border border-gray-200 p-8 text-center">
@@ -212,7 +212,7 @@ export default function LightningRound({ onComplete }: { onComplete?: () => void
   if (!round) return null
 
   return (
-    <section id="lightning-round" className="mb-10">
+    <section id="lightning-round" className="">
       <h2 className="text-2xl font-bold font-[family-name:var(--font-inter)] mb-2">Lightning Round</h2>
 
       <div className="bg-white rounded-xl border border-gray-200 p-6">

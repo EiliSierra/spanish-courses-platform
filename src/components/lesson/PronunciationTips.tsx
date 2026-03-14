@@ -25,7 +25,7 @@ export default function PronunciationTips() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   return (
-    <section id="pronunciation-tips" className="mb-10">
+    <section id="pronunciation-tips">
       <h2 className="text-2xl font-bold font-[family-name:var(--font-inter)] mb-5">Pronunciation Tips</h2>
       <div className="space-y-3">
         {TIPS.map((tip, i) => (

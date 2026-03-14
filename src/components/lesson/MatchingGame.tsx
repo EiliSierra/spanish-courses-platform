@@ -55,7 +55,7 @@ export default function MatchingGame({ onComplete }: { onComplete?: () => void }
   }, [])
 
   return (
-    <section id="matching-game" className="mb-10">
+    <section id="matching-game" className="">
       <h2 className="text-2xl font-bold font-[family-name:var(--font-inter)] mb-2">Matching Game</h2>
       <p className="text-gray-600 mb-2">Drag each letter name to its matching letter. <strong>Score: {score}/10</strong></p>
 

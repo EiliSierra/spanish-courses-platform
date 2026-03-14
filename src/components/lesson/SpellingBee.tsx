@@ -76,7 +76,7 @@ export default function SpellingBee({ onComplete }: { onComplete?: () => void })
     const pct = score / (BEE_ROUNDS * 10)
     const stars = pct >= 0.9 ? 3 : pct >= 0.6 ? 2 : pct >= 0.3 ? 1 : 0
     return (
-      <section id="spelling-bee" className="mb-10">
+      <section id="spelling-bee" className="">
         <h2 className="text-2xl font-bold font-[family-name:var(--font-inter)] mb-5">Spelling Bee</h2>
         <div className="bg-white rounded-xl border border-gray-200 p-8 text-center">
           <div className="text-4xl mb-2">{'⭐'.repeat(stars)}{'☆'.repeat(3 - stars)}</div>
@@ -93,7 +93,7 @@ export default function SpellingBee({ onComplete }: { onComplete?: () => void })
   }
 
   return (
-    <section id="spelling-bee" className="mb-10">
+    <section id="spelling-bee" className="">
       <h2 className="text-2xl font-bold font-[family-name:var(--font-inter)] mb-2">Spelling Bee</h2>
       <p className="text-gray-600 mb-5">Listen to the letter sound and type which letter it is.</p>
 

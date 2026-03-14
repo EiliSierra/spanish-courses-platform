@@ -17,7 +17,7 @@ const NOTES = [
 
 export default function CulturalNotes() {
   return (
-    <section id="cultural" className="mb-10">
+    <section id="cultural">
       <h2 className="text-2xl font-bold font-[family-name:var(--font-inter)] mb-5">The Alphabet in Action</h2>
       <div className="grid sm:grid-cols-3 gap-4">
         {NOTES.map((note) => (

@@ -11,7 +11,7 @@ export default function DialogueSection() {
   const dialogue = DIALOGUES[activeDialogue]
 
   return (
-    <section id="dialogues" className="mb-10">
+    <section id="dialogues">
       <h2 className="text-2xl font-bold font-[family-name:var(--font-inter)] mb-2">Real-World Dialogues</h2>
       <p className="text-gray-600 mb-5">Listen to Spanish speakers spell words in real situations.</p>
 

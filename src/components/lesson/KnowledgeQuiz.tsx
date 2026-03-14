@@ -44,7 +44,7 @@ export default function KnowledgeQuiz({ onComplete }: { onComplete?: (score: num
   }, [])
 
   return (
-    <section id="knowledge-check" className="mb-10">
+    <section id="knowledge-check">
       <h2 className="text-2xl font-bold font-[family-name:var(--font-inter)] mb-2">Knowledge Check</h2>
       <p className="text-gray-600 mb-2">Answer all 15 questions. You need 70% (11/15) to pass.</p>
 

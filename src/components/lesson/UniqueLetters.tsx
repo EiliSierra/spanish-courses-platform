@@ -30,7 +30,7 @@ export default function UniqueLetters() {
   const { playLetter } = useAudio()
 
   return (
-    <section id="unique-letters" className="mb-10">
+    <section id="unique-letters">
       <h2 className="text-2xl font-bold font-[family-name:var(--font-inter)] mb-2">Unique Spanish Letters</h2>
       <p className="text-gray-600 mb-5">These letters or combinations don&apos;t exist in English.</p>
       <div className="grid sm:grid-cols-3 gap-4">
