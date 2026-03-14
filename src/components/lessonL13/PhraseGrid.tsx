@@ -67,22 +67,15 @@ export default function PhraseGrid() {
   return (
     <>
       <section id="numbers-0-20" className="mb-6">
-        <h2 className="text-2xl font-bold font-[family-name:var(--font-inter)] mb-2">Numbers 0–20</h2>
-        <p className="text-gray-600 mb-4">Click any number to hear it. These are the building blocks — learn them by heart!</p>
-        <TabGroup tabs={['0–10', '11–20']}>
+        <h2 className="text-2xl font-bold font-[family-name:var(--font-inter)] mb-2">Spanish Numbers</h2>
+        <p className="text-gray-600 mb-4">Click any number to hear it. Use the tabs to explore each range.</p>
+        <TabGroup tabs={['0–10', '11–20', '21–29', '30–100']}>
           <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-4">
             {NUMBERS_0_10.map((p) => <PhraseCard key={p.audio} item={p} color="orange" />)}
           </div>
           <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-4">
             {NUMBERS_11_20.map((p) => <PhraseCard key={p.audio} item={p} color="orange" />)}
           </div>
-        </TabGroup>
-      </section>
-
-      <section id="numbers-21-100" className="mb-6">
-        <h2 className="text-2xl font-bold font-[family-name:var(--font-inter)] mb-2">Numbers 21–100</h2>
-        <p className="text-gray-600 mb-4">Numbers 21–29 are single words. From 30 onward, use &ldquo;y&rdquo; to combine.</p>
-        <TabGroup tabs={['21–29', 'Tens (30–100)']}>
           <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-4">
             {NUMBERS_21_29.map((p) => <PhraseCard key={p.audio} item={p} color="amber" />)}
           </div>
@@ -91,6 +84,8 @@ export default function PhraseGrid() {
           </div>
         </TabGroup>
       </section>
+
+      <section id="numbers-21-100" className="sr-only" aria-hidden="true" />
 
       <section id="telling-time" className="mb-6">
         <h2 className="text-2xl font-bold font-[family-name:var(--font-inter)] mb-2">Telling Time</h2>

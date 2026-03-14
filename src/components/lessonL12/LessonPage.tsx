@@ -7,6 +7,7 @@ import LessonSidebar from '@/components/layout/LessonSidebar'
 import HeroSection from './HeroSection'
 import ObjectivesGrid from './ObjectivesGrid'
 import PhraseGrid from './PhraseGrid'
+import PronunciationTips from './PronunciationTips'
 import FlashcardGrid from './FlashcardGrid'
 import MatchingGame from './MatchingGame'
 import SortingActivity from './SortingActivity'
@@ -95,6 +96,7 @@ export default function LessonL12Content() {
           <HeroSection />
           <div className="section-card bg-white"><ObjectivesGrid /></div>
           <div className="section-card bg-emerald-50/30 border-emerald-100"><PhraseGrid /></div>
+          <div className="section-card bg-amber-50/30 border-amber-100"><PronunciationTips /></div>
           <div className="section-card bg-indigo-50/30 border-indigo-100"><FlashcardGrid /></div>
           <div className="section-card bg-teal-50/30 border-teal-100"><MatchingGame onComplete={handleMatchingComplete} /></div>
           <div className="section-card bg-amber-50/30 border-amber-100"><SortingActivity onComplete={handleSortingComplete} /></div>

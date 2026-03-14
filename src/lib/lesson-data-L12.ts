@@ -72,6 +72,7 @@ export const SECTIONS_L12 = [
   { id: 'polite-expressions', label: 'Polite Expressions' },
   { id: 'introductions', label: 'Introducing Yourself' },
   { id: 'essential-questions', label: 'Essential Questions' },
+  { id: 'pronunciation-tips', label: 'Pronunciation Tips' },
   { id: 'flashcards', label: 'Flashcards' },
   { id: 'matching-game', label: 'Matching Game' },
   { id: 'phrase-sorting', label: 'Sort the Phrases' },
