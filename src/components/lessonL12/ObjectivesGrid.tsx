@@ -1,15 +1,15 @@
 'use client'
 
 const OBJECTIVES = [
-  { icon: '🔤', title: '27 Letters', desc: 'Learn every letter of the Spanish alphabet and its name' },
-  { icon: '🗣️', title: 'Pronunciation', desc: 'Master the sounds that make Spanish a phonetic language' },
-  { icon: '✍️', title: 'Spelling', desc: 'Practice spelling words aloud using letter names' },
-  { icon: '🎯', title: 'Key Differences', desc: 'Understand how Spanish letters differ from English' },
+  { icon: '👋', title: 'Greetings & Farewells', desc: 'Say hello, goodbye, and everything in between for any time of day' },
+  { icon: '🤝', title: 'Introductions', desc: 'Introduce yourself, ask names, and say where you are from' },
+  { icon: '🙏', title: 'Polite Expressions', desc: 'Thank, apologize, and make polite requests like a native speaker' },
+  { icon: '❓', title: 'Survival Questions', desc: 'Ask for help, repetition, and navigate when you don\'t understand' },
 ]
 
-export default function ObjectivesGrid() {
+export default function ObjectivesGridL12() {
   return (
-    <section id="why-alphabet">
+    <section id="why-greetings">
       <h2 className="text-2xl font-bold font-[family-name:var(--font-inter)] mb-6">What You&apos;ll Learn</h2>
       <div className="grid sm:grid-cols-2 gap-5">
         {OBJECTIVES.map((obj) => (

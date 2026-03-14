@@ -2,9 +2,14 @@
 
 export default function HeroSection() {
   return (
-    <section id="welcome" className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-purple-700 text-white rounded-2xl overflow-hidden mb-10">
-      <div className="px-8 py-16 md:py-20 max-w-3xl">
-        <div className="text-blue-200 text-sm font-semibold tracking-wider uppercase mb-3">Lesson 1.1</div>
+    <section
+      id="welcome"
+      className="relative text-white rounded-2xl overflow-hidden mb-10 bg-cover bg-center"
+      style={{ backgroundImage: "url('/images/L1.1/bg-learning.jpg')" }}
+    >
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-800/70 via-blue-700/60 to-purple-700/70" />
+      <div className="relative px-8 py-16 md:py-20 max-w-3xl">
+        <div className="text-amber-300 text-sm font-semibold tracking-wider uppercase mb-3">Lesson 1.1</div>
         <h1 className="text-4xl md:text-5xl font-extrabold leading-tight font-[family-name:var(--font-inter)] mb-4">
           Sounds & Letters
         </h1>

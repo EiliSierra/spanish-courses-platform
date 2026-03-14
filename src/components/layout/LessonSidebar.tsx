@@ -7,9 +7,12 @@ interface LessonSidebarProps {
   progressPct: number
   sectionStates: Record<string, { visited?: boolean; completed?: boolean }>
   activeSection: string
+  sections?: { id: string; title?: string; label?: string }[]
+  lessonLabel?: string
 }
 
-export default function LessonSidebar({ progressPct, sectionStates, activeSection }: LessonSidebarProps) {
+export default function LessonSidebar({ progressPct, sectionStates, activeSection, sections, lessonLabel }: LessonSidebarProps) {
+  const sidebarSections: { id: string; title?: string; label?: string }[] = sections ?? SECTIONS;
   const [open, setOpen] = useState(false)
 
   // Close on resize to desktop
@@ -47,7 +50,7 @@ export default function LessonSidebar({ progressPct, sectionStates, activeSectio
       >
         <div className="p-5 border-b border-gray-100">
           <h2 className="font-bold text-lg font-[family-name:var(--font-inter)]">Spanish Course</h2>
-          <div className="text-sm text-gray-500">Lesson 1.1</div>
+          <div className="text-sm text-gray-500">{lessonLabel ?? 'Lesson 1.1'}</div>
         </div>
 
         {/* Progress */}
@@ -70,10 +73,11 @@ export default function LessonSidebar({ progressPct, sectionStates, activeSectio
 
         {/* Nav links */}
         <div className="py-2">
-          {SECTIONS.map((sec) => {
+          {sidebarSections.map((sec) => {
             const state = sectionStates[sec.id]
             const isActive = sec.id === activeSection
             const isCompleted = state?.completed
+            const title = sec.title ?? sec.label ?? sec.id
 
             return (
               <a
@@ -99,7 +103,7 @@ export default function LessonSidebar({ progressPct, sectionStates, activeSectio
                         : 'bg-gray-300'
                   }`}
                 />
-                {sec.title}
+                {title}
               </a>
             )
           })}

@@ -17,12 +17,18 @@ import DialogueSection from '@/components/lesson/DialogueSection'
 import CulturalNotes from '@/components/lesson/CulturalNotes'
 import LightningRound from '@/components/lesson/LightningRound'
 import KnowledgeQuiz from '@/components/lesson/KnowledgeQuiz'
+import LessonL12Content from '@/components/lessonL12/LessonPage'
 import { SECTIONS } from '@/lib/lesson-data'
 import { useParams } from 'next/navigation'
 
 function LessonContent() {
   const params = useParams()
   const lessonId = params.lessonId as string
+
+  // Route to L1.2 lesson
+  if (lessonId === 'L1.2') {
+    return <LessonL12Content />
+  }
   const { sectionStates, progressPct, markVisited, markCompleted, setQuizScore } = useLessonProgress(lessonId)
   const [activeSection, setActiveSection] = useState('welcome')
   const { showToast } = useToast()
@@ -63,8 +69,9 @@ function LessonContent() {
     }
   }, [markVisited])
 
-  // Mark welcome visited on mount
+  // Scroll to top and mark welcome visited on mount
   useEffect(() => {
+    window.scrollTo(0, 0)
     markVisited('welcome')
   }, [markVisited])
 
@@ -104,20 +111,20 @@ function LessonContent() {
       />
 
       <div className="lg:ml-[280px]">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8 space-y-6">
           <HeroSection />
-          <ObjectivesGrid />
-          <LetterGrid />
-          <UniqueLetters />
-          <PronunciationTips />
-          <FlashcardGrid />
-          <MatchingGame onComplete={handleMatchingComplete} />
-          <SpellingBee onComplete={handleBeeComplete} />
-          <SortingActivity onComplete={handleSortingComplete} />
-          <DialogueSection />
-          <CulturalNotes />
-          <LightningRound onComplete={handleLightningComplete} />
-          <KnowledgeQuiz onComplete={handleQuizComplete} />
+          <div className="section-card bg-white"><ObjectivesGrid /></div>
+          <div className="section-card bg-blue-50/40 border-blue-100"><LetterGrid /></div>
+          <div className="section-card bg-purple-50/40 border-purple-100"><UniqueLetters /></div>
+          <div className="section-card bg-amber-50/30 border-amber-100"><PronunciationTips /></div>
+          <div className="section-card bg-indigo-50/30 border-indigo-100"><FlashcardGrid /></div>
+          <div className="section-card bg-emerald-50/30 border-emerald-100"><MatchingGame onComplete={handleMatchingComplete} /></div>
+          <div className="section-card bg-amber-50/30 border-amber-100"><SpellingBee onComplete={handleBeeComplete} /></div>
+          <div className="section-card bg-blue-50/30 border-blue-100"><SortingActivity onComplete={handleSortingComplete} /></div>
+          <div className="section-card bg-purple-50/30 border-purple-100"><DialogueSection /></div>
+          <div className="section-card bg-rose-50/30 border-rose-100"><CulturalNotes /></div>
+          <div className="section-card bg-orange-50/30 border-orange-100"><LightningRound onComplete={handleLightningComplete} /></div>
+          <div className="section-card bg-indigo-50/40 border-indigo-100"><KnowledgeQuiz onComplete={handleQuizComplete} /></div>
         </div>
       </div>
     </>
