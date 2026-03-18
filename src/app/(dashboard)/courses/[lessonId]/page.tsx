@@ -19,6 +19,8 @@ import LightningRound from '@/components/lesson/LightningRound'
 import KnowledgeQuiz from '@/components/lesson/KnowledgeQuiz'
 import LessonL12Content from '@/components/lessonL12/LessonPage'
 import LessonL13Content from '@/components/lessonL13/LessonPage'
+import LessonShell from '@/components/engine/LessonShell'
+import { L14Data, L14PhraseByAudio } from '@/lib/lessons/L1.4'
 import { SECTIONS } from '@/lib/lesson-data'
 import { useParams } from 'next/navigation'
 
@@ -29,6 +31,7 @@ function LessonContent() {
   // Route to specific lessons
   if (lessonId === 'L1.2') return <LessonL12Content />
   if (lessonId === 'L1.3') return <LessonL13Content />
+  if (lessonId === 'L1.4') return <LessonShell data={L14Data} phraseByAudio={L14PhraseByAudio} />
   const { sectionStates, progressPct, markVisited, markCompleted, setQuizScore } = useLessonProgress(lessonId)
   const [activeSection, setActiveSection] = useState('welcome')
   const { showToast } = useToast()

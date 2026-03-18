@@ -19,7 +19,7 @@ function getStorageKey(userId: string | undefined, lessonId: string) {
   return `progress-${userId ?? 'anonymous'}-${lessonId}`
 }
 
-export function useLessonProgress(lessonId: string) {
+export function useLessonProgress(lessonId: string, sections?: { id: string; label: string }[]) {
   const { user } = useUser()
   const [sectionStates, setSectionStates] = useState<Record<string, SectionState>>({})
   const [quizScore, setQuizScoreState] = useState<ProgressData['quizScore']>(null)
@@ -86,8 +86,9 @@ export function useLessonProgress(lessonId: string) {
   )
 
   // Progress percentage
-  const completedCount = SECTIONS.filter((s) => sectionStates[s.id]?.completed).length
-  const progressPct = Math.round((completedCount / SECTIONS.length) * 100)
+  const sectionList = sections ?? SECTIONS
+  const completedCount = sectionList.filter((s) => sectionStates[s.id]?.completed).length
+  const progressPct = Math.round((completedCount / sectionList.length) * 100)
 
   return {
     sectionStates,

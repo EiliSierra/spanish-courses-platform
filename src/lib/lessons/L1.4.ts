@@ -1,0 +1,401 @@
+import type { LessonData } from '@/lib/types/lesson'
+
+const PHRASES = [
+  // Drinks
+  { spanish: 'Café', english: 'Coffee', pronunciation: 'kah-FEH', category: 'drink', audio: 'cafe' },
+  { spanish: 'Té', english: 'Tea', pronunciation: 'teh', category: 'drink', audio: 'te' },
+  { spanish: 'Agua', english: 'Water', pronunciation: 'AH-gwah', category: 'drink', audio: 'agua' },
+  { spanish: 'Jugo', english: 'Juice', pronunciation: 'HOO-goh', category: 'drink', audio: 'jugo' },
+  { spanish: 'Cerveza', english: 'Beer', pronunciation: 'sehr-BEH-sah', category: 'drink', audio: 'cerveza' },
+  { spanish: 'Vino', english: 'Wine', pronunciation: 'BEE-noh', category: 'drink', audio: 'vino' },
+  { spanish: 'Refresco', english: 'Soft drink / Soda', pronunciation: 'reh-FREHS-koh', category: 'drink', audio: 'refresco' },
+  { spanish: 'Café con leche', english: 'Coffee with milk', pronunciation: 'kah-FEH kohn LEH-cheh', category: 'drink', audio: 'cafe-con-leche' },
+  // Food
+  { spanish: 'Pan', english: 'Bread', pronunciation: 'pahn', category: 'food', audio: 'pan' },
+  { spanish: 'Tostada', english: 'Toast', pronunciation: 'tohs-TAH-dah', category: 'food', audio: 'tostada' },
+  { spanish: 'Huevos', english: 'Eggs', pronunciation: 'WEH-bohs', category: 'food', audio: 'huevos' },
+  { spanish: 'Fruta', english: 'Fruit', pronunciation: 'FROO-tah', category: 'food', audio: 'fruta' },
+  { spanish: 'Sándwich', english: 'Sandwich', pronunciation: 'SAHND-weech', category: 'food', audio: 'sandwich' },
+  { spanish: 'Ensalada', english: 'Salad', pronunciation: 'ehn-sah-LAH-dah', category: 'food', audio: 'ensalada' },
+  { spanish: 'Sopa', english: 'Soup', pronunciation: 'SOH-pah', category: 'food', audio: 'sopa' },
+  { spanish: 'Empanada', english: 'Empanada', pronunciation: 'ehm-pah-NAH-dah', category: 'food', audio: 'empanada' },
+  { spanish: 'Pastel', english: 'Cake', pronunciation: 'pahs-TEHL', category: 'food', audio: 'pastel' },
+  { spanish: 'Helado', english: 'Ice cream', pronunciation: 'eh-LAH-doh', category: 'food', audio: 'helado' },
+  { spanish: 'Flan', english: 'Flan', pronunciation: 'flahn', category: 'food', audio: 'flan' },
+  { spanish: 'Churros', english: 'Churros', pronunciation: 'CHOO-rrohs', category: 'food', audio: 'churros' },
+  // Ordering
+  { spanish: 'Quiero un café', english: 'I want a coffee', pronunciation: 'kee-EH-roh oon kah-FEH', category: 'ordering', audio: 'quiero-un-cafe' },
+  { spanish: 'Quiero una ensalada', english: 'I want a salad', pronunciation: 'kee-EH-roh OO-nah ehn-sah-LAH-dah', category: 'ordering', audio: 'quiero-una-ensalada' },
+  { spanish: 'Me gustaría...', english: 'I would like...', pronunciation: 'meh goos-tah-REE-ah', category: 'ordering', audio: 'me-gustaria' },
+  { spanish: '¿Tiene...?', english: 'Do you have...?', pronunciation: 'tee-EH-neh', category: 'ordering', audio: 'tiene' },
+  { spanish: 'Para mí', english: 'For me', pronunciation: 'PAH-rah mee', category: 'ordering', audio: 'para-mi' },
+  { spanish: 'Sin azúcar', english: 'Without sugar', pronunciation: 'seen ah-SOO-kahr', category: 'ordering', audio: 'sin-azucar' },
+  { spanish: 'Con hielo', english: 'With ice', pronunciation: 'kohn YEH-loh', category: 'ordering', audio: 'con-hielo' },
+  // Paying
+  { spanish: '¿Cuánto es?', english: 'How much is it?', pronunciation: 'KWAHN-toh ehs', category: 'paying', audio: 'cuanto-es' },
+  { spanish: '¿Cuánto cuesta?', english: 'How much does it cost?', pronunciation: 'KWAHN-toh KWEHS-tah', category: 'paying', audio: 'cuanto-cuesta' },
+  { spanish: 'La cuenta, por favor', english: 'The check, please', pronunciation: 'lah KWEHN-tah pohr fah-BOHR', category: 'paying', audio: 'la-cuenta-por-favor' },
+  { spanish: '¿Aceptan tarjeta?', english: 'Do you accept card?', pronunciation: 'ah-SEHP-tahn tahr-HEH-tah', category: 'paying', audio: 'aceptan-tarjeta' },
+  { spanish: 'Aquí tiene', english: 'Here you go', pronunciation: 'ah-KEE tee-EH-neh', category: 'paying', audio: 'aqui-tiene' },
+  { spanish: 'El cambio', english: 'The change', pronunciation: 'ehl KAHM-bee-oh', category: 'paying', audio: 'el-cambio' },
+  { spanish: 'La propina', english: 'The tip', pronunciation: 'lah proh-PEE-nah', category: 'paying', audio: 'la-propina' },
+  // Polite expressions
+  { spanish: '¿Me puede traer...?', english: 'Can you bring me...?', pronunciation: 'meh PWEH-deh trah-EHR', category: 'polite', audio: 'me-puede-traer' },
+  { spanish: '¡Está delicioso!', english: 'It is delicious!', pronunciation: 'ehs-TAH deh-lee-see-OH-soh', category: 'polite', audio: 'esta-delicioso' },
+  { spanish: 'Más agua, por favor', english: 'More water, please', pronunciation: 'mahs AH-gwah pohr fah-BOHR', category: 'polite', audio: 'mas-agua-por-favor' },
+  { spanish: 'No, gracias', english: 'No, thank you', pronunciation: 'noh GRAH-see-ahs', category: 'polite', audio: 'no-gracias' },
+  { spanish: '¡Buen provecho!', english: 'Enjoy your meal!', pronunciation: 'bwehn proh-BEH-choh', category: 'polite', audio: 'buen-provecho' },
+  { spanish: 'Estoy satisfecho/a', english: 'I am satisfied / full', pronunciation: 'ehs-TOY sah-tees-FEH-choh', category: 'polite', audio: 'estoy-satisfecho' },
+  { spanish: 'La sobremesa', english: 'Time spent talking after a meal', pronunciation: 'lah soh-breh-MEH-sah', category: 'polite', audio: 'la-sobremesa' },
+  { spanish: 'Muy amable', english: 'Very kind', pronunciation: 'mooy ah-MAH-bleh', category: 'polite', audio: 'muy-amable' },
+]
+
+const phraseByAudio: Record<string, (typeof PHRASES)[number]> = {}
+PHRASES.forEach((p) => { phraseByAudio[p.audio] = p })
+
+export const L14Data: LessonData = {
+  id: 'L1.4',
+  hero: {
+    lessonId: 'L1.4',
+    title: 'At the Cafe',
+    subtitle: 'Ordering food, drinks & paying the bill',
+    description: 'Learn to order at a cafe, ask for the check, and navigate real dining situations across the Spanish-speaking world.',
+    image: '/images/L1.4/hero-cafe.png',
+    gradient: 'from-amber-800/65 via-orange-700/55 to-yellow-700/65',
+    accentColor: 'amber-200',
+  },
+  priorKnowledge: [
+    {
+      fromLesson: 'L1.1',
+      label: 'Pronunciation Rules',
+      detail: 'QU = "kee" sound — now appearing in "quiero" (I want) and "queso" (cheese).',
+    },
+    {
+      fromLesson: 'L1.2',
+      label: 'Polite Expressions',
+      detail: '"Por favor," "gracias," "buenos días" — essential for polite ordering at a cafe.',
+    },
+    {
+      fromLesson: 'L1.3',
+      label: 'Numbers & Prices',
+      detail: 'Numbers let you understand prices: "¿Cuánto es? Trescientos cincuenta pesos."',
+    },
+  ],
+  sectionTransitions: [
+    { afterSection: 'drinks', text: 'Now that you know the drinks, let\'s explore the food menu.' },
+    { afterSection: 'food', text: 'You know what\'s on the menu — time to learn HOW to order.' },
+    { afterSection: 'ordering', text: 'You ordered successfully! Now let\'s handle the bill.' },
+    { afterSection: 'paying', text: 'Payment handled. Let\'s wrap up with phrases that show good manners.' },
+    { afterSection: 'dialogues', text: 'Great listening! Now discover the cultural side of dining in Spanish-speaking countries.' },
+    { afterSection: 'cultural', text: 'Ready to put it all together? Listen to real orders and identify what was requested.' },
+    { afterSection: 'order-challenge', text: 'Final stretch — let\'s check how much you\'ve learned!' },
+  ],
+  personalizedVocab: [
+    { spanish: 'Quiero', english: 'I want' },
+    { spanish: 'Me gustaría', english: 'I would like' },
+    { spanish: 'La cuenta', english: 'The check' },
+    { spanish: '¿Cuánto cuesta?', english: 'How much does it cost?' },
+    { spanish: 'Por favor', english: 'Please' },
+    { spanish: '¿Me puede traer...?', english: 'Can you bring me...?' },
+  ],
+  pronunciationChallenges: [
+    { spanish: 'Quiero un café', pronunciation: 'kee-EH-roh oon kah-FEH', english: 'I want a coffee', audio: 'quiero-un-cafe', tip: 'Remember: QU = "k" sound (L1.1). Stress the last syllable of "café."' },
+    { spanish: 'Quiero una ensalada', pronunciation: 'kee-EH-roh OO-nah ehn-sah-LAH-dah', english: 'I want a salad', audio: 'quiero-una-ensalada', tip: 'Notice "una" (feminine) for ensalada. Stress the -LA- in "ensalada."' },
+    { spanish: 'La cuenta, por favor', pronunciation: 'lah KWEHN-tah pohr fah-BOHR', english: 'The check, please', audio: 'la-cuenta-por-favor', tip: 'CU before E makes "kwe" sound. "Por favor" from L1.2!' },
+    { spanish: '¿Cuánto cuesta?', pronunciation: 'KWAHN-toh KWEHS-tah', english: 'How much does it cost?', audio: 'cuanto-cuesta', tip: 'Both words start with the CU = "kw" sound. Keep them crisp.' },
+    { spanish: 'Más agua, por favor', pronunciation: 'mahs AH-gwah pohr fah-BOHR', english: 'More water, please', audio: 'mas-agua-por-favor', tip: 'The "gua" in "agua" = "gwah." "Por favor" from L1.2!' },
+    { spanish: '¡Buen provecho!', pronunciation: 'bwehn proh-BEH-choh', english: 'Enjoy your meal!', audio: 'buen-provecho', tip: 'UE diphthong in "buen" = "weh." CH = "ch" like in English.' },
+  ],
+  objectives: [
+    { icon: '\u2615', title: 'Order Drinks & Food', desc: 'Request items using "quiero," "me gustaría," and "¿tiene?"' },
+    { icon: '\uD83C\uDF54', title: 'Cafe Vocabulary', desc: 'Master 30+ food, drink, and dining words' },
+    { icon: '\uD83D\uDCB0', title: 'Ask & Pay', desc: 'Ask for the check, inquire about prices, and handle payment' },
+    { icon: '\uD83C\uDF0E', title: 'Cultural Dining', desc: 'Understand sobremesa, tipping etiquette, and meal times' },
+  ],
+  sections: [
+    { id: 'welcome', label: 'Welcome' },
+    { id: 'prior-knowledge', label: 'What You Already Know' },
+    { id: 'objectives', label: "What You'll Learn" },
+    { id: 'personalized-context', label: 'See in YOUR Context' },
+    { id: 'drinks', label: 'Drinks' },
+    { id: 'food', label: 'Food' },
+    { id: 'ordering', label: 'Ordering' },
+    { id: 'paying', label: 'Paying' },
+    { id: 'polite', label: 'Polite Phrases' },
+    { id: 'pronunciation-tips', label: 'Pronunciation Tips' },
+    { id: 'pronunciation-practice', label: 'Pronunciation Practice' },
+    { id: 'flashcards', label: 'Flashcards' },
+    { id: 'matching-game', label: 'Matching Game' },
+    { id: 'menu-sorting', label: 'Menu Sorting' },
+    { id: 'dialogues', label: 'Dialogues' },
+    { id: 'cultural', label: 'Cultural Insights' },
+    { id: 'order-challenge', label: 'Order Challenge' },
+    { id: 'knowledge-check', label: 'Knowledge Check' },
+  ],
+  audioBase: '/audio/L1.4/phrases',
+  phraseSections: [
+    {
+      id: 'drinks',
+      title: 'Ordering Drinks',
+      description: 'Click any item to hear it pronounced. Master the basics before ordering.',
+      tabs: [
+        { label: 'All Drinks', color: 'amber', phrases: PHRASES.filter(p => p.category === 'drink') },
+      ],
+    },
+    {
+      id: 'food',
+      title: 'Ordering Food',
+      description: 'From breakfast staples to desserts \u2014 everything you need at a cafe.',
+      tabs: [
+        { label: 'Breakfast', color: 'orange', phrases: PHRASES.filter(p => p.category === 'food').slice(0, 4) },
+        { label: 'Lunch & Snacks', color: 'amber', phrases: PHRASES.filter(p => p.category === 'food').slice(4, 8) },
+        { label: 'Desserts', color: 'rose', phrases: PHRASES.filter(p => p.category === 'food').slice(8) },
+      ],
+    },
+    {
+      id: 'ordering',
+      title: 'Asking for Things',
+      description: 'Key phrases for placing your order. Notice "un" (masculine) vs "una" (feminine).',
+      tabs: [
+        { label: 'Order Phrases', color: 'blue', phrases: PHRASES.filter(p => p.category === 'ordering'), columns: 2 },
+      ],
+    },
+    {
+      id: 'paying',
+      title: 'Asking the Price & Paying',
+      description: 'Essential phrases when the meal is over.',
+      tabs: [
+        { label: 'Payment', color: 'purple', phrases: PHRASES.filter(p => p.category === 'paying'), columns: 2 },
+      ],
+    },
+    {
+      id: 'polite',
+      title: 'Polite Dining Phrases',
+      description: 'Impress your host with these courteous expressions.',
+      tabs: [
+        { label: 'Polite Phrases', color: 'emerald', phrases: PHRASES.filter(p => p.category === 'polite'), columns: 2 },
+      ],
+    },
+  ],
+  pronunciationTips: [
+    {
+      title: '"Café" — Stress on the Last Syllable',
+      content: 'Many English speakers say "KAH-fay" but in Spanish the stress falls on the last syllable: kah-FEH. The accent mark (é) tells you exactly where to stress.',
+      example: 'Café = kah-FEH  |  Té = teh  |  Flan = flahn',
+      reviewFrom: 'L1.1',
+    },
+    {
+      title: '"Huevos" — The Silent H + UE Diphthong',
+      content: 'H is always silent in Spanish, and "ue" is a diphthong that sounds like "weh." So "huevos" is WEH-bohs, not "hoo-EH-vos."',
+      example: 'Huevos = WEH-bohs  |  Hielo = YEH-loh',
+      reviewFrom: 'L1.1',
+    },
+    {
+      title: '"Quiero" — The QUI = "kee" Sound',
+      content: 'In Spanish, QU before E or I makes a "k" sound. The U is completely silent. So "quiero" is kee-EH-roh. You first learned this rule in L1.1 — now you\'re using it to order food!',
+      example: 'Quiero = kee-EH-roh  |  Queso = KEH-soh  |  Cuenta = KWEHN-tah',
+      reviewFrom: 'L1.1',
+    },
+    {
+      title: '"Cerveza" — Latin America vs Spain',
+      content: 'In Latin America, the Z in "cerveza" is pronounced like an "s." In Spain, it\u2019s a "th" sound (like "think"). Both are correct!',
+      example: 'L. America: sehr-BEH-sah  |  Spain: thehr-BEH-thah',
+    },
+  ],
+  flashcardGroups: [
+    { key: 'food-drink', label: 'Food & Drink', audioKeys: ['cafe','te','agua','jugo','cafe-con-leche','pan','huevos','ensalada','sopa','empanada','helado','churros'] },
+    { key: 'ordering-paying', label: 'Ordering & Paying', audioKeys: ['quiero-un-cafe','me-gustaria','tiene','para-mi','sin-azucar','con-hielo','cuanto-es','la-cuenta-por-favor','aceptan-tarjeta'] },
+    { key: 'polite', label: 'Polite Phrases', audioKeys: ['me-puede-traer','esta-delicioso','buen-provecho','no-gracias','estoy-satisfecho','muy-amable','la-sobremesa','mas-agua-por-favor'] },
+  ],
+  matchPairs: [
+    { left: 'Caf\u00e9', right: 'Coffee' },
+    { left: 'Agua', right: 'Water' },
+    { left: 'Ensalada', right: 'Salad' },
+    { left: 'La cuenta', right: 'The check' },
+    { left: 'Quiero', right: 'I want' },
+    { left: 'Helado', right: 'Ice cream' },
+    { left: '\u00bfCu\u00e1nto es?', right: 'How much is it?' },
+    { left: '\u00a1Buen provecho!', right: 'Enjoy your meal!' },
+  ],
+  matchLabels: { left: 'Spanish', right: 'English' },
+  sortActivities: [
+    {
+      title: 'Drinks vs. Food',
+      instruction: 'Sort each item into the correct category.',
+      buckets: ['Drinks', 'Food'],
+      items: [
+        { text: 'Caf\u00e9', bucket: 'Drinks' },
+        { text: 'Agua', bucket: 'Drinks' },
+        { text: 'Cerveza', bucket: 'Drinks' },
+        { text: 'Jugo', bucket: 'Drinks' },
+        { text: 'Refresco', bucket: 'Drinks' },
+        { text: 'Ensalada', bucket: 'Food' },
+        { text: 'Churros', bucket: 'Food' },
+        { text: 'Sopa', bucket: 'Food' },
+        { text: 'Helado', bucket: 'Food' },
+        { text: 'Empanada', bucket: 'Food' },
+      ],
+    },
+    {
+      title: 'Un vs. Una',
+      instruction: 'Sort each noun by its article: "un" (masculine) or "una" (feminine).',
+      buckets: ['Un (masculine)', 'Una (feminine)'],
+      items: [
+        { text: 'Caf\u00e9', bucket: 'Un (masculine)' },
+        { text: 'Helado', bucket: 'Un (masculine)' },
+        { text: 'Pan', bucket: 'Un (masculine)' },
+        { text: 'Jugo', bucket: 'Un (masculine)' },
+        { text: 'Vino', bucket: 'Un (masculine)' },
+        { text: 'Ensalada', bucket: 'Una (feminine)' },
+        { text: 'Cerveza', bucket: 'Una (feminine)' },
+        { text: 'Sopa', bucket: 'Una (feminine)' },
+        { text: 'Tostada', bucket: 'Una (feminine)' },
+        { text: 'Fruta', bucket: 'Una (feminine)' },
+      ],
+    },
+    {
+      title: 'True or False?',
+      instruction: 'Sort each statement as True or False.',
+      buckets: ['True', 'False'],
+      items: [
+        { text: '"Quiero" is more direct than "Me gustar\u00eda"', bucket: 'True' },
+        { text: '"Sobremesa" means time spent talking after a meal', bucket: 'True' },
+        { text: 'In Spain, lunch is typically around 2 PM', bucket: 'True' },
+        { text: 'Churros are typically a breakfast food', bucket: 'True' },
+        { text: '"Buen provecho" is said before eating', bucket: 'True' },
+        { text: '"Un" is used with feminine nouns', bucket: 'False' },
+        { text: '"La cuenta" means the menu', bucket: 'False' },
+        { text: '"Caf\u00e9 con leche" means coffee with ice', bucket: 'False' },
+        { text: '"Propina" means receipt', bucket: 'False' },
+        { text: '"Cu\u00e1nto es" and "Cu\u00e1nto cuesta" are different', bucket: 'False' },
+      ],
+    },
+  ],
+  sortSectionId: 'menu-sorting',
+  sortTitle: 'Menu Sorting',
+  dialogues: [
+    {
+      id: 'dialogue-ordering',
+      title: 'Ordering at a Cafe — Mexico City',
+      location: 'Mexico City',
+      lines: [
+        { speaker: 'Mesero', text: 'Buenos días. ¿Qué le puedo servir?', audio: '/audio/L1.4/phrases/d1-line1.mp3',
+          annotations: [{ phrase: 'Buenos días', fromLesson: 'L1.2', note: 'Greeting' }] },
+        { speaker: 'Cliente', text: 'Buenos días. Quiero un café con leche, por favor.', audio: '/audio/L1.4/phrases/d1-line2.mp3',
+          annotations: [
+            { phrase: 'Buenos días', fromLesson: 'L1.2', note: 'Greeting' },
+            { phrase: 'por favor', fromLesson: 'L1.2', note: 'Polite request' },
+          ] },
+        { speaker: 'Mesero', text: '¿Con azúcar?', audio: '/audio/L1.4/phrases/d1-line3.mp3' },
+        { speaker: 'Cliente', text: 'Sin azúcar, gracias. Y una empanada de queso.', audio: '/audio/L1.4/phrases/d1-line4.mp3',
+          annotations: [{ phrase: 'gracias', fromLesson: 'L1.2', note: 'Thank you' }] },
+        { speaker: 'Mesero', text: 'Perfecto. ¿Algo más?', audio: '/audio/L1.4/phrases/d1-line5.mp3' },
+        { speaker: 'Cliente', text: 'No, gracias. Eso es todo.', audio: '/audio/L1.4/phrases/d1-line6.mp3',
+          annotations: [{ phrase: 'gracias', fromLesson: 'L1.2', note: 'Thank you' }] },
+        { speaker: 'Mesero', text: 'Aquí tiene. ¡Buen provecho!', audio: '/audio/L1.4/phrases/d1-line7.mp3' },
+        { speaker: 'Cliente', text: '¡Muchas gracias! ¡Está delicioso!', audio: '/audio/L1.4/phrases/d1-line8.mp3',
+          annotations: [{ phrase: 'Muchas gracias', fromLesson: 'L1.2', note: 'Thank you very much' }] },
+      ],
+    },
+    {
+      id: 'dialogue-paying',
+      title: 'Paying the Bill — Buenos Aires',
+      location: 'Buenos Aires',
+      lines: [
+        { speaker: 'Cliente', text: 'Disculpe, la cuenta, por favor.', audio: '/audio/L1.4/phrases/d2-line1.mp3',
+          annotations: [{ phrase: 'por favor', fromLesson: 'L1.2', note: 'Polite request' }] },
+        { speaker: 'Mesero', text: 'Sí, un momento. Son trescientos cincuenta pesos.', audio: '/audio/L1.4/phrases/d2-line2.mp3',
+          annotations: [{ phrase: 'trescientos cincuenta pesos', fromLesson: 'L1.3', note: 'Numbers & prices' }] },
+        { speaker: 'Cliente', text: '¿Aceptan tarjeta?', audio: '/audio/L1.4/phrases/d2-line3.mp3' },
+        { speaker: 'Mesero', text: 'Sí, por supuesto. Aquí tiene.', audio: '/audio/L1.4/phrases/d2-line4.mp3' },
+        { speaker: 'Cliente', text: 'Perfecto. Aquí tiene. ¡Muchas gracias! Todo estuvo delicioso.', audio: '/audio/L1.4/phrases/d2-line5.mp3',
+          annotations: [{ phrase: 'Muchas gracias', fromLesson: 'L1.2', note: 'Thank you very much' }] },
+        { speaker: 'Mesero', text: '¡Muy amable! Que tenga buen día.', audio: '/audio/L1.4/phrases/d2-line6.mp3' },
+      ],
+    },
+  ],
+  dialogueDescription: 'Listen to real cafe conversations from Mexico City and Buenos Aires.',
+  culturalNotes: [
+    {
+      title: 'Sobremesa \u2014 The Art of Lingering',
+      content: 'In Spanish-speaking countries, sobremesa is the cherished tradition of staying at the table long after the meal is finished, chatting over coffee or drinks. The waiter will never bring you the check unless you ask. Embrace it: it\u2019s where friendships deepen.',
+    },
+    {
+      title: 'La Propina \u2014 Tipping Etiquette',
+      content: 'Mexico: 10\u201315% standard. Spain: not expected, but small change appreciated. Argentina: 10% customary. Colombia: 10% service charge often included ("servicio incluido"). Always ask if unsure!',
+    },
+    {
+      title: 'Meal Times \u2014 Later Than You Think',
+      content: 'Spain: lunch 2:00\u20133:30 PM, dinner 9:00\u201310:00 PM. Latin America: slightly earlier but still later than the US. Merienda (afternoon snack) around 5\u20136 PM with coffee and pastries is common.',
+    },
+  ],
+  culturalGradient: 'from-amber-50 to-orange-50',
+  quiz: [
+    // Scenario-based questions
+    { id: 1, type: 'mc', text: 'You\'re at a cafe in Bogotá. You want coffee but the waiter seems busy. What\'s the MOST polite way to get his attention and order?', options: ['¡Oye! Quiero café', 'Disculpe, me gustaría un café, por favor', 'Dame café ahora', 'Necesito café'], answer: 1 },
+    { id: 2, type: 'mc', text: 'You hear the waiter say "Son trescientos cincuenta pesos." Using what you learned about numbers in L1.3, how much is the bill?', options: ['35 pesos', '315 pesos', '350 pesos', '3,500 pesos'], answer: 2 },
+    { id: 3, type: 'mc', text: 'Your friend orders: "Quiero un sopa y una ensalada." Spot the mistake.', options: ['Ensalada should use "un"', '"Sopa" is feminine — it should be "una sopa"', 'You can\'t order two things at once', 'Both articles are wrong'], answer: 1 },
+    // Cross-lesson transfer (L1.2 polite phrases)
+    { id: 4, type: 'mc', text: 'Using polite phrases from L1.2, how would you ask a waiter for more water?', options: ['Agua, más', 'Dame más agua', '¿Me puede traer más agua, por favor?', 'Yo quiero más agua ahora'], answer: 2 },
+    { id: 5, type: 'fill', text: 'Complete the polite request: "La ___, por favor" (The check, please)', answer: 'cuenta' },
+    // Comprehension from dialogues
+    { id: 6, type: 'mc', text: 'In Dialogue 1, the customer says "Sin azúcar, gracias." The waiter asked "¿Con azúcar?" What does "sin" mean in this context?', options: ['With', 'Without', 'More', 'Less'], answer: 1 },
+    { id: 7, type: 'tf', text: '"Me gustaría un café" is more polite than "Quiero un café" — just like "I would like" vs "I want" in English.', answer: true },
+    // Application scenario
+    { id: 8, type: 'mc', text: 'You\'re paying at a cafe in Buenos Aires. You want to use a card. What do you ask?', options: ['¿Tiene efectivo?', '¿Aceptan tarjeta?', '¿Cuánto es la tarjeta?', '¿Dónde está el banco?'], answer: 1 },
+    { id: 9, type: 'fill', text: 'Complete: "Un café ___ leche" (A coffee with milk)', answer: 'con' },
+    // Cultural comprehension
+    { id: 10, type: 'mc', text: 'After finishing your meal in Spain, the waiter doesn\'t bring the check. Why?', options: ['The meal is free', 'You need to ask — sobremesa culture means the waiter won\'t rush you', 'The restaurant is closing', 'You need to pay at the counter'], answer: 1 },
+    // Error detection
+    { id: 11, type: 'mc', text: 'Which of these orders has NO errors?', options: ['Quiero un cerveza', 'Quiero una café con leche', 'Me gustaría una ensalada, por favor', 'Quiero un sopa'], answer: 2 },
+    { id: 12, type: 'fill', text: 'Complete: "Quiero ___ helado" (I want an ice cream — masculine noun)', answer: 'un' },
+    // Cross-lesson pronunciation (L1.1)
+    { id: 13, type: 'mc', text: 'In L1.1 you learned QU makes a "k" sound. Applying that rule, how do you pronounce "quiero"?', options: ['kwee-EH-roh', 'kee-EH-roh', 'kay-EH-roh', 'chee-EH-roh'], answer: 1 },
+    { id: 14, type: 'tf', text: 'In Latin America, the Z in "cerveza" is pronounced like "s" (sehr-BEH-sah), not "th."', answer: true },
+    // Real-world scenario
+    { id: 15, type: 'mc', text: 'You\'re at a table and someone passing says "¡Buen provecho!" You should:', options: ['Ignore them — it\'s rude', 'Say "¡Gracias!" — they\'re wishing you a good meal', 'Ask for the menu', 'Call the waiter'], answer: 1 },
+  ],
+  uniqueActivity: {
+    id: 'OrderChallengeL14',
+    sectionId: 'order-challenge',
+    sectionColor: 'bg-orange-50/40',
+    sectionBorder: 'border-orange-100',
+  },
+  sectionColors: {
+    'prior-knowledge': { bg: 'bg-indigo-50/30', border: 'border-indigo-100' },
+    objectives: { bg: 'bg-white', border: '' },
+    'personalized-context': { bg: 'bg-violet-50/30', border: 'border-violet-100' },
+    drinks: { bg: 'bg-amber-50/30', border: 'border-amber-100' },
+    food: { bg: 'bg-orange-50/30', border: 'border-orange-100' },
+    ordering: { bg: 'bg-blue-50/30', border: 'border-blue-100' },
+    paying: { bg: 'bg-purple-50/30', border: 'border-purple-100' },
+    polite: { bg: 'bg-emerald-50/30', border: 'border-emerald-100' },
+    'pronunciation-tips': { bg: 'bg-yellow-50/30', border: 'border-yellow-100' },
+    'pronunciation-practice': { bg: 'bg-blue-50/30', border: 'border-blue-200' },
+    flashcards: { bg: 'bg-amber-50/30', border: 'border-amber-100' },
+    'matching-game': { bg: 'bg-emerald-50/30', border: 'border-emerald-100' },
+    'menu-sorting': { bg: 'bg-blue-50/30', border: 'border-blue-100' },
+    dialogues: { bg: 'bg-purple-50/30', border: 'border-purple-100' },
+    cultural: { bg: 'bg-rose-50/30', border: 'border-rose-100' },
+    'order-challenge': { bg: 'bg-orange-50/40', border: 'border-orange-100' },
+    'knowledge-check': { bg: 'bg-indigo-50/40', border: 'border-indigo-100' },
+  },
+}
+
+// Export phrase lookup for flashcard component
+export const L14PhraseByAudio = phraseByAudio
+
+// Export order challenge rounds
+export const ORDER_CHALLENGE_ROUNDS = [
+  { audio: 'quiero-un-cafe', transcript: 'Quiero un café', correct: 'Café', options: ['Café', 'Té', 'Ensalada', 'Cerveza'] },
+  { audio: 'quiero-una-ensalada', transcript: 'Quiero una ensalada', correct: 'Ensalada', options: ['Ensalada', 'Sopa', 'Pan', 'Helado'] },
+  { audio: 'cafe-con-leche', transcript: 'Un café con leche, por favor', correct: 'Café con leche', options: ['Café con leche', 'Café solo', 'Té con leche', 'Jugo'] },
+  { audio: 'sin-azucar', transcript: 'Sin azúcar, por favor', correct: 'Sin azúcar', options: ['Sin azúcar', 'Con azúcar', 'Con hielo', 'Con leche'] },
+  { audio: 'la-cuenta-por-favor', transcript: 'La cuenta, por favor', correct: 'La cuenta', options: ['La cuenta', 'El menú', 'Más agua', 'Un postre'] },
+  { audio: 'con-hielo', transcript: 'Un jugo con hielo', correct: 'Con hielo', options: ['Con hielo', 'Sin hielo', 'Con azúcar', 'Sin azúcar'] },
+  { audio: 'aceptan-tarjeta', transcript: '¿Aceptan tarjeta?', correct: 'Tarjeta', options: ['Tarjeta', 'Efectivo', 'La propina', 'El cambio'] },
+  { audio: 'me-puede-traer', transcript: '¿Me puede traer más pan?', correct: 'Más pan', options: ['Más pan', 'Más agua', 'La cuenta', 'Un postre'] },
+  // Cross-lesson rounds: combine vocab from L1.2 (polite) + L1.3 (numbers) with L1.4
+  { audio: 'mas-agua-por-favor', transcript: 'Más agua, por favor', correct: 'Más agua', options: ['Más agua', 'La cuenta', 'Un café', 'Sin azúcar'] },
+  { audio: 'no-gracias', transcript: 'No, gracias. Estoy satisfecho.', correct: 'No, gracias', options: ['No, gracias', 'Sí, por favor', 'Más pan', 'La propina'] },
+]

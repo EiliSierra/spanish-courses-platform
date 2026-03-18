@@ -5,7 +5,13 @@ const isProtectedRoute = createRouteMatcher([
   '/profile(.*)',
 ])
 
+const isPublicApiRoute = createRouteMatcher([
+  '/api/ai(.*)',
+])
+
 export default clerkMiddleware(async (auth, req) => {
+  // Allow AI API routes without auth check (they're called from authenticated pages)
+  if (isPublicApiRoute(req)) return
   if (isProtectedRoute(req)) {
     await auth.protect()
   }

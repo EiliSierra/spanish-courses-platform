@@ -4,7 +4,7 @@ const LESSONS = [
   { id: 'L1.1', title: 'Sounds & Letters', subtitle: 'The Spanish Alphabet', level: 1, available: true },
   { id: 'L1.2', title: 'Greetings & Introductions', subtitle: 'Meeting People', level: 1, available: true },
   { id: 'L1.3', title: 'Numbers & Time', subtitle: 'From 0 to 100 + Telling Time', level: 1, available: true },
-  { id: 'L1.4', title: 'Days & Months', subtitle: 'Time & Calendar', level: 1, available: false },
+  { id: 'L1.4', title: 'At the Cafe', subtitle: 'Ordering Food & Drinks', level: 1, available: true },
   { id: 'L1.5', title: 'Colors & Descriptions', subtitle: 'Describing the World', level: 1, available: false },
   { id: 'L1.6', title: 'Family & Relationships', subtitle: 'La Familia', level: 1, available: false },
   { id: 'L1.7', title: 'Food & Drinks', subtitle: 'At the Restaurant', level: 1, available: false },
