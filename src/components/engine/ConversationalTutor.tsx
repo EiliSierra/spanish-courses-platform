@@ -41,57 +41,30 @@ export default function ConversationalTutor({ lessonId, lessonTitle }: Props) {
     const text = input.trim()
     if (!text || loading) return
 
-    const apiKey = process.env.NEXT_PUBLIC_OPENROUTER_API_KEY
-    if (!apiKey) return
-
     const userMsg: Message = { role: 'user', content: text }
     const updatedMessages = [...messages, userMsg]
     setMessages(updatedMessages)
     setInput('')
     setLoading(true)
 
-    const systemPrompt = `You are a friendly, encouraging AI Spanish tutor for the Alexandria Language Institute.
-You are helping a student who is currently on lesson ${lessonId} ("${lessonTitle}").
-
-Rules:
-- Answer in the language the student uses (English or Spanish), but always include Spanish examples
-- Keep answers SHORT (2-4 sentences max) — this is a chat widget, not an essay
-- For grammar questions, give the rule + 1-2 examples
-- For vocabulary, include pronunciation in parentheses
-- For cultural questions, be concise but informative
-- Reference concepts from this lesson and earlier lessons (L1.1 pronunciation, L1.2 greetings, L1.3 numbers) when relevant
-- NEVER break character — you are a tutor, not a general AI assistant
-- If the student asks something unrelated to Spanish learning, gently redirect
-- Use encouraging language: "Great question!", "You're getting it!", etc.
-- CEFR level: A1 — keep Spanish examples simple`
-
-    const apiMessages = [
-      { role: 'system', content: systemPrompt },
-      ...updatedMessages.map(m => ({ role: m.role, content: m.content })),
-    ]
-
     try {
-      const res = await fetch('https://openrouter.ai/api/v1/chat/completions', {
+      const res = await fetch('/api/ai/tutor', {
         method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${apiKey}`,
-          'Content-Type': 'application/json',
-          'HTTP-Referer': 'https://alexandria-language.com',
-          'X-Title': 'Alexandria Language Institute',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          model: 'openai/gpt-4o',
-          messages: apiMessages,
-          temperature: 0.7,
-          max_tokens: 300,
+          messages: updatedMessages,
+          lessonId,
+          lessonTitle,
         }),
       })
 
-      if (!res.ok) throw new Error('API error')
+      if (!res.ok) {
+        const errData = await res.json().catch(() => ({ error: 'Unknown error' }))
+        throw new Error(errData.error || `API error: ${res.status}`)
+      }
 
       const data = await res.json()
-      const reply = data.choices?.[0]?.message?.content ?? 'Sorry, I couldn\'t process that. Try again!'
-      setMessages(prev => [...prev, { role: 'assistant', content: reply }])
+      setMessages(prev => [...prev, { role: 'assistant', content: data.reply }])
     } catch {
       setMessages(prev => [...prev, { role: 'assistant', content: 'Connection error. Please try again.' }])
     } finally {

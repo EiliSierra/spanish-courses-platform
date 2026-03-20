@@ -36,65 +36,26 @@ export default function PersonalizedContext({ words, lessonId }: { words: VocabW
     setError(null)
     setSentences([])
 
-    const apiKey = process.env.NEXT_PUBLIC_OPENROUTER_API_KEY
-    if (!apiKey) {
-      setError('OpenRouter API key not configured')
-      setLoading(false)
-      return
-    }
-
     const selectedWords = words.slice(0, 6)
-    const systemPrompt = `You are a Spanish language tutor for the Alexandria Language Institute.
-Your task: take vocabulary words from lesson ${lessonId} and create personalized example sentences
-that connect to the student's real life context.
-
-Rules:
-- Create exactly ONE Spanish sentence per word, followed by its English translation
-- The sentence MUST use the vocabulary word naturally
-- Adapt the context to the student's profile/interest
-- Keep sentences at A1 CEFR level (simple present, basic structures)
-- Use vocabulary from earlier lessons when possible (greetings, numbers, polite phrases)
-- Format each as: {"word": "...", "spanish": "...", "english": "...", "connection": "..."}
-- "connection" is a brief note explaining why this sentence fits their context
-- Return a JSON array of these objects, nothing else`
-
-    const userPrompt = `Student context: ${context}
-
-Vocabulary words to personalize:
-${selectedWords.map(w => `- ${w.spanish} (${w.english})`).join('\n')}
-
-Generate personalized sentences for each word.`
 
     try {
-      const res = await fetch('https://openrouter.ai/api/v1/chat/completions', {
+      const res = await fetch('/api/ai/personalize', {
         method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${apiKey}`,
-          'Content-Type': 'application/json',
-          'HTTP-Referer': 'https://alexandria-language.com',
-          'X-Title': 'Alexandria Language Institute',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          model: 'openai/gpt-4o',
-          messages: [
-            { role: 'system', content: systemPrompt },
-            { role: 'user', content: userPrompt },
-          ],
-          temperature: 0.7,
-          max_tokens: 1500,
+          words: selectedWords,
+          context,
+          lessonId,
         }),
       })
 
       if (!res.ok) {
-        const errText = await res.text()
-        throw new Error(`API error: ${errText}`)
+        const errData = await res.json().catch(() => ({ error: 'Unknown error' }))
+        throw new Error(errData.error || `API error: ${res.status}`)
       }
 
       const data = await res.json()
-      const content = data.choices?.[0]?.message?.content ?? '[]'
-      const jsonStr = content.replace(/```json?\n?/g, '').replace(/```/g, '').trim()
-      const parsed = JSON.parse(jsonStr)
-      setSentences(parsed)
+      setSentences(data.sentences)
     } catch (err) {
       setError(String(err instanceof Error ? err.message : err))
     } finally {

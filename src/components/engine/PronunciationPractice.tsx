@@ -52,65 +52,24 @@ export default function PronunciationPractice({ challenges, audioBase }: Props) 
   const getAIFeedback = useCallback(async (studentSaid: string, challengeAtRecord: PronunciationChallenge) => {
     setLoadingFeedback(true)
 
-    const apiKey = process.env.NEXT_PUBLIC_OPENROUTER_API_KEY
-    if (!apiKey) {
-      setFeedback({
-        score: 0,
-        assessment: 'Error',
-        feedback: 'API key not configured.',
-        corrections: [],
-      })
-      setLoadingFeedback(false)
-      return
-    }
-
-    const prompt = `You are a Spanish pronunciation coach for A1-level learners.
-
-The student tried to say: "${challengeAtRecord.spanish}"
-Expected pronunciation guide: ${challengeAtRecord.pronunciation}
-What the speech recognizer heard: "${studentSaid}"
-
-Analyze the pronunciation and respond with ONLY a JSON object (no markdown):
-{
-  "score": <number 0-100>,
-  "assessment": "<Excellent|Good|Needs Work>",
-  "feedback": "<1-2 sentences of encouraging, specific feedback>",
-  "corrections": ["<specific correction 1>", "<specific correction 2>"]
-}
-
-Rules:
-- Score 90-100 if the transcript closely matches the target (minor differences OK)
-- Score 70-89 if most words are correct but some pronunciation issues
-- Score below 70 if significant differences
-- Be encouraging but specific — mention exact sounds to improve
-- Keep corrections to max 3 items
-- If the transcript is very close, congratulate them!
-- Consider that speech recognition may mishear similar-sounding words`
-
     try {
-      const res = await fetch('https://openrouter.ai/api/v1/chat/completions', {
+      const res = await fetch('/api/ai/pronunciation', {
         method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${apiKey}`,
-          'Content-Type': 'application/json',
-          'HTTP-Referer': 'https://alexandria-language.com',
-          'X-Title': 'Alexandria Language Institute',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          model: 'openai/gpt-4o',
-          messages: [{ role: 'user', content: prompt }],
-          temperature: 0.5,
-          max_tokens: 300,
+          studentSaid,
+          targetSpanish: challengeAtRecord.spanish,
+          pronunciation: challengeAtRecord.pronunciation,
         }),
       })
 
-      if (!res.ok) throw new Error('API error')
+      if (!res.ok) {
+        const errData = await res.json().catch(() => ({ error: 'Unknown error' }))
+        throw new Error(errData.error || `API error: ${res.status}`)
+      }
 
       const data = await res.json()
-      const content = data.choices?.[0]?.message?.content ?? '{}'
-      const jsonStr = content.replace(/```json?\n?/g, '').replace(/```/g, '').trim()
-      const parsed = JSON.parse(jsonStr) as FeedbackResult
-      setFeedback(parsed)
+      setFeedback(data.feedback as FeedbackResult)
     } catch {
       setFeedback({
         score: 0,

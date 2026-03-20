@@ -20,7 +20,9 @@ import KnowledgeQuiz from '@/components/lesson/KnowledgeQuiz'
 import LessonL12Content from '@/components/lessonL12/LessonPage'
 import LessonL13Content from '@/components/lessonL13/LessonPage'
 import LessonShell from '@/components/engine/LessonShell'
+import { L11Data, L11PhraseByAudio } from '@/lib/lessons/L1.1'
 import { L14Data, L14PhraseByAudio } from '@/lib/lessons/L1.4'
+import { L15Data, L15PhraseByAudio } from '@/lib/lessons/L1.5'
 import { SECTIONS } from '@/lib/lesson-data'
 import { useParams } from 'next/navigation'
 
@@ -29,9 +31,11 @@ function LessonContent() {
   const lessonId = params.lessonId as string
 
   // Route to specific lessons
+  if (lessonId === 'L1.1') return <LessonShell data={L11Data} phraseByAudio={L11PhraseByAudio} />
   if (lessonId === 'L1.2') return <LessonL12Content />
   if (lessonId === 'L1.3') return <LessonL13Content />
   if (lessonId === 'L1.4') return <LessonShell data={L14Data} phraseByAudio={L14PhraseByAudio} />
+  if (lessonId === 'L1.5') return <LessonShell data={L15Data} phraseByAudio={L15PhraseByAudio} />
   const { sectionStates, progressPct, markVisited, markCompleted, setQuizScore } = useLessonProgress(lessonId)
   const [activeSection, setActiveSection] = useState('welcome')
   const { showToast } = useToast()

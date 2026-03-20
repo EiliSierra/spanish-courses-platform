@@ -1,6 +1,6 @@
 'use client'
 
-import { useCallback, useState, useEffect, useRef } from 'react'
+import { useCallback, useState, useRef } from 'react'
 import type { PhraseData, PhraseSection } from '@/lib/types/lesson'
 
 const COLOR_MAP: Record<string, { bg: string; border: string; activeBorder: string; text: string; sub: string }> = {
@@ -137,42 +137,12 @@ function TabGroup({ tabs, children }: { tabs: string[]; children: React.ReactNod
 }
 
 function DialectSelector({ selected, onChange }: { selected: string; onChange: (code: string) => void }) {
-  const [uniqueDialects, setUniqueDialects] = useState<typeof DIALECTS>([DIALECTS[0]])
-
-  useEffect(() => {
-    const checkVoices = () => {
-      const voices = loadVoices()
-      if (voices.length === 0) return
-
-      // Find which dialects have UNIQUE voices (not the same voice reused)
-      const seenVoiceNames = new Set<string>()
-      const unique = [DIALECTS[0]] // Always include "Original"
-
-      for (const d of DIALECTS) {
-        if (d.code === 'default') continue
-        const voice = findVoiceForDialect(d.lang)
-        if (voice && !seenVoiceNames.has(voice.name)) {
-          seenVoiceNames.add(voice.name)
-          unique.push(d)
-        }
-      }
-
-      setUniqueDialects(unique)
-    }
-
-    checkVoices()
-    window.speechSynthesis.onvoiceschanged = checkVoices
-    const timer = setTimeout(checkVoices, 500)
-    return () => { window.speechSynthesis.onvoiceschanged = null; clearTimeout(timer) }
-  }, [])
-
-  // Need at least Original + 1 dialect to show the selector
-  if (uniqueDialects.length <= 1) return null
-
+  // Always show all dialects — when a specific voice isn't available,
+  // findVoiceForDialect already falls back to any Spanish voice.
   return (
     <div className="flex items-center gap-1.5 flex-wrap">
       <span className="text-xs text-gray-500 font-semibold mr-1">Accent:</span>
-      {uniqueDialects.map(d => (
+      {DIALECTS.map(d => (
         <button
           key={d.code}
           onClick={() => onChange(d.code)}

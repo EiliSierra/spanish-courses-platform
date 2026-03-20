@@ -44,7 +44,7 @@ Generate personalized sentences for each word.`
         'X-Title': 'Alexandria Language Institute',
       },
       body: JSON.stringify({
-        model: 'openai/gpt-4o',
+        model: 'nvidia/nemotron-nano-12b-v2-vl:free',
         messages: [
           { role: 'system', content: systemPrompt },
           { role: 'user', content: userPrompt },
