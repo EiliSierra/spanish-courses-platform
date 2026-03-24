@@ -43,7 +43,7 @@ Rules:
         'X-Title': 'Alexandria Language Institute',
       },
       body: JSON.stringify({
-        model: 'nvidia/nemotron-nano-12b-v2-vl:free',
+        model: 'google/gemini-2.5-flash',
         messages: apiMessages,
         temperature: 0.7,
         max_tokens: 300,

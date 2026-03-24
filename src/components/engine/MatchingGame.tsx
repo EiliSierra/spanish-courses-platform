@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useCallback, useRef } from 'react'
+import { useState, useCallback, useRef, useEffect } from 'react'
 import type { MatchPair } from '@/lib/types/lesson'
 import { spawnConfetti } from '@/components/ui/Confetti'
 
@@ -25,9 +25,15 @@ export default function MatchingGame({ pairs, labels, onComplete }: MatchingGame
   const [matched, setMatched] = useState<Set<string>>(new Set())
   const [wrongZone, setWrongZone] = useState<string | null>(null)
   const [dragging, setDragging] = useState<string | null>(null)
-  const [shuffledLeft] = useState(() => shuffle(pairs))
-  const [shuffledRight] = useState(() => shuffle(pairs))
+  // Shuffle only on client to avoid hydration mismatch
+  const [shuffledLeft, setShuffledLeft] = useState(pairs)
+  const [shuffledRight, setShuffledRight] = useState(pairs)
   const scoreRef = useRef(0)
+
+  useEffect(() => {
+    setShuffledLeft(shuffle(pairs))
+    setShuffledRight(shuffle(pairs))
+  }, [pairs])
 
   const handleDrop = useCallback(
     (leftText: string, targetRight: string) => {

@@ -40,9 +40,26 @@ export default function FlashcardGrid({ groups, phraseByAudio, audioBase }: Flas
     setFlipped(new Set())
   }, [])
 
+  // Speech API overrides for letters the browser can't pronounce from their symbol alone
+  const LETTER_SPEECH: Record<string, string> = {
+    'Ñ': 'eñe', 'LL': 'elle', 'RR': 'doble erre', 'CH': 'che', 'Y': 'ye',
+  }
+
   const playAudio = useCallback((audio: string) => {
-    new Audio(`${audioBase}/${audio}.mp3`).play().catch(() => {})
-  }, [audioBase])
+    const phrase = phraseByAudio[audio]
+    const isLetter = phrase && phrase.spanish.length <= 2
+    if (isLetter && phrase) {
+      // Use Speech API for single letters — MP3s have "la letra" prefix
+      window.speechSynthesis.cancel()
+      const text = LETTER_SPEECH[phrase.spanish] ?? phrase.spanish
+      const utterance = new SpeechSynthesisUtterance(text)
+      utterance.lang = 'es-MX'
+      utterance.rate = 0.95
+      window.speechSynthesis.speak(utterance)
+    } else {
+      new Audio(`${audioBase}/${audio}.mp3`).play().catch(() => {})
+    }
+  }, [audioBase, phraseByAudio])
 
   return (
     <section id="flashcards">

@@ -62,10 +62,24 @@ function findVoiceForDialect(langCode: string): SpeechSynthesisVoice | null {
   return null
 }
 
+// Example words that showcase dialectal differences for letters/digraphs
+// When a letter is too short for TTS to differentiate accents, speak a word instead
+// Override Speech API text for letters it can't pronounce correctly on its own
+const DIALECT_EXAMPLES: Record<string, string> = {
+  'Ñ': 'eñe',
+  'LL': 'elle',
+  'RR': 'doble erre',
+  'CH': 'che',
+  'Y': 'ye',
+}
+
 function speakWithDialect(text: string, langCode: string) {
   window.speechSynthesis.cancel()
 
-  const utterance = new SpeechSynthesisUtterance(text)
+  // For single letters/digraphs, speak an example word so dialect differences are audible
+  const speakText = DIALECT_EXAMPLES[text] ?? text
+
+  const utterance = new SpeechSynthesisUtterance(speakText)
   utterance.lang = langCode
   utterance.rate = 0.95
 
@@ -84,15 +98,17 @@ function PhraseCard({ item, color, audioBase, dialect }: { item: PhraseData; col
   const audioRef = useRef<HTMLAudioElement | null>(null)
 
   const handleClick = useCallback(() => {
-    if (dialect === 'default') {
-      // Play original MP3
+    // For single letters/digraphs, always use Speech API (MP3s have "la letra" prefix)
+    const isLetter = item.spanish.length <= 2
+    if (dialect === 'default' && !isLetter) {
+      // Play original MP3 for phrases/words
       if (audioRef.current) { audioRef.current.pause(); audioRef.current.currentTime = 0 }
       const audio = new Audio(`${audioBase}/${item.audio}.mp3`)
       audioRef.current = audio
       audio.play().catch(() => {})
     } else {
-      // Use Web Speech API with selected dialect
-      speakWithDialect(item.spanish, dialect)
+      // Use Web Speech API — for letters always, for phrases when non-default dialect
+      speakWithDialect(item.spanish, dialect === 'default' ? 'es-MX' : dialect)
     }
     setActive(true)
     setTimeout(() => setActive(false), 800)

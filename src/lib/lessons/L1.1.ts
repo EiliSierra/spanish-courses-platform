@@ -58,7 +58,8 @@ export const L11Data: LessonData = {
     { afterSection: 'unique', text: 'Now you know the full alphabet! Time to sharpen your pronunciation with key tips.' },
     { afterSection: 'pronunciation-tips', text: 'Nice work on the tips. Let\'s put your knowledge to the test with interactive practice.' },
     { afterSection: 'dialogues', text: 'You just heard real Spanish spelling in action. Let\'s explore some cultural facts about the alphabet.' },
-    { afterSection: 'cultural', text: 'Final stretch \u2014 let\'s see how much you\'ve learned!' },
+    { afterSection: 'cultural', text: 'Time to put your spelling skills to the test!' },
+    { afterSection: 'spelling-challenge', text: 'Final stretch \u2014 let\'s see how much you\'ve learned!' },
   ],
   personalizedVocab: [
     { spanish: 'A, E, I, O, U', english: 'The five vowels' },
@@ -96,6 +97,7 @@ export const L11Data: LessonData = {
     { id: 'letter-sorting', label: 'Letter Sorting' },
     { id: 'dialogues', label: 'Real-World Dialogues' },
     { id: 'cultural', label: 'The Alphabet in Action' },
+    { id: 'spelling-challenge', label: 'Spelling Challenge' },
     { id: 'knowledge-check', label: 'Knowledge Check' },
   ],
   audioBase: '/audio/L1.1/letters',
@@ -228,10 +230,10 @@ export const L11Data: LessonData = {
       title: 'Spelling Practice \u2014 In the Classroom',
       location: 'Classroom',
       lines: [
-        { speaker: 'Teacher', text: 'Vamos a deletrear palabras en espa\u00f1ol. \u00bfC\u00f3mo se escribe guitarra?', audio: '/audio/L1.1/dialogue_1_0.mp3' },
+        { speaker: 'Teacher', text: '\u00bfC\u00f3mo se escribe guitarra?', audio: '/audio/L1.1/dialogue_1_0.mp3' },
         { speaker: 'Student', text: 'Se escribe: ge, u, i, te, a, erre, erre, a.', audio: '/audio/L1.1/dialogue_1_1.mp3' },
-        { speaker: 'Teacher', text: 'Muy bien. \u00bfY queso?', audio: '/audio/L1.1/dialogue_1_2.mp3' },
-        { speaker: 'Student', text: 'Cu, u, e, ese, o.', audio: '/audio/L1.1/dialogue_1_3.mp3' },
+        { speaker: 'Teacher', text: 'Muy bien. \u00bfY hola?', audio: '/audio/L1.1/dialogue_1_2.mp3' },
+        { speaker: 'Student', text: 'Hache, o, ele, a.', audio: '/audio/L1.1/dialogue_1_3.mp3' },
         { speaker: 'Teacher', text: 'Excelente. Ahora una dif\u00edcil: zapato.', audio: '/audio/L1.1/dialogue_1_4.mp3' },
         { speaker: 'Student', text: 'Zeta, a, pe, a, te, o.', audio: '/audio/L1.1/dialogue_1_5.mp3' },
         { speaker: 'Teacher', text: '\u00a1Perfecto! Ya conoces bien las letras.', audio: '/audio/L1.1/dialogue_1_6.mp3' },
@@ -271,6 +273,12 @@ export const L11Data: LessonData = {
     { id: 14, type: 'mc', text: '"G" before "e" or "i" sounds:', options: ['Hard like "go"', 'Soft, similar to "h"', 'Like "j" in English', 'Silent'], answer: 1 },
     { id: 15, type: 'tf', text: 'Each Spanish vowel has only one consistent sound.', answer: true },
   ],
+  uniqueActivity: {
+    id: 'SpellingChallengeL11',
+    sectionId: 'spelling-challenge',
+    sectionColor: 'bg-blue-50/40',
+    sectionBorder: 'border-blue-100',
+  },
   sectionColors: {
     'objectives': { bg: 'bg-white', border: '' },
     'personalized-context': { bg: 'bg-violet-50/30', border: 'border-violet-100' },
@@ -284,9 +292,78 @@ export const L11Data: LessonData = {
     'letter-sorting': { bg: 'bg-blue-50/30', border: 'border-blue-100' },
     'dialogues': { bg: 'bg-purple-50/30', border: 'border-purple-100' },
     'cultural': { bg: 'bg-rose-50/30', border: 'border-rose-100' },
+    'spelling-challenge': { bg: 'bg-blue-50/40', border: 'border-blue-100' },
     'knowledge-check': { bg: 'bg-indigo-50/40', border: 'border-indigo-100' },
   },
 }
 
 // Export phrase lookup for flashcard component
 export const L11PhraseByAudio = phraseByAudio
+
+// Spelling Challenge rounds — student hears a word, must spell it using letter names
+export const SPELLING_CHALLENGE_ROUNDS = [
+  {
+    word: 'Hola',
+    english: 'Hello',
+    audio: 'hola',
+    spelling: ['H', 'O', 'L', 'A'],
+    options: ['H', 'O', 'L', 'A', 'E', 'N', 'S', 'R'],
+    hint: '4 letters',
+  },
+  {
+    word: 'Niño',
+    english: 'Child / Boy',
+    audio: 'nino',
+    spelling: ['N', 'I', 'Ñ', 'O'],
+    options: ['N', 'I', 'Ñ', 'O', 'A', 'E', 'L', 'R'],
+    hint: '4 letters — includes a unique Spanish letter',
+  },
+  {
+    word: 'Queso',
+    english: 'Cheese',
+    audio: 'queso',
+    spelling: ['Q', 'U', 'E', 'S', 'O'],
+    options: ['Q', 'U', 'E', 'S', 'O', 'A', 'I', 'C'],
+    hint: '5 letters — starts with QU',
+  },
+  {
+    word: 'Calle',
+    english: 'Street',
+    audio: 'calle',
+    spelling: ['C', 'A', 'L', 'L', 'E'],
+    options: ['C', 'A', 'L', 'L', 'E', 'O', 'N', 'R'],
+    hint: '5 letters — has a double letter',
+  },
+  {
+    word: 'Perro',
+    english: 'Dog',
+    audio: 'perro-vs-pero',
+    spelling: ['P', 'E', 'R', 'R', 'O'],
+    options: ['P', 'E', 'R', 'R', 'O', 'A', 'L', 'S'],
+    hint: '5 letters — has RR',
+  },
+  {
+    word: 'Guitarra',
+    english: 'Guitar',
+    audio: 'guitarra',
+    spelling: ['G', 'U', 'I', 'T', 'A', 'R', 'R', 'A'],
+    options: ['G', 'U', 'I', 'T', 'A', 'R', 'R', 'A', 'E', 'O'],
+    hint: '8 letters — GU + I, double RR',
+  },
+  {
+    word: 'Zapato',
+    english: 'Shoe',
+    audio: 'zapato',
+    spelling: ['Z', 'A', 'P', 'A', 'T', 'O'],
+    options: ['Z', 'A', 'P', 'A', 'T', 'O', 'E', 'S'],
+    hint: '6 letters — starts with Z',
+  },
+  {
+    word: 'México',
+    english: 'Mexico',
+    audio: 'mexico',
+    spelling: ['M', 'É', 'X', 'I', 'C', 'O'],
+    options: ['M', 'É', 'X', 'I', 'C', 'O', 'A', 'E'],
+    hint: '6 letters — the X sounds like "h"',
+  },
+]
