@@ -22,6 +22,7 @@ import LessonL13Content from '@/components/lessonL13/LessonPage'
 import LessonShell from '@/components/engine/LessonShell'
 import { L11Data, L11PhraseByAudio } from '@/lib/lessons/L1.1'
 import { L12Data, L12PhraseByAudio } from '@/lib/lessons/L1.2'
+import { L13Data, L13PhraseByAudio } from '@/lib/lessons/L1.3'
 import { L14Data, L14PhraseByAudio } from '@/lib/lessons/L1.4'
 import { L15Data, L15PhraseByAudio } from '@/lib/lessons/L1.5'
 import { SECTIONS } from '@/lib/lesson-data'
@@ -34,7 +35,7 @@ function LessonContent() {
   // Route to specific lessons
   if (lessonId === 'L1.1') return <LessonShell data={L11Data} phraseByAudio={L11PhraseByAudio} />
   if (lessonId === 'L1.2') return <LessonShell data={L12Data} phraseByAudio={L12PhraseByAudio} />
-  if (lessonId === 'L1.3') return <LessonL13Content />
+  if (lessonId === 'L1.3') return <LessonShell data={L13Data} phraseByAudio={L13PhraseByAudio} />
   if (lessonId === 'L1.4') return <LessonShell data={L14Data} phraseByAudio={L14PhraseByAudio} />
   if (lessonId === 'L1.5') return <LessonShell data={L15Data} phraseByAudio={L15PhraseByAudio} />
   const { sectionStates, progressPct, markVisited, markCompleted, setQuizScore } = useLessonProgress(lessonId)
