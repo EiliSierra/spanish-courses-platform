@@ -8,6 +8,7 @@ const REGISTRY: Record<string, () => Promise<{ default: UniqueActivityComponent 
   SpellingChallengeL11: () => import('./SpellingChallengeL11'),
   ConversationBuilderL12: () => import('./ConversationBuilderL12'),
   NumberDictationL13: () => import('./NumberDictationL13'),
+  DirectionRaceL15: () => import('./DirectionRaceL15'),
 }
 
 export function getUniqueActivity(id: string) {
