@@ -60,7 +60,7 @@ export const L14Data: LessonData = {
     title: 'At the Cafe',
     subtitle: 'Ordering food, drinks & paying the bill',
     description: 'Learn to order at a cafe, ask for the check, and navigate real dining situations across the Spanish-speaking world.',
-    image: '/images/L1.4/hero-cafe.png',
+    image: '/images/L1.4/L1.4.jpg',
     gradient: 'from-amber-800/65 via-orange-700/55 to-yellow-700/65',
     accentColor: 'amber-200',
   },
