@@ -2,13 +2,13 @@ import type { LessonData } from '@/lib/types/lesson'
 
 const PHRASES = [
   // Immediate Family
-  { spanish: 'La mamá / La madre', english: 'Mom / Mother', pronunciation: 'lah mah-MAH / lah MAH-dreh', category: 'immediate', audio: 'la-mama' },
-  { spanish: 'El papá / El padre', english: 'Dad / Father', pronunciation: 'ehl pah-PAH / ehl PAH-dreh', category: 'immediate', audio: 'el-papa' },
+  { spanish: 'La mamá (la madre)', english: 'Mom / Mother', pronunciation: 'lah mah-MAH', category: 'immediate', audio: 'la-mama' },
+  { spanish: 'El papá (el padre)', english: 'Dad / Father', pronunciation: 'ehl pah-PAH', category: 'immediate', audio: 'el-papa' },
   { spanish: 'El hermano', english: 'Brother', pronunciation: 'ehl ehr-MAH-noh', category: 'immediate', audio: 'el-hermano' },
   { spanish: 'La hermana', english: 'Sister', pronunciation: 'lah ehr-MAH-nah', category: 'immediate', audio: 'la-hermana' },
   { spanish: 'El hijo', english: 'Son', pronunciation: 'ehl EE-hoh', category: 'immediate', audio: 'el-hijo' },
   { spanish: 'La hija', english: 'Daughter', pronunciation: 'lah EE-hah', category: 'immediate', audio: 'la-hija' },
-  { spanish: 'El esposo / El marido', english: 'Husband', pronunciation: 'ehl ehs-POH-soh / ehl mah-REE-doh', category: 'immediate', audio: 'el-esposo' },
+  { spanish: 'El esposo (el marido)', english: 'Husband', pronunciation: 'ehl ehs-POH-soh', category: 'immediate', audio: 'el-esposo' },
   { spanish: 'La esposa', english: 'Wife', pronunciation: 'lah ehs-POH-sah', category: 'immediate', audio: 'la-esposa' },
   { spanish: 'El bebé', english: 'Baby', pronunciation: 'ehl beh-BEH', category: 'immediate', audio: 'el-bebe' },
   // Extended Family
@@ -26,15 +26,15 @@ const PHRASES = [
   { spanish: 'Mi familia', english: 'My family', pronunciation: 'mee fah-MEE-lee-ah', category: 'describing', audio: 'mi-familia' },
   { spanish: 'Mi mamá se llama...', english: 'My mom\'s name is...', pronunciation: 'mee mah-MAH seh YAH-mah', category: 'describing', audio: 'mi-mama-se-llama' },
   { spanish: 'Tengo dos hermanos', english: 'I have two siblings', pronunciation: 'TEHN-goh dohs ehr-MAH-nohs', category: 'describing', audio: 'tengo-dos-hermanos' },
-  { spanish: 'Soy hijo/a único/a', english: 'I am an only child', pronunciation: 'soy EE-hoh OO-nee-koh', category: 'describing', audio: 'soy-hijo-unico' },
+  { spanish: 'Soy hijo único', english: 'I am an only child', pronunciation: 'soy EE-hoh OO-nee-koh', category: 'describing', audio: 'soy-hijo-unico' },
   { spanish: 'Vivimos juntos', english: 'We live together', pronunciation: 'bee-BEE-mohs HOON-tohs', category: 'describing', audio: 'vivimos-juntos' },
   { spanish: 'Mi hermano es mayor', english: 'My brother is older', pronunciation: 'mee ehr-MAH-noh ehs mah-YOHR', category: 'describing', audio: 'mi-hermano-es-mayor' },
   { spanish: 'Mi hermana es menor', english: 'My sister is younger', pronunciation: 'mee ehr-MAH-nah ehs meh-NOHR', category: 'describing', audio: 'mi-hermana-es-menor' },
   // Possessives & Key Phrases
-  { spanish: 'Mi / Mis', english: 'My (singular / plural)', pronunciation: 'mee / mees', category: 'possessive', audio: 'mi-mis' },
-  { spanish: 'Tu / Tus', english: 'Your (singular / plural)', pronunciation: 'too / toos', category: 'possessive', audio: 'tu-tus' },
-  { spanish: 'Su / Sus', english: 'His/Her/Their (sing. / pl.)', pronunciation: 'soo / soos', category: 'possessive', audio: 'su-sus' },
-  { spanish: 'Nuestro/a', english: 'Our', pronunciation: 'NWEHS-troh / NWEHS-trah', category: 'possessive', audio: 'nuestro' },
+  { spanish: 'Mi, Mis', english: 'My (singular, plural)', pronunciation: 'mee, mees', category: 'possessive', audio: 'mi-mis' },
+  { spanish: 'Tu, Tus', english: 'Your (singular, plural)', pronunciation: 'too, toos', category: 'possessive', audio: 'tu-tus' },
+  { spanish: 'Su, Sus', english: 'His/Her/Their (sing., pl.)', pronunciation: 'soo, soos', category: 'possessive', audio: 'su-sus' },
+  { spanish: 'Nuestro, Nuestra', english: 'Our', pronunciation: 'NWEHS-troh, NWEHS-trah', category: 'possessive', audio: 'nuestro' },
   { spanish: '¿Tienes hermanos?', english: 'Do you have siblings?', pronunciation: 'tee-EH-nehs ehr-MAH-nohs', category: 'possessive', audio: 'tienes-hermanos' },
   { spanish: '¿Cómo se llama tu mamá?', english: 'What is your mom\'s name?', pronunciation: 'KOH-moh seh YAH-mah too mah-MAH', category: 'possessive', audio: 'como-se-llama-tu-mama' },
 ]
