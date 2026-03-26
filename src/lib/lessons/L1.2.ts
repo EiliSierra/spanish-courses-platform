@@ -27,7 +27,7 @@ const PHRASES = [
   // Introductions
   { spanish: 'Me llamo...', english: 'My name is...', pronunciation: 'meh YAH-moh', category: 'introduction', audio: 'me-llamo' },
   { spanish: 'Mucho gusto', english: 'Nice to meet you', pronunciation: 'MOO-choh GOOS-toh', category: 'introduction', audio: 'mucho-gusto' },
-  { spanish: 'Encantado/a', english: 'Delighted to meet you', pronunciation: 'ehn-kahn-TAH-doh', category: 'introduction', audio: 'encantado' },
+  { spanish: 'Encantado', english: 'Delighted to meet you', pronunciation: 'ehn-kahn-TAH-doh', category: 'introduction', audio: 'encantado' },
   { spanish: 'Soy de...', english: "I'm from...", pronunciation: 'soy deh', category: 'introduction', audio: 'soy-de' },
   { spanish: '¿Cómo te llamas?', english: "What's your name? (informal)", pronunciation: 'KOH-moh teh YAH-mahs', category: 'introduction', audio: 'como-te-llamas' },
   { spanish: '¿Cómo se llama?', english: "What's your name? (formal)", pronunciation: 'KOH-moh seh YAH-mah', category: 'introduction', audio: 'como-se-llama' },
@@ -83,10 +83,10 @@ export const L12Data: LessonData = {
     { afterSection: 'conversation-builder', text: 'Final stretch — let\'s check how much you\'ve learned!' },
   ],
   personalizedVocab: [
-    { spanish: 'Hola / Buenos días', english: 'Hello / Good morning' },
+    { spanish: 'Hola, Buenos días', english: 'Hello / Good morning' },
     { spanish: 'Me llamo...', english: 'My name is...' },
     { spanish: 'Mucho gusto', english: 'Nice to meet you' },
-    { spanish: 'Gracias / Por favor', english: 'Thank you / Please' },
+    { spanish: 'Gracias, Por favor', english: 'Thank you / Please' },
     { spanish: '¿De dónde eres?', english: 'Where are you from?' },
     { spanish: 'No entiendo', english: "I don't understand" },
   ],

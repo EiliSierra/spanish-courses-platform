@@ -45,7 +45,7 @@ const PHRASES = [
   { spanish: 'Más agua, por favor', english: 'More water, please', pronunciation: 'mahs AH-gwah pohr fah-BOHR', category: 'polite', audio: 'mas-agua-por-favor' },
   { spanish: 'No, gracias', english: 'No, thank you', pronunciation: 'noh GRAH-see-ahs', category: 'polite', audio: 'no-gracias' },
   { spanish: '¡Buen provecho!', english: 'Enjoy your meal!', pronunciation: 'bwehn proh-BEH-choh', category: 'polite', audio: 'buen-provecho' },
-  { spanish: 'Estoy satisfecho/a', english: 'I am satisfied / full', pronunciation: 'ehs-TOY sah-tees-FEH-choh', category: 'polite', audio: 'estoy-satisfecho' },
+  { spanish: 'Estoy satisfecho', english: 'I am satisfied / full', pronunciation: 'ehs-TOY sah-tees-FEH-choh', category: 'polite', audio: 'estoy-satisfecho' },
   { spanish: 'La sobremesa', english: 'Time spent talking after a meal', pronunciation: 'lah soh-breh-MEH-sah', category: 'polite', audio: 'la-sobremesa' },
   { spanish: 'Muy amable', english: 'Very kind', pronunciation: 'mooy ah-MAH-bleh', category: 'polite', audio: 'muy-amable' },
 ]

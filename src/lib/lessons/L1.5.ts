@@ -4,7 +4,7 @@ const PHRASES = [
   // Asking for locations
   { spanish: '¿Dónde está...?', english: 'Where is...?', pronunciation: 'DOHN-deh ehs-TAH', category: 'location', audio: 'donde-esta' },
   { spanish: '¿Cómo llego a...?', english: 'How do I get to...?', pronunciation: 'KOH-moh YEH-goh ah', category: 'location', audio: 'como-llego-a' },
-  { spanish: 'Estoy perdido/a', english: 'I am lost', pronunciation: 'ehs-TOY pehr-DEE-doh', category: 'location', audio: 'estoy-perdido' },
+  { spanish: 'Estoy perdido', english: 'I am lost', pronunciation: 'ehs-TOY pehr-DEE-doh', category: 'location', audio: 'estoy-perdido' },
   { spanish: '¿Está lejos?', english: 'Is it far?', pronunciation: 'ehs-TAH LEH-hohs', category: 'location', audio: 'esta-lejos' },
   { spanish: '¿Está cerca?', english: 'Is it close?', pronunciation: 'ehs-TAH SEHR-kah', category: 'location', audio: 'esta-cerca' },
   { spanish: 'Está aquí', english: 'It is here', pronunciation: 'ehs-TAH ah-KEE', category: 'location', audio: 'esta-aqui' },
@@ -12,7 +12,7 @@ const PHRASES = [
   // Directions
   { spanish: 'A la derecha', english: 'To the right', pronunciation: 'ah lah deh-REH-chah', category: 'direction', audio: 'a-la-derecha' },
   { spanish: 'A la izquierda', english: 'To the left', pronunciation: 'ah lah ees-kee-EHR-dah', category: 'direction', audio: 'a-la-izquierda' },
-  { spanish: 'Derecho / Recto', english: 'Straight ahead', pronunciation: 'deh-REH-choh / REHK-toh', category: 'direction', audio: 'derecho' },
+  { spanish: 'Derecho (Recto)', english: 'Straight ahead', pronunciation: 'deh-REH-choh / REHK-toh', category: 'direction', audio: 'derecho' },
   { spanish: 'En la esquina', english: 'On the corner', pronunciation: 'ehn lah ehs-KEE-nah', category: 'direction', audio: 'en-la-esquina' },
   { spanish: 'Al lado de', english: 'Next to', pronunciation: 'ahl LAH-doh deh', category: 'direction', audio: 'al-lado-de' },
   { spanish: 'Enfrente de', english: 'In front of', pronunciation: 'ehn-FREHN-teh deh', category: 'direction', audio: 'enfrente-de' },
@@ -80,8 +80,8 @@ export const L15Data: LessonData = {
   ],
   personalizedVocab: [
     { spanish: '\u00bfD\u00f3nde est\u00e1...?', english: 'Where is...?' },
-    { spanish: 'A la derecha / izquierda', english: 'To the right / left' },
-    { spanish: 'Est\u00e1 cerca / lejos', english: 'It is close / far' },
+    { spanish: 'A la derecha, izquierda', english: 'To the right / left' },
+    { spanish: 'Está cerca, lejos', english: 'It is close / far' },
     { spanish: 'Quiero ir a...', english: 'I want to go to...' },
     { spanish: 'Un taxi, por favor', english: 'A taxi, please' },
     { spanish: 'Pare aqu\u00ed', english: 'Stop here' },

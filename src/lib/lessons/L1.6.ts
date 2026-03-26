@@ -82,9 +82,9 @@ export const L16Data: LessonData = {
   personalizedVocab: [
     { spanish: 'Mi mamá se llama...', english: 'My mom\'s name is...' },
     { spanish: 'Tengo ___ hermanos', english: 'I have ___ siblings' },
-    { spanish: 'Mi familia es grande/pequeña', english: 'My family is big/small' },
+    { spanish: 'Mi familia es grande o pequeña', english: 'My family is big/small' },
     { spanish: 'Vivo con mi...', english: 'I live with my...' },
-    { spanish: 'Mi ___ es mayor/menor', english: 'My ___ is older/younger' },
+    { spanish: 'Mi ___ es mayor o menor', english: 'My ___ is older/younger' },
     { spanish: 'Somos ___ en mi familia', english: 'We are ___ in my family' },
   ],
   pronunciationChallenges: [
