@@ -9,6 +9,7 @@ const REGISTRY: Record<string, () => Promise<{ default: UniqueActivityComponent 
   ConversationBuilderL12: () => import('./ConversationBuilderL12'),
   NumberDictationL13: () => import('./NumberDictationL13'),
   DirectionRaceL15: () => import('./DirectionRaceL15'),
+  PictureMatchL16: () => import('./PictureMatchL16'),
 }
 
 export function getUniqueActivity(id: string) {

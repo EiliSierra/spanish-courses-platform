@@ -25,6 +25,7 @@ import { L12Data, L12PhraseByAudio } from '@/lib/lessons/L1.2'
 import { L13Data, L13PhraseByAudio } from '@/lib/lessons/L1.3'
 import { L14Data, L14PhraseByAudio } from '@/lib/lessons/L1.4'
 import { L15Data, L15PhraseByAudio } from '@/lib/lessons/L1.5'
+import { L16Data, L16PhraseByAudio } from '@/lib/lessons/L1.6'
 import { SECTIONS } from '@/lib/lesson-data'
 import { useParams } from 'next/navigation'
 
@@ -38,6 +39,7 @@ function LessonContent() {
   if (lessonId === 'L1.3') return <LessonShell data={L13Data} phraseByAudio={L13PhraseByAudio} />
   if (lessonId === 'L1.4') return <LessonShell data={L14Data} phraseByAudio={L14PhraseByAudio} />
   if (lessonId === 'L1.5') return <LessonShell data={L15Data} phraseByAudio={L15PhraseByAudio} />
+  if (lessonId === 'L1.6') return <LessonShell data={L16Data} phraseByAudio={L16PhraseByAudio} />
   const { sectionStates, progressPct, markVisited, markCompleted, setQuizScore } = useLessonProgress(lessonId)
   const [activeSection, setActiveSection] = useState('welcome')
   const { showToast } = useToast()
