@@ -11,6 +11,7 @@ const REGISTRY: Record<string, () => Promise<{ default: UniqueActivityComponent 
   DirectionRaceL15: () => import('./DirectionRaceL15'),
   PictureMatchL16: () => import('./PictureMatchL16'),
   MenuBuilderL17: () => import('./MenuBuilderL17'),
+  ScheduleBuilderL18: () => import('./ScheduleBuilderL18'),
 }
 
 export function getUniqueActivity(id: string) {

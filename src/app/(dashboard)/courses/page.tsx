@@ -8,7 +8,7 @@ const LESSONS = [
   { id: 'L1.5', title: 'Getting Around', subtitle: 'Directions & Places', level: 1, available: true },
   { id: 'L1.6', title: 'Family & Relationships', subtitle: 'La Familia', level: 1, available: true },
   { id: 'L1.7', title: 'Food & Drinks', subtitle: 'At the Restaurant', level: 1, available: true },
-  { id: 'L1.8', title: 'Daily Routines', subtitle: 'A Day in Your Life', level: 1, available: false },
+  { id: 'L1.8', title: 'Daily Routines', subtitle: 'A Day in Your Life', level: 1, available: true },
 ]
 
 export default function CoursesPage() {
