@@ -45,6 +45,24 @@ export default function CoursesPage() {
           </div>
         ))}
       </div>
+
+      {/* Final Assessment */}
+      <div className="mt-10">
+        <Link href="/courses/L1.F" className="block group">
+          <div className="bg-gradient-to-r from-indigo-50 to-violet-50 rounded-2xl border-2 border-indigo-200 p-6 shadow-sm hover:shadow-md hover:border-indigo-400 transition-all">
+            <div className="flex items-center gap-4">
+              <span className="text-4xl">🏆</span>
+              <div>
+                <div className="text-xs font-semibold text-indigo-600 mb-1">FINAL ASSESSMENT</div>
+                <h3 className="font-bold text-lg font-[family-name:var(--font-inter)] group-hover:text-indigo-700 transition-colors">
+                  Level 1 — Final Exam
+                </h3>
+                <p className="text-gray-500 text-sm mt-1">25 questions from all 8 lessons. Score 70% to earn your badge!</p>
+              </div>
+            </div>
+          </div>
+        </Link>
+      </div>
     </div>
   )
 }
