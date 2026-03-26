@@ -28,38 +28,48 @@ Rules:
 - Use encouraging language: "Great question!", "You're getting it!", etc.
 - CEFR level: A1 — keep Spanish examples simple`
 
-  const apiMessages = [
-    { role: 'system', content: systemPrompt },
-    ...messages.map((m: { role: string; content: string }) => ({ role: m.role, content: m.content })),
+  const MODELS = [
+    'google/gemini-2.5-flash',
+    'google/gemma-3-27b-it:free',
+    'google/gemma-3-12b-it:free',
   ]
 
-  try {
-    const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${OPENROUTER_API_KEY}`,
-        'Content-Type': 'application/json',
-        'HTTP-Referer': 'https://alexandria-language.com',
-        'X-Title': 'Alexandria Language Institute',
-      },
-      body: JSON.stringify({
-        model: 'google/gemini-2.5-flash',
-        messages: apiMessages,
-        temperature: 0.7,
-        max_tokens: 300,
-      }),
-    })
+  const userMessages = messages.map((m: { role: string; content: string }) => ({ role: m.role, content: m.content }))
 
-    if (!response.ok) {
-      const err = await response.text()
-      return NextResponse.json({ error: `OpenRouter error: ${err}` }, { status: 502 })
+  for (const model of MODELS) {
+    try {
+      const isFreeModel = model.includes(':free')
+      // Free models don't support system messages — prepend to first user message
+      const apiMessages = isFreeModel
+        ? [{ role: 'user', content: `${systemPrompt}\n\n${userMessages.map((m: { role: string; content: string }) => `${m.role}: ${m.content}`).join('\n')}` }]
+        : [{ role: 'system', content: systemPrompt }, ...userMessages]
+
+      const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${OPENROUTER_API_KEY}`,
+          'Content-Type': 'application/json',
+          'HTTP-Referer': 'https://alexandria-language.com',
+          'X-Title': 'Alexandria Language Institute',
+        },
+        body: JSON.stringify({
+          model,
+          messages: apiMessages,
+          temperature: 0.7,
+          max_tokens: 300,
+        }),
+      })
+
+      if (!response.ok) throw new Error(`HTTP ${response.status}`)
+
+      const data = await response.json()
+      const reply = data.choices?.[0]?.message?.content ?? 'Sorry, I couldn\'t process that. Try again!'
+      return NextResponse.json({ reply })
+    } catch (err) {
+      console.warn(`[tutor] Model ${model} failed:`, String(err))
+      continue
     }
-
-    const data = await response.json()
-    const reply = data.choices?.[0]?.message?.content ?? 'Sorry, I couldn\'t process that. Try again!'
-
-    return NextResponse.json({ reply })
-  } catch (err) {
-    return NextResponse.json({ error: `Failed to generate: ${String(err)}` }, { status: 500 })
   }
+
+  return NextResponse.json({ error: 'AI service is temporarily busy. Please try again.' }, { status: 503 })
 }

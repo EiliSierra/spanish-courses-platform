@@ -4,7 +4,9 @@ const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY
 
 // Models to try in order — first that succeeds wins
 const MODELS = [
-  'google/gemini-2.5-flash',              // Fast, cheap, reliable
+  'google/gemini-2.5-flash',              // Fast, cheap, reliable (paid)
+  'google/gemma-3-27b-it:free',           // Free fallback — no system message support
+  'google/gemma-3-12b-it:free',           // Free fallback — smaller but works
 ]
 
 const TIMEOUT_MS = 20000
@@ -109,7 +111,13 @@ Generate personalized sentences for each word.`
   // Try each model until one succeeds
   for (const model of MODELS) {
     try {
-      const data = await callOpenRouter(model, messages, 1500)
+      // Free Gemma models don't support system messages — merge into user
+      const isFreeModel = model.includes(':free')
+      const modelMessages = isFreeModel
+        ? [{ role: 'user', content: `${systemPrompt}\n\n${userPrompt}` }]
+        : messages
+
+      const data = await callOpenRouter(model, modelMessages, 1500)
       const content = data.choices?.[0]?.message?.content ?? '[]'
       const jsonStr = content.replace(/```json?\n?/g, '').replace(/```/g, '').trim()
       const sentences = JSON.parse(jsonStr)

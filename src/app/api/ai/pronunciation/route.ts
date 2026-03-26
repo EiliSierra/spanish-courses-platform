@@ -4,6 +4,8 @@ const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY
 
 const MODELS = [
   'google/gemini-2.5-flash',
+  'google/gemma-3-27b-it:free',
+  'google/gemma-3-12b-it:free',
 ]
 
 const TIMEOUT_MS = 15000
