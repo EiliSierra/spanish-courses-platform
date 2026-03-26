@@ -321,22 +321,24 @@ export default function FinalExam({ questions, totalQuestions, passingScore, tit
             Next →
           </button>
         ) : (
-          <button
-            onClick={() => setPhase('results')}
-            disabled={totalAnswered < totalQuestions}
-            className="px-5 py-2 bg-indigo-600 text-white rounded-lg text-sm font-semibold hover:bg-indigo-700 transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
-          >
-            Submit Exam
-          </button>
+          <div className="w-[70px]" /> /* spacer to keep dots centered */
         )}
       </div>
 
-      {/* Unanswered warning */}
-      {currentQ + 1 === totalQuestions && totalAnswered < totalQuestions && (
-        <p className="text-center text-xs text-amber-600 mt-3">
-          Answer all {totalQuestions} questions to submit. ({totalQuestions - totalAnswered} remaining)
-        </p>
-      )}
+      {/* Submit button — always visible */}
+      <div className="mt-6">
+        <button
+          onClick={() => setPhase('results')}
+          className="w-full py-3 bg-indigo-600 text-white rounded-xl font-semibold hover:bg-indigo-700 transition-colors shadow-md"
+        >
+          Submit Exam ({totalAnswered}/{totalQuestions} answered)
+        </button>
+        {totalAnswered < totalQuestions && (
+          <p className="text-center text-xs text-amber-600 mt-2">
+            {totalQuestions - totalAnswered} unanswered questions will count as incorrect.
+          </p>
+        )}
+      </div>
     </div>
   )
 }
