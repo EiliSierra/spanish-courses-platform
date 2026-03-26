@@ -48,7 +48,7 @@ export const L15Data: LessonData = {
     title: 'Getting Around',
     subtitle: 'Directions, transportation & finding your way',
     description: 'Learn to ask for directions, take a taxi, find places, and navigate a Spanish-speaking city. These are the phrases that will get you from point A to point B.',
-    image: '/images/L1.5/hero-directions-foto.png',
+    image: '/images/L1.5/L1.5.jpg',
     gradient: 'from-sky-800/65 via-blue-700/55 to-indigo-700/65',
     accentColor: 'sky-200',
   },
