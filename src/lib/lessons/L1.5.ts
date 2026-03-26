@@ -336,12 +336,28 @@ export const L15Data: LessonData = {
 
 export const L15PhraseByAudio = phraseByAudio
 
-// Direction Race rounds — student hears directions and selects where they end up
+// Direction Race — visual grid map
+// Grid layout (row, col) — student starts at center (1,1)
+// "Derecho" ALWAYS means UP (north/forward)
+// "A la derecha" = right, "A la izquierda" = left
+//
+//   (0,0) Farmacia   (0,1) Hospital   (0,2) Hotel
+//   (1,0) Banco      (1,1) TÚ         (1,2) Restaurante
+//   (2,0) Metro      (2,1) Parada     (2,2) Supermercado
+export const DIRECTION_RACE_MAP = [
+  [{ emoji: '💊', label: 'La farmacia' }, { emoji: '🏥', label: 'El hospital' }, { emoji: '🏨', label: 'El hotel' }],
+  [{ emoji: '🏦', label: 'El banco' },   { emoji: '📍', label: 'TÚ' },          { emoji: '🍽️', label: 'El restaurante' }],
+  [{ emoji: '🚇', label: 'El metro' },   { emoji: '🚏', label: 'La parada' },   { emoji: '🛒', label: 'El supermercado' }],
+]
+
+// Derecho = UP always. Izquierda = LEFT. Derecha = RIGHT.
 export const DIRECTION_RACE_ROUNDS = [
-  { instruction: 'Derecho y a la derecha', correct: 'El banco', options: ['El banco', 'La farmacia', 'El hotel', 'El hospital'] },
-  { instruction: 'A la izquierda, en la esquina', correct: 'La farmacia', options: ['El restaurante', 'La farmacia', 'El supermercado', 'La estaci\u00f3n'] },
-  { instruction: 'Derecho dos cuadras, a la derecha', correct: 'El hotel', options: ['El hospital', 'El banco', 'El hotel', 'El aeropuerto'] },
-  { instruction: 'A la izquierda, al lado del banco', correct: 'El restaurante', options: ['El restaurante', 'La parada', 'El metro', 'El supermercado'] },
-  { instruction: 'Derecho, enfrente de la farmacia', correct: 'El hospital', options: ['El banco', 'El hospital', 'El hotel', 'La estaci\u00f3n'] },
-  { instruction: 'A la derecha, detr\u00e1s del hotel', correct: 'El supermercado', options: ['El supermercado', 'La farmacia', 'El aeropuerto', 'El metro'] },
+  { instruction: 'A la izquierda', correct: 'El banco' },
+  { instruction: 'A la derecha', correct: 'El restaurante' },
+  { instruction: 'Derecho', correct: 'El hospital' },
+  { instruction: 'Derecho y a la izquierda', correct: 'La farmacia' },
+  { instruction: 'Derecho y a la derecha', correct: 'El hotel' },
+  { instruction: 'A la derecha y abajo', correct: 'El supermercado' },
+  { instruction: 'A la izquierda y abajo', correct: 'El metro' },
+  { instruction: 'Abajo y a la derecha', correct: 'El supermercado' },
 ]
