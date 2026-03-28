@@ -31,10 +31,13 @@ export default function FinalExam({ questions, totalQuestions, passingScore, tit
   const [answers, setAnswers] = useState<Record<number, number | boolean | string>>({})
   const [fillInput, setFillInput] = useState('')
 
-  // Pick random questions on start
-  const examQuestions = useMemo(() => {
-    if (phase !== 'exam') return []
-    return shuffle(questions).slice(0, totalQuestions)
+  // Pick random questions on start — persists into results phase
+  const [examQuestions, setExamQuestions] = useState<ExamQuestion[]>([])
+
+  useEffect(() => {
+    if (phase === 'exam' && examQuestions.length === 0) {
+      setExamQuestions(shuffle(questions).slice(0, totalQuestions))
+    }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [phase])
 
@@ -123,7 +126,7 @@ export default function FinalExam({ questions, totalQuestions, passingScore, tit
           </ul>
         </div>
         <button
-          onClick={() => { setPhase('exam'); setCurrentQ(0); setAnswers({}); setFillInput('') }}
+          onClick={() => { setExamQuestions([]); setPhase('exam'); setCurrentQ(0); setAnswers({}); setFillInput('') }}
           className="px-10 py-4 bg-indigo-600 text-white rounded-xl font-bold text-lg hover:bg-indigo-700 transition-colors shadow-lg"
         >
           Start Exam
@@ -190,7 +193,7 @@ export default function FinalExam({ questions, totalQuestions, passingScore, tit
 
         <div className="flex gap-3 justify-center">
           <button
-            onClick={() => { setPhase('intro') }}
+            onClick={() => { setExamQuestions([]); setPhase('intro') }}
             className="px-6 py-3 bg-indigo-600 text-white rounded-xl font-semibold hover:bg-indigo-700 transition-colors"
           >
             {results.passed ? 'Retake Exam' : 'Try Again'}

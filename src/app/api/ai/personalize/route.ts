@@ -1,15 +1,35 @@
 import { NextRequest, NextResponse } from 'next/server'
 
+const OPENAI_API_KEY = process.env.OPENAI_API_KEY
 const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY
-
-// Models to try in order — first that succeeds wins
-const MODELS = [
-  'google/gemini-2.5-flash',              // Fast, cheap, reliable (paid)
-  'google/gemma-3-27b-it:free',           // Free fallback — no system message support
-  'google/gemma-3-12b-it:free',           // Free fallback — smaller but works
-]
-
 const TIMEOUT_MS = 20000
+
+async function callOpenAI(messages: { role: string; content: string }[], maxTokens: number) {
+  const controller = new AbortController()
+  const timer = setTimeout(() => controller.abort(), TIMEOUT_MS)
+
+  try {
+    const response = await fetch('https://api.openai.com/v1/chat/completions', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${OPENAI_API_KEY}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        model: 'gpt-4o-mini',
+        messages,
+        temperature: 0.7,
+        max_tokens: maxTokens,
+      }),
+      signal: controller.signal,
+    })
+
+    if (!response.ok) throw new Error(`OpenAI HTTP ${response.status}`)
+    return await response.json()
+  } finally {
+    clearTimeout(timer)
+  }
+}
 
 async function callOpenRouter(model: string, messages: { role: string; content: string }[], maxTokens: number) {
   const controller = new AbortController()
@@ -33,11 +53,7 @@ async function callOpenRouter(model: string, messages: { role: string; content: 
       signal: controller.signal,
     })
 
-    if (!response.ok) {
-      const err = await response.text()
-      throw new Error(`HTTP ${response.status}: ${err}`)
-    }
-
+    if (!response.ok) throw new Error(`OpenRouter HTTP ${response.status}`)
     return await response.json()
   } finally {
     clearTimeout(timer)
@@ -45,8 +61,8 @@ async function callOpenRouter(model: string, messages: { role: string; content: 
 }
 
 export async function POST(req: NextRequest) {
-  if (!OPENROUTER_API_KEY) {
-    return NextResponse.json({ error: 'API key not configured' }, { status: 500 })
+  if (!OPENAI_API_KEY && !OPENROUTER_API_KEY) {
+    return NextResponse.json({ error: 'No API key configured' }, { status: 500 })
   }
 
   const { words, context, lessonId } = await req.json()
@@ -83,7 +99,9 @@ Rules:
 - Create exactly ONE Spanish sentence per word, followed by its English translation
 - The sentence MUST use the vocabulary word naturally
 - Adapt the context to the student's profile/interest
-- Keep sentences at A1 CEFR level (simple present, basic structures)
+- CRITICAL: Keep sentences VERY SHORT — maximum 5 to 7 Spanish words per sentence
+- CEFR level A1: only simple present tense, basic structures, no complex grammar
+- No compound sentences, no subordinate clauses, no relative pronouns
 - Use vocabulary from earlier lessons when possible (greetings, numbers, polite phrases)
 - Format each as: {"word": "...", "spanish": "...", "english": "...", "connection": "..."}
 - "connection" is a brief note explaining why this sentence fits their context
@@ -108,23 +126,41 @@ Generate personalized sentences for each word.`
     { role: 'user', content: userPrompt },
   ]
 
-  // Try each model until one succeeds
-  for (const model of MODELS) {
-    try {
-      // Free Gemma models don't support system messages — merge into user
-      const isFreeModel = model.includes(':free')
-      const modelMessages = isFreeModel
-        ? [{ role: 'user', content: `${systemPrompt}\n\n${userPrompt}` }]
-        : messages
+  function parseJSON(content: string) {
+    const jsonStr = content.replace(/```json?\n?/g, '').replace(/```/g, '').trim()
+    return JSON.parse(jsonStr)
+  }
 
-      const data = await callOpenRouter(model, modelMessages, 1500)
+  // 1) Try OpenAI direct (gpt-4o-mini)
+  if (OPENAI_API_KEY) {
+    try {
+      const data = await callOpenAI(messages, 1500)
       const content = data.choices?.[0]?.message?.content ?? '[]'
-      const jsonStr = content.replace(/```json?\n?/g, '').replace(/```/g, '').trim()
-      const sentences = JSON.parse(jsonStr)
+      const sentences = parseJSON(content)
       return NextResponse.json({ sentences })
     } catch (err) {
-      console.warn(`[personalize] Model ${model} failed:`, String(err))
-      continue
+      console.warn('[personalize] OpenAI gpt-4o-mini failed:', String(err))
+    }
+  }
+
+  // 2) Fallback to OpenRouter free models
+  if (OPENROUTER_API_KEY) {
+    const fallbackModels = ['google/gemma-3-27b-it:free', 'google/gemma-3-12b-it:free']
+    for (const model of fallbackModels) {
+      try {
+        const isFreeModel = model.includes(':free')
+        const modelMessages = isFreeModel
+          ? [{ role: 'user', content: `${systemPrompt}\n\n${userPrompt}` }]
+          : messages
+
+        const data = await callOpenRouter(model, modelMessages, 1500)
+        const content = data.choices?.[0]?.message?.content ?? '[]'
+        const sentences = parseJSON(content)
+        return NextResponse.json({ sentences })
+      } catch (err) {
+        console.warn(`[personalize] OpenRouter ${model} failed:`, String(err))
+        continue
+      }
     }
   }
 

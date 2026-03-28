@@ -1,10 +1,6 @@
 import Link from 'next/link'
-import { auth } from '@clerk/nextjs/server'
 
-export default async function LandingPage() {
-  const { userId } = await auth()
-  const isSignedIn = !!userId
-
+export default function LandingPage() {
   return (
     <main className="min-h-screen">
       {/* Hero */}
@@ -20,34 +16,17 @@ export default async function LandingPage() {
               and real-world dialogues. No boring textbooks — just engaging, hands-on learning.
             </p>
             <div className="mt-10 flex gap-4 flex-wrap">
-              {isSignedIn ? (
-                <Link
-                  href="/courses"
-                  className="inline-flex items-center px-8 py-4 bg-white text-blue-700 font-bold rounded-xl shadow-lg hover:shadow-xl hover:bg-blue-50 transition-all text-lg"
-                >
-                  Go to My Courses
-                </Link>
-              ) : (
-                <>
-                  <Link
-                    href="/sign-up"
-                    className="inline-flex items-center px-8 py-4 bg-white text-blue-700 font-bold rounded-xl shadow-lg hover:shadow-xl hover:bg-blue-50 transition-all text-lg"
-                  >
-                    Start Learning Free
-                  </Link>
-                  <Link
-                    href="/sign-in"
-                    className="inline-flex items-center px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-xl hover:bg-white/10 transition-all text-lg"
-                  >
-                    Sign In
-                  </Link>
-                </>
-              )}
+              <Link
+                href="/courses"
+                className="inline-flex items-center px-8 py-4 bg-white text-blue-700 font-bold rounded-xl shadow-lg hover:shadow-xl hover:bg-blue-50 transition-all text-lg"
+              >
+                Go to My Courses
+              </Link>
             </div>
           </div>
         </div>
         {/* Decorative wave */}
-        <div className="absolute bottom-0 left-0 right-0">
+        <div className="absolute bottom-0 left-0 right-0 pointer-events-none">
           <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0 120L60 105C120 90 240 60 360 52.5C480 45 600 60 720 67.5C840 75 960 75 1080 67.5C1200 60 1320 45 1380 37.5L1440 30V120H0Z" fill="#f9fafb"/>
           </svg>

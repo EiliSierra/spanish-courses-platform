@@ -1,10 +1,73 @@
 import { NextRequest, NextResponse } from 'next/server'
 
+const OPENAI_API_KEY = process.env.OPENAI_API_KEY
 const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY
+const TIMEOUT_MS = 15000
+
+async function callOpenAI(messages: { role: string; content: string }[], maxTokens: number) {
+  const controller = new AbortController()
+  const timer = setTimeout(() => controller.abort(), TIMEOUT_MS)
+
+  try {
+    const response = await fetch('https://api.openai.com/v1/chat/completions', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${OPENAI_API_KEY}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        model: 'gpt-4o-mini',
+        messages,
+        temperature: 0.7,
+        max_tokens: maxTokens,
+      }),
+      signal: controller.signal,
+    })
+
+    if (!response.ok) throw new Error(`OpenAI HTTP ${response.status}`)
+    return await response.json()
+  } finally {
+    clearTimeout(timer)
+  }
+}
+
+async function callOpenRouter(model: string, messages: { role: string; content: string }[], maxTokens: number) {
+  const controller = new AbortController()
+  const timer = setTimeout(() => controller.abort(), TIMEOUT_MS)
+
+  try {
+    const isFreeModel = model.includes(':free')
+    const apiMessages = isFreeModel
+      ? [{ role: 'user', content: messages.map(m => `${m.role}: ${m.content}`).join('\n') }]
+      : messages
+
+    const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${OPENROUTER_API_KEY}`,
+        'Content-Type': 'application/json',
+        'HTTP-Referer': 'https://alexandria-language.com',
+        'X-Title': 'Alexandria Language Institute',
+      },
+      body: JSON.stringify({
+        model,
+        messages: apiMessages,
+        temperature: 0.7,
+        max_tokens: maxTokens,
+      }),
+      signal: controller.signal,
+    })
+
+    if (!response.ok) throw new Error(`OpenRouter HTTP ${response.status}`)
+    return await response.json()
+  } finally {
+    clearTimeout(timer)
+  }
+}
 
 export async function POST(req: NextRequest) {
-  if (!OPENROUTER_API_KEY) {
-    return NextResponse.json({ error: 'API key not configured' }, { status: 500 })
+  if (!OPENAI_API_KEY && !OPENROUTER_API_KEY) {
+    return NextResponse.json({ error: 'No API key configured' }, { status: 500 })
   }
 
   const { messages, lessonId, lessonTitle } = await req.json()
@@ -28,46 +91,32 @@ Rules:
 - Use encouraging language: "Great question!", "You're getting it!", etc.
 - CEFR level: A1 — keep Spanish examples simple`
 
-  const MODELS = [
-    'google/gemini-2.5-flash',
-    'google/gemma-3-27b-it:free',
-    'google/gemma-3-12b-it:free',
-  ]
-
   const userMessages = messages.map((m: { role: string; content: string }) => ({ role: m.role, content: m.content }))
+  const fullMessages = [{ role: 'system', content: systemPrompt }, ...userMessages]
 
-  for (const model of MODELS) {
+  // 1) Try OpenAI direct (gpt-4o-mini — fast & cheap)
+  if (OPENAI_API_KEY) {
     try {
-      const isFreeModel = model.includes(':free')
-      // Free models don't support system messages — prepend to first user message
-      const apiMessages = isFreeModel
-        ? [{ role: 'user', content: `${systemPrompt}\n\n${userMessages.map((m: { role: string; content: string }) => `${m.role}: ${m.content}`).join('\n')}` }]
-        : [{ role: 'system', content: systemPrompt }, ...userMessages]
-
-      const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${OPENROUTER_API_KEY}`,
-          'Content-Type': 'application/json',
-          'HTTP-Referer': 'https://alexandria-language.com',
-          'X-Title': 'Alexandria Language Institute',
-        },
-        body: JSON.stringify({
-          model,
-          messages: apiMessages,
-          temperature: 0.7,
-          max_tokens: 300,
-        }),
-      })
-
-      if (!response.ok) throw new Error(`HTTP ${response.status}`)
-
-      const data = await response.json()
+      const data = await callOpenAI(fullMessages, 300)
       const reply = data.choices?.[0]?.message?.content ?? 'Sorry, I couldn\'t process that. Try again!'
       return NextResponse.json({ reply })
     } catch (err) {
-      console.warn(`[tutor] Model ${model} failed:`, String(err))
-      continue
+      console.warn('[tutor] OpenAI gpt-4o-mini failed:', String(err))
+    }
+  }
+
+  // 2) Fallback to OpenRouter free models
+  if (OPENROUTER_API_KEY) {
+    const fallbackModels = ['google/gemma-3-27b-it:free', 'google/gemma-3-12b-it:free']
+    for (const model of fallbackModels) {
+      try {
+        const data = await callOpenRouter(model, fullMessages, 300)
+        const reply = data.choices?.[0]?.message?.content ?? 'Sorry, I couldn\'t process that. Try again!'
+        return NextResponse.json({ reply })
+      } catch (err) {
+        console.warn(`[tutor] OpenRouter ${model} failed:`, String(err))
+        continue
+      }
     }
   }
 

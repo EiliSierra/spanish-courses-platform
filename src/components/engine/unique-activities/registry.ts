@@ -12,6 +12,9 @@ const REGISTRY: Record<string, () => Promise<{ default: UniqueActivityComponent 
   PictureMatchL16: () => import('./PictureMatchL16'),
   MenuBuilderL17: () => import('./MenuBuilderL17'),
   ScheduleBuilderL18: () => import('./ScheduleBuilderL18'),
+  SymptomCheckerL21: () => import('./SymptomCheckerL21'),
+  WeatherForecastL22: () => import('./WeatherForecastL22'),
+  PlanBuilderL23: () => import('./PlanBuilderL23'),
 }
 
 export function getUniqueActivity(id: string) {

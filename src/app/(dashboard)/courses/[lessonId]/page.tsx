@@ -29,6 +29,9 @@ import { L16Data, L16PhraseByAudio } from '@/lib/lessons/L1.6'
 import { L17Data, L17PhraseByAudio } from '@/lib/lessons/L1.7'
 import { L18Data, L18PhraseByAudio } from '@/lib/lessons/L1.8'
 import { L1F_QUESTION_POOL, L1F_CONFIG } from '@/lib/lessons/L1.F'
+import { L21Data, L21PhraseByAudio } from '@/lib/lessons/L2.1'
+import { L22Data, L22PhraseByAudio } from '@/lib/lessons/L2.2'
+import { L23Data, L23PhraseByAudio } from '@/lib/lessons/L2.3'
 import FinalExam from '@/components/engine/FinalExam'
 import { SECTIONS } from '@/lib/lesson-data'
 import { useParams } from 'next/navigation'
@@ -47,6 +50,9 @@ function LessonContent() {
   if (lessonId === 'L1.7') return <LessonShell data={L17Data} phraseByAudio={L17PhraseByAudio} />
   if (lessonId === 'L1.8') return <LessonShell data={L18Data} phraseByAudio={L18PhraseByAudio} />
   if (lessonId === 'L1.F') return <FinalExam questions={L1F_QUESTION_POOL} {...L1F_CONFIG} />
+  if (lessonId === 'L2.1') return <LessonShell data={L21Data} phraseByAudio={L21PhraseByAudio} />
+  if (lessonId === 'L2.2') return <LessonShell data={L22Data} phraseByAudio={L22PhraseByAudio} />
+  if (lessonId === 'L2.3') return <LessonShell data={L23Data} phraseByAudio={L23PhraseByAudio} />
   const { sectionStates, progressPct, markVisited, markCompleted, setQuizScore } = useLessonProgress(lessonId)
   const [activeSection, setActiveSection] = useState('welcome')
   const { showToast } = useToast()
