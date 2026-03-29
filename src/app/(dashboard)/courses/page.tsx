@@ -15,11 +15,22 @@ const LEVEL2_LESSONS = [
   { id: 'L2.1', title: 'At the Doctor', subtitle: 'Symptoms, Body Parts & Doctor Visits', available: true },
   { id: 'L2.2', title: 'Weather & Seasons', subtitle: 'Climate, Months & Clothing', available: true },
   { id: 'L2.3', title: 'Making Plans', subtitle: 'Invitations & Future Plans', available: true },
-  { id: 'L2.4', title: 'At the Hotel', subtitle: 'Check-in, Rooms & Services', available: false },
-  { id: 'L2.5', title: 'Eating Out', subtitle: 'Restaurant & Full Menu', available: false },
-  { id: 'L2.6', title: 'Phone & Social Media', subtitle: 'Calls, Messages & Technology', available: false },
-  { id: 'L2.7', title: 'Feelings & Opinions', subtitle: 'Emotions & Ser vs. Estar', available: false },
-  { id: 'L2.8', title: 'A Day in Bogot\u00e1', subtitle: 'Review: All of Level 1 + 2', available: false },
+  { id: 'L2.4', title: 'At the Hotel', subtitle: 'Check-in, Rooms & Services', available: true },
+  { id: 'L2.5', title: 'At the Airport', subtitle: 'Flights, Check-in & Boarding', available: true },
+  { id: 'L2.6', title: 'Shopping & Clothing', subtitle: 'Clothes, Colors & Buying Things', available: true },
+  { id: 'L2.7', title: 'Describing People', subtitle: 'Appearance, Personality & Feelings', available: true },
+  { id: 'L2.8', title: 'Work & Professions', subtitle: 'Jobs, Workplace & Career', available: true },
+]
+
+const LEVEL3_LESSONS = [
+  { id: 'L3.1', title: 'Past Tense — Pretérito', subtitle: 'Telling Stories About What Happened', available: true },
+  { id: 'L3.2', title: 'Home & Housing', subtitle: 'Rooms, Furniture & Renting', available: true },
+  { id: 'L3.3', title: 'Technology & Social Media', subtitle: 'Phones, Apps & Internet', available: true },
+  { id: 'L3.4', title: 'Cooking & Recipes', subtitle: 'Ingredients, Kitchen & Instructions', available: true },
+  { id: 'L3.5', title: 'Sports & Hobbies', subtitle: 'Activities, Preferences & Frequency', available: true },
+  { id: 'L3.6', title: 'Environment & Nature', subtitle: 'Animals, Geography & Eco-Actions', available: true },
+  { id: 'L3.7', title: 'Celebrations & Traditions', subtitle: 'Holidays, Parties & Customs', available: true },
+  { id: 'L3.8', title: 'Travel Stories', subtitle: 'Sharing Experiences & Recommendations', available: true },
 ]
 
 export default function CoursesPage() {
@@ -106,6 +117,75 @@ export default function CoursesPage() {
             )}
           </div>
         ))}
+      </div>
+
+      {/* Level 2 Final Assessment */}
+      <div className="mt-10">
+        <Link href="/courses/L2.F" className="block group">
+          <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl border-2 border-green-200 p-6 shadow-sm hover:shadow-md hover:border-green-400 transition-all">
+            <div className="flex items-center gap-4">
+              <span className="text-4xl">🎖️</span>
+              <div>
+                <div className="text-xs font-semibold text-green-600 mb-1">FINAL ASSESSMENT</div>
+                <h3 className="font-bold text-lg font-[family-name:var(--font-inter)] group-hover:text-green-700 transition-colors">
+                  Level 2 — Final Exam
+                </h3>
+                <p className="text-gray-500 text-sm mt-1">25 questions from all 8 lessons. Score 70% to earn your badge!</p>
+              </div>
+            </div>
+          </div>
+        </Link>
+      </div>
+
+      {/* Level 3 — Intermediate Spanish */}
+      <div className="mt-16 mb-8">
+        <h1 className="text-3xl font-bold font-[family-name:var(--font-inter)]">Level 3 — Intermediate Spanish</h1>
+        <p className="text-gray-500 mt-1">8 lessons to reach conversational fluency</p>
+      </div>
+
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        {LEVEL3_LESSONS.map((lesson) => (
+          <div key={lesson.id} className="relative">
+            {lesson.available ? (
+              <Link href={`/courses/${lesson.id}`} className="block group">
+                <div className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md hover:border-amber-300 transition-all">
+                  <div className="text-xs font-semibold text-amber-600 mb-2">{lesson.id}</div>
+                  <h3 className="font-bold text-lg font-[family-name:var(--font-inter)] group-hover:text-amber-700 transition-colors">
+                    {lesson.title}
+                  </h3>
+                  <p className="text-gray-500 text-sm mt-1">{lesson.subtitle}</p>
+                </div>
+              </Link>
+            ) : (
+              <div className="bg-gray-100 rounded-2xl border border-gray-200 p-6 opacity-60 cursor-not-allowed">
+                <div className="text-xs font-semibold text-gray-400 mb-2">{lesson.id}</div>
+                <h3 className="font-bold text-lg font-[family-name:var(--font-inter)] text-gray-500">
+                  {lesson.title}
+                </h3>
+                <p className="text-gray-400 text-sm mt-1">{lesson.subtitle}</p>
+                <span className="mt-3 inline-block text-xs bg-gray-200 text-gray-500 px-3 py-1 rounded-full">Coming Soon</span>
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+
+      {/* Level 3 Final Assessment */}
+      <div className="mt-10">
+        <Link href="/courses/L3.F" className="block group">
+          <div className="bg-gradient-to-r from-amber-50 to-orange-50 rounded-2xl border-2 border-amber-200 p-6 shadow-sm hover:shadow-md hover:border-amber-400 transition-all">
+            <div className="flex items-center gap-4">
+              <span className="text-4xl">🏅</span>
+              <div>
+                <div className="text-xs font-semibold text-amber-600 mb-1">FINAL ASSESSMENT</div>
+                <h3 className="font-bold text-lg font-[family-name:var(--font-inter)] group-hover:text-amber-700 transition-colors">
+                  Level 3 — Final Exam
+                </h3>
+                <p className="text-gray-500 text-sm mt-1">25 questions from all 8 lessons. Score 70% to earn your badge!</p>
+              </div>
+            </div>
+          </div>
+        </Link>
       </div>
     </div>
   )
