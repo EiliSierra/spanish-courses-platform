@@ -32,6 +32,8 @@ const REGISTRY: Record<string, () => Promise<{ default: UniqueActivityComponent 
   SubjunctiveDetectorL42: () => import('./SubjunctiveDetectorL42'),
   RegisterSwitchL43: () => import('./RegisterSwitchL43'),
   HeadlineReaderL44: () => import('./HeadlineReaderL44'),
+  WellnessCoachL45: () => import('./WellnessCoachL45'),
+  BankTellerL46: () => import('./BankTellerL46'),
 }
 
 export function getUniqueActivity(id: string) {

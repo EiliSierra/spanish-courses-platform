@@ -38,8 +38,8 @@ const LEVEL4_LESSONS = [
   { id: 'L4.2', title: 'Subjunctive Mood', subtitle: 'Wishes, Doubts & Recommendations', available: true },
   { id: 'L4.3', title: 'Formal vs Informal', subtitle: 'Tú, Usted & Vos', available: true },
   { id: 'L4.4', title: 'News & Current Events', subtitle: 'Media, Headlines & Opinions', available: true },
-  { id: 'L4.5', title: 'Health & Wellness', subtitle: 'Lifestyle, Mental Health & Habits', available: false },
-  { id: 'L4.6', title: 'Banking & Finance', subtitle: 'Money, Bills & Accounts', available: false },
+  { id: 'L4.5', title: 'Health & Wellness', subtitle: 'Lifestyle, Mental Health & Habits', available: true },
+  { id: 'L4.6', title: 'Banking & Finance', subtitle: 'Money, Bills & Accounts', available: true },
   { id: 'L4.7', title: 'Arts & Entertainment', subtitle: 'Music, Movies & Books', available: false },
   { id: 'L4.8', title: 'Future Plans & Dreams', subtitle: 'Goals, Conditional & Aspirations', available: false },
 ]
