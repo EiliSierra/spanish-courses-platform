@@ -34,6 +34,8 @@ const REGISTRY: Record<string, () => Promise<{ default: UniqueActivityComponent 
   HeadlineReaderL44: () => import('./HeadlineReaderL44'),
   WellnessCoachL45: () => import('./WellnessCoachL45'),
   BankTellerL46: () => import('./BankTellerL46'),
+  CriticCornerL47: () => import('./CriticCornerL47'),
+  DreamBoardL48: () => import('./DreamBoardL48'),
 }
 
 export function getUniqueActivity(id: string) {

@@ -53,6 +53,9 @@ import { L43Data, L43PhraseByAudio } from '@/lib/lessons/L4.3'
 import { L44Data, L44PhraseByAudio } from '@/lib/lessons/L4.4'
 import { L45Data, L45PhraseByAudio } from '@/lib/lessons/L4.5'
 import { L46Data, L46PhraseByAudio } from '@/lib/lessons/L4.6'
+import { L47Data, L47PhraseByAudio } from '@/lib/lessons/L4.7'
+import { L48Data, L48PhraseByAudio } from '@/lib/lessons/L4.8'
+import { L4F_QUESTION_POOL, L4F_CONFIG } from '@/lib/lessons/L4.F'
 import FinalExam from '@/components/engine/FinalExam'
 import { SECTIONS } from '@/lib/lesson-data'
 import { useParams } from 'next/navigation'
@@ -95,6 +98,9 @@ function LessonContent() {
   if (lessonId === 'L4.4') return <LessonShell data={L44Data} phraseByAudio={L44PhraseByAudio} />
   if (lessonId === 'L4.5') return <LessonShell data={L45Data} phraseByAudio={L45PhraseByAudio} />
   if (lessonId === 'L4.6') return <LessonShell data={L46Data} phraseByAudio={L46PhraseByAudio} />
+  if (lessonId === 'L4.7') return <LessonShell data={L47Data} phraseByAudio={L47PhraseByAudio} />
+  if (lessonId === 'L4.8') return <LessonShell data={L48Data} phraseByAudio={L48PhraseByAudio} />
+  if (lessonId === 'L4.F') return <FinalExam questions={L4F_QUESTION_POOL} {...L4F_CONFIG} />
   const { sectionStates, progressPct, markVisited, markCompleted, setQuizScore } = useLessonProgress(lessonId)
   const [activeSection, setActiveSection] = useState('welcome')
   const { showToast } = useToast()
