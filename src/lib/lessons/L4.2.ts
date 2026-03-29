@@ -327,7 +327,7 @@ export const L42Data: LessonData = {
         { speaker: 'Diego', text: 'Buena idea. ¿Quieres que te ayude con la cena primero?', audio: '/audio/L4.2/phrases/d1-line6.mp3' },
         { speaker: 'Mamá', text: 'Me alegra que me ofrezcas ayuda. Sí, necesito que cortes las verduras.', audio: '/audio/L4.2/phrases/d1-line7.mp3' },
         { speaker: 'Diego', text: 'Claro. Ojalá que mañana todo salga bien.', audio: '/audio/L4.2/phrases/d1-line8.mp3' },
-        { speaker: 'Mamá', text: 'Estoy segura de que vas a estar bien. ¡Tú puedes!', audio: '/audio/L4.2/phrases/d1-line9.mp3', annotations: [{ phrase: 'Estoy segura de que', note: 'Certainty = indicative! "vas" is indicative because she is sure.' }] },
+        { speaker: 'Mamá', text: 'Estoy segura de que vas a estar bien. ¡Tú puedes!', audio: '/audio/L4.2/phrases/d1-line9.mp3', annotations: [{ phrase: 'Estoy segura de que', fromLesson: 'L4.2', note: 'Certainty = indicative! "vas" is indicative because she is sure.' }] },
       ],
     },
     {
@@ -339,7 +339,7 @@ export const L42Data: LessonData = {
         { speaker: 'Tomás', text: '¿En serio? No creo que tenga suficiente dinero.', audio: '/audio/L4.2/phrases/d2-line2.mp3' },
         { speaker: 'Valentina', text: 'Es posible que encuentres ofertas en internet. Te sugiero que busques ahora.', audio: '/audio/L4.2/phrases/d2-line3.mp3' },
         { speaker: 'Tomás', text: 'Me encanta que me ayudes con esto. ¿Cuándo es mejor ir?', audio: '/audio/L4.2/phrases/d2-line4.mp3' },
-        { speaker: 'Valentina', text: 'Es mejor que vayas en invierno si querés esquiar.', audio: '/audio/L4.2/phrases/d2-line5.mp3', annotations: [{ phrase: 'querés', note: 'Argentine "voseo": querés = quieres. Common in Buenos Aires!' }] },
+        { speaker: 'Valentina', text: 'Es mejor que vayas en invierno si querés esquiar.', audio: '/audio/L4.2/phrases/d2-line5.mp3', annotations: [{ phrase: 'querés', fromLesson: 'L4.3', note: 'Argentine "voseo": querés = quieres. Common in Buenos Aires!' }] },
         { speaker: 'Tomás', text: 'Espero que haya nieve. Dudo que pueda ir en julio, pero tal vez en agosto.', audio: '/audio/L4.2/phrases/d2-line6.mp3' },
         { speaker: 'Valentina', text: 'Ojalá que puedas ir. Es importante que reserves el hotel con tiempo.', audio: '/audio/L4.2/phrases/d2-line7.mp3', annotations: [{ phrase: 'reserves', fromLesson: 'L2.4', note: 'Hotel reservations from L2.4, now with subjunctive!' }] },
         { speaker: 'Tomás', text: '¡Gracias! Me alegra que conozcas tanto de viajes.', audio: '/audio/L4.2/phrases/d2-line8.mp3' },
