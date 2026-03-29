@@ -28,6 +28,8 @@ const REGISTRY: Record<string, () => Promise<{ default: UniqueActivityComponent 
   EcoQuizL36: () => import('./EcoQuizL36'),
   FestivalMatchL37: () => import('./FestivalMatchL37'),
   PostcardWriterL38: () => import('./PostcardWriterL38'),
+  MemoryLaneL41: () => import('./MemoryLaneL41'),
+  SubjunctiveDetectorL42: () => import('./SubjunctiveDetectorL42'),
 }
 
 export function getUniqueActivity(id: string) {

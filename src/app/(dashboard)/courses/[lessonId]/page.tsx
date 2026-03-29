@@ -47,6 +47,8 @@ import { L36Data, L36PhraseByAudio } from '@/lib/lessons/L3.6'
 import { L37Data, L37PhraseByAudio } from '@/lib/lessons/L3.7'
 import { L38Data, L38PhraseByAudio } from '@/lib/lessons/L3.8'
 import { L3F_QUESTION_POOL, L3F_CONFIG } from '@/lib/lessons/L3.F'
+import { L41Data, L41PhraseByAudio } from '@/lib/lessons/L4.1'
+import { L42Data, L42PhraseByAudio } from '@/lib/lessons/L4.2'
 import FinalExam from '@/components/engine/FinalExam'
 import { SECTIONS } from '@/lib/lesson-data'
 import { useParams } from 'next/navigation'
@@ -83,6 +85,8 @@ function LessonContent() {
   if (lessonId === 'L3.7') return <LessonShell data={L37Data} phraseByAudio={L37PhraseByAudio} />
   if (lessonId === 'L3.8') return <LessonShell data={L38Data} phraseByAudio={L38PhraseByAudio} />
   if (lessonId === 'L3.F') return <FinalExam questions={L3F_QUESTION_POOL} {...L3F_CONFIG} />
+  if (lessonId === 'L4.1') return <LessonShell data={L41Data} phraseByAudio={L41PhraseByAudio} />
+  if (lessonId === 'L4.2') return <LessonShell data={L42Data} phraseByAudio={L42PhraseByAudio} />
   const { sectionStates, progressPct, markVisited, markCompleted, setQuizScore } = useLessonProgress(lessonId)
   const [activeSection, setActiveSection] = useState('welcome')
   const { showToast } = useToast()

@@ -33,6 +33,17 @@ const LEVEL3_LESSONS = [
   { id: 'L3.8', title: 'Travel Stories', subtitle: 'Sharing Experiences & Recommendations', available: true },
 ]
 
+const LEVEL4_LESSONS = [
+  { id: 'L4.1', title: 'Imperfect Tense', subtitle: 'How Things Used to Be', available: true },
+  { id: 'L4.2', title: 'Subjunctive Mood', subtitle: 'Wishes, Doubts & Recommendations', available: true },
+  { id: 'L4.3', title: 'Formal vs Informal', subtitle: 'Tú, Usted & Vos', available: false },
+  { id: 'L4.4', title: 'News & Current Events', subtitle: 'Media, Headlines & Opinions', available: false },
+  { id: 'L4.5', title: 'Health & Wellness', subtitle: 'Lifestyle, Mental Health & Habits', available: false },
+  { id: 'L4.6', title: 'Banking & Finance', subtitle: 'Money, Bills & Accounts', available: false },
+  { id: 'L4.7', title: 'Arts & Entertainment', subtitle: 'Music, Movies & Books', available: false },
+  { id: 'L4.8', title: 'Future Plans & Dreams', subtitle: 'Goals, Conditional & Aspirations', available: false },
+]
+
 export default function CoursesPage() {
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10">
@@ -186,6 +197,39 @@ export default function CoursesPage() {
             </div>
           </div>
         </Link>
+      </div>
+
+      {/* Level 4 — Upper-Intermediate */}
+      <div className="mt-16 mb-8">
+        <h1 className="text-3xl font-bold font-[family-name:var(--font-inter)]">Level 4 — Upper-Intermediate</h1>
+        <p className="text-gray-500 mt-1">8 lessons to master complex Spanish grammar and real-world topics</p>
+      </div>
+
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        {LEVEL4_LESSONS.map((lesson) => (
+          <div key={lesson.id} className="relative">
+            {lesson.available ? (
+              <Link href={`/courses/${lesson.id}`} className="block group">
+                <div className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md hover:border-purple-300 transition-all">
+                  <div className="text-xs font-semibold text-purple-600 mb-2">{lesson.id}</div>
+                  <h3 className="font-bold text-lg font-[family-name:var(--font-inter)] group-hover:text-purple-700 transition-colors">
+                    {lesson.title}
+                  </h3>
+                  <p className="text-gray-500 text-sm mt-1">{lesson.subtitle}</p>
+                </div>
+              </Link>
+            ) : (
+              <div className="bg-gray-100 rounded-2xl border border-gray-200 p-6 opacity-60 cursor-not-allowed">
+                <div className="text-xs font-semibold text-gray-400 mb-2">{lesson.id}</div>
+                <h3 className="font-bold text-lg font-[family-name:var(--font-inter)] text-gray-500">
+                  {lesson.title}
+                </h3>
+                <p className="text-gray-400 text-sm mt-1">{lesson.subtitle}</p>
+                <span className="mt-3 inline-block text-xs bg-gray-200 text-gray-500 px-3 py-1 rounded-full">Coming Soon</span>
+              </div>
+            )}
+          </div>
+        ))}
       </div>
     </div>
   )
