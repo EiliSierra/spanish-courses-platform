@@ -89,11 +89,11 @@ export const L17Data: LessonData = {
   ],
   pronunciationChallenges: [
     { spanish: 'Quiero el pollo asado con arroz', pronunciation: 'kee-EH-roh ehl POH-yoh ah-SAH-doh kohn ah-ROHS', english: 'I want the grilled chicken with rice', audio: 'el-pollo', tip: '"Quiero" from L1.4! "Pollo" = POH-yoh (LL = Y sound). Double R in "arroz" = trilled R.' },
-    { spanish: '¿Tiene opciones sin gluten?', pronunciation: 'tee-EH-neh ohp-see-OH-nehs seen GLOO-tehn', english: 'Do you have gluten-free options?', audio: 'sin-gluten', tip: '"¿Tiene?" from L1.4! "Sin" = without. "Gluten" keeps its original pronunciation.' },
+    { spanish: '¿Tiene postre?', pronunciation: 'tee-EH-neh POHS-treh', english: 'Do you have dessert?', audio: 'sin-gluten', tip: '"¿Tiene?" from L1.4! Simple and practical — just add any noun after "¿Tiene...?"' },
     { spanish: 'El pescado está muy fresco', pronunciation: 'ehl pehs-KAH-doh ehs-TAH mooy FREHS-koh', english: 'The fish is very fresh', audio: 'el-pescado', tip: '"Está" for description of state (L1.5). "Fresco" — the FR blend is the same as English.' },
     { spanish: 'De postre, quiero flan', pronunciation: 'deh POHS-treh kee-EH-roh flahn', english: 'For dessert, I want flan', audio: 'el-postre', tip: '"De" = for/of. "Postre" stress on first syllable: POHS-treh.' },
     { spanish: 'Los camarones están picantes', pronunciation: 'lohs kah-mah-ROH-nehs ehs-TAHN pee-KAHN-tehs', english: 'The shrimp are spicy', audio: 'los-camarones', tip: '"Están" (plural of "está") because "camarones" is plural. Notice the -es ending!' },
-    { spanish: '¿Qué recomienda el mesero?', pronunciation: 'keh reh-koh-mee-EHN-dah ehl meh-SEH-roh', english: 'What does the waiter recommend?', audio: 'que-recomienda', tip: '"Recomienda" — stress on the -MIEN- syllable. The D sounds soft, almost like English "th."' },
+    { spanish: '¿Qué recomienda?', pronunciation: 'keh reh-koh-mee-EHN-dah', english: 'What do you recommend?', audio: 'que-recomienda', tip: '"Recomienda" — stress on the -MIEN- syllable. The D sounds soft, almost like English "th."' },
   ],
   objectives: [
     { icon: '🍽️', title: 'Navigate a Restaurant', desc: 'Make reservations, get a table, read the menu, and order' },

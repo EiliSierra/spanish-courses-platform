@@ -128,7 +128,7 @@ export const L13Data: LessonData = {
     { spanish: 'Tengo veinte años', pronunciation: 'TEHN-goh BAYN-teh AH-nyohs', english: 'I am 20 years old', audio: 'tengo-veinte-anos', tip: 'In Spanish you "have" years, not "are" years. The Ñ in "años" = "ny" sound (L1.1).' },
     { spanish: 'Cincuenta y ocho', pronunciation: 'seen-KWEHN-tah ee OH-choh', english: 'Fifty-eight', audio: 'cincuenta', tip: 'From 30 up, compound numbers use "y" (and): treinta y uno, cuarenta y dos, etc.' },
     { spanish: 'Son las nueve de la noche', pronunciation: 'sohn lahs NWEH-beh deh lah NOH-cheh', english: 'It\'s 9:00 PM', audio: 'son-las-tres', tip: '"De la mañana" = AM, "de la tarde" = afternoon PM, "de la noche" = evening PM.' },
-    { spanish: 'Mi número es cinco, tres, dos, ocho, uno, cero, nueve', pronunciation: 'mee NOO-meh-roh ehs...', english: 'My number is 5-3-2-8-1-0-9', audio: 'mi-numero-es', tip: 'Phone numbers are said one digit at a time in Spanish, not grouped like in English.' },
+    { spanish: 'Mi número es tres, dos, ocho, uno', pronunciation: 'mee NOO-meh-roh ehs trehs dohs OH-choh OO-noh', english: 'My number is 3-2-8-1', audio: 'mi-numero-es', tip: 'Phone numbers are said one digit at a time in Spanish, not grouped like in English.' },
   ],
   objectives: [
     { icon: '\uD83D\uDD22', title: 'Count to 100', desc: 'Master numbers 0–100 including the tricky teens and twenties' },

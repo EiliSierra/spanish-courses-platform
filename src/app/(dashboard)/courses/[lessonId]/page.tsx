@@ -32,6 +32,21 @@ import { L1F_QUESTION_POOL, L1F_CONFIG } from '@/lib/lessons/L1.F'
 import { L21Data, L21PhraseByAudio } from '@/lib/lessons/L2.1'
 import { L22Data, L22PhraseByAudio } from '@/lib/lessons/L2.2'
 import { L23Data, L23PhraseByAudio } from '@/lib/lessons/L2.3'
+import { L24Data, L24PhraseByAudio } from '@/lib/lessons/L2.4'
+import { L25Data, L25PhraseByAudio } from '@/lib/lessons/L2.5'
+import { L26Data, L26PhraseByAudio } from '@/lib/lessons/L2.6'
+import { L27Data, L27PhraseByAudio } from '@/lib/lessons/L2.7'
+import { L28Data, L28PhraseByAudio } from '@/lib/lessons/L2.8'
+import { L2F_QUESTION_POOL, L2F_CONFIG } from '@/lib/lessons/L2.F'
+import { L31Data, L31PhraseByAudio } from '@/lib/lessons/L3.1'
+import { L32Data, L32PhraseByAudio } from '@/lib/lessons/L3.2'
+import { L33Data, L33PhraseByAudio } from '@/lib/lessons/L3.3'
+import { L34Data, L34PhraseByAudio } from '@/lib/lessons/L3.4'
+import { L35Data, L35PhraseByAudio } from '@/lib/lessons/L3.5'
+import { L36Data, L36PhraseByAudio } from '@/lib/lessons/L3.6'
+import { L37Data, L37PhraseByAudio } from '@/lib/lessons/L3.7'
+import { L38Data, L38PhraseByAudio } from '@/lib/lessons/L3.8'
+import { L3F_QUESTION_POOL, L3F_CONFIG } from '@/lib/lessons/L3.F'
 import FinalExam from '@/components/engine/FinalExam'
 import { SECTIONS } from '@/lib/lesson-data'
 import { useParams } from 'next/navigation'
@@ -53,6 +68,21 @@ function LessonContent() {
   if (lessonId === 'L2.1') return <LessonShell data={L21Data} phraseByAudio={L21PhraseByAudio} />
   if (lessonId === 'L2.2') return <LessonShell data={L22Data} phraseByAudio={L22PhraseByAudio} />
   if (lessonId === 'L2.3') return <LessonShell data={L23Data} phraseByAudio={L23PhraseByAudio} />
+  if (lessonId === 'L2.4') return <LessonShell data={L24Data} phraseByAudio={L24PhraseByAudio} />
+  if (lessonId === 'L2.5') return <LessonShell data={L25Data} phraseByAudio={L25PhraseByAudio} />
+  if (lessonId === 'L2.6') return <LessonShell data={L26Data} phraseByAudio={L26PhraseByAudio} />
+  if (lessonId === 'L2.7') return <LessonShell data={L27Data} phraseByAudio={L27PhraseByAudio} />
+  if (lessonId === 'L2.8') return <LessonShell data={L28Data} phraseByAudio={L28PhraseByAudio} />
+  if (lessonId === 'L2.F') return <FinalExam questions={L2F_QUESTION_POOL} {...L2F_CONFIG} />
+  if (lessonId === 'L3.1') return <LessonShell data={L31Data} phraseByAudio={L31PhraseByAudio} />
+  if (lessonId === 'L3.2') return <LessonShell data={L32Data} phraseByAudio={L32PhraseByAudio} />
+  if (lessonId === 'L3.3') return <LessonShell data={L33Data} phraseByAudio={L33PhraseByAudio} />
+  if (lessonId === 'L3.4') return <LessonShell data={L34Data} phraseByAudio={L34PhraseByAudio} />
+  if (lessonId === 'L3.5') return <LessonShell data={L35Data} phraseByAudio={L35PhraseByAudio} />
+  if (lessonId === 'L3.6') return <LessonShell data={L36Data} phraseByAudio={L36PhraseByAudio} />
+  if (lessonId === 'L3.7') return <LessonShell data={L37Data} phraseByAudio={L37PhraseByAudio} />
+  if (lessonId === 'L3.8') return <LessonShell data={L38Data} phraseByAudio={L38PhraseByAudio} />
+  if (lessonId === 'L3.F') return <FinalExam questions={L3F_QUESTION_POOL} {...L3F_CONFIG} />
   const { sectionStates, progressPct, markVisited, markCompleted, setQuizScore } = useLessonProgress(lessonId)
   const [activeSection, setActiveSection] = useState('welcome')
   const { showToast } = useToast()

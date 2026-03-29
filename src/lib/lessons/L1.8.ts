@@ -93,9 +93,9 @@ export const L18Data: LessonData = {
     { spanish: 'Me levanto a las siete de la mañana', pronunciation: 'meh leh-BAHN-toh ah lahs see-EH-teh deh lah mah-NYAH-nah', english: 'I get up at seven in the morning', audio: 'me-levanto', tip: '"A las siete" from L1.3! "Mañana" — the Ñ sounds like "ny" (L1.1).' },
     { spanish: 'Me gusta cocinar por la noche', pronunciation: 'meh GOOS-tah koh-see-NAHR pohr lah NOH-cheh', english: 'I like to cook at night', audio: 'me-gusta-cocinar', tip: '"Me gusta" + infinitive (-AR, -ER, -IR). "Cocinar" ends in -AR — stress the last syllable.' },
     { spanish: 'Siempre desayuno a las ocho', pronunciation: 'see-EHM-preh deh-sah-YOO-noh ah lahs OH-choh', english: 'I always eat breakfast at eight', audio: 'desayuno', tip: '"Siempre" = always. "Desayuno" — stress on YOO. "A las ocho" from L1.3.' },
-    { spanish: 'Los fines de semana hago ejercicio', pronunciation: 'lohs FEE-nehs deh seh-MAH-nah AH-goh eh-hehr-SEE-see-oh', english: 'On weekends I exercise', audio: 'hago-ejercicio', tip: '"Hago" = I do/make. H is silent (L1.1). "Ejercicio" has 5 syllables!' },
+    { spanish: 'Hago ejercicio los sábados', pronunciation: 'AH-goh eh-hehr-SEE-see-oh lohs SAH-bah-dohs', english: 'I exercise on Saturdays', audio: 'hago-ejercicio', tip: '"Hago" = I do/make. H is silent (L1.1). "Ejercicio" has 5 syllables!' },
     { spanish: 'Me acuesto tarde los viernes', pronunciation: 'meh ah-KWEHS-toh TAR-deh lohs bee-EHR-nehs', english: 'I go to bed late on Fridays', audio: 'me-acuesto', tip: '"Viernes" from L1.3! V sounds like B in Spanish: bee-EHR-nehs.' },
-    { spanish: 'Normalmente almuerzo a la una', pronunciation: 'nohr-mahl-MEHN-teh ahl-MWEHR-soh ah lah OO-nah', english: 'I normally eat lunch at one', audio: 'almuerzo', tip: '"A la una" (not "a las" — 1:00 is singular). "Almuerzo" = ahl-MWEHR-soh.' },
+    { spanish: 'Almuerzo a la una', pronunciation: 'ahl-MWEHR-soh ah lah OO-nah', english: 'I eat lunch at one', audio: 'almuerzo', tip: '"A la una" (not "a las" — 1:00 is singular). "Almuerzo" = ahl-MWEHR-soh.' },
   ],
   objectives: [
     { icon: '🌅', title: 'Describe Your Morning', desc: 'Wake up, shower, get dressed, eat breakfast — all in Spanish' },

@@ -15,6 +15,19 @@ const REGISTRY: Record<string, () => Promise<{ default: UniqueActivityComponent 
   SymptomCheckerL21: () => import('./SymptomCheckerL21'),
   WeatherForecastL22: () => import('./WeatherForecastL22'),
   PlanBuilderL23: () => import('./PlanBuilderL23'),
+  HotelCheckinL24: () => import('./HotelCheckinL24'),
+  BoardingPassL25: () => import('./BoardingPassL25'),
+  OutfitBuilderL26: () => import('./OutfitBuilderL26'),
+  WhoIsItL27: () => import('./WhoIsItL27'),
+  JobInterviewL28: () => import('./JobInterviewL28'),
+  StoryBuilderL31: () => import('./StoryBuilderL31'),
+  RoomDesignerL32: () => import('./RoomDesignerL32'),
+  AppNavigatorL33: () => import('./AppNavigatorL33'),
+  RecipeBuilderL34: () => import('./RecipeBuilderL34'),
+  HobbyMatchL35: () => import('./HobbyMatchL35'),
+  EcoQuizL36: () => import('./EcoQuizL36'),
+  FestivalMatchL37: () => import('./FestivalMatchL37'),
+  PostcardWriterL38: () => import('./PostcardWriterL38'),
 }
 
 export function getUniqueActivity(id: string) {
