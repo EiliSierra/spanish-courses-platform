@@ -30,6 +30,8 @@ const REGISTRY: Record<string, () => Promise<{ default: UniqueActivityComponent 
   PostcardWriterL38: () => import('./PostcardWriterL38'),
   MemoryLaneL41: () => import('./MemoryLaneL41'),
   SubjunctiveDetectorL42: () => import('./SubjunctiveDetectorL42'),
+  RegisterSwitchL43: () => import('./RegisterSwitchL43'),
+  HeadlineReaderL44: () => import('./HeadlineReaderL44'),
 }
 
 export function getUniqueActivity(id: string) {

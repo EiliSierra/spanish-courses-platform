@@ -36,8 +36,8 @@ const LEVEL3_LESSONS = [
 const LEVEL4_LESSONS = [
   { id: 'L4.1', title: 'Imperfect Tense', subtitle: 'How Things Used to Be', available: true },
   { id: 'L4.2', title: 'Subjunctive Mood', subtitle: 'Wishes, Doubts & Recommendations', available: true },
-  { id: 'L4.3', title: 'Formal vs Informal', subtitle: 'Tú, Usted & Vos', available: false },
-  { id: 'L4.4', title: 'News & Current Events', subtitle: 'Media, Headlines & Opinions', available: false },
+  { id: 'L4.3', title: 'Formal vs Informal', subtitle: 'Tú, Usted & Vos', available: true },
+  { id: 'L4.4', title: 'News & Current Events', subtitle: 'Media, Headlines & Opinions', available: true },
   { id: 'L4.5', title: 'Health & Wellness', subtitle: 'Lifestyle, Mental Health & Habits', available: false },
   { id: 'L4.6', title: 'Banking & Finance', subtitle: 'Money, Bills & Accounts', available: false },
   { id: 'L4.7', title: 'Arts & Entertainment', subtitle: 'Music, Movies & Books', available: false },
