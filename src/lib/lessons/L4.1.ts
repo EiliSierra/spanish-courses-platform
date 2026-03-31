@@ -192,8 +192,8 @@ export const L41Data: LessonData = {
       title: 'Regular -AR Imperfect',
       description: 'The most common verb type. Drop -AR, add: -aba, -abas, -aba, -ábamos, -aban. Super regular!',
       tabs: [
-        { label: 'Yo & Tú', color: 'purple', phrases: PHRASES.filter(p => p.category === 'ar-imperfect').slice(0, 5) },
-        { label: 'Él/Nosotros/Ellos', color: 'amber', phrases: PHRASES.filter(p => p.category === 'ar-imperfect').slice(5) },
+        { label: 'Yo & Tú', color: 'purple', columns: 1, phrases: PHRASES.filter(p => p.category === 'ar-imperfect').slice(0, 5) },
+        { label: 'Él/Nosotros/Ellos', color: 'amber', columns: 1, phrases: PHRASES.filter(p => p.category === 'ar-imperfect').slice(5) },
       ],
     },
     {
@@ -201,8 +201,8 @@ export const L41Data: LessonData = {
       title: 'Regular -ER/-IR Imperfect',
       description: '-ER and -IR share the SAME endings again! Drop ending, add: -ía, -ías, -ía, -íamos, -ían.',
       tabs: [
-        { label: 'Yo & Tú', color: 'blue', phrases: PHRASES.filter(p => p.category === 'er-ir-imperfect').slice(0, 4) },
-        { label: 'Él/Nosotros/Ellos', color: 'teal', phrases: PHRASES.filter(p => p.category === 'er-ir-imperfect').slice(4) },
+        { label: 'Yo & Tú', color: 'blue', columns: 1, phrases: PHRASES.filter(p => p.category === 'er-ir-imperfect').slice(0, 4) },
+        { label: 'Él/Nosotros/Ellos', color: 'teal', columns: 1, phrases: PHRASES.filter(p => p.category === 'er-ir-imperfect').slice(4) },
       ],
     },
     {
@@ -210,8 +210,8 @@ export const L41Data: LessonData = {
       title: 'Irregular Imperfect — Only 3!',
       description: 'The best news in Spanish grammar: only SER (era), IR (iba), and VER (veía) are irregular in the imperfect!',
       tabs: [
-        { label: 'Ser & Ir', color: 'rose', phrases: PHRASES.filter(p => p.category === 'irregular-imperfect').slice(0, 4) },
-        { label: 'Ver', color: 'emerald', phrases: PHRASES.filter(p => p.category === 'irregular-imperfect').slice(4) },
+        { label: 'Ser & Ir', color: 'rose', columns: 1, phrases: PHRASES.filter(p => p.category === 'irregular-imperfect').slice(0, 4) },
+        { label: 'Ver', color: 'emerald', columns: 1, phrases: PHRASES.filter(p => p.category === 'irregular-imperfect').slice(4) },
       ],
     },
     {
@@ -219,8 +219,8 @@ export const L41Data: LessonData = {
       title: 'Childhood & Habitual Past',
       description: 'Put it all together! Describe memories, habits, and how life used to be.',
       tabs: [
-        { label: 'Childhood', color: 'orange', phrases: PHRASES.filter(p => p.category === 'childhood').slice(0, 7) },
-        { label: 'Life Back Then', color: 'purple', phrases: PHRASES.filter(p => p.category === 'childhood').slice(7) },
+        { label: 'Childhood', color: 'orange', columns: 1, phrases: PHRASES.filter(p => p.category === 'childhood').slice(0, 7) },
+        { label: 'Life Back Then', color: 'purple', columns: 1, phrases: PHRASES.filter(p => p.category === 'childhood').slice(7) },
       ],
     },
   ],

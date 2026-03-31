@@ -69,7 +69,7 @@ export default function MatchingGame({ pairs, labels, onComplete }: MatchingGame
   return (
     <section id="matching-game">
       <h2 className="text-2xl font-bold font-[family-name:var(--font-inter)] mb-2">Matching Game</h2>
-      <p className="text-gray-600 mb-2">Drag each item to its match. <strong>Score: {score}/{total}</strong></p>
+      <p className="text-gray-400 mb-2">Drag each item to its match. <strong>Score: {score}/{total}</strong></p>
 
       <div className="grid md:grid-cols-2 gap-6 mb-4">
         <div className="space-y-2">
@@ -83,7 +83,7 @@ export default function MatchingGame({ pairs, labels, onComplete }: MatchingGame
               className={`px-4 py-3 rounded-lg font-medium text-center transition-all select-none ${
                 matched.has(pair.left)
                   ? 'bg-green-100 text-green-700 opacity-50 cursor-default'
-                  : 'bg-white border-2 border-orange-200 text-orange-800 cursor-grab hover:border-orange-400 hover:shadow-sm active:cursor-grabbing'
+                  : 'bg-gray-800 border-2 border-orange-700 text-orange-200 cursor-grab hover:border-orange-400 hover:shadow-sm active:cursor-grabbing'
               }`}
             >
               {pair.left}
@@ -110,8 +110,8 @@ export default function MatchingGame({ pairs, labels, onComplete }: MatchingGame
                   isMatched
                     ? 'bg-green-100 text-green-700 border-2 border-green-300'
                     : isWrong
-                      ? 'bg-red-50 border-2 border-red-400 animate-[shake_0.3s]'
-                      : 'bg-gray-50 border-2 border-dashed border-gray-300 hover:border-purple-400 hover:bg-purple-50'
+                      ? 'bg-red-950 border-2 border-red-400 animate-[shake_0.3s]'
+                      : 'bg-gray-900 border-2 border-dashed border-gray-600 hover:border-purple-400 hover:bg-purple-950'
                 }`}
               >
                 {pair.right}
@@ -126,7 +126,7 @@ export default function MatchingGame({ pairs, labels, onComplete }: MatchingGame
         </div>
       </div>
 
-      <button onClick={reset} className="px-5 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 text-sm font-medium transition-colors">
+      <button onClick={reset} className="px-5 py-2 bg-gray-800 text-gray-300 rounded-lg hover:bg-gray-200 text-sm font-medium transition-colors">
         Reset Game
       </button>
     </section>

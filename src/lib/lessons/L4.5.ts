@@ -180,8 +180,8 @@ export const L45Data: LessonData = {
       title: 'Mental Health & Emotional Well-being',
       description: 'Talk about stress, anxiety, therapy, and emotional self-care. Mental health is health!',
       tabs: [
-        { label: 'Feelings & States', color: 'purple', phrases: PHRASES.filter(p => p.category === 'mental-health').slice(0, 5) },
-        { label: 'Self-Care', color: 'teal', phrases: PHRASES.filter(p => p.category === 'mental-health').slice(5) },
+        { label: 'Feelings & States', color: 'purple', columns: 1, phrases: PHRASES.filter(p => p.category === 'mental-health').slice(0, 5) },
+        { label: 'Self-Care', color: 'teal', columns: 1, phrases: PHRASES.filter(p => p.category === 'mental-health').slice(5) },
       ],
     },
     {
@@ -189,8 +189,8 @@ export const L45Data: LessonData = {
       title: 'Lifestyle & Sleep Habits',
       description: 'Healthy habits beyond exercise — sleep, hydration, screen time, and daily routines.',
       tabs: [
-        { label: 'Sleep & Rest', color: 'blue', phrases: PHRASES.filter(p => p.category === 'lifestyle').slice(0, 5) },
-        { label: 'Daily Habits', color: 'amber', phrases: PHRASES.filter(p => p.category === 'lifestyle').slice(5) },
+        { label: 'Sleep & Rest', color: 'blue', columns: 1, phrases: PHRASES.filter(p => p.category === 'lifestyle').slice(0, 5) },
+        { label: 'Daily Habits', color: 'amber', columns: 1, phrases: PHRASES.filter(p => p.category === 'lifestyle').slice(5) },
       ],
     },
     {
@@ -198,8 +198,8 @@ export const L45Data: LessonData = {
       title: 'Exercise & Nutrition',
       description: 'From running to yoga, from fruits to proteins — build your fitness vocabulary.',
       tabs: [
-        { label: 'Working Out', color: 'emerald', phrases: PHRASES.filter(p => p.category === 'exercise-diet').slice(0, 5) },
-        { label: 'Nutrition', color: 'orange', phrases: PHRASES.filter(p => p.category === 'exercise-diet').slice(5) },
+        { label: 'Working Out', color: 'emerald', columns: 1, phrases: PHRASES.filter(p => p.category === 'exercise-diet').slice(0, 5) },
+        { label: 'Nutrition', color: 'orange', columns: 1, phrases: PHRASES.filter(p => p.category === 'exercise-diet').slice(5) },
       ],
     },
     {
@@ -207,8 +207,8 @@ export const L45Data: LessonData = {
       title: 'Giving Wellness Advice',
       description: 'Use the subjunctive to recommend, suggest, and advise on health. "Te recomiendo que..." + subjunctive.',
       tabs: [
-        { label: 'Recommendations', color: 'rose', phrases: PHRASES.filter(p => p.category === 'advice').slice(0, 4) },
-        { label: 'More Advice', color: 'purple', phrases: PHRASES.filter(p => p.category === 'advice').slice(4) },
+        { label: 'Recommendations', color: 'rose', columns: 1, phrases: PHRASES.filter(p => p.category === 'advice').slice(0, 4) },
+        { label: 'More Advice', color: 'purple', columns: 1, phrases: PHRASES.filter(p => p.category === 'advice').slice(4) },
       ],
     },
   ],

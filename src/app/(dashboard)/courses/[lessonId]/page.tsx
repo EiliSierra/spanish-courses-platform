@@ -56,6 +56,54 @@ import { L46Data, L46PhraseByAudio } from '@/lib/lessons/L4.6'
 import { L47Data, L47PhraseByAudio } from '@/lib/lessons/L4.7'
 import { L48Data, L48PhraseByAudio } from '@/lib/lessons/L4.8'
 import { L4F_QUESTION_POOL, L4F_CONFIG } from '@/lib/lessons/L4.F'
+import { L51Data, L51PhraseByAudio } from '@/lib/lessons/L5.1'
+import { L52Data, L52PhraseByAudio } from '@/lib/lessons/L5.2'
+import { L53Data, L53PhraseByAudio } from '@/lib/lessons/L5.3'
+import { L54Data, L54PhraseByAudio } from '@/lib/lessons/L5.4'
+import { L55Data, L55PhraseByAudio } from '@/lib/lessons/L5.5'
+import { L56Data, L56PhraseByAudio } from '@/lib/lessons/L5.6'
+import { L57Data, L57PhraseByAudio } from '@/lib/lessons/L5.7'
+import { L58Data, L58PhraseByAudio } from '@/lib/lessons/L5.8'
+import { L5F_QUESTION_POOL, L5F_CONFIG } from '@/lib/lessons/L5.F'
+import { L61Data, L61PhraseByAudio } from '@/lib/lessons/L6.1'
+import { L62Data, L62PhraseByAudio } from '@/lib/lessons/L6.2'
+import { L63Data, L63PhraseByAudio } from '@/lib/lessons/L6.3'
+import { L64Data, L64PhraseByAudio } from '@/lib/lessons/L6.4'
+import { L65Data, L65PhraseByAudio } from '@/lib/lessons/L6.5'
+import { L66Data, L66PhraseByAudio } from '@/lib/lessons/L6.6'
+import { L67Data, L67PhraseByAudio } from '@/lib/lessons/L6.7'
+import { L68Data, L68PhraseByAudio } from '@/lib/lessons/L6.8'
+import { L6F_QUESTION_POOL, L6F_CONFIG } from '@/lib/lessons/L6.F'
+import { L71Data, L71PhraseByAudio } from '@/lib/lessons/L7.1'
+import { L72Data, L72PhraseByAudio } from '@/lib/lessons/L7.2'
+import { L73Data, L73PhraseByAudio } from '@/lib/lessons/L7.3'
+import { L74Data, L74PhraseByAudio } from '@/lib/lessons/L7.4'
+import { L75Data, L75PhraseByAudio } from '@/lib/lessons/L7.5'
+import { L76Data, L76PhraseByAudio } from '@/lib/lessons/L7.6'
+import { L77Data, L77PhraseByAudio } from '@/lib/lessons/L7.7'
+import { L78Data, L78PhraseByAudio } from '@/lib/lessons/L7.8'
+import { L7F_QUESTION_POOL, L7F_CONFIG } from '@/lib/lessons/L7.F'
+import { L81Data, L81PhraseByAudio } from '@/lib/lessons/L8.1'
+import { L82Data, L82PhraseByAudio } from '@/lib/lessons/L8.2'
+import { L83Data, L83PhraseByAudio } from '@/lib/lessons/L8.3'
+import { L84Data, L84PhraseByAudio } from '@/lib/lessons/L8.4'
+import { L85Data, L85PhraseByAudio } from '@/lib/lessons/L8.5'
+import { L86Data, L86PhraseByAudio } from '@/lib/lessons/L8.6'
+import { L87Data, L87PhraseByAudio } from '@/lib/lessons/L8.7'
+import { L88Data, L88PhraseByAudio } from '@/lib/lessons/L8.8'
+import { L8F_QUESTION_POOL, L8F_CONFIG } from '@/lib/lessons/L8.F'
+import { L91Data, L91PhraseByAudio } from '@/lib/lessons/L9.1'
+import { L92Data, L92PhraseByAudio } from '@/lib/lessons/L9.2'
+import { L93Data, L93PhraseByAudio } from '@/lib/lessons/L9.3'
+import { L94Data, L94PhraseByAudio } from '@/lib/lessons/L9.4'
+import { L95Data, L95PhraseByAudio } from '@/lib/lessons/L9.5'
+import { L96Data, L96PhraseByAudio } from '@/lib/lessons/L9.6'
+import { L97Data, L97PhraseByAudio } from '@/lib/lessons/L9.7'
+import { L98Data, L98PhraseByAudio } from '@/lib/lessons/L9.8'
+import { L9F_QUESTION_POOL, L9F_CONFIG } from '@/lib/lessons/L9.F'
+import { L101Data, L101PhraseByAudio } from '@/lib/lessons/L10.1'
+import { L102Data, L102PhraseByAudio } from '@/lib/lessons/L10.2'
+import { L10F_QUESTION_POOL, L10F_CONFIG } from '@/lib/lessons/L10.F'
 import FinalExam from '@/components/engine/FinalExam'
 import { SECTIONS } from '@/lib/lesson-data'
 import { useParams } from 'next/navigation'
@@ -101,6 +149,54 @@ function LessonContent() {
   if (lessonId === 'L4.7') return <LessonShell data={L47Data} phraseByAudio={L47PhraseByAudio} />
   if (lessonId === 'L4.8') return <LessonShell data={L48Data} phraseByAudio={L48PhraseByAudio} />
   if (lessonId === 'L4.F') return <FinalExam questions={L4F_QUESTION_POOL} {...L4F_CONFIG} />
+  if (lessonId === 'L5.1') return <LessonShell data={L51Data} phraseByAudio={L51PhraseByAudio} />
+  if (lessonId === 'L5.2') return <LessonShell data={L52Data} phraseByAudio={L52PhraseByAudio} />
+  if (lessonId === 'L5.3') return <LessonShell data={L53Data} phraseByAudio={L53PhraseByAudio} />
+  if (lessonId === 'L5.4') return <LessonShell data={L54Data} phraseByAudio={L54PhraseByAudio} />
+  if (lessonId === 'L5.5') return <LessonShell data={L55Data} phraseByAudio={L55PhraseByAudio} />
+  if (lessonId === 'L5.6') return <LessonShell data={L56Data} phraseByAudio={L56PhraseByAudio} />
+  if (lessonId === 'L5.7') return <LessonShell data={L57Data} phraseByAudio={L57PhraseByAudio} />
+  if (lessonId === 'L5.8') return <LessonShell data={L58Data} phraseByAudio={L58PhraseByAudio} />
+  if (lessonId === 'L5.F') return <FinalExam questions={L5F_QUESTION_POOL} {...L5F_CONFIG} />
+  if (lessonId === 'L6.1') return <LessonShell data={L61Data} phraseByAudio={L61PhraseByAudio} />
+  if (lessonId === 'L6.2') return <LessonShell data={L62Data} phraseByAudio={L62PhraseByAudio} />
+  if (lessonId === 'L6.3') return <LessonShell data={L63Data} phraseByAudio={L63PhraseByAudio} />
+  if (lessonId === 'L6.4') return <LessonShell data={L64Data} phraseByAudio={L64PhraseByAudio} />
+  if (lessonId === 'L6.5') return <LessonShell data={L65Data} phraseByAudio={L65PhraseByAudio} />
+  if (lessonId === 'L6.6') return <LessonShell data={L66Data} phraseByAudio={L66PhraseByAudio} />
+  if (lessonId === 'L6.7') return <LessonShell data={L67Data} phraseByAudio={L67PhraseByAudio} />
+  if (lessonId === 'L6.8') return <LessonShell data={L68Data} phraseByAudio={L68PhraseByAudio} />
+  if (lessonId === 'L6.F') return <FinalExam questions={L6F_QUESTION_POOL} {...L6F_CONFIG} />
+  if (lessonId === 'L7.1') return <LessonShell data={L71Data} phraseByAudio={L71PhraseByAudio} />
+  if (lessonId === 'L7.2') return <LessonShell data={L72Data} phraseByAudio={L72PhraseByAudio} />
+  if (lessonId === 'L7.3') return <LessonShell data={L73Data} phraseByAudio={L73PhraseByAudio} />
+  if (lessonId === 'L7.4') return <LessonShell data={L74Data} phraseByAudio={L74PhraseByAudio} />
+  if (lessonId === 'L7.5') return <LessonShell data={L75Data} phraseByAudio={L75PhraseByAudio} />
+  if (lessonId === 'L7.6') return <LessonShell data={L76Data} phraseByAudio={L76PhraseByAudio} />
+  if (lessonId === 'L7.7') return <LessonShell data={L77Data} phraseByAudio={L77PhraseByAudio} />
+  if (lessonId === 'L7.8') return <LessonShell data={L78Data} phraseByAudio={L78PhraseByAudio} />
+  if (lessonId === 'L7.F') return <FinalExam questions={L7F_QUESTION_POOL} {...L7F_CONFIG} />
+  if (lessonId === 'L8.1') return <LessonShell data={L81Data} phraseByAudio={L81PhraseByAudio} />
+  if (lessonId === 'L8.2') return <LessonShell data={L82Data} phraseByAudio={L82PhraseByAudio} />
+  if (lessonId === 'L8.3') return <LessonShell data={L83Data} phraseByAudio={L83PhraseByAudio} />
+  if (lessonId === 'L8.4') return <LessonShell data={L84Data} phraseByAudio={L84PhraseByAudio} />
+  if (lessonId === 'L8.5') return <LessonShell data={L85Data} phraseByAudio={L85PhraseByAudio} />
+  if (lessonId === 'L8.6') return <LessonShell data={L86Data} phraseByAudio={L86PhraseByAudio} />
+  if (lessonId === 'L8.7') return <LessonShell data={L87Data} phraseByAudio={L87PhraseByAudio} />
+  if (lessonId === 'L8.8') return <LessonShell data={L88Data} phraseByAudio={L88PhraseByAudio} />
+  if (lessonId === 'L8.F') return <FinalExam questions={L8F_QUESTION_POOL} {...L8F_CONFIG} />
+  if (lessonId === 'L9.1') return <LessonShell data={L91Data} phraseByAudio={L91PhraseByAudio} />
+  if (lessonId === 'L9.2') return <LessonShell data={L92Data} phraseByAudio={L92PhraseByAudio} />
+  if (lessonId === 'L9.3') return <LessonShell data={L93Data} phraseByAudio={L93PhraseByAudio} />
+  if (lessonId === 'L9.4') return <LessonShell data={L94Data} phraseByAudio={L94PhraseByAudio} />
+  if (lessonId === 'L9.5') return <LessonShell data={L95Data} phraseByAudio={L95PhraseByAudio} />
+  if (lessonId === 'L9.6') return <LessonShell data={L96Data} phraseByAudio={L96PhraseByAudio} />
+  if (lessonId === 'L9.7') return <LessonShell data={L97Data} phraseByAudio={L97PhraseByAudio} />
+  if (lessonId === 'L9.8') return <LessonShell data={L98Data} phraseByAudio={L98PhraseByAudio} />
+  if (lessonId === 'L9.F') return <FinalExam questions={L9F_QUESTION_POOL} {...L9F_CONFIG} />
+  if (lessonId === 'L10.1') return <LessonShell data={L101Data} phraseByAudio={L101PhraseByAudio} />
+  if (lessonId === 'L10.2') return <LessonShell data={L102Data} phraseByAudio={L102PhraseByAudio} />
+  if (lessonId === 'L10.F') return <FinalExam questions={L10F_QUESTION_POOL} {...L10F_CONFIG} />
   const { sectionStates, progressPct, markVisited, markCompleted, setQuizScore } = useLessonProgress(lessonId)
   const [activeSection, setActiveSection] = useState('welcome')
   const { showToast } = useToast()

@@ -180,8 +180,8 @@ export const L46Data: LessonData = {
       title: 'Banking Basics',
       description: 'Essential vocabulary for navigating any bank or ATM in the Spanish-speaking world.',
       tabs: [
-        { label: 'Accounts & Cards', color: 'blue', phrases: PHRASES.filter(p => p.category === 'banking').slice(0, 5) },
-        { label: 'Tools & Services', color: 'teal', phrases: PHRASES.filter(p => p.category === 'banking').slice(5) },
+        { label: 'Accounts & Cards', color: 'blue', columns: 1, phrases: PHRASES.filter(p => p.category === 'banking').slice(0, 5) },
+        { label: 'Tools & Services', color: 'teal', columns: 1, phrases: PHRASES.filter(p => p.category === 'banking').slice(5) },
       ],
     },
     {
@@ -189,8 +189,8 @@ export const L46Data: LessonData = {
       title: 'Banking Transactions',
       description: 'The actions you perform at the bank — depositing, withdrawing, transferring, and more.',
       tabs: [
-        { label: 'Deposits & Withdrawals', color: 'emerald', phrases: PHRASES.filter(p => p.category === 'transactions').slice(0, 5) },
-        { label: 'Payments & Signing', color: 'amber', phrases: PHRASES.filter(p => p.category === 'transactions').slice(5) },
+        { label: 'Deposits & Withdrawals', color: 'emerald', columns: 1, phrases: PHRASES.filter(p => p.category === 'transactions').slice(0, 5) },
+        { label: 'Payments & Signing', color: 'amber', columns: 1, phrases: PHRASES.filter(p => p.category === 'transactions').slice(5) },
       ],
     },
     {
@@ -198,8 +198,8 @@ export const L46Data: LessonData = {
       title: 'Currency Exchange',
       description: 'Navigate casas de cambio and handle foreign currency with confidence.',
       tabs: [
-        { label: 'Exchange', color: 'orange', phrases: PHRASES.filter(p => p.category === 'currency').slice(0, 4) },
-        { label: 'Money Types', color: 'purple', phrases: PHRASES.filter(p => p.category === 'currency').slice(4) },
+        { label: 'Exchange', color: 'orange', columns: 1, phrases: PHRASES.filter(p => p.category === 'currency').slice(0, 4) },
+        { label: 'Money Types', color: 'purple', columns: 1, phrases: PHRASES.filter(p => p.category === 'currency').slice(4) },
       ],
     },
     {
@@ -207,8 +207,8 @@ export const L46Data: LessonData = {
       title: 'Financial Phrases',
       description: 'Talk about loans, savings, budgets, and investments like a pro.',
       tabs: [
-        { label: 'Loans & Rates', color: 'rose', phrases: PHRASES.filter(p => p.category === 'financial-phrases').slice(0, 5) },
-        { label: 'Budgets & Investing', color: 'blue', phrases: PHRASES.filter(p => p.category === 'financial-phrases').slice(5) },
+        { label: 'Loans & Rates', color: 'rose', columns: 1, phrases: PHRASES.filter(p => p.category === 'financial-phrases').slice(0, 5) },
+        { label: 'Budgets & Investing', color: 'blue', columns: 1, phrases: PHRASES.filter(p => p.category === 'financial-phrases').slice(5) },
       ],
     },
   ],

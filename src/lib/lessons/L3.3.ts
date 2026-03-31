@@ -180,8 +180,8 @@ export const L33Data: LessonData = {
       title: 'Devices & Hardware',
       description: 'The gadgets you use every day — phones, laptops, tablets, and accessories.',
       tabs: [
-        { label: 'Phone & Tablet', color: 'blue', phrases: PHRASES.filter(p => p.category === 'devices').slice(0, 5) },
-        { label: 'Computer & Accessories', color: 'purple', phrases: PHRASES.filter(p => p.category === 'devices').slice(5) },
+        { label: 'Phone & Tablet', color: 'blue', columns: 1, phrases: PHRASES.filter(p => p.category === 'devices').slice(0, 5) },
+        { label: 'Computer & Accessories', color: 'purple', columns: 1, phrases: PHRASES.filter(p => p.category === 'devices').slice(5) },
       ],
     },
     {
@@ -189,8 +189,8 @@ export const L33Data: LessonData = {
       title: 'Social Media',
       description: 'Post, share, follow, comment — everything you do on social platforms.',
       tabs: [
-        { label: 'Posting & Sharing', color: 'rose', phrases: PHRASES.filter(p => p.category === 'social-media').slice(0, 5) },
-        { label: 'Connecting & Engaging', color: 'amber', phrases: PHRASES.filter(p => p.category === 'social-media').slice(5) },
+        { label: 'Posting & Sharing', color: 'rose', columns: 1, phrases: PHRASES.filter(p => p.category === 'social-media').slice(0, 5) },
+        { label: 'Connecting & Engaging', color: 'amber', columns: 1, phrases: PHRASES.filter(p => p.category === 'social-media').slice(5) },
       ],
     },
     {
@@ -198,8 +198,8 @@ export const L33Data: LessonData = {
       title: 'Tech Actions',
       description: 'Essential actions — download, connect, search, log in, and manage your digital life.',
       tabs: [
-        { label: 'Connect & Search', color: 'emerald', phrases: PHRASES.filter(p => p.category === 'actions').slice(0, 5) },
-        { label: 'Manage & Secure', color: 'teal', phrases: PHRASES.filter(p => p.category === 'actions').slice(5) },
+        { label: 'Connect & Search', color: 'emerald', columns: 1, phrases: PHRASES.filter(p => p.category === 'actions').slice(0, 5) },
+        { label: 'Manage & Secure', color: 'teal', columns: 1, phrases: PHRASES.filter(p => p.category === 'actions').slice(5) },
       ],
     },
     {
@@ -207,8 +207,8 @@ export const L33Data: LessonData = {
       title: 'Tech Problems',
       description: 'When things go wrong — describe tech issues and ask for help.',
       tabs: [
-        { label: 'Signal & Speed', color: 'orange', phrases: PHRASES.filter(p => p.category === 'problems').slice(0, 4) },
-        { label: 'Apps & Storage', color: 'rose', phrases: PHRASES.filter(p => p.category === 'problems').slice(4) },
+        { label: 'Signal & Speed', color: 'orange', columns: 1, phrases: PHRASES.filter(p => p.category === 'problems').slice(0, 4) },
+        { label: 'Apps & Storage', color: 'rose', columns: 1, phrases: PHRASES.filter(p => p.category === 'problems').slice(4) },
       ],
     },
   ],

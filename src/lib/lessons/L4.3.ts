@@ -192,8 +192,8 @@ export const L43Data: LessonData = {
       title: 'Tú — Informal You',
       description: 'Used with friends, family, children, and peers. The default in most of Spain and Mexico.',
       tabs: [
-        { label: 'Everyday Tú', color: 'orange', phrases: PHRASES.filter(p => p.category === 'tu-forms').slice(0, 5) },
-        { label: 'Commands & Questions', color: 'amber', phrases: PHRASES.filter(p => p.category === 'tu-forms').slice(5) },
+        { label: 'Everyday Tú', color: 'orange', columns: 1, phrases: PHRASES.filter(p => p.category === 'tu-forms').slice(0, 5) },
+        { label: 'Commands & Questions', color: 'amber', columns: 1, phrases: PHRASES.filter(p => p.category === 'tu-forms').slice(5) },
       ],
     },
     {
@@ -201,8 +201,8 @@ export const L43Data: LessonData = {
       title: 'Usted — Formal You',
       description: 'Used with strangers, elders, bosses, and in professional settings. Shows respect and distance.',
       tabs: [
-        { label: 'Polite Phrases', color: 'blue', phrases: PHRASES.filter(p => p.category === 'usted-forms').slice(0, 5) },
-        { label: 'Professional', color: 'purple', phrases: PHRASES.filter(p => p.category === 'usted-forms').slice(5) },
+        { label: 'Polite Phrases', color: 'blue', columns: 1, phrases: PHRASES.filter(p => p.category === 'usted-forms').slice(0, 5) },
+        { label: 'Professional', color: 'purple', columns: 1, phrases: PHRASES.filter(p => p.category === 'usted-forms').slice(5) },
       ],
     },
     {
@@ -210,8 +210,8 @@ export const L43Data: LessonData = {
       title: 'Vos — Regional Informal',
       description: 'Used in Argentina, Uruguay, Paraguay, and Central America instead of tú. Unique conjugations!',
       tabs: [
-        { label: 'Vos Basics', color: 'emerald', phrases: PHRASES.filter(p => p.category === 'vos-forms').slice(0, 4) },
-        { label: 'Vos Commands', color: 'teal', phrases: PHRASES.filter(p => p.category === 'vos-forms').slice(4) },
+        { label: 'Vos Basics', color: 'emerald', columns: 1, phrases: PHRASES.filter(p => p.category === 'vos-forms').slice(0, 4) },
+        { label: 'Vos Commands', color: 'teal', columns: 1, phrases: PHRASES.filter(p => p.category === 'vos-forms').slice(4) },
       ],
     },
     {
@@ -219,8 +219,8 @@ export const L43Data: LessonData = {
       title: 'When to Use Each Register',
       description: 'Knowing which register to use is just as important as knowing the grammar. Read the social cues!',
       tabs: [
-        { label: 'Social Rules', color: 'rose', phrases: PHRASES.filter(p => p.category === 'contexts').slice(0, 5) },
-        { label: 'Regional Norms', color: 'amber', phrases: PHRASES.filter(p => p.category === 'contexts').slice(5) },
+        { label: 'Social Rules', color: 'rose', columns: 1, phrases: PHRASES.filter(p => p.category === 'contexts').slice(0, 5) },
+        { label: 'Regional Norms', color: 'amber', columns: 1, phrases: PHRASES.filter(p => p.category === 'contexts').slice(5) },
       ],
     },
   ],

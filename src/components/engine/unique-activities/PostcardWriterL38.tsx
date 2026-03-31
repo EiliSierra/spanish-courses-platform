@@ -70,10 +70,10 @@ export default function PostcardWriterL38({ onComplete }: { onComplete?: () => v
     return (
       <section id="postcard-writer">
         <h2 className="text-2xl font-bold font-[family-name:var(--font-inter)] mb-2">Postcard Writer</h2>
-        <p className="text-gray-600 mb-4">Read each travel scenario and pick the best Spanish postcard message!</p>
-        <div className="bg-white rounded-xl border border-gray-200 p-8 text-center">
+        <p className="text-gray-400 mb-4">Read each travel scenario and pick the best Spanish postcard message!</p>
+        <div className="bg-gray-800 rounded-xl border border-gray-700 p-8 text-center">
           <div className="text-5xl mb-4">&#9993;&#65039;</div>
-          <p className="text-gray-600 mb-2">{totalRounds} postcards from amazing destinations. Choose the correct past-tense message for each.</p>
+          <p className="text-gray-400 mb-2">{totalRounds} postcards from amazing destinations. Choose the correct past-tense message for each.</p>
           <p className="text-sm text-gray-400 mb-6">20 seconds per postcard.</p>
           <button onClick={startGame} className="px-8 py-3 bg-gradient-to-r from-amber-500 to-orange-500 text-white rounded-xl font-bold text-lg hover:from-amber-600 hover:to-orange-600 transition-all shadow-lg hover:shadow-xl">
             Start Writing Postcards
@@ -89,11 +89,11 @@ export default function PostcardWriterL38({ onComplete }: { onComplete?: () => v
     return (
       <section id="postcard-writer">
         <h2 className="text-2xl font-bold font-[family-name:var(--font-inter)] mb-2">Postcard Writer</h2>
-        <div className="bg-white rounded-xl border border-gray-200 p-8 text-center">
+        <div className="bg-gray-800 rounded-xl border border-gray-700 p-8 text-center">
           <div className="text-4xl mb-2">{'\u2b50'.repeat(stars)}{'\u2606'.repeat(3 - stars)}</div>
           <div className="text-4xl font-bold text-amber-600 mb-1">{score}/{totalRounds}</div>
-          <p className="text-gray-600 mb-4">{pct >= 80 ? 'Amazing travel writer!' : pct >= 50 ? 'Good postcards! Practice your preterite a bit more.' : 'Keep practicing those past tense travel stories!'}</p>
-          <div className="bg-amber-50 rounded-xl p-4 mb-4 text-left">
+          <p className="text-gray-400 mb-4">{pct >= 80 ? 'Amazing travel writer!' : pct >= 50 ? 'Good postcards! Practice your preterite a bit more.' : 'Keep practicing those past tense travel stories!'}</p>
+          <div className="bg-amber-950 rounded-xl p-4 mb-4 text-left">
             <p className="text-xs font-semibold text-amber-600 uppercase mb-2">Your Postcards:</p>
             {postcards.map((msg, i) => (
               <div key={i} className="mb-2 p-2 bg-white rounded-lg border border-amber-100">
@@ -114,7 +114,7 @@ export default function PostcardWriterL38({ onComplete }: { onComplete?: () => v
     <section id="postcard-writer">
       <h2 className="text-2xl font-bold font-[family-name:var(--font-inter)] mb-2">Postcard Writer</h2>
       <div className="flex justify-between text-sm mb-2">
-        <span className="text-gray-500">Postcard {round + 1} of {totalRounds}</span>
+        <span className="text-gray-400">Postcard {round + 1} of {totalRounds}</span>
         <span className="font-semibold text-amber-600">Score: {score}</span>
       </div>
       <div className="h-2 bg-gray-200 rounded-full overflow-hidden mb-4">
@@ -122,18 +122,18 @@ export default function PostcardWriterL38({ onComplete }: { onComplete?: () => v
       </div>
 
       {postcards.length > 0 && (
-        <div className="bg-amber-50/50 rounded-lg p-3 mb-4 border border-amber-100">
+        <div className="bg-amber-950/50 rounded-lg p-3 mb-4 border border-amber-100">
           <p className="text-xs font-semibold text-amber-500 mb-1">Postcards sent:</p>
           {postcards.map((msg, i) => (
-            <span key={i} className="text-sm text-gray-600 block">{DESTINATIONS[i]}: {msg.slice(0, 40)}...</span>
+            <span key={i} className="text-sm text-gray-400 block">{DESTINATIONS[i]}: {msg.slice(0, 40)}...</span>
           ))}
         </div>
       )}
 
-      <div className="bg-orange-50 border border-orange-200 rounded-xl p-4 mb-3">
+      <div className="bg-orange-950 border border-orange-800 rounded-xl p-4 mb-3">
         <p className="text-xs font-semibold text-orange-500 uppercase mb-1">{DESTINATIONS[round]}</p>
-        <p className="font-semibold text-gray-800 text-lg">{challenge.scenario}</p>
-        {feedback && <p className="text-sm text-gray-500 mt-1 italic">{challenge.english}</p>}
+        <p className="font-semibold text-gray-200 text-lg">{challenge.scenario}</p>
+        {feedback && <p className="text-sm text-gray-400 mt-1 italic">{challenge.english}</p>}
       </div>
 
       <div className="space-y-3">
@@ -144,14 +144,14 @@ export default function PostcardWriterL38({ onComplete }: { onComplete?: () => v
           return (
             <button key={opt} onClick={() => handleSelect(opt)} disabled={!!feedback}
               className={`w-full text-left px-4 py-4 rounded-xl border-2 font-medium text-sm transition-all ${
-                show ? isCorrect ? 'border-green-400 bg-green-50 text-green-800' : isSelected && !isCorrect ? 'border-red-300 bg-red-50 text-red-700' : 'border-gray-200 opacity-40'
-                  : 'border-gray-200 hover:border-amber-400 hover:bg-amber-50/50 cursor-pointer'
+                show ? isCorrect ? 'border-green-400 bg-green-950 text-green-200' : isSelected && !isCorrect ? 'border-red-700 bg-red-950 text-red-700' : 'border-gray-700 opacity-40'
+                  : 'border-gray-700 hover:border-amber-400 hover:bg-amber-950/50 cursor-pointer'
               }`}>{opt}</button>
           )
         })}
       </div>
       {feedback && (
-        <div className={`text-center text-sm font-semibold p-3 rounded-lg mt-4 ${feedback.correct ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`}>
+        <div className={`text-center text-sm font-semibold p-3 rounded-lg mt-4 ${feedback.correct ? 'bg-green-950 text-green-200' : 'bg-red-950 text-red-200'}`}>
           {feedback.correct ? 'Perfect postcard!' : `Correct: ${challenge.correctMessage}`}
         </div>
       )}

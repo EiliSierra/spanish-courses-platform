@@ -186,8 +186,8 @@ export const L48Data: LessonData = {
       title: 'Future Tense — El Futuro',
       description: 'Add endings directly to the infinitive: -é, -ás, -á, -emos, -án. Irregulars change the stem but keep the same endings.',
       tabs: [
-        { label: 'Regular Future', color: 'orange', phrases: PHRASES.filter(p => p.category === 'future').slice(0, 5) },
-        { label: 'Irregular Future', color: 'amber', phrases: PHRASES.filter(p => p.category === 'future').slice(5) },
+        { label: 'Regular Future', color: 'orange', columns: 1, phrases: PHRASES.filter(p => p.category === 'future').slice(0, 5) },
+        { label: 'Irregular Future', color: 'amber', columns: 1, phrases: PHRASES.filter(p => p.category === 'future').slice(5) },
       ],
     },
     {
@@ -195,8 +195,8 @@ export const L48Data: LessonData = {
       title: 'Conditional — El Condicional',
       description: 'Same stem as future + imperfect -ER/-IR endings: -ía, -ías, -ía, -íamos, -ían. "I would..."',
       tabs: [
-        { label: 'Regular Conditional', color: 'blue', phrases: PHRASES.filter(p => p.category === 'conditional').slice(0, 5) },
-        { label: 'Irregular & Wishes', color: 'purple', phrases: PHRASES.filter(p => p.category === 'conditional').slice(5) },
+        { label: 'Regular Conditional', color: 'blue', columns: 1, phrases: PHRASES.filter(p => p.category === 'conditional').slice(0, 5) },
+        { label: 'Irregular & Wishes', color: 'purple', columns: 1, phrases: PHRASES.filter(p => p.category === 'conditional').slice(5) },
       ],
     },
     {
@@ -204,8 +204,8 @@ export const L48Data: LessonData = {
       title: 'Goals & Aspirations — Metas y Sueños',
       description: 'Use quiero, planeo, espero, pienso + infinitive to share your life ambitions.',
       tabs: [
-        { label: 'Career & Education', color: 'rose', phrases: PHRASES.filter(p => p.category === 'goals').slice(0, 5) },
-        { label: 'Life Goals', color: 'emerald', phrases: PHRASES.filter(p => p.category === 'goals').slice(5) },
+        { label: 'Career & Education', color: 'rose', columns: 1, phrases: PHRASES.filter(p => p.category === 'goals').slice(0, 5) },
+        { label: 'Life Goals', color: 'emerald', columns: 1, phrases: PHRASES.filter(p => p.category === 'goals').slice(5) },
       ],
     },
     {
@@ -213,8 +213,8 @@ export const L48Data: LessonData = {
       title: 'Hypothetical Situations — Si yo pudiera...',
       description: 'Si + imperfect subjunctive + conditional = "If I could/had... I would..." The key formula for dreaming in Spanish!',
       tabs: [
-        { label: 'If I could...', color: 'teal', phrases: PHRASES.filter(p => p.category === 'hypothetical').slice(0, 4) },
-        { label: 'I would love to...', color: 'amber', phrases: PHRASES.filter(p => p.category === 'hypothetical').slice(4) },
+        { label: 'If I could...', color: 'teal', columns: 1, phrases: PHRASES.filter(p => p.category === 'hypothetical').slice(0, 4) },
+        { label: 'I would love to...', color: 'amber', columns: 1, phrases: PHRASES.filter(p => p.category === 'hypothetical').slice(4) },
       ],
     },
   ],

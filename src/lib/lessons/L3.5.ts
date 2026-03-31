@@ -192,8 +192,8 @@ export const L35Data: LessonData = {
       title: 'Sports',
       description: 'The most popular sports across the Spanish-speaking world. Use "jugar a" for team sports and "practicar/hacer" for individual ones.',
       tabs: [
-        { label: 'Team Sports', color: 'emerald', phrases: PHRASES.filter(p => p.category === 'sports').slice(0, 5) },
-        { label: 'Individual Sports', color: 'teal', phrases: PHRASES.filter(p => p.category === 'sports').slice(5) },
+        { label: 'Team Sports', color: 'emerald', columns: 1, phrases: PHRASES.filter(p => p.category === 'sports').slice(0, 5) },
+        { label: 'Individual Sports', color: 'teal', columns: 1, phrases: PHRASES.filter(p => p.category === 'sports').slice(5) },
       ],
     },
     {
@@ -201,8 +201,8 @@ export const L35Data: LessonData = {
       title: 'Hobbies & Pastimes',
       description: 'Creative and relaxing activities for your free time. "Pasatiempo" = pastime, "afici\u00f3n" = hobby.',
       tabs: [
-        { label: 'Creative', color: 'purple', phrases: PHRASES.filter(p => p.category === 'hobbies').slice(0, 5) },
-        { label: 'Active', color: 'orange', phrases: PHRASES.filter(p => p.category === 'hobbies').slice(5) },
+        { label: 'Creative', color: 'purple', columns: 1, phrases: PHRASES.filter(p => p.category === 'hobbies').slice(0, 5) },
+        { label: 'Active', color: 'orange', columns: 1, phrases: PHRASES.filter(p => p.category === 'hobbies').slice(5) },
       ],
     },
     {
@@ -210,8 +210,8 @@ export const L35Data: LessonData = {
       title: 'How Often?',
       description: 'Express how frequently you do your favorite activities. These go before or after the verb.',
       tabs: [
-        { label: 'Regular', color: 'blue', phrases: PHRASES.filter(p => p.category === 'frequency').slice(0, 4) },
-        { label: 'Occasional', color: 'amber', phrases: PHRASES.filter(p => p.category === 'frequency').slice(4) },
+        { label: 'Regular', color: 'blue', columns: 1, phrases: PHRASES.filter(p => p.category === 'frequency').slice(0, 4) },
+        { label: 'Occasional', color: 'amber', columns: 1, phrases: PHRASES.filter(p => p.category === 'frequency').slice(4) },
       ],
     },
     {
@@ -219,8 +219,8 @@ export const L35Data: LessonData = {
       title: 'Opinions & Preferences',
       description: 'Share what you love, like, and prefer. These verbs work "backwards" \u2014 the activity is the subject!',
       tabs: [
-        { label: 'Me gusta / encanta', color: 'rose', phrases: PHRASES.filter(p => p.category === 'opinions').slice(0, 5) },
-        { label: 'Prefiero / other', color: 'emerald', phrases: PHRASES.filter(p => p.category === 'opinions').slice(5) },
+        { label: 'Me gusta / encanta', color: 'rose', columns: 1, phrases: PHRASES.filter(p => p.category === 'opinions').slice(0, 5) },
+        { label: 'Prefiero / other', color: 'emerald', columns: 1, phrases: PHRASES.filter(p => p.category === 'opinions').slice(5) },
       ],
     },
   ],

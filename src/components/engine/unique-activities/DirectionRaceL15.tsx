@@ -79,9 +79,9 @@ export default function DirectionRaceL15({ onComplete }: { onComplete?: () => vo
         const isSelected = cell.label === selectedCell
         const isWrongSelected = isSelected && feedback && !feedback.correct
 
-        let cellStyle = 'bg-gray-50 border-gray-200 hover:border-sky-400 hover:bg-sky-50 cursor-pointer'
+        let cellStyle = 'bg-gray-50 border-gray-700 hover:border-sky-400 hover:bg-sky-950 cursor-pointer'
         if (isYou) cellStyle = 'bg-blue-100 border-blue-300 cursor-default'
-        if (!interactive) cellStyle = 'bg-gray-50 border-gray-200'
+        if (!interactive) cellStyle = 'bg-gray-50 border-gray-700'
         if (isCorrectAnswer) cellStyle = 'bg-green-100 border-green-400 ring-2 ring-green-300'
         if (isWrongSelected) cellStyle = 'bg-red-100 border-red-400'
 
@@ -103,7 +103,7 @@ export default function DirectionRaceL15({ onComplete }: { onComplete?: () => vo
   )
 
   const directionLegend = (
-    <div className="flex items-center justify-center gap-4 text-xs text-gray-500 mb-3">
+    <div className="flex items-center justify-center gap-4 text-xs text-gray-400 mb-3">
       <span>⬆️ Derecho</span>
       <span>⬇️ Abajo</span>
       <span>⬅️ Izquierda</span>
@@ -115,12 +115,12 @@ export default function DirectionRaceL15({ onComplete }: { onComplete?: () => vo
     return (
       <section id="direction-race">
         <h2 className="text-2xl font-bold font-[family-name:var(--font-inter)] mb-2">Direction Race</h2>
-        <p className="text-gray-600 mb-4">Look at the map below. You start at the center (📍 TÚ). Listen to directions in Spanish and click the place you end up!</p>
-        <div className="bg-white rounded-xl border border-gray-200 p-6">
+        <p className="text-gray-400 mb-4">Look at the map below. You start at the center (📍 TÚ). Listen to directions in Spanish and click the place you end up!</p>
+        <div className="bg-gray-800 rounded-xl border border-gray-700 p-6">
           {directionLegend}
           {renderMap(false)}
           <div className="text-center">
-            <p className="text-gray-500 text-sm mb-4">{totalRounds} directions to follow. Use the map!</p>
+            <p className="text-gray-400 text-sm mb-4">{totalRounds} directions to follow. Use the map!</p>
             <button onClick={startGame} className="px-8 py-3 bg-gradient-to-r from-sky-500 to-blue-500 text-white rounded-xl font-bold text-lg hover:from-sky-600 hover:to-blue-600 transition-all shadow-lg hover:shadow-xl">
               Start Race
             </button>
@@ -136,10 +136,10 @@ export default function DirectionRaceL15({ onComplete }: { onComplete?: () => vo
     return (
       <section id="direction-race">
         <h2 className="text-2xl font-bold font-[family-name:var(--font-inter)] mb-2">Direction Race</h2>
-        <div className="bg-white rounded-xl border border-gray-200 p-8 text-center">
+        <div className="bg-gray-800 rounded-xl border border-gray-700 p-8 text-center">
           <div className="text-4xl mb-2">{Array(stars).fill(null).map((_, i) => <span key={i}>&#11088;</span>)}{Array(3 - stars).fill(null).map((_, i) => <span key={i}>&#9734;</span>)}</div>
           <div className="text-4xl font-bold text-sky-600 mb-1">{score}/{totalRounds}</div>
-          <p className="text-gray-600 mb-4">
+          <p className="text-gray-400 mb-4">
             {pct >= 80 ? 'Excellent navigation!' : pct >= 50 ? 'Good sense of direction! Keep practicing.' : 'Keep following those directions!'}
           </p>
           <button onClick={startGame} className="px-6 py-2 bg-sky-600 text-white rounded-lg font-medium hover:bg-sky-700">Try Again</button>
@@ -152,11 +152,11 @@ export default function DirectionRaceL15({ onComplete }: { onComplete?: () => vo
     <section id="direction-race">
       <h2 className="text-2xl font-bold font-[family-name:var(--font-inter)] mb-2">Direction Race</h2>
       <div className="flex justify-between text-sm mb-2">
-        <span className="text-gray-500">Direction {round + 1} of {totalRounds}</span>
+        <span className="text-gray-400">Direction {round + 1} of {totalRounds}</span>
         <span className="font-semibold text-sky-600">Score: {score}</span>
       </div>
 
-      <div className="bg-white rounded-xl border border-gray-200 p-6">
+      <div className="bg-gray-800 rounded-xl border border-gray-700 p-6">
         {/* Instruction */}
         <div className="text-center mb-4">
           <div className="flex items-center justify-center gap-3">
@@ -165,9 +165,9 @@ export default function DirectionRaceL15({ onComplete }: { onComplete?: () => vo
                 <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z" />
               </svg>
             </button>
-            <p className="text-lg font-semibold text-gray-800">&ldquo;{currentRound.instruction}&rdquo;</p>
+            <p className="text-lg font-semibold text-gray-200">&ldquo;{currentRound.instruction}&rdquo;</p>
           </div>
-          <p className="text-sm text-gray-500 mt-2">Click the place on the map where you end up</p>
+          <p className="text-sm text-gray-400 mt-2">Click the place on the map where you end up</p>
         </div>
 
         {/* Interactive map */}
@@ -176,7 +176,7 @@ export default function DirectionRaceL15({ onComplete }: { onComplete?: () => vo
 
         {/* Feedback */}
         {feedback && (
-          <div className={`text-center text-sm font-semibold p-3 rounded-lg ${feedback.correct ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`}>
+          <div className={`text-center text-sm font-semibold p-3 rounded-lg ${feedback.correct ? 'bg-green-950 text-green-200' : 'bg-red-950 text-red-200'}`}>
             {feedback.correct ? '¡Correcto! You found it!' : `The answer was: ${feedback.answer}`}
           </div>
         )}

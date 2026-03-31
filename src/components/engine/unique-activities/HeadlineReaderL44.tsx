@@ -66,10 +66,10 @@ export default function HeadlineReaderL44({ onComplete }: { onComplete?: () => v
     return (
       <section id="headline-reader">
         <h2 className="text-2xl font-bold font-[family-name:var(--font-inter)] mb-2">Headline Reader</h2>
-        <p className="text-gray-600 mb-4">Read the headline and pick what the news story is about!</p>
-        <div className="bg-white rounded-xl border border-gray-200 p-8 text-center">
+        <p className="text-gray-400 mb-4">Read the headline and pick what the news story is about!</p>
+        <div className="bg-gray-800 rounded-xl border border-gray-700 p-8 text-center">
           <div className="text-5xl mb-4">&#128240;</div>
-          <p className="text-gray-600 mb-2">{totalRounds} headlines. Read each one and identify the topic.</p>
+          <p className="text-gray-400 mb-2">{totalRounds} headlines. Read each one and identify the topic.</p>
           <p className="text-sm text-gray-400 mb-6">12 seconds per headline.</p>
           <button onClick={startGame} className="px-8 py-3 bg-gradient-to-r from-rose-500 to-amber-500 text-white rounded-xl font-bold text-lg hover:from-rose-600 hover:to-amber-600 transition-all shadow-lg hover:shadow-xl">
             Start Reading
@@ -85,10 +85,10 @@ export default function HeadlineReaderL44({ onComplete }: { onComplete?: () => v
     return (
       <section id="headline-reader">
         <h2 className="text-2xl font-bold font-[family-name:var(--font-inter)] mb-2">Headline Reader</h2>
-        <div className="bg-white rounded-xl border border-gray-200 p-8 text-center">
+        <div className="bg-gray-800 rounded-xl border border-gray-700 p-8 text-center">
           <div className="text-4xl mb-2">{'\u2b50'.repeat(stars)}{'\u2606'.repeat(3 - stars)}</div>
           <div className="text-4xl font-bold text-rose-600 mb-1">{score}/{totalRounds}</div>
-          <p className="text-gray-600 mb-4">{pct >= 80 ? 'Star news reader!' : pct >= 50 ? 'Good eye for headlines!' : 'Keep practicing your reading!'}</p>
+          <p className="text-gray-400 mb-4">{pct >= 80 ? 'Star news reader!' : pct >= 50 ? 'Good eye for headlines!' : 'Keep practicing your reading!'}</p>
           <button onClick={startGame} className="px-6 py-2 bg-rose-600 text-white rounded-lg font-medium hover:bg-rose-700">Try Again</button>
         </div>
       </section>
@@ -101,23 +101,23 @@ export default function HeadlineReaderL44({ onComplete }: { onComplete?: () => v
     <section id="headline-reader">
       <h2 className="text-2xl font-bold font-[family-name:var(--font-inter)] mb-2">Headline Reader</h2>
       <div className="flex justify-between text-sm mb-2">
-        <span className="text-gray-500">Headline {round + 1} of {totalRounds}</span>
+        <span className="text-gray-400">Headline {round + 1} of {totalRounds}</span>
         <span className="font-semibold text-rose-600">Score: {score}</span>
       </div>
       <div className="h-2 bg-gray-200 rounded-full overflow-hidden mb-6">
         <div className={`h-full rounded-full transition-all duration-100 ${timerColor}`} style={{ width: `${timeLeft}%` }} />
       </div>
-      <div className="bg-white rounded-xl border border-gray-200 p-6">
-        <div className="bg-rose-50 border border-rose-200 rounded-xl p-4 mb-6">
+      <div className="bg-gray-800 rounded-xl border border-gray-700 p-6">
+        <div className="bg-rose-950 border border-rose-800 rounded-xl p-4 mb-6">
           <div className="flex items-start gap-3">
             <span className="text-2xl">&#128240;</span>
             <div>
-              <p className="font-semibold text-gray-800 text-lg">{challenge.headline}</p>
-              {feedback && <p className="text-sm text-gray-500 mt-1 italic">{challenge.english}</p>}
+              <p className="font-semibold text-gray-200 text-lg">{challenge.headline}</p>
+              {feedback && <p className="text-sm text-gray-400 mt-1 italic">{challenge.english}</p>}
             </div>
           </div>
         </div>
-        <p className="text-sm font-semibold text-gray-500 mb-3">What is this headline about?</p>
+        <p className="text-sm font-semibold text-gray-400 mb-3">What is this headline about?</p>
         <div className="grid grid-cols-2 gap-3">
           {challenge.options.map((opt) => {
             const isCorrect = opt === challenge.correctTopic
@@ -126,14 +126,14 @@ export default function HeadlineReaderL44({ onComplete }: { onComplete?: () => v
             return (
               <button key={opt} onClick={() => handleSelect(opt)} disabled={!!feedback}
                 className={`px-4 py-4 rounded-xl border-2 font-medium text-sm transition-all ${
-                  show ? isCorrect ? 'border-green-400 bg-green-50 text-green-800' : isSelected && !isCorrect ? 'border-red-300 bg-red-50 text-red-700' : 'border-gray-200 opacity-40'
-                    : 'border-gray-200 hover:border-rose-400 hover:bg-rose-50/50 cursor-pointer'
+                  show ? isCorrect ? 'border-green-400 bg-green-950 text-green-200' : isSelected && !isCorrect ? 'border-red-700 bg-red-950 text-red-700' : 'border-gray-700 opacity-40'
+                    : 'border-gray-700 hover:border-rose-400 hover:bg-rose-950/50 cursor-pointer'
                 }`}>{opt}</button>
             )
           })}
         </div>
         {feedback && (
-          <div className={`text-center text-sm font-semibold p-3 rounded-lg mt-4 ${feedback.correct ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`}>
+          <div className={`text-center text-sm font-semibold p-3 rounded-lg mt-4 ${feedback.correct ? 'bg-green-950 text-green-200' : 'bg-red-950 text-red-200'}`}>
             {feedback.correct ? 'Correct!' : `The topic was: ${challenge.correctTopic}`}
           </div>
         )}

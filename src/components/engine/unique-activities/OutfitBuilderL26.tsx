@@ -76,10 +76,10 @@ export default function OutfitBuilderL26({ onComplete }: { onComplete?: () => vo
     return (
       <section id="outfit-builder">
         <h2 className="text-2xl font-bold font-[family-name:var(--font-inter)] mb-2">Outfit Builder</h2>
-        <p className="text-gray-600 mb-4">Pick the right clothes for each scenario!</p>
-        <div className="bg-white rounded-xl border border-gray-200 p-8 text-center">
+        <p className="text-gray-400 mb-4">Pick the right clothes for each scenario!</p>
+        <div className="bg-gray-800 rounded-xl border border-gray-700 p-8 text-center">
           <div className="text-5xl mb-4">&#128087;</div>
-          <p className="text-gray-600 mb-2">{totalRounds} scenarios. Pick exactly 3 items that fit the situation.</p>
+          <p className="text-gray-400 mb-2">{totalRounds} scenarios. Pick exactly 3 items that fit the situation.</p>
           <p className="text-sm text-gray-400 mb-6">20 seconds per outfit.</p>
           <button onClick={startGame} className="px-8 py-3 bg-gradient-to-r from-pink-500 to-rose-500 text-white rounded-xl font-bold text-lg hover:from-pink-600 hover:to-rose-600 transition-all shadow-lg hover:shadow-xl">
             Start Styling
@@ -95,10 +95,10 @@ export default function OutfitBuilderL26({ onComplete }: { onComplete?: () => vo
     return (
       <section id="outfit-builder">
         <h2 className="text-2xl font-bold font-[family-name:var(--font-inter)] mb-2">Outfit Builder</h2>
-        <div className="bg-white rounded-xl border border-gray-200 p-8 text-center">
+        <div className="bg-gray-800 rounded-xl border border-gray-700 p-8 text-center">
           <div className="text-4xl mb-2">{'\u2b50'.repeat(stars)}{'\u2606'.repeat(3 - stars)}</div>
           <div className="text-4xl font-bold text-pink-600 mb-1">{score}/{totalRounds}</div>
-          <p className="text-gray-600 mb-4">{pct >= 80 ? 'Fashion expert!' : pct >= 50 ? 'Nice picks! A few outfits were off.' : 'Keep practicing your outfits!'}</p>
+          <p className="text-gray-400 mb-4">{pct >= 80 ? 'Fashion expert!' : pct >= 50 ? 'Nice picks! A few outfits were off.' : 'Keep practicing your outfits!'}</p>
           <button onClick={startGame} className="px-6 py-2 bg-pink-600 text-white rounded-lg font-medium hover:bg-pink-700">Try Again</button>
         </div>
       </section>
@@ -111,19 +111,19 @@ export default function OutfitBuilderL26({ onComplete }: { onComplete?: () => vo
     <section id="outfit-builder">
       <h2 className="text-2xl font-bold font-[family-name:var(--font-inter)] mb-2">Outfit Builder</h2>
       <div className="flex justify-between text-sm mb-2">
-        <span className="text-gray-500">Outfit {round + 1} of {totalRounds}</span>
+        <span className="text-gray-400">Outfit {round + 1} of {totalRounds}</span>
         <span className="font-semibold text-pink-600">Score: {score}</span>
       </div>
       <div className="h-2 bg-gray-200 rounded-full overflow-hidden mb-6">
         <div className={`h-full rounded-full transition-all duration-100 ${timerColor}`} style={{ width: `${timeLeft}%` }} />
       </div>
 
-      <div className="bg-pink-50 border border-pink-200 rounded-xl p-4 mb-5">
-        <p className="font-semibold text-gray-800 text-lg">{challenge.scenario}</p>
-        {feedback && <p className="text-sm text-gray-500 mt-1 italic">{challenge.english}</p>}
+      <div className="bg-pink-950 border border-pink-200 rounded-xl p-4 mb-5">
+        <p className="font-semibold text-gray-200 text-lg">{challenge.scenario}</p>
+        {feedback && <p className="text-sm text-gray-400 mt-1 italic">{challenge.english}</p>}
       </div>
 
-      <p className="text-sm font-semibold text-gray-500 mb-3">Pick 3 items:</p>
+      <p className="text-sm font-semibold text-gray-400 mb-3">Pick 3 items:</p>
       <div className="grid grid-cols-2 gap-3 mb-4">
         {challenge.allItems.map((item) => {
           const isSel = selected.has(item)
@@ -132,11 +132,11 @@ export default function OutfitBuilderL26({ onComplete }: { onComplete?: () => vo
           return (
             <button key={item} onClick={() => toggleItem(item)} disabled={!!feedback}
               className={`px-4 py-4 rounded-xl border-2 font-medium text-sm transition-all ${
-                show ? isCorrect ? 'border-green-400 bg-green-50 text-green-800'
-                  : isSel && !isCorrect ? 'border-red-300 bg-red-50 text-red-700'
-                  : 'border-gray-200 opacity-40'
-                : isSel ? 'border-pink-400 bg-pink-50 text-pink-800 ring-2 ring-pink-200'
-                : 'border-gray-200 hover:border-pink-300 hover:bg-pink-50/50 cursor-pointer'
+                show ? isCorrect ? 'border-green-400 bg-green-950 text-green-200'
+                  : isSel && !isCorrect ? 'border-red-700 bg-red-950 text-red-700'
+                  : 'border-gray-700 opacity-40'
+                : isSel ? 'border-pink-400 bg-pink-950 text-pink-800 ring-2 ring-pink-200'
+                : 'border-gray-700 hover:border-pink-300 hover:bg-pink-950/50 cursor-pointer'
               }`}>{item}</button>
           )
         })}
@@ -152,7 +152,7 @@ export default function OutfitBuilderL26({ onComplete }: { onComplete?: () => vo
       )}
 
       {feedback && (
-        <div className={`text-center text-sm font-semibold p-3 rounded-lg ${feedback.correct ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`}>
+        <div className={`text-center text-sm font-semibold p-3 rounded-lg ${feedback.correct ? 'bg-green-950 text-green-200' : 'bg-red-950 text-red-200'}`}>
           {feedback.correct ? 'Perfect outfit!' : `Correct: ${challenge.correctItems.join(', ')}`}
         </div>
       )}

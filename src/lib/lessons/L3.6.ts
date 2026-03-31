@@ -234,8 +234,8 @@ export const L36Data: LessonData = {
       title: 'Animals of Latin America',
       description: 'From jaguars in the jungle to whales in the Pacific \u2014 the amazing fauna of the Spanish-speaking world.',
       tabs: [
-        { label: 'Land Animals', color: 'orange', phrases: PHRASES.filter(p => p.category === 'animals').slice(0, 5) },
-        { label: 'Sea & Sky', color: 'teal', phrases: PHRASES.filter(p => p.category === 'animals').slice(5) },
+        { label: 'Land Animals', color: 'orange', columns: 1, phrases: PHRASES.filter(p => p.category === 'animals').slice(0, 5) },
+        { label: 'Sea & Sky', color: 'teal', columns: 1, phrases: PHRASES.filter(p => p.category === 'animals').slice(5) },
       ],
     },
     {
@@ -243,8 +243,8 @@ export const L36Data: LessonData = {
       title: 'Nature & Geography',
       description: 'Rainforests, volcanoes, deserts, and coasts \u2014 Latin America has every landscape imaginable.',
       tabs: [
-        { label: 'Land & Water', color: 'emerald', phrases: PHRASES.filter(p => p.category === 'nature').slice(0, 5) },
-        { label: 'More Landscapes', color: 'blue', phrases: PHRASES.filter(p => p.category === 'nature').slice(5) },
+        { label: 'Land & Water', color: 'emerald', columns: 1, phrases: PHRASES.filter(p => p.category === 'nature').slice(0, 5) },
+        { label: 'More Landscapes', color: 'blue', columns: 1, phrases: PHRASES.filter(p => p.category === 'nature').slice(5) },
       ],
     },
     {
@@ -252,8 +252,8 @@ export const L36Data: LessonData = {
       title: 'Environment & Climate',
       description: 'Understand the environmental challenges facing our planet and the vocabulary to discuss them.',
       tabs: [
-        { label: 'Problems', color: 'rose', phrases: PHRASES.filter(p => p.category === 'environment').slice(0, 5) },
-        { label: 'Concepts', color: 'purple', phrases: PHRASES.filter(p => p.category === 'environment').slice(5) },
+        { label: 'Problems', color: 'rose', columns: 1, phrases: PHRASES.filter(p => p.category === 'environment').slice(0, 5) },
+        { label: 'Concepts', color: 'purple', columns: 1, phrases: PHRASES.filter(p => p.category === 'environment').slice(5) },
       ],
     },
     {
@@ -261,8 +261,8 @@ export const L36Data: LessonData = {
       title: 'Eco-Actions',
       description: 'What can we do to help? Learn to express environmental actions in Spanish.',
       tabs: [
-        { label: 'Reduce & Reuse', color: 'amber', phrases: PHRASES.filter(p => p.category === 'eco-actions').slice(0, 4) },
-        { label: 'Protect & Care', color: 'emerald', phrases: PHRASES.filter(p => p.category === 'eco-actions').slice(4) },
+        { label: 'Reduce & Reuse', color: 'amber', columns: 1, phrases: PHRASES.filter(p => p.category === 'eco-actions').slice(0, 4) },
+        { label: 'Protect & Care', color: 'emerald', columns: 1, phrases: PHRASES.filter(p => p.category === 'eco-actions').slice(4) },
       ],
     },
   ],

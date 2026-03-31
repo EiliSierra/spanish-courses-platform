@@ -15,7 +15,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <ClerkProvider>
       <html lang="en" className={`${inter.variable} ${sourceSans.variable}`}>
-        <body className="font-[family-name:var(--font-source-sans)] bg-gray-50 text-gray-800 antialiased">
+        <body className="font-[family-name:var(--font-source-sans)] bg-gray-950 text-gray-100 antialiased">
           {children}
         </body>
       </html>

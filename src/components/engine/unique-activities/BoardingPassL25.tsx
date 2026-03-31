@@ -66,10 +66,10 @@ export default function BoardingPassL25({ onComplete }: { onComplete?: () => voi
     return (
       <section id="boarding-pass">
         <h2 className="text-2xl font-bold font-[family-name:var(--font-inter)] mb-2">Boarding Pass Reader</h2>
-        <p className="text-gray-600 mb-4">Read the boarding pass in Spanish and answer the question!</p>
-        <div className="bg-white rounded-xl border border-gray-200 p-8 text-center">
+        <p className="text-gray-400 mb-4">Read the boarding pass in Spanish and answer the question!</p>
+        <div className="bg-gray-800 rounded-xl border border-gray-700 p-8 text-center">
           <div className="text-5xl mb-4">&#127915;</div>
-          <p className="text-gray-600 mb-2">{totalRounds} boarding passes. Read the info and answer correctly.</p>
+          <p className="text-gray-400 mb-2">{totalRounds} boarding passes. Read the info and answer correctly.</p>
           <p className="text-sm text-gray-400 mb-6">20 seconds per pass.</p>
           <button onClick={startGame} className="px-8 py-3 bg-gradient-to-r from-sky-500 to-blue-500 text-white rounded-xl font-bold text-lg hover:from-sky-600 hover:to-blue-600 transition-all shadow-lg hover:shadow-xl">
             Start Reading
@@ -85,10 +85,10 @@ export default function BoardingPassL25({ onComplete }: { onComplete?: () => voi
     return (
       <section id="boarding-pass">
         <h2 className="text-2xl font-bold font-[family-name:var(--font-inter)] mb-2">Boarding Pass Reader</h2>
-        <div className="bg-white rounded-xl border border-gray-200 p-8 text-center">
+        <div className="bg-gray-800 rounded-xl border border-gray-700 p-8 text-center">
           <div className="text-4xl mb-2">{'\u2b50'.repeat(stars)}{'\u2606'.repeat(3 - stars)}</div>
           <div className="text-4xl font-bold text-sky-600 mb-1">{score}/{totalRounds}</div>
-          <p className="text-gray-600 mb-4">{pct >= 80 ? 'Expert traveler!' : pct >= 50 ? 'Good reading! A few details missed.' : 'Keep practicing your boarding passes!'}</p>
+          <p className="text-gray-400 mb-4">{pct >= 80 ? 'Expert traveler!' : pct >= 50 ? 'Good reading! A few details missed.' : 'Keep practicing your boarding passes!'}</p>
           <button onClick={startGame} className="px-6 py-2 bg-sky-600 text-white rounded-lg font-medium hover:bg-sky-700">Try Again</button>
         </div>
       </section>
@@ -101,7 +101,7 @@ export default function BoardingPassL25({ onComplete }: { onComplete?: () => voi
     <section id="boarding-pass">
       <h2 className="text-2xl font-bold font-[family-name:var(--font-inter)] mb-2">Boarding Pass Reader</h2>
       <div className="flex justify-between text-sm mb-2">
-        <span className="text-gray-500">Pass {round + 1} of {totalRounds}</span>
+        <span className="text-gray-400">Pass {round + 1} of {totalRounds}</span>
         <span className="font-semibold text-sky-600">Score: {score}</span>
       </div>
       <div className="h-2 bg-gray-200 rounded-full overflow-hidden mb-6">
@@ -114,7 +114,7 @@ export default function BoardingPassL25({ onComplete }: { onComplete?: () => voi
         <div className="flex justify-between items-start mb-4 pt-2">
           <div>
             <p className="text-[10px] uppercase tracking-widest text-gray-400 font-semibold">Pasajero / Passenger</p>
-            <p className="text-lg font-bold text-gray-800">{scenario.passengerName}</p>
+            <p className="text-lg font-bold text-gray-200">{scenario.passengerName}</p>
           </div>
           <div className="text-right">
             <p className="text-[10px] uppercase tracking-widest text-gray-400 font-semibold">Vuelo / Flight</p>
@@ -131,30 +131,30 @@ export default function BoardingPassL25({ onComplete }: { onComplete?: () => voi
             <p className="text-sm font-semibold text-gray-700">{scenario.to}</p>
           </div>
         </div>
-        <div className="grid grid-cols-4 gap-3 bg-sky-50/60 rounded-lg p-3">
+        <div className="grid grid-cols-4 gap-3 bg-sky-950/60 rounded-lg p-3">
           <div>
             <p className="text-[10px] uppercase tracking-widest text-gray-400 font-semibold">Puerta / Gate</p>
-            <p className="text-base font-bold text-gray-800">{scenario.gate}</p>
+            <p className="text-base font-bold text-gray-200">{scenario.gate}</p>
           </div>
           <div>
             <p className="text-[10px] uppercase tracking-widest text-gray-400 font-semibold">Asiento / Seat</p>
-            <p className="text-base font-bold text-gray-800">{scenario.seat}</p>
+            <p className="text-base font-bold text-gray-200">{scenario.seat}</p>
           </div>
           <div>
             <p className="text-[10px] uppercase tracking-widest text-gray-400 font-semibold">Embarque / Boarding</p>
-            <p className="text-base font-bold text-gray-800">{scenario.boarding}</p>
+            <p className="text-base font-bold text-gray-200">{scenario.boarding}</p>
           </div>
           <div>
             <p className="text-[10px] uppercase tracking-widest text-gray-400 font-semibold">Salida / Departure</p>
-            <p className="text-base font-bold text-gray-800">{scenario.departure}</p>
+            <p className="text-base font-bold text-gray-200">{scenario.departure}</p>
           </div>
         </div>
       </div>
 
       {/* Question */}
-      <div className="bg-sky-50 border border-sky-200 rounded-xl p-4 mb-5">
-        <p className="font-semibold text-gray-800 text-lg">{scenario.question}</p>
-        {feedback && <p className="text-sm text-gray-500 mt-1 italic">{scenario.questionEnglish}</p>}
+      <div className="bg-sky-950 border border-sky-800 rounded-xl p-4 mb-5">
+        <p className="font-semibold text-gray-200 text-lg">{scenario.question}</p>
+        {feedback && <p className="text-sm text-gray-400 mt-1 italic">{scenario.questionEnglish}</p>}
       </div>
 
       {/* Options */}
@@ -166,14 +166,14 @@ export default function BoardingPassL25({ onComplete }: { onComplete?: () => voi
           return (
             <button key={opt} onClick={() => handleSelect(opt)} disabled={!!feedback}
               className={`px-4 py-4 rounded-xl border-2 font-medium text-sm transition-all ${
-                show ? isCorrect ? 'border-green-400 bg-green-50 text-green-800' : isSelected && !isCorrect ? 'border-red-300 bg-red-50 text-red-700' : 'border-gray-200 opacity-40'
-                  : 'border-gray-200 hover:border-sky-400 hover:bg-sky-50/50 cursor-pointer'
+                show ? isCorrect ? 'border-green-400 bg-green-950 text-green-200' : isSelected && !isCorrect ? 'border-red-700 bg-red-950 text-red-700' : 'border-gray-700 opacity-40'
+                  : 'border-gray-700 hover:border-sky-400 hover:bg-sky-950/50 cursor-pointer'
               }`}>{opt}</button>
           )
         })}
       </div>
       {feedback && (
-        <div className={`text-center text-sm font-semibold p-3 rounded-lg mt-4 ${feedback.correct ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`}>
+        <div className={`text-center text-sm font-semibold p-3 rounded-lg mt-4 ${feedback.correct ? 'bg-green-950 text-green-200' : 'bg-red-950 text-red-200'}`}>
           {feedback.correct ? 'Correct!' : `Answer: ${scenario.correctAnswer}`}
         </div>
       )}

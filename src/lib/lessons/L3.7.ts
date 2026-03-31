@@ -180,8 +180,8 @@ export const L37Data: LessonData = {
       title: 'Celebrations',
       description: 'Birthdays, weddings, and quinceañeras — the biggest parties in Latin American culture.',
       tabs: [
-        { label: 'Birthday & Wedding', color: 'rose', phrases: PHRASES.filter(p => p.category === 'celebrations').slice(0, 5) },
-        { label: 'Dancing & Toasts', color: 'purple', phrases: PHRASES.filter(p => p.category === 'celebrations').slice(5) },
+        { label: 'Birthday & Wedding', color: 'rose', columns: 1, phrases: PHRASES.filter(p => p.category === 'celebrations').slice(0, 5) },
+        { label: 'Dancing & Toasts', color: 'purple', columns: 1, phrases: PHRASES.filter(p => p.category === 'celebrations').slice(5) },
       ],
     },
     {
@@ -189,8 +189,8 @@ export const L37Data: LessonData = {
       title: 'Holidays',
       description: 'Major holidays celebrated across Latin America — from Navidad to Día de Muertos.',
       tabs: [
-        { label: 'Christmas & New Year', color: 'amber', phrases: PHRASES.filter(p => p.category === 'holidays').slice(0, 5) },
-        { label: 'More Holidays', color: 'orange', phrases: PHRASES.filter(p => p.category === 'holidays').slice(5) },
+        { label: 'Christmas & New Year', color: 'amber', columns: 1, phrases: PHRASES.filter(p => p.category === 'holidays').slice(0, 5) },
+        { label: 'More Holidays', color: 'orange', columns: 1, phrases: PHRASES.filter(p => p.category === 'holidays').slice(5) },
       ],
     },
     {
@@ -198,8 +198,8 @@ export const L37Data: LessonData = {
       title: 'Traditions',
       description: 'The customs that make Latin American celebrations unique and unforgettable.',
       tabs: [
-        { label: 'Piñatas & Carols', color: 'blue', phrases: PHRASES.filter(p => p.category === 'traditions').slice(0, 5) },
-        { label: 'Altars & Food', color: 'teal', phrases: PHRASES.filter(p => p.category === 'traditions').slice(5) },
+        { label: 'Piñatas & Carols', color: 'blue', columns: 1, phrases: PHRASES.filter(p => p.category === 'traditions').slice(0, 5) },
+        { label: 'Altars & Food', color: 'teal', columns: 1, phrases: PHRASES.filter(p => p.category === 'traditions').slice(5) },
       ],
     },
     {
@@ -207,8 +207,8 @@ export const L37Data: LessonData = {
       title: 'Festive Greetings',
       description: 'The phrases you need to congratulate, toast, and celebrate with others.',
       tabs: [
-        { label: 'Congratulations', color: 'emerald', phrases: PHRASES.filter(p => p.category === 'greetings').slice(0, 4) },
-        { label: 'Cheers & Wishes', color: 'rose', phrases: PHRASES.filter(p => p.category === 'greetings').slice(4) },
+        { label: 'Congratulations', color: 'emerald', columns: 1, phrases: PHRASES.filter(p => p.category === 'greetings').slice(0, 4) },
+        { label: 'Cheers & Wishes', color: 'rose', columns: 1, phrases: PHRASES.filter(p => p.category === 'greetings').slice(4) },
       ],
     },
   ],

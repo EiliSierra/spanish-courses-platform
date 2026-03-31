@@ -83,7 +83,7 @@ export default function PersonalizedContext({ words, lessonId }: { words: VocabW
           AI
         </span>
       </div>
-      <p className="text-gray-600 mb-5">
+      <p className="text-gray-400 mb-5">
         Select your profile and AI will create personalized sentences using this lesson&apos;s vocabulary in situations relevant to YOU.
       </p>
 
@@ -95,9 +95,9 @@ export default function PersonalizedContext({ words, lessonId }: { words: VocabW
               <button
                 key={opt.label}
                 onClick={() => handleProfileSelect(opt.value)}
-                className="text-left p-4 rounded-xl border border-gray-200 hover:border-indigo-300 hover:bg-indigo-50/50 transition-all group"
+                className="text-left p-4 rounded-xl border border-gray-700 hover:border-indigo-300 hover:bg-indigo-950/50 transition-all group"
               >
-                <span className="font-semibold text-gray-800 group-hover:text-indigo-700 text-sm">{opt.label}</span>
+                <span className="font-semibold text-gray-200 group-hover:text-indigo-700 text-sm">{opt.label}</span>
               </button>
             ))}
           </div>
@@ -116,7 +116,7 @@ export default function PersonalizedContext({ words, lessonId }: { words: VocabW
                 value={customContext}
                 onChange={(e) => setCustomContext(e.target.value)}
                 placeholder="E.g., I'm a firefighter who works with Spanish-speaking communities..."
-                className="flex-1 px-4 py-2 rounded-lg border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-300"
+                className="flex-1 px-4 py-2 rounded-lg border border-gray-700 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-300"
                 onKeyDown={(e) => e.key === 'Enter' && handleCustomSubmit()}
               />
               <button
@@ -136,14 +136,14 @@ export default function PersonalizedContext({ words, lessonId }: { words: VocabW
         <div className="flex items-center justify-center py-12">
           <div className="flex items-center gap-3">
             <div className="w-5 h-5 border-2 border-indigo-300 border-t-indigo-600 rounded-full animate-spin" />
-            <span className="text-gray-600 text-sm">AI is personalizing vocabulary for you...</span>
+            <span className="text-gray-400 text-sm">AI is personalizing vocabulary for you...</span>
           </div>
         </div>
       )}
 
       {/* Error State */}
       {error && (
-        <div className="bg-red-50 border border-red-200 rounded-xl p-4 mb-4">
+        <div className="bg-red-950 border border-red-200 rounded-xl p-4 mb-4">
           <p className="text-red-700 text-sm">{error}</p>
           <button onClick={() => { setSelectedProfile(null); setError(null) }}
             className="text-red-600 text-sm font-medium mt-2 hover:underline">
@@ -157,14 +157,14 @@ export default function PersonalizedContext({ words, lessonId }: { words: VocabW
         <div>
           <div className="space-y-3 mb-4">
             {sentences.map((s, i) => (
-              <div key={i} className="bg-white rounded-xl border border-indigo-100 p-4 hover:shadow-sm transition-shadow">
+              <div key={i} className="bg-gray-800 rounded-xl border border-indigo-800 p-4 hover:shadow-sm transition-shadow">
                 <div className="flex items-center gap-2 mb-2">
                   <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-bold bg-indigo-100 text-indigo-700">
                     {s.word}
                   </span>
                   <span className="text-xs text-gray-400">{s.connection}</span>
                 </div>
-                <p className="text-gray-900 font-medium">{s.spanish}</p>
+                <p className="text-gray-100 font-medium">{s.spanish}</p>
                 <p className="text-gray-500 text-sm mt-1">{s.english}</p>
               </div>
             ))}

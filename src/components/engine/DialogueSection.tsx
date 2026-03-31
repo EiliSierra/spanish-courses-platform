@@ -51,20 +51,20 @@ export default function DialogueSection({ dialogues, description }: { dialogues:
   return (
     <section id="dialogues">
       <h2 className="text-2xl font-bold font-[family-name:var(--font-inter)] mb-2">Real-World Dialogues</h2>
-      <p className="text-gray-600 mb-5">{description}</p>
+      <p className="text-gray-400 mb-5">{description}</p>
 
       <div className="flex gap-2 mb-5">
         {dialogues.map((d, i) => (
           <button key={d.id} onClick={() => setActiveDialogue(i)}
             className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-              i === activeDialogue ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+              i === activeDialogue ? 'bg-blue-600 text-white' : 'bg-gray-800 text-gray-400 hover:bg-gray-200'
             }`}>
             {d.location}
           </button>
         ))}
       </div>
 
-      <div className="bg-white rounded-xl border border-gray-200 p-6">
+      <div className="bg-gray-800 rounded-xl border border-gray-700 p-6">
         <h3 className="font-bold text-lg mb-4">{dialogue.title}</h3>
         <div className="space-y-4">
           {dialogue.lines.map((line, i) => {
@@ -72,7 +72,7 @@ export default function DialogueSection({ dialogues, description }: { dialogues:
             return (
               <div key={i} className={`flex items-start gap-3 ${!isFirstSpeaker ? 'flex-row-reverse' : ''}`}>
                 <div className={`max-w-[80%] rounded-2xl px-5 py-3 ${
-                  isFirstSpeaker ? 'bg-gray-100 rounded-tl-sm' : 'bg-amber-600 text-white rounded-tr-sm'
+                  isFirstSpeaker ? 'bg-gray-800 rounded-tl-sm' : 'bg-amber-600 text-white rounded-tr-sm'
                 }`}>
                   <div className={`text-xs font-semibold mb-1 ${isFirstSpeaker ? 'text-gray-500' : 'text-amber-200'}`}>
                     {line.speaker}

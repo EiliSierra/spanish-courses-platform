@@ -192,8 +192,8 @@ export const L44Data: LessonData = {
       title: 'Media Vocabulary',
       description: 'Essential words for talking about news, media, and journalism in Spanish.',
       tabs: [
-        { label: 'Print & TV', color: 'rose', phrases: PHRASES.filter(p => p.category === 'media-vocab').slice(0, 5) },
-        { label: 'People & Formats', color: 'amber', phrases: PHRASES.filter(p => p.category === 'media-vocab').slice(5) },
+        { label: 'Print & TV', color: 'rose', columns: 1, phrases: PHRASES.filter(p => p.category === 'media-vocab').slice(0, 5) },
+        { label: 'People & Formats', color: 'amber', columns: 1, phrases: PHRASES.filter(p => p.category === 'media-vocab').slice(5) },
       ],
     },
     {
@@ -201,8 +201,8 @@ export const L44Data: LessonData = {
       title: 'Reading Headlines',
       description: 'Real-style Spanish headlines. Notice how headlines drop articles and use present tense for recent events.',
       tabs: [
-        { label: 'Economy & Science', color: 'blue', phrases: PHRASES.filter(p => p.category === 'headlines').slice(0, 4) },
-        { label: 'Politics & Society', color: 'purple', phrases: PHRASES.filter(p => p.category === 'headlines').slice(4) },
+        { label: 'Economy & Science', color: 'blue', columns: 1, phrases: PHRASES.filter(p => p.category === 'headlines').slice(0, 4) },
+        { label: 'Politics & Society', color: 'purple', columns: 1, phrases: PHRASES.filter(p => p.category === 'headlines').slice(4) },
       ],
     },
     {
@@ -210,8 +210,8 @@ export const L44Data: LessonData = {
       title: 'Expressing Opinions',
       description: 'Share your views on the news using these key expressions.',
       tabs: [
-        { label: 'Agree & Believe', color: 'emerald', phrases: PHRASES.filter(p => p.category === 'opinions').slice(0, 5) },
-        { label: 'Disagree & Worry', color: 'orange', phrases: PHRASES.filter(p => p.category === 'opinions').slice(5) },
+        { label: 'Agree & Believe', color: 'emerald', columns: 1, phrases: PHRASES.filter(p => p.category === 'opinions').slice(0, 5) },
+        { label: 'Disagree & Worry', color: 'orange', columns: 1, phrases: PHRASES.filter(p => p.category === 'opinions').slice(5) },
       ],
     },
     {
@@ -219,8 +219,8 @@ export const L44Data: LessonData = {
       title: 'Reporting Language',
       description: 'How to cite sources and report what others said, just like a real journalist.',
       tabs: [
-        { label: 'Citing Sources', color: 'teal', phrases: PHRASES.filter(p => p.category === 'reporting').slice(0, 5) },
-        { label: 'Reporting Events', color: 'rose', phrases: PHRASES.filter(p => p.category === 'reporting').slice(5) },
+        { label: 'Citing Sources', color: 'teal', columns: 1, phrases: PHRASES.filter(p => p.category === 'reporting').slice(0, 5) },
+        { label: 'Reporting Events', color: 'rose', columns: 1, phrases: PHRASES.filter(p => p.category === 'reporting').slice(5) },
       ],
     },
   ],

@@ -130,10 +130,10 @@ export default function SpellingChallengeL11({ onComplete }: { onComplete?: () =
     return (
       <section id="spelling-challenge">
         <h2 className="text-2xl font-bold font-[family-name:var(--font-inter)] mb-2">Spelling Challenge</h2>
-        <p className="text-gray-600 mb-4">Listen to a Spanish word and spell it by selecting the correct letters in order. Use the Spanish letter names you just learned!</p>
-        <div className="bg-white rounded-xl border border-gray-200 p-8 text-center">
+        <p className="text-gray-400 mb-4">Listen to a Spanish word and spell it by selecting the correct letters in order. Use the Spanish letter names you just learned!</p>
+        <div className="bg-gray-800 rounded-xl border border-gray-700 p-8 text-center">
           <div className="text-5xl mb-4">&#128221;</div>
-          <p className="text-gray-600 mb-6">{totalRounds} words to spell. You have 15 seconds per word.</p>
+          <p className="text-gray-400 mb-6">{totalRounds} words to spell. You have 15 seconds per word.</p>
           <button onClick={startGame} className="px-8 py-3 bg-gradient-to-r from-blue-500 to-indigo-500 text-white rounded-xl font-bold text-lg hover:from-blue-600 hover:to-indigo-600 transition-all shadow-lg hover:shadow-xl">
             Start Spelling
           </button>
@@ -148,10 +148,10 @@ export default function SpellingChallengeL11({ onComplete }: { onComplete?: () =
     return (
       <section id="spelling-challenge">
         <h2 className="text-2xl font-bold font-[family-name:var(--font-inter)] mb-2">Spelling Challenge</h2>
-        <div className="bg-white rounded-xl border border-gray-200 p-8 text-center">
+        <div className="bg-gray-800 rounded-xl border border-gray-700 p-8 text-center">
           <div className="text-4xl mb-2">{Array(stars).fill(null).map((_, i) => <span key={i}>&#11088;</span>)}{Array(3 - stars).fill(null).map((_, i) => <span key={i}>&#9734;</span>)}</div>
           <div className="text-4xl font-bold text-blue-600 mb-1">{score}/{totalRounds}</div>
-          <p className="text-gray-600 mb-4">
+          <p className="text-gray-400 mb-4">
             {pct >= 80 ? 'Excellent spelling!' : pct >= 50 ? 'Good effort! Practice makes perfect.' : 'Keep learning those letter names!'}
           </p>
           <button onClick={startGame} className="px-6 py-2 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700">Try Again</button>
@@ -164,7 +164,7 @@ export default function SpellingChallengeL11({ onComplete }: { onComplete?: () =
     <section id="spelling-challenge">
       <h2 className="text-2xl font-bold font-[family-name:var(--font-inter)] mb-2">Spelling Challenge</h2>
       <div className="flex justify-between text-sm mb-2">
-        <span className="text-gray-500">Word {round + 1} of {totalRounds}</span>
+        <span className="text-gray-400">Word {round + 1} of {totalRounds}</span>
         <span className="font-semibold text-blue-600">Score: {score}</span>
       </div>
 
@@ -173,7 +173,7 @@ export default function SpellingChallengeL11({ onComplete }: { onComplete?: () =
         <div className={`h-full rounded-full transition-all duration-100 ${timerColor}`} style={{ width: `${timeLeft}%` }} />
       </div>
 
-      <div className="bg-white rounded-xl border border-gray-200 p-6">
+      <div className="bg-gray-800 rounded-xl border border-gray-700 p-6">
         {/* Audio replay + hint */}
         <div className="text-center mb-5">
           <button onClick={playWord} className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-400 to-indigo-500 text-white flex items-center justify-center mx-auto hover:from-blue-500 hover:to-indigo-600 transition-all shadow-lg">
@@ -181,7 +181,7 @@ export default function SpellingChallengeL11({ onComplete }: { onComplete?: () =
               <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z" />
             </svg>
           </button>
-          <p className="text-sm text-gray-500 mt-2">
+          <p className="text-sm text-gray-400 mt-2">
             {feedback ? (
               <span className="font-semibold">{currentRound.word} &mdash; &ldquo;{currentRound.english}&rdquo;</span>
             ) : (
@@ -198,17 +198,17 @@ export default function SpellingChallengeL11({ onComplete }: { onComplete?: () =
             const isWrongSpot = feedback && letter && letter !== currentRound.spelling[i]
             return (
               <div key={i} className={`w-12 h-12 rounded-lg border-2 flex items-center justify-center font-bold text-lg transition-all ${
-                isCorrectSpot ? 'border-green-400 bg-green-50 text-green-700'
-                : isWrongSpot ? 'border-red-400 bg-red-50 text-red-700'
-                : letter ? 'border-blue-400 bg-blue-50 text-blue-700'
-                : 'border-gray-200 bg-gray-50 text-gray-300'
+                isCorrectSpot ? 'border-green-400 bg-green-950 text-green-700'
+                : isWrongSpot ? 'border-red-400 bg-red-950 text-red-700'
+                : letter ? 'border-blue-400 bg-blue-950 text-blue-700'
+                : 'border-gray-700 bg-gray-50 text-gray-300'
               }`}>
                 {letter || (i + 1)}
               </div>
             )
           })}
           {!feedback && selected.length > 0 && (
-            <button onClick={undoLast} className="ml-2 w-10 h-10 rounded-lg bg-gray-100 text-gray-500 flex items-center justify-center hover:bg-gray-200 text-sm font-medium" title="Undo">
+            <button onClick={undoLast} className="ml-2 w-10 h-10 rounded-lg bg-gray-800 text-gray-400 flex items-center justify-center hover:bg-gray-200 text-sm font-medium" title="Undo">
               &#8592;
             </button>
           )}
@@ -226,7 +226,7 @@ export default function SpellingChallengeL11({ onComplete }: { onComplete?: () =
                   className={`w-12 h-12 rounded-xl border-2 font-bold text-base transition-all ${
                     disabled
                       ? 'border-gray-100 bg-gray-50 text-gray-300 cursor-not-allowed'
-                      : 'border-gray-200 bg-white text-gray-800 hover:border-blue-400 hover:bg-blue-50 cursor-pointer shadow-sm'
+                      : 'border-gray-700 bg-white text-gray-200 hover:border-blue-400 hover:bg-blue-950 cursor-pointer shadow-sm'
                   }`}>
                   {letter}
                 </button>
@@ -237,7 +237,7 @@ export default function SpellingChallengeL11({ onComplete }: { onComplete?: () =
 
         {/* Feedback */}
         {feedback && (
-          <div className={`mt-4 text-center text-sm font-semibold p-3 rounded-lg ${feedback.correct ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`}>
+          <div className={`mt-4 text-center text-sm font-semibold p-3 rounded-lg ${feedback.correct ? 'bg-green-950 text-green-200' : 'bg-red-950 text-red-200'}`}>
             {feedback.correct ? 'Correct spelling!' : `Correct answer: ${feedback.answer}`}
           </div>
         )}

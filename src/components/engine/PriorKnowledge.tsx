@@ -3,9 +3,9 @@
 import type { PriorKnowledgeItem } from '@/lib/types/lesson'
 
 const LESSON_COLORS: Record<string, { bg: string; text: string; border: string }> = {
-  'L1.1': { bg: 'bg-sky-100', text: 'text-sky-700', border: 'border-sky-200' },
-  'L1.2': { bg: 'bg-emerald-100', text: 'text-emerald-700', border: 'border-emerald-200' },
-  'L1.3': { bg: 'bg-violet-100', text: 'text-violet-700', border: 'border-violet-200' },
+  'L1.1': { bg: 'bg-sky-100', text: 'text-sky-700', border: 'border-sky-800' },
+  'L1.2': { bg: 'bg-emerald-100', text: 'text-emerald-700', border: 'border-emerald-800' },
+  'L1.3': { bg: 'bg-violet-100', text: 'text-violet-700', border: 'border-violet-800' },
 }
 
 const DEFAULT_COLOR = { bg: 'bg-gray-100', text: 'text-gray-700', border: 'border-gray-200' }

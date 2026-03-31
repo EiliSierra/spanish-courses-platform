@@ -180,8 +180,8 @@ export const L47Data: LessonData = {
       title: 'Music',
       description: 'Songs, singers, concerts, and genres. Music is central to Latin American life!',
       tabs: [
-        { label: 'Basics', color: 'purple', phrases: PHRASES.filter(p => p.category === 'music').slice(0, 5) },
-        { label: 'Talking About Music', color: 'rose', phrases: PHRASES.filter(p => p.category === 'music').slice(5) },
+        { label: 'Basics', color: 'purple', columns: 1, phrases: PHRASES.filter(p => p.category === 'music').slice(0, 5) },
+        { label: 'Talking About Music', color: 'rose', columns: 1, phrases: PHRASES.filter(p => p.category === 'music').slice(5) },
       ],
     },
     {
@@ -189,8 +189,8 @@ export const L47Data: LessonData = {
       title: 'Movies & TV',
       description: 'Films, series, genres, and how to describe what you watched.',
       tabs: [
-        { label: 'Genres', color: 'amber', phrases: PHRASES.filter(p => p.category === 'movies-tv').slice(0, 5) },
-        { label: 'Discussing Films', color: 'blue', phrases: PHRASES.filter(p => p.category === 'movies-tv').slice(5) },
+        { label: 'Genres', color: 'amber', columns: 1, phrases: PHRASES.filter(p => p.category === 'movies-tv').slice(0, 5) },
+        { label: 'Discussing Films', color: 'blue', columns: 1, phrases: PHRASES.filter(p => p.category === 'movies-tv').slice(5) },
       ],
     },
     {
@@ -198,8 +198,8 @@ export const L47Data: LessonData = {
       title: 'Books, Theater & Art',
       description: 'Novels, plays, museums \u2014 the literary and visual arts in Spanish.',
       tabs: [
-        { label: 'Literature', color: 'teal', phrases: PHRASES.filter(p => p.category === 'books-theater').slice(0, 4) },
-        { label: 'Arts & Culture', color: 'emerald', phrases: PHRASES.filter(p => p.category === 'books-theater').slice(4) },
+        { label: 'Literature', color: 'teal', columns: 1, phrases: PHRASES.filter(p => p.category === 'books-theater').slice(0, 4) },
+        { label: 'Arts & Culture', color: 'emerald', columns: 1, phrases: PHRASES.filter(p => p.category === 'books-theater').slice(4) },
       ],
     },
     {
@@ -207,8 +207,8 @@ export const L47Data: LessonData = {
       title: 'Reviews & Opinions',
       description: 'Rate, recommend, and debate \u2014 express what you think about entertainment.',
       tabs: [
-        { label: 'Positive Reviews', color: 'orange', phrases: PHRASES.filter(p => p.category === 'reviews-opinions').slice(0, 5) },
-        { label: 'More Opinions', color: 'purple', phrases: PHRASES.filter(p => p.category === 'reviews-opinions').slice(5) },
+        { label: 'Positive Reviews', color: 'orange', columns: 1, phrases: PHRASES.filter(p => p.category === 'reviews-opinions').slice(0, 5) },
+        { label: 'More Opinions', color: 'purple', columns: 1, phrases: PHRASES.filter(p => p.category === 'reviews-opinions').slice(5) },
       ],
     },
   ],

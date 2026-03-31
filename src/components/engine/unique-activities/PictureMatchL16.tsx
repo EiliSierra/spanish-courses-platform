@@ -66,7 +66,7 @@ export default function PictureMatchL16({ onComplete }: { onComplete?: () => voi
     return (
       <div id="picture-match" className="text-center py-8">
         <h2 className="text-2xl font-bold mb-3">Picture Match</h2>
-        <p className="text-gray-600 mb-6 max-w-lg mx-auto">
+        <p className="text-gray-400 mb-6 max-w-lg mx-auto">
           Read or listen to a family description in Spanish, then choose the matching family. Use what you learned about family members and possessives!
         </p>
         <button
@@ -91,7 +91,7 @@ export default function PictureMatchL16({ onComplete }: { onComplete?: () => voi
         <p className="text-lg text-gray-700 mb-2">
           You matched <strong>{score}</strong> of <strong>{totalRounds}</strong> families correctly ({pct}%)
         </p>
-        <p className="text-gray-500 mb-6">
+        <p className="text-gray-400 mb-6">
           {passed
             ? 'You can understand family descriptions in Spanish!'
             : 'Review the family vocabulary and possessives, then try again.'}
@@ -110,7 +110,7 @@ export default function PictureMatchL16({ onComplete }: { onComplete?: () => voi
     <div id="picture-match" className="py-6">
       <div className="flex items-center justify-between mb-4">
         <h2 className="text-xl font-bold">Picture Match</h2>
-        <span className="text-sm text-gray-500 font-medium">
+        <span className="text-sm text-gray-400 font-medium">
           {round + 1} / {totalRounds} — Score: {score}
         </span>
       </div>
@@ -124,12 +124,12 @@ export default function PictureMatchL16({ onComplete }: { onComplete?: () => voi
       </div>
 
       {/* Clue */}
-      <div className="bg-rose-50 border border-rose-200 rounded-xl p-5 mb-6">
+      <div className="bg-rose-950 border border-rose-800 rounded-xl p-5 mb-6">
         <div className="flex items-start gap-3">
           <span className="text-2xl">🗣️</span>
           <div className="flex-1">
             <p className="text-sm text-rose-600 font-semibold mb-1">Listen to the description:</p>
-            <p className="text-lg font-medium text-gray-800 italic">&ldquo;{currentRound.clue}&rdquo;</p>
+            <p className="text-lg font-medium text-gray-200 italic">&ldquo;{currentRound.clue}&rdquo;</p>
           </div>
           <button
             onClick={replayAudio}
@@ -142,7 +142,7 @@ export default function PictureMatchL16({ onComplete }: { onComplete?: () => voi
       </div>
 
       {/* Family cards */}
-      <p className="text-sm text-gray-500 font-medium mb-3">Which family matches this description?</p>
+      <p className="text-sm text-gray-400 font-medium mb-3">Which family matches this description?</p>
       <div className="grid grid-cols-2 gap-4">
         {PICTURE_MATCH_FAMILIES.map((family) => {
           const isSelected = selectedFamily === family.label
@@ -151,13 +151,13 @@ export default function PictureMatchL16({ onComplete }: { onComplete?: () => voi
 
           let cardClass = 'border-2 rounded-xl p-4 text-center cursor-pointer transition-all duration-300 '
           if (isCorrectAnswer && feedback) {
-            cardClass += 'border-green-500 bg-green-50 ring-2 ring-green-300 scale-[1.02]'
+            cardClass += 'border-green-500 bg-green-950 ring-2 ring-green-300 scale-[1.02]'
           } else if (isWrongSelection) {
-            cardClass += 'border-red-400 bg-red-50 ring-2 ring-red-300'
+            cardClass += 'border-red-400 bg-red-950 ring-2 ring-red-300'
           } else if (feedback) {
-            cardClass += 'border-gray-200 bg-gray-50 opacity-50'
+            cardClass += 'border-gray-700 bg-gray-50 opacity-50'
           } else {
-            cardClass += 'border-gray-200 bg-white hover:border-rose-300 hover:shadow-md'
+            cardClass += 'border-gray-700 bg-white hover:border-rose-300 hover:shadow-md'
           }
 
           return (
@@ -169,7 +169,7 @@ export default function PictureMatchL16({ onComplete }: { onComplete?: () => voi
             >
               <div className="text-4xl mb-2">{family.emoji}</div>
               <p className="font-bold text-gray-700 mb-1">{family.label}</p>
-              <p className="text-xs text-gray-500">{family.description}</p>
+              <p className="text-xs text-gray-400">{family.description}</p>
               {isCorrectAnswer && feedback && (
                 <span className="inline-block mt-2 text-green-600 font-semibold text-sm">✓ Correct!</span>
               )}

@@ -92,10 +92,10 @@ export default function OrderChallengeL14({ onComplete }: { onComplete?: () => v
     return (
       <section id="order-challenge">
         <h2 className="text-2xl font-bold font-[family-name:var(--font-inter)] mb-2">Order Challenge</h2>
-        <p className="text-gray-600 mb-4">Listen to the audio and select what was ordered. You have 10 seconds per round!</p>
-        <div className="bg-white rounded-xl border border-gray-200 p-8 text-center">
+        <p className="text-gray-400 mb-4">Listen to the audio and select what was ordered. You have 10 seconds per round!</p>
+        <div className="bg-gray-800 rounded-xl border border-gray-700 p-8 text-center">
           <div className="text-5xl mb-4">&#127911;</div>
-          <p className="text-gray-600 mb-6">{totalRounds} rounds. Listen carefully and choose the correct item.</p>
+          <p className="text-gray-400 mb-6">{totalRounds} rounds. Listen carefully and choose the correct item.</p>
           <button onClick={startGame} className="px-8 py-3 bg-gradient-to-r from-orange-500 to-amber-500 text-white rounded-xl font-bold text-lg hover:from-orange-600 hover:to-amber-600 transition-all shadow-lg hover:shadow-xl">
             Start Challenge
           </button>
@@ -110,10 +110,10 @@ export default function OrderChallengeL14({ onComplete }: { onComplete?: () => v
     return (
       <section id="order-challenge">
         <h2 className="text-2xl font-bold font-[family-name:var(--font-inter)] mb-2">Order Challenge</h2>
-        <div className="bg-white rounded-xl border border-gray-200 p-8 text-center">
+        <div className="bg-gray-800 rounded-xl border border-gray-700 p-8 text-center">
           <div className="text-4xl mb-2">{'⭐'.repeat(stars)}{'☆'.repeat(3 - stars)}</div>
           <div className="text-4xl font-bold text-blue-600 mb-1">{score}/{totalRounds}</div>
-          <p className="text-gray-600 mb-4">{pct >= 80 ? 'Excellent work!' : pct >= 50 ? 'Good effort! Try again for a better score.' : 'Keep practicing!'}</p>
+          <p className="text-gray-400 mb-4">{pct >= 80 ? 'Excellent work!' : pct >= 50 ? 'Good effort! Try again for a better score.' : 'Keep practicing!'}</p>
           <button onClick={startGame} className="px-6 py-2 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700">Try Again</button>
         </div>
       </section>
@@ -124,7 +124,7 @@ export default function OrderChallengeL14({ onComplete }: { onComplete?: () => v
     <section id="order-challenge">
       <h2 className="text-2xl font-bold font-[family-name:var(--font-inter)] mb-2">Order Challenge</h2>
       <div className="flex justify-between text-sm mb-2">
-        <span className="text-gray-500">Round {round + 1} of {totalRounds}</span>
+        <span className="text-gray-400">Round {round + 1} of {totalRounds}</span>
         <span className="font-semibold text-blue-600">Score: {score}</span>
       </div>
 
@@ -133,7 +133,7 @@ export default function OrderChallengeL14({ onComplete }: { onComplete?: () => v
         <div className={`h-full rounded-full transition-all duration-100 ${timerColor}`} style={{ width: `${timeLeft}%` }} />
       </div>
 
-      <div className="bg-white rounded-xl border border-gray-200 p-6">
+      <div className="bg-gray-800 rounded-xl border border-gray-700 p-6">
         {/* Audio replay button */}
         <div className="text-center mb-6">
           <button onClick={playAudio} className="w-16 h-16 rounded-full bg-gradient-to-br from-orange-400 to-amber-500 text-white flex items-center justify-center mx-auto hover:from-orange-500 hover:to-amber-600 transition-all shadow-lg">
@@ -141,7 +141,7 @@ export default function OrderChallengeL14({ onComplete }: { onComplete?: () => v
               <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z" />
             </svg>
           </button>
-          <p className="text-sm text-gray-500 mt-2">
+          <p className="text-sm text-gray-400 mt-2">
             {feedback ? (
               <span className="italic">&ldquo;{currentRound.transcript}&rdquo;</span>
             ) : (
@@ -160,9 +160,9 @@ export default function OrderChallengeL14({ onComplete }: { onComplete?: () => v
                 className={`px-4 py-4 rounded-xl border-2 font-semibold text-center transition-all ${
                   showResult
                     ? isCorrectOption
-                      ? 'border-green-400 bg-green-50 text-green-800'
-                      : 'border-gray-200 opacity-50'
-                    : 'border-gray-200 hover:border-orange-400 hover:bg-orange-50 cursor-pointer'
+                      ? 'border-green-400 bg-green-950 text-green-200'
+                      : 'border-gray-700 opacity-50'
+                    : 'border-gray-700 hover:border-orange-400 hover:bg-orange-950 cursor-pointer'
                 }`}>
                 {option}
               </button>
@@ -171,7 +171,7 @@ export default function OrderChallengeL14({ onComplete }: { onComplete?: () => v
         </div>
 
         {feedback && (
-          <div className={`mt-4 text-center text-sm font-semibold p-3 rounded-lg ${feedback.correct ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`}>
+          <div className={`mt-4 text-center text-sm font-semibold p-3 rounded-lg ${feedback.correct ? 'bg-green-950 text-green-200' : 'bg-red-950 text-red-200'}`}>
             {feedback.correct ? 'Correct!' : `The answer was: ${feedback.display}`}
           </div>
         )}

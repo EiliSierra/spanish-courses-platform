@@ -3,15 +3,15 @@ import Link from 'next/link'
 
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-950">
       {/* Top nav */}
-      <header className="sticky top-0 z-40 bg-white border-b border-gray-200 shadow-sm">
+      <header className="sticky top-0 z-40 bg-gray-900 border-b border-gray-800 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-          <Link href="/courses" className="font-bold text-xl font-[family-name:var(--font-inter)] text-blue-700">
+          <Link href="/courses" className="font-bold text-xl font-[family-name:var(--font-inter)] text-blue-400">
             Spanish Course
           </Link>
           <div className="flex items-center gap-4">
-            <Link href="/courses" className="text-gray-600 hover:text-gray-900 text-sm font-medium">
+            <Link href="/courses" className="text-gray-400 hover:text-gray-100 text-sm font-medium">
               My Courses
             </Link>
             <UserButton />

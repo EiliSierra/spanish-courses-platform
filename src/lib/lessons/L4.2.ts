@@ -192,8 +192,8 @@ export const L42Data: LessonData = {
       title: 'Wishes & Desires',
       description: 'Use "quiero que...", "espero que...", "deseo que..." + subjunctive to express what you want someone else to do.',
       tabs: [
-        { label: 'Quiero & Espero', color: 'blue', phrases: PHRASES.filter(p => p.category === 'wishes').slice(0, 5) },
-        { label: 'More Wishes', color: 'purple', phrases: PHRASES.filter(p => p.category === 'wishes').slice(5) },
+        { label: 'Quiero & Espero', color: 'blue', columns: 1, phrases: PHRASES.filter(p => p.category === 'wishes').slice(0, 5) },
+        { label: 'More Wishes', color: 'purple', columns: 1, phrases: PHRASES.filter(p => p.category === 'wishes').slice(5) },
       ],
     },
     {
@@ -201,8 +201,8 @@ export const L42Data: LessonData = {
       title: 'Recommendations & Advice',
       description: 'Impersonal expressions like "es importante que...", "es mejor que..." always trigger the subjunctive.',
       tabs: [
-        { label: 'Es importante / mejor', color: 'orange', phrases: PHRASES.filter(p => p.category === 'recommendations').slice(0, 5) },
-        { label: 'Sugiero / Aconsejo', color: 'amber', phrases: PHRASES.filter(p => p.category === 'recommendations').slice(5) },
+        { label: 'Es importante / mejor', color: 'orange', columns: 1, phrases: PHRASES.filter(p => p.category === 'recommendations').slice(0, 5) },
+        { label: 'Sugiero / Aconsejo', color: 'amber', columns: 1, phrases: PHRASES.filter(p => p.category === 'recommendations').slice(5) },
       ],
     },
     {
@@ -210,8 +210,8 @@ export const L42Data: LessonData = {
       title: 'Emotions & Reactions',
       description: 'When you express how you feel about something someone does, use the subjunctive: "me alegra que...", "me preocupa que...".',
       tabs: [
-        { label: 'Positive Emotions', color: 'emerald', phrases: PHRASES.filter(p => p.category === 'emotions').slice(0, 5) },
-        { label: 'Concerns & More', color: 'rose', phrases: PHRASES.filter(p => p.category === 'emotions').slice(5) },
+        { label: 'Positive Emotions', color: 'emerald', columns: 1, phrases: PHRASES.filter(p => p.category === 'emotions').slice(0, 5) },
+        { label: 'Concerns & More', color: 'rose', columns: 1, phrases: PHRASES.filter(p => p.category === 'emotions').slice(5) },
       ],
     },
     {
@@ -219,8 +219,8 @@ export const L42Data: LessonData = {
       title: 'Doubt & Uncertainty',
       description: 'Doubt, disbelief, and possibility expressions require the subjunctive: "dudo que...", "no creo que...", "es posible que...".',
       tabs: [
-        { label: 'Dudo & No creo', color: 'teal', phrases: PHRASES.filter(p => p.category === 'doubt').slice(0, 4) },
-        { label: 'Possibility', color: 'blue', phrases: PHRASES.filter(p => p.category === 'doubt').slice(4) },
+        { label: 'Dudo & No creo', color: 'teal', columns: 1, phrases: PHRASES.filter(p => p.category === 'doubt').slice(0, 4) },
+        { label: 'Possibility', color: 'blue', columns: 1, phrases: PHRASES.filter(p => p.category === 'doubt').slice(4) },
       ],
     },
   ],
