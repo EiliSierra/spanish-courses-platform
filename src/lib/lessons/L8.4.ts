@@ -13,7 +13,7 @@ const PHRASES = [
   { spanish: 'Glasea las zanahorias con mantequilla y miel', english: 'Glaze the carrots with butter and honey', pronunciation: 'glah-SEH-ah lahs sah-nah-OH-ree-ahs kohn mahn-teh-KEE-yah ee mee-EHL', category: 'kitchen-techniques', audio: 'glasear-zanahorias' },
   { spanish: 'Escalfa los huevos en agua con vinagre', english: 'Poach the eggs in water with vinegar', pronunciation: 'ehs-KAHL-fah lohs WEH-bohs ehn AH-gwah kohn bee-NAH-greh', category: 'kitchen-techniques', audio: 'escalfar-huevos' },
   { spanish: 'Confita el ajo a temperatura baja durante dos horas', english: 'Confit the garlic at low temperature for two hours', pronunciation: 'kohn-FEE-tah ehl AH-hoh ah tehm-peh-rah-TOO-rah BAH-hah doo-RAHN-teh dohs OH-rahs', category: 'kitchen-techniques', audio: 'confitar-ajo' },
-  { spanish: 'Bracear la carne le da un sabor profundo', english: 'Braising the meat gives it a deep flavor', pronunciation: 'brah-seh-AHR lah KAHR-neh leh dah oon sah-BOHR proh-FOON-doh', category: 'kitchen-techniques', audio: 'bracear-carne' },
+  { spanish: 'Brasear la carne le da un sabor profundo', english: 'Braising the meat gives it a deep flavor', pronunciation: 'brah-seh-AHR lah KAHR-neh leh dah oon sah-BOHR proh-FOON-doh', category: 'kitchen-techniques', audio: 'brasear-carne' },
 
   // === Regional Cuisines (12) ===
   { spanish: 'El ceviche peruano se prepara con pescado crudo y limón', english: 'Peruvian ceviche is prepared with raw fish and lime', pronunciation: 'ehl seh-BEE-cheh peh-roo-AH-noh seh preh-PAH-rah kohn pehs-KAH-doh KROO-doh ee lee-MOHN', category: 'regional-cuisines', audio: 'ceviche-peruano' },
@@ -82,7 +82,7 @@ export const CHEF_CHALLENGES: ChefChallenge[] = [
     dish: 'Verduras cortadas en trozos pequeños, movidas rápidamente en un sartén con aceite muy caliente',
     english: 'Vegetables cut in small pieces, quickly tossed in a pan with very hot oil',
     correctTechnique: 'Saltear',
-    options: ['Reducir', 'Saltear', 'Escalfar', 'Bracear'],
+    options: ['Reducir', 'Saltear', 'Escalfar', 'Brasear'],
   },
   {
     dish: 'Un postre bañado en licor al que se le prende fuego para caramelizar',
@@ -112,7 +112,7 @@ export const CHEF_CHALLENGES: ChefChallenge[] = [
     dish: 'Aceite y vinagre mezclados vigorosamente hasta formar una mezcla homogénea y estable',
     english: 'Oil and vinegar mixed vigorously until forming a homogeneous and stable mixture',
     correctTechnique: 'Emulsionar',
-    options: ['Reducir', 'Emulsionar', 'Flamear', 'Bracear'],
+    options: ['Reducir', 'Emulsionar', 'Flamear', 'Brasear'],
   },
 ]
 
@@ -258,7 +258,7 @@ export const L84Data: LessonData = {
     {
       key: 'kitchen-techniques',
       label: 'Kitchen Techniques',
-      audioKeys: ['saltear-verduras', 'blanquear-tomates', 'reducir-salsa', 'emulsionar-aceite', 'flamear-postre', 'marinar-pollo', 'mise-en-place', 'punto-coccion', 'glasear-zanahorias', 'escalfar-huevos', 'confitar-ajo', 'bracear-carne'],
+      audioKeys: ['saltear-verduras', 'blanquear-tomates', 'reducir-salsa', 'emulsionar-aceite', 'flamear-postre', 'marinar-pollo', 'mise-en-place', 'punto-coccion', 'glasear-zanahorias', 'escalfar-huevos', 'confitar-ajo', 'brasear-carne'],
     },
     {
       key: 'regional-cuisines',
