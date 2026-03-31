@@ -37,7 +37,7 @@ export const L6F_QUESTION_POOL: ExamQuestion[] = [
   { id: 22, type: 'mc', text: '"El anglicismo" refers to a word borrowed from:', options: ['French', 'Arabic', 'English', 'Italian'], answer: 2, fromLesson: 'L6.4', topic: 'Borrowings' },
   { id: 23, type: 'tf', text: 'Languages are constantly evolving — no living language stays the same forever.', answer: true, fromLesson: 'L6.4', topic: 'Language Evolution' },
   { id: 24, type: 'mc', text: '"El registro" in linguistics refers to:', options: ['A list of students', 'The level of formality in language use', 'A type of accent', 'A grammatical rule'], answer: 1, fromLesson: 'L6.4', topic: 'Register' },
-  { id: 25, type: 'fill', text: 'Complete: "La ___ lingüística estudia cómo cambian las lenguas" (diachronic/historical)', answer: 'lingüística', fromLesson: 'L6.4', topic: 'Linguistics' },
+  { id: 25, type: 'fill', text: 'Complete: "La lingüística ___ estudia cómo cambian las lenguas" (diachronic/historical)', answer: 'diacrónica', fromLesson: 'L6.4', topic: 'Linguistics' },
 
   // === L6.5 (6 questions) ===
   { id: 26, type: 'mc', text: '"La mediación intercultural" involves:', options: ['Translating word for word', 'Facilitating understanding between cultures', 'Studying ancient languages', 'Writing poetry'], answer: 1, fromLesson: 'L6.5', topic: 'Intercultural Mediation' },

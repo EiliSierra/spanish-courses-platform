@@ -341,7 +341,7 @@ export const L35Data: LessonData = {
         { speaker: 'Santiago', text: '\u00bfDe verdad? \u00bfY qu\u00e9 m\u00e1s te gusta hacer en tu tiempo libre?', audio: '/audio/L3.5/phrases/d2-line4.mp3' },
         { speaker: 'Camila', text: 'Leo mucho \u2014 dos libros al mes. Y pinto cuadros los domingos.', audio: '/audio/L3.5/phrases/d2-line5.mp3' },
         { speaker: 'Santiago', text: 'Yo prefiero actividades al aire libre. Hago senderismo de vez en cuando.', audio: '/audio/L3.5/phrases/d2-line6.mp3' },
-        { speaker: 'Camila', text: 'A m\u00ed tambi\u00e9n me interesa el senderismo. \u00bfCon\u00f3ces senderos cerca de aqu\u00ed?', audio: '/audio/L3.5/phrases/d2-line7.mp3' },
+        { speaker: 'Camila', text: 'A m\u00ed tambi\u00e9n me interesa el senderismo. \u00bfConoces senderos cerca de aqu\u00ed?', audio: '/audio/L3.5/phrases/d2-line7.mp3' },
         { speaker: 'Santiago', text: '\u00a1Claro! Hay uno incre\u00edble en las monta\u00f1as. Vamos el pr\u00f3ximo fin de semana.', audio: '/audio/L3.5/phrases/d2-line8.mp3' },
         { speaker: 'Camila', text: '\u00a1Listo! Llevo mi c\u00e1mara para tomar fotos del paisaje.', audio: '/audio/L3.5/phrases/d2-line9.mp3' },
       ],

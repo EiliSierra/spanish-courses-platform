@@ -84,7 +84,7 @@ export const L3F_CONFIG = {
   totalQuestions: 25,
   passingScore: 70,
   title: 'Level 3 — Final Assessment',
-  subtitle: 'Intermediate Spanish',
+  subtitle: 'Elementary Spanish (A2)',
   description: 'This exam covers everything from Level 3: past tense, home, technology, cooking, sports, environment, celebrations, and travel stories. You need 70% (18/25) to earn your Level 3 badge.',
   badgeEmoji: '🏅',
   badgeName: 'Level 3 — Intermediate Spanish Complete',

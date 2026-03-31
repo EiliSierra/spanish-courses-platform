@@ -6,38 +6,38 @@ import type { ExamQuestion } from './L4.F'
 export type { ExamQuestion }
 
 export const L7F_QUESTION_POOL: ExamQuestion[] = [
-  // === L7.1 (6 questions) ===
-  { id: 1, type: 'mc', text: '"El matiz semántico" refers to:', options: ['A grammar rule', 'A subtle shade of meaning', 'A verb tense', 'A pronunciation guide'], answer: 1, fromLesson: 'L7.1', topic: 'Semantic Nuance' },
-  { id: 2, type: 'fill', text: 'Complete: "La ___ del lenguaje permite expresar ideas con máxima precisión" (subtlety)', answer: 'sutileza', fromLesson: 'L7.1', topic: 'Precision' },
-  { id: 3, type: 'mc', text: '"Connotar" vs. "denotar" — connotation refers to:', options: ['The literal meaning', 'The dictionary definition', 'The emotional or cultural associations', 'The pronunciation'], answer: 2, fromLesson: 'L7.1', topic: 'Connotation' },
-  { id: 4, type: 'tf', text: 'At the C2 level, a speaker can understand virtually everything heard or read with ease.', answer: true, fromLesson: 'L7.1', topic: 'C2 Proficiency' },
-  { id: 5, type: 'mc', text: '"El eufemismo" is used to:', options: ['Exaggerate a point', 'Soften or substitute a harsh expression', 'Create humor', 'Describe colors'], answer: 1, fromLesson: 'L7.1', topic: 'Euphemism' },
-  { id: 6, type: 'fill', text: 'Complete: "El lenguaje figurado va más allá del significado ___" (literal)', answer: 'literal', fromLesson: 'L7.1', topic: 'Figurative Language' },
+  // === L7.1 Dialectology & Sociolinguistics (6 questions) ===
+  { id: 1, type: 'mc', text: '"El voseo" refers to:', options: ['A type of Spanish poetry', 'The use of "vos" instead of "tú" with distinct conjugations', 'A dialect spoken only in Spain', 'A formal register used in writing'], answer: 1, fromLesson: 'L7.1', topic: 'Voseo' },
+  { id: 2, type: 'fill', text: 'Complete: "El ___ consiste en pronunciar la \"z\" y la \"c\" ante e/i como \"s\"" (seseo)', answer: 'seseo', fromLesson: 'L7.1', topic: 'Phonetic Variation' },
+  { id: 3, type: 'mc', text: '"El lunfardo" originated in:', options: ['The royal courts of Madrid', 'The conventillos (tenement houses) of Buenos Aires', 'The universities of Mexico City', 'The coastal towns of Chile'], answer: 1, fromLesson: 'L7.1', topic: 'Sociolects' },
+  { id: 4, type: 'tf', text: 'El yeísmo merges the "ll" and "y" sounds into one, so "calle" and "caye" sound the same.', answer: true, fromLesson: 'L7.1', topic: 'Yeísmo' },
+  { id: 5, type: 'mc', text: 'In Spain they say "ordenador" for computer; in Mexico they say:', options: ['Computador', 'Computadora', 'Portátil', 'Procesador'], answer: 1, fromLesson: 'L7.1', topic: 'Vocabulary Divergence' },
+  { id: 6, type: 'fill', text: 'Complete: "El ___ mezcla inglés y español fluidamente: \"Voy a parkear el carro\"" (Spanglish)', answer: 'spanglish', fromLesson: 'L7.1', topic: 'Code-Switching' },
 
-  // === L7.2 (6 questions) ===
-  { id: 7, type: 'mc', text: '"El registro académico" is characterized by:', options: ['Slang and colloquialisms', 'Formal vocabulary and complex syntax', 'Short sentences only', 'Spoken language only'], answer: 1, fromLesson: 'L7.2', topic: 'Academic Register' },
-  { id: 8, type: 'fill', text: 'Complete: "La tesis debe estar respaldada por ___ empíricas" (evidence)', answer: 'evidencias', fromLesson: 'L7.2', topic: 'Academic Writing' },
-  { id: 9, type: 'mc', text: '"Cabe destacar que" is used in academic writing to:', options: ['End a paragraph', 'Introduce a noteworthy point', 'Express doubt', 'Make a joke'], answer: 1, fromLesson: 'L7.2', topic: 'Academic Markers' },
-  { id: 10, type: 'tf', text: '"No obstante" and "sin embargo" both mean "however/nevertheless" in academic Spanish.', answer: true, fromLesson: 'L7.2', topic: 'Connectors' },
-  { id: 11, type: 'mc', text: 'A "ponencia" in academic Spanish is:', options: ['A type of exam', 'A conference presentation or paper', 'A university building', 'A study group'], answer: 1, fromLesson: 'L7.2', topic: 'Academic Events' },
-  { id: 12, type: 'fill', text: 'Complete: "Los resultados del estudio ___ la hipótesis inicial" (confirm/support)', answer: 'confirman', fromLesson: 'L7.2', topic: 'Research Language' },
+  // === L7.2 Humor, Wordplay & Double Entendre (6 questions) ===
+  { id: 7, type: 'mc', text: '"El albur" is best described as:', options: ['A type of formal debate', 'A Mexican verbal duel based on double meanings', 'A Spanish poetry form', 'An Argentine dance style'], answer: 1, fromLesson: 'L7.2', topic: 'Albur' },
+  { id: 8, type: 'fill', text: 'Complete: "El ___ juega con la división de sílabas: \"oro parece, plata no es\"" (calambur)', answer: 'calambur', fromLesson: 'L7.2', topic: 'Wordplay' },
+  { id: 9, type: 'mc', text: 'When someone says "¡Qué sorpresa!" with an exaggerated tone and no actual surprise, they are using:', options: ['A formal greeting', 'Sarcasm', 'A compliment', 'An apology'], answer: 1, fromLesson: 'L7.2', topic: 'Sarcasm' },
+  { id: 10, type: 'tf', text: '"El doble sentido" works because many Spanish words have multiple meanings (acepciones múltiples).', answer: true, fromLesson: 'L7.2', topic: 'Double Entendre' },
+  { id: 11, type: 'mc', text: '"El retruécano" is a figure of speech that:', options: ['Uses exaggeration for effect', 'Inverts word order to create new meaning, e.g. "comer para vivir, no vivir para comer"', 'Repeats the same word three times', 'Compares two unlike things'], answer: 1, fromLesson: 'L7.2', topic: 'Wordplay' },
+  { id: 12, type: 'fill', text: 'Complete: "El ___ debe ser inesperado — es la parte final del chiste que provoca la risa" (punchline)', answer: 'remate', fromLesson: 'L7.2', topic: 'Comedic Storytelling' },
 
-  // === L7.3 (7 questions) ===
-  { id: 13, type: 'mc', text: '"El dialecto" differs from "el idioma" in that a dialect is:', options: ['A separate language', 'A regional variety of a language', 'An ancient language', 'A written-only form'], answer: 1, fromLesson: 'L7.3', topic: 'Dialects' },
-  { id: 14, type: 'fill', text: 'Complete: "El ___ es el uso del \"vos\" en lugar de \"tú\"" (voseo)', answer: 'voseo', fromLesson: 'L7.3', topic: 'Voseo' },
-  { id: 15, type: 'mc', text: '"El seseo" is the pronunciation of "c" (before e/i) and "z" as:', options: ['/th/ like in English "think"', '/s/ like in English "see"', '/ch/ like in English "church"', '/k/ like in English "cat"'], answer: 1, fromLesson: 'L7.3', topic: 'Phonetic Variation' },
-  { id: 16, type: 'tf', text: 'Spanish is spoken as an official language on every inhabited continent.', answer: true, fromLesson: 'L7.3', topic: 'Global Spanish' },
-  { id: 17, type: 'mc', text: '"El lunfardo" is a slang associated with:', options: ['Mexico City', 'Buenos Aires, Argentina', 'Madrid, Spain', 'Bogotá, Colombia'], answer: 1, fromLesson: 'L7.3', topic: 'Regional Slang' },
-  { id: 18, type: 'fill', text: 'Complete: "En México se dice \"computadora\"; en España se dice ___" (computer)', answer: 'ordenador', fromLesson: 'L7.3', topic: 'Lexical Variation' },
-  { id: 19, type: 'mc', text: '"El español neutro" is used primarily in:', options: ['Academic papers only', 'Media and dubbing to reach all Spanish speakers', 'Government documents', 'Poetry'], answer: 1, fromLesson: 'L7.3', topic: 'Neutral Spanish' },
+  // === L7.3 Media Literacy & Critical Analysis (7 questions) ===
+  { id: 13, type: 'mc', text: '"El sesgo de confirmación" means:', options: ['Accepting all news as true', 'Seeking only information that reinforces your existing beliefs', 'Confirming sources with experts', 'Writing a balanced article'], answer: 1, fromLesson: 'L7.3', topic: 'Bias' },
+  { id: 14, type: 'fill', text: 'Complete: "La ___ se crea deliberadamente; la malinformación saca de contexto hechos reales" (disinformation)', answer: 'desinformación', fromLesson: 'L7.3', topic: 'Fake News Detection' },
+  { id: 15, type: 'mc', text: '"La falacia ad hominem" attacks:', options: ['The argument\'s logic', 'The person instead of their argument', 'The sources used', 'The writing style'], answer: 1, fromLesson: 'L7.3', topic: 'Logical Fallacies' },
+  { id: 16, type: 'tf', text: '"La cámara de eco" reinforces your existing beliefs by exposing you only to similar opinions.', answer: true, fromLesson: 'L7.3', topic: 'Echo Chamber' },
+  { id: 17, type: 'mc', text: '"El encuadre mediático" determines:', options: ['The newspaper\'s price', 'How a story is presented and perceived by the public', 'Which journalists are hired', 'The font size of headlines'], answer: 1, fromLesson: 'L7.3', topic: 'Media Framing' },
+  { id: 18, type: 'fill', text: 'Complete: "La ___ de fuentes requiere al menos tres fuentes independientes para confirmar un hecho" (triangulation)', answer: 'triangulación', fromLesson: 'L7.3', topic: 'Source Verification' },
+  { id: 19, type: 'mc', text: '"El clickbait" uses:', options: ['Verified facts and balanced reporting', 'Misleading headlines to generate clicks without substantial content', 'Academic citations', 'Government press releases'], answer: 1, fromLesson: 'L7.3', topic: 'Media Vocabulary' },
 
-  // === L7.4 (6 questions) ===
-  { id: 20, type: 'mc', text: '"La ironía" says:', options: ['Exactly what it means', 'The opposite of what it means', 'Nothing meaningful', 'Only positive things'], answer: 1, fromLesson: 'L7.4', topic: 'Irony' },
-  { id: 21, type: 'fill', text: 'Complete: "El ___ es un tipo de humor que dice lo contrario de lo que parece" (sarcasm)', answer: 'sarcasmo', fromLesson: 'L7.4', topic: 'Sarcasm' },
-  { id: 22, type: 'mc', text: '"El doble sentido" in Spanish humor relies on:', options: ['Visual effects', 'Words with multiple meanings', 'Physical comedy', 'Repetition'], answer: 1, fromLesson: 'L7.4', topic: 'Double Meaning' },
-  { id: 23, type: 'tf', text: 'Understanding humor in a foreign language is considered one of the highest levels of fluency.', answer: true, fromLesson: 'L7.4', topic: 'Humor & Fluency' },
-  { id: 24, type: 'mc', text: '"El albur" is a form of wordplay most associated with:', options: ['Spain', 'Argentina', 'Mexico', 'Colombia'], answer: 2, fromLesson: 'L7.4', topic: 'Cultural Humor' },
-  { id: 25, type: 'fill', text: 'Complete: "No es para ___, pero..." (to brag — common understatement)', answer: 'presumir', fromLesson: 'L7.4', topic: 'Understatement' },
+  // === L7.4 Scientific & Environmental Spanish (6 questions) ===
+  { id: 20, type: 'mc', text: '"La hipótesis nula" establishes that:', options: ['The experiment was successful', 'There is no significant difference', 'The results are definitive', 'More research is impossible'], answer: 1, fromLesson: 'L7.4', topic: 'Scientific Method' },
+  { id: 21, type: 'fill', text: 'Complete: "La ___ de carbono mide el impacto ambiental de nuestras actividades" (footprint)', answer: 'huella', fromLesson: 'L7.4', topic: 'Environmental Crisis' },
+  { id: 22, type: 'mc', text: '"La revisión por pares" in scientific publishing ensures:', options: ['Faster publication', 'The quality of the publication through expert review', 'Lower costs', 'More citations'], answer: 1, fromLesson: 'L7.4', topic: 'Peer Review' },
+  { id: 23, type: 'tf', text: '"La correlación no implica causalidad" means that just because two things are correlated does not mean one causes the other.', answer: true, fromLesson: 'L7.4', topic: 'Scientific Method' },
+  { id: 24, type: 'mc', text: '"La divulgación científica" aims to:', options: ['Restrict science to experts only', 'Bring science closer to the general public', 'Replace academic journals', 'Simplify all research conclusions'], answer: 1, fromLesson: 'L7.4', topic: 'Science Communication' },
+  { id: 25, type: 'fill', text: 'Complete: "La evidencia ___ respalda la hipótesis planteada" (empirical)', answer: 'empírica', fromLesson: 'L7.4', topic: 'Technical Writing' },
 
   // === L7.5 Psychology & Emotional Intelligence (6 questions) ===
   { id: 26, type: 'mc', text: '"La resiliencia" is the ability to:', options: ['Avoid all problems', 'Recover from adversity', 'Control others', 'Eliminate emotions'], answer: 1, fromLesson: 'L7.5', topic: 'Resilience' },
@@ -77,7 +77,7 @@ export const L7F_CONFIG = {
   totalQuestions: 25,
   passingScore: 70,
   title: 'Level 7 — Final Assessment',
-  subtitle: 'Native Fluency (C2)',
+  subtitle: 'Upper-Intermediate (B2)',
   description: 'This final exam covers everything from Level 7: dialectology, humor and wordplay, media literacy, scientific Spanish, psychology and emotional intelligence, diplomacy, creative writing, and cultural identity. You need 70% (18/25) to earn your Level 7 badge and achieve Native Fluency status!',
   badgeEmoji: '🌟',
   badgeName: 'Level 7 — Native Fluency',

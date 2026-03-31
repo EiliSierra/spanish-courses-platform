@@ -64,10 +64,10 @@ export const L4F_QUESTION_POOL: ExamQuestion[] = [
   // === L4.7 Arts & Entertainment ===
   { id: 37, type: 'mc', text: '"La película me pareció aburrida" means:', options: ['I loved the movie', 'The movie seemed boring to me', 'The movie was exciting', 'I want to see the movie'], answer: 1, fromLesson: 'L4.7', topic: 'Reviews' },
   { id: 38, type: 'fill', text: 'Complete: "Me encanta la música ___" (Latin)', answer: 'latina', fromLesson: 'L4.7', topic: 'Music' },
-  { id: 39, type: 'mc', text: '"El guión" in film refers to:', options: ['The director', 'The screenplay/script', 'The actor', 'The camera'], answer: 1, fromLesson: 'L4.7', topic: 'Movies' },
+  { id: 39, type: 'mc', text: '"La trama" in a story refers to:', options: ['The director', 'The plot', 'The actor', 'The camera'], answer: 1, fromLesson: 'L4.7', topic: 'Stories' },
   { id: 40, type: 'tf', text: 'Gabriel García Márquez wrote "Cien años de soledad."', answer: true, fromLesson: 'L4.7', topic: 'Literature' },
   { id: 41, type: 'mc', text: '"Te recomiendo esta serie" means:', options: ['I watch this series', 'I recommend this series to you', 'I hate this series', 'I filmed this series'], answer: 1, fromLesson: 'L4.7', topic: 'Reviews' },
-  { id: 42, type: 'fill', text: 'Complete: "El ___ de la novela es muy interesante" (plot)', answer: 'argumento', fromLesson: 'L4.7', topic: 'Books' },
+  { id: 42, type: 'fill', text: 'Complete: "La ___ de la novela es muy interesante" (plot)', answer: 'trama', fromLesson: 'L4.7', topic: 'Books' },
 
   // === L4.8 Future & Dreams ===
   { id: 43, type: 'mc', text: 'The future tense of "hablar" (yo) is:', options: ['Hablé', 'Hablaba', 'Hablaré', 'Hablaría'], answer: 2, fromLesson: 'L4.8', topic: 'Future' },
@@ -84,7 +84,7 @@ export const L4F_CONFIG = {
   totalQuestions: 25,
   passingScore: 70,
   title: 'Level 4 — Final Assessment',
-  subtitle: 'Upper-Intermediate Spanish',
+  subtitle: 'Pre-Intermediate Spanish (A2-B1)',
   description: 'This exam covers everything from Level 4: imperfect, subjunctive, formal/informal, news, wellness, banking, arts, and future plans. You need 70% (18/25) to earn your Level 4 badge.',
   badgeEmoji: '👑',
   badgeName: 'Level 4 — Upper-Intermediate Complete',

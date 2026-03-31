@@ -151,7 +151,7 @@ export const L46Data: LessonData = {
     { spanish: 'Necesito retirar quinientos dólares', pronunciation: 'neh-seh-SEE-toh reh-tee-RAHR kee-nee-EHN-tohs DOH-lah-rehs', english: 'I need to withdraw five hundred dollars', audio: 'necesito-retirar-efectivo', tip: '"Retirar" — stress the last syllable: reh-tee-RAHR. Connect "retirar quinientos" smoothly.' },
     { spanish: 'La tasa de interés es del cinco por ciento', pronunciation: 'lah TAH-sah deh een-teh-REHS ehs dehl SEEN-koh pohr see-EHN-toh', english: 'The interest rate is five percent', audio: 'cual-es-la-tasa-de-interes', tip: '"Interés" — accent on the last syllable. Don\'t say "IN-teres." It\'s een-teh-REHS.' },
     { spanish: 'Quiero transferir fondos a otra cuenta', pronunciation: 'kee-EH-roh trahns-feh-REER FOHN-dohs ah OH-trah KWEHN-tah', english: 'I want to transfer funds to another account', audio: 'quiero-transferir-fondos', tip: '"Transferir" — the stress is on the last syllable: trahns-feh-REER. In Latin America, the "s" before "f" is often soft.' },
-    { spanish: 'Ingrese su número de identificación personal', pronunciation: 'een-GREH-seh soo NOO-meh-roh deh ee-dehn-tee-fee-kah-see-OHN pehr-soh-NAHL', english: 'Enter your personal identification number', audio: 'ingrese-su-contrasena', tip: '"Identificación" — five syllables! Practice breaking it down: i-den-ti-fi-ca-ción. Stress the final -CIÓN.' },
+    { spanish: 'Ingrese su número de identificación personal', pronunciation: 'een-GREH-seh soo NOO-meh-roh deh ee-dehn-tee-fee-kah-see-OHN pehr-soh-NAHL', english: 'Enter your personal identification number', audio: 'ingrese-su-contrasena', tip: '"Identificación" — six syllables! Practice breaking it down: i-den-ti-fi-ca-ción. Stress the final -CIÓN.' },
   ],
 
   sections: [

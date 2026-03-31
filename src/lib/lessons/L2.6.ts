@@ -292,10 +292,9 @@ export const L26Data: LessonData = {
       items: [
         { text: 'Rojo', bucket: 'Warm 🔥' },
         { text: 'Amarillo', bucket: 'Warm 🔥' },
-        { text: 'Naranja', bucket: 'Warm 🔥' },
         { text: 'Azul', bucket: 'Cool ❄️' },
         { text: 'Verde', bucket: 'Cool ❄️' },
-        { text: 'Morado', bucket: 'Cool ❄️' },
+        { text: 'Blanco', bucket: 'Cool ❄️' },
       ],
     },
   ],
@@ -326,7 +325,7 @@ export const L26Data: LessonData = {
       lines: [
         { speaker: 'Vendedora', text: '¡Pásele, pásele! Tenemos vestidos bonitos y baratos.', audio: '/audio/L2.6/phrases/d2-line1.mp3' },
         { speaker: 'Clienta', text: 'Me gusta este vestido rojo. ¿Cuánto cuesta?', audio: '/audio/L2.6/phrases/d2-line2.mp3' },
-        { speaker: 'Vendedora', text: 'Trescientos cincuenta pesos. Es hecho a mano.', audio: '/audio/L2.6/phrases/d2-line3.mp3' },
+        { speaker: 'Vendedora', text: 'Trescientos cincuenta pesos. Está hecho a mano.', audio: '/audio/L2.6/phrases/d2-line3.mp3' },
         { speaker: 'Clienta', text: '¿Me hace un descuento? Compro dos.', audio: '/audio/L2.6/phrases/d2-line4.mp3' },
         { speaker: 'Vendedora', text: 'Dos por seiscientos pesos. ¿Le parece bien?', audio: '/audio/L2.6/phrases/d2-line5.mp3' },
         { speaker: 'Clienta', text: '¡Sí! ¿Tiene uno en verde también?', audio: '/audio/L2.6/phrases/d2-line6.mp3' },

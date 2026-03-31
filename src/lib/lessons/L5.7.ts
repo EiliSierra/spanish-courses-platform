@@ -10,15 +10,15 @@ const PHRASES = [
   { spanish: 'Según el investigador, los resultados son prometedores', english: 'According to the researcher, the results are promising', pronunciation: 'seh-GOON ehl een-behs-tee-gah-DOHR lohs reh-sool-TAH-dohs sohn proh-meh-teh-DOH-rehs', category: 'reported-speech', audio: 'segun-el-investigador' },
   { spanish: 'De acuerdo con el estudio, la hipótesis se cumple', english: 'According to the study, the hypothesis holds true', pronunciation: 'deh ah-KWEHR-doh kohn ehl ehs-TOO-dee-oh lah ee-POH-teh-sees seh KOOM-pleh', category: 'reported-speech', audio: 'de-acuerdo-con-el-estudio' },
   { spanish: 'Señaló que habría cambios significativos', english: 'He pointed out there would be significant changes', pronunciation: 'seh-nyah-LOH keh ah-BREE-ah KAHM-bee-ohs seeg-nee-fee-kah-TEE-bohs', category: 'reported-speech', audio: 'senalo-que-habria-cambios' },
-  { spanish: 'Sostuvo que la metodología era adecuada', english: 'She maintained that the methodology was adequate', pronunciation: 'sohs-TOO-boh keh lah meh-toh-doh-loh-HEE-ah EH-rah ah-deh-KWAH-dah', category: 'reported-speech', audio: 'sostuvo-que-la-metodologia' },
+  { spanish: 'Sostuvo que la metodología era adecuada', english: 'She maintained that the methodology was adequate', pronunciation: 'sohs-TOO-boh keh lah meh-toh-doh-loh-HEE-ah EH-rah ah-deh-KWAH-dah', category: 'reported-speech', audio: 'sostuvo-que-la-metodología' },
   { spanish: 'Concluyó que se necesitaba más investigación', english: 'He concluded that more research was needed', pronunciation: 'kohn-kloo-YOH keh seh neh-seh-see-TAH-bah mahs een-behs-tee-gah-see-OHN', category: 'reported-speech', audio: 'concluyo-que-se-necesitaba' },
   { spanish: 'Admitió que el modelo tenía limitaciones', english: 'She admitted that the model had limitations', pronunciation: 'ahd-mee-tee-OH keh ehl moh-DEH-loh teh-NEE-ah lee-mee-tah-see-OH-nehs', category: 'reported-speech', audio: 'admitio-que-el-modelo-tenia' },
   { spanish: 'Insistió en que los resultados eran confiables', english: 'He insisted that the results were reliable', pronunciation: 'een-sees-tee-OH ehn keh lohs reh-sool-TAH-dohs EH-rahn kohn-fee-AH-blehs', category: 'reported-speech', audio: 'insistio-en-que-los-resultados' },
 
   // === Academic Vocabulary (12) ===
-  { spanish: 'La hipótesis fue rechazada por los datos', english: 'The hypothesis was rejected by the data', pronunciation: 'lah ee-POH-teh-sees fweh reh-chah-SAH-dah pohr lohs DAH-tohs', category: 'academic-vocabulary', audio: 'la-hipotesis-fue-rechazada' },
+  { spanish: 'La hipótesis fue rechazada por los datos', english: 'The hypothesis was rejected by the data', pronunciation: 'lah ee-POH-teh-sees fweh reh-chah-SAH-dah pohr lohs DAH-tohs', category: 'academic-vocabulary', audio: 'la-hipótesis-fue-rechazada' },
   { spanish: 'El marco teórico se basa en tres pilares', english: 'The theoretical framework is based on three pillars', pronunciation: 'ehl MAHR-koh teh-OH-ree-koh seh BAH-sah ehn trehs pee-LAH-rehs', category: 'academic-vocabulary', audio: 'el-marco-teorico-se-basa' },
-  { spanish: 'La metodología combina enfoques cualitativos y cuantitativos', english: 'The methodology combines qualitative and quantitative approaches', pronunciation: 'lah meh-toh-doh-loh-HEE-ah kohm-BEE-nah ehn-FOH-kehs kwah-lee-tah-TEE-bohs ee kwahn-tee-tah-TEE-bohs', category: 'academic-vocabulary', audio: 'la-metodologia-combina-enfoques' },
+  { spanish: 'La metodología combina enfoques cualitativos y cuantitativos', english: 'The methodology combines qualitative and quantitative approaches', pronunciation: 'lah meh-toh-doh-loh-HEE-ah kohm-BEE-nah ehn-FOH-kehs kwah-lee-tah-TEE-bohs ee kwahn-tee-tah-TEE-bohs', category: 'academic-vocabulary', audio: 'la-metodología-combina-enfoques' },
   { spanish: 'Los hallazgos contradicen estudios previos', english: 'The findings contradict previous studies', pronunciation: 'lohs ah-YAHS-gohs kohn-trah-DEE-sehn ehs-TOO-dee-ohs PREH-bee-ohs', category: 'academic-vocabulary', audio: 'los-hallazgos-contradicen' },
   { spanish: 'Cabe destacar que la muestra es representativa', english: 'It is worth noting that the sample is representative', pronunciation: 'KAH-beh dehs-tah-KAHR keh lah MWEHS-trah ehs reh-preh-sehn-tah-TEE-bah', category: 'academic-vocabulary', audio: 'cabe-destacar-que-la-muestra' },
   { spanish: 'Es menester señalar las limitaciones del estudio', english: 'It is necessary to point out the study\'s limitations', pronunciation: 'ehs meh-nehs-TEHR seh-nyah-LAHR lahs lee-mee-tah-see-OH-nehs dehl ehs-TOO-dee-oh', category: 'academic-vocabulary', audio: 'es-menester-senalar' },
@@ -167,9 +167,9 @@ export const L57Data: LessonData = {
 
   objectives: [
     { icon: '\uD83D\uDDE3\uFE0F', title: 'Reported Speech', desc: 'Transform direct quotes into indirect speech with correct tense backshifting: present to imperfect, future to conditional.' },
-    { icon: '\uD83C\uDF93', title: 'Academic Vocabulary', desc: 'Use formal scholarly language: hipotesis, marco teorico, metodologia, hallazgos, cabe destacar, es menester.' },
+    { icon: '\uD83C\uDF93', title: 'Academic Vocabulary', desc: 'Use formal scholarly language: hipótesis, marco teórico, metodología, hallazgos, cabe destacar, es menester.' },
     { icon: '\uD83D\uDCDA', title: 'Literary Analysis', desc: 'Discuss novels and poetry using critical terms: argumento, trama, desenlace, narrador omnisciente, metafora, simbolismo.' },
-    { icon: '\uD83D\uDCDD', title: 'Summarizing & Paraphrasing', desc: 'Condense and rephrase academic content: en sintesis, en otras palabras, el autor sostiene que, se puede inferir que.' },
+    { icon: '\uD83D\uDCDD', title: 'Summarizing & Paraphrasing', desc: 'Condense and rephrase academic content: en síntesis, en otras palabras, el autor sostiene que, se puede inferir que.' },
   ],
 
   priorKnowledge: [
@@ -188,18 +188,18 @@ export const L57Data: LessonData = {
   ],
 
   personalizedVocab: [
-    { spanish: 'Segun el autor...', english: 'According to the author...' },
+    { spanish: 'Según el autor...', english: 'According to the author...' },
     { spanish: 'Cabe destacar que...', english: 'It is worth noting that...' },
-    { spanish: 'En sintesis...', english: 'In summary...' },
+    { spanish: 'En síntesis...', english: 'In summary...' },
     { spanish: 'El argumento principal...', english: 'The main argument...' },
     { spanish: 'Se puede inferir que...', english: 'It can be inferred that...' },
     { spanish: 'Dijo que...', english: 'He/She said that...' },
   ],
 
   pronunciationChallenges: [
-    { spanish: 'La hipotesis fue corroborada por los datos empiricos', pronunciation: 'lah ee-POH-teh-sees fweh koh-rroh-boh-RAH-dah pohr lohs DAH-tohs ehm-PEE-ree-kohs', english: 'The hypothesis was corroborated by the empirical data', audio: 'la-hipotesis-fue-rechazada', tip: '"Hipotesis" has the stress on the third-to-last syllable: hi-PO-te-sis. Most words ending in -sis follow this pattern: analisis, sintesis, tesis.' },
+    { spanish: 'La hipótesis fue corroborada por los datos empiricos', pronunciation: 'lah ee-POH-teh-sees fweh koh-rroh-boh-RAH-dah pohr lohs DAH-tohs ehm-PEE-ree-kohs', english: 'The hypothesis was corroborated by the empirical data', audio: 'la-hipótesis-fue-rechazada', tip: '"Hipotesis" has the stress on the third-to-last syllable: hi-PO-te-sis. Most words ending in -sis follow this pattern: analisis, sintesis, tesis.' },
     { spanish: 'El narrador omnisciente revela el desenlace', pronunciation: 'ehl nah-rrah-DOHR ohm-nee-see-EHN-teh reh-BEH-lah ehl deh-sehn-LAH-seh', english: 'The omniscient narrator reveals the ending', audio: 'el-narrador-omnisciente', tip: '"Omnisciente" is pronounced ohm-nee-see-EHN-teh — the "sc" before "i" sounds like "s" in Latin American Spanish, not "sh."' },
-    { spanish: 'Afirmo que la metodologia era adecuada', pronunciation: 'ah-feer-MOH keh lah meh-toh-doh-loh-HEE-ah EH-rah ah-deh-KWAH-dah', english: 'She affirmed that the methodology was adequate', audio: 'afirmo-que-el-proyecto-era-viable', tip: 'In reported speech, present tense "es" becomes imperfect "era." This tense backshifting is automatic in academic Spanish.' },
+    { spanish: 'Afirmo que la metodología era adecuada', pronunciation: 'ah-feer-MOH keh lah meh-toh-doh-loh-HEE-ah EH-rah ah-deh-KWAH-dah', english: 'She affirmed that the methodology was adequate', audio: 'afirmo-que-el-proyecto-era-viable', tip: 'In reported speech, present tense "es" becomes imperfect "era." This tense backshifting is automatic in academic Spanish.' },
     { spanish: 'La metafora del rio simboliza el paso del tiempo', pronunciation: 'lah meh-TAH-foh-rah dehl RREE-oh seem-boh-LEE-sah ehl PAH-soh dehl tee-EHM-poh', english: 'The river metaphor symbolizes the passage of time', audio: 'la-metafora-del-rio', tip: '"Metafora" is esdrujula (stress on third-to-last syllable): me-TA-fo-ra. All esdrujulas carry a written accent mark.' },
     { spanish: 'Dicho de otro modo, la correlacion no implica causalidad', pronunciation: 'DEE-choh deh OH-troh MOH-doh lah koh-rreh-lah-see-OHN noh eem-PLEE-kah kow-sah-lee-DAHD', english: 'Put another way, correlation does not imply causation', audio: 'dicho-de-otro-modo', tip: '"Correlacion" and "causalidad" are cognates. Recognize Latin roots to quickly expand your academic vocabulary.' },
     { spanish: 'Cabe concluir que los hallazgos respaldan la tesis', pronunciation: 'KAH-beh kohn-kloo-EER keh lohs ah-YAHS-gohs rehs-PAHL-dahn lah TEH-sees', english: 'It can be concluded that the findings support the thesis', audio: 'cabe-concluir-que', tip: '"Hallazgos" has the LL sound (like "y" in most Latin American dialects): ah-YAHS-gohs. A common academic word meaning "findings."' },
@@ -267,7 +267,7 @@ export const L57Data: LessonData = {
   pronunciationTips: [
     {
       title: 'Esdrujulas: Academic Words with Antepenultimate Stress',
-      content: 'Many academic words are esdrujulas (stress on the third-to-last syllable) and always carry a written accent: hipotesis, metodologia (me-to-do-lo-GI-a is NOT esdrujula, but metafora IS: me-TA-fo-ra), analisis, sintesis, empirico, bibliografico. Recognizing this pattern helps you pronounce scholarly vocabulary correctly.',
+      content: 'Many academic words are esdrujulas (stress on the third-to-last syllable) and always carry a written accent: hipótesis, metodología (me-to-do-lo-GI-a is NOT esdrujula, but metafora IS: me-TA-fo-ra), analisis, sintesis, empirico, bibliografico. Recognizing this pattern helps you pronounce scholarly vocabulary correctly.',
       example: 'Hipotesis (hi-PO-te-sis) | Metafora (me-TA-fo-ra) | Empirico (em-PI-ri-co) | Sintesis (SIN-te-sis)',
     },
     {
@@ -278,7 +278,7 @@ export const L57Data: LessonData = {
     },
     {
       title: 'Latin-Origin Academic Cognates',
-      content: 'Spanish and English share hundreds of academic cognates from Latin: metodologia/methodology, hipotesis/hypothesis, analisis/analysis, variable/variable, correlacion/correlation. The pronunciation differs but the meaning is nearly identical. Use this to rapidly expand your scholarly vocabulary.',
+      content: 'Spanish and English share hundreds of academic cognates from Latin: metodología/methodology, hipótesis/hypothesis, analisis/analysis, variable/variable, correlacion/correlation. The pronunciation differs but the meaning is nearly identical. Use this to rapidly expand your scholarly vocabulary.',
       example: 'Investigacion (research) | Conclusion (conclusion) | Evidencia (evidence) | Paradigma (paradigm)',
     },
     {
@@ -293,12 +293,12 @@ export const L57Data: LessonData = {
     {
       key: 'reported-speech',
       label: 'Reported Speech',
-      audioKeys: ['dijo-que-estaba-cansado', 'afirmo-que-el-proyecto-era-viable', 'nego-que-hubiera-participado', 'explico-que-los-datos-confirmaban', 'menciono-que-vendria-al-congreso', 'segun-el-investigador', 'de-acuerdo-con-el-estudio', 'senalo-que-habria-cambios', 'sostuvo-que-la-metodologia', 'concluyo-que-se-necesitaba'],
+      audioKeys: ['dijo-que-estaba-cansado', 'afirmo-que-el-proyecto-era-viable', 'nego-que-hubiera-participado', 'explico-que-los-datos-confirmaban', 'menciono-que-vendria-al-congreso', 'segun-el-investigador', 'de-acuerdo-con-el-estudio', 'senalo-que-habria-cambios', 'sostuvo-que-la-metodología', 'concluyo-que-se-necesitaba'],
     },
     {
       key: 'academic-literary',
       label: 'Academic & Literary',
-      audioKeys: ['la-hipotesis-fue-rechazada', 'el-marco-teorico-se-basa', 'la-metodologia-combina-enfoques', 'los-hallazgos-contradicen', 'el-argumento-de-la-novela', 'la-trama-se-desarrolla', 'el-desenlace-fue-inesperado', 'el-narrador-omnisciente', 'la-metafora-del-rio', 'el-simbolismo-es-central'],
+      audioKeys: ['la-hipótesis-fue-rechazada', 'el-marco-teorico-se-basa', 'la-metodología-combina-enfoques', 'los-hallazgos-contradicen', 'el-argumento-de-la-novela', 'la-trama-se-desarrolla', 'el-desenlace-fue-inesperado', 'el-narrador-omnisciente', 'la-metafora-del-rio', 'el-simbolismo-es-central'],
     },
     {
       key: 'summarizing',
@@ -309,9 +309,9 @@ export const L57Data: LessonData = {
 
   matchPairs: [
     { left: 'Dijo que', right: 'He/She said that' },
-    { left: 'La hipotesis', right: 'The hypothesis' },
+    { left: 'La hipótesis', right: 'The hypothesis' },
     { left: 'El desenlace', right: 'The ending/outcome' },
-    { left: 'En sintesis', right: 'In summary' },
+    { left: 'En síntesis', right: 'In summary' },
     { left: 'Cabe destacar', right: 'It is worth noting' },
     { left: 'El narrador', right: 'The narrator' },
     { left: 'Dicho de otro modo', right: 'Put another way' },
@@ -325,8 +325,8 @@ export const L57Data: LessonData = {
       instruction: 'Is this term from academic research or literary analysis?',
       buckets: ['Academic Research', 'Literary Analysis'],
       items: [
-        { text: 'La hipotesis', bucket: 'Academic Research' },
-        { text: 'La metodologia', bucket: 'Academic Research' },
+        { text: 'La hipótesis', bucket: 'Academic Research' },
+        { text: 'La metodología', bucket: 'Academic Research' },
         { text: 'Los hallazgos', bucket: 'Academic Research' },
         { text: 'Las variables', bucket: 'Academic Research' },
         { text: 'El desenlace', bucket: 'Literary Analysis' },
@@ -340,7 +340,7 @@ export const L57Data: LessonData = {
       instruction: 'Does this phrase introduce a summary or a paraphrase/restatement?',
       buckets: ['Summary', 'Paraphrase/Restatement'],
       items: [
-        { text: 'En sintesis', bucket: 'Summary' },
+        { text: 'En síntesis', bucket: 'Summary' },
         { text: 'Para resumir', bucket: 'Summary' },
         { text: 'En definitiva', bucket: 'Summary' },
         { text: 'A grandes rasgos', bucket: 'Summary' },
@@ -360,15 +360,15 @@ export const L57Data: LessonData = {
       title: 'University Seminar on Climate Change — Quito, Ecuador',
       location: 'Quito',
       lines: [
-        { speaker: 'Profesora Salazar', text: 'Buenas tardes. Hoy analizaremos el articulo de Ramirez sobre cambio climatico y migracion. Andrea, ¿podrias resumir la tesis principal?', audio: '/audio/L5.7/phrases/d1-line1.mp3' },
+        { speaker: 'Profesora Salazar', text: 'Buenas tardes. Hoy analizaremos el artículo de Ramírez sobre cambio climático y migración. Andrea, ¿podrías resumir la tesis principal?', audio: '/audio/L5.7/phrases/d1-line1.mp3' },
         { speaker: 'Andrea', text: 'Si, profesora. El autor sostiene que el cambio climatico sera el principal motor de migracion en America Latina para 2040.', audio: '/audio/L5.7/phrases/d1-line2.mp3', annotations: [{ phrase: 'El autor sostiene que', fromLesson: 'L5.7', note: 'Key summarizing phrase: "The author argues that..."' }] },
-        { speaker: 'Profesora Salazar', text: 'Bien. ¿Y cual es el marco teorico que utiliza?', audio: '/audio/L5.7/phrases/d1-line3.mp3' },
+        { speaker: 'Profesora Salazar', text: 'Bien. ¿Y cual es el marco teórico que utiliza?', audio: '/audio/L5.7/phrases/d1-line3.mp3' },
         { speaker: 'Diego', text: 'Se basa en la teoria de sistemas complejos. Cabe destacar que combina datos cuantitativos con estudios de caso cualitativos.', audio: '/audio/L5.7/phrases/d1-line4.mp3', annotations: [{ phrase: 'Cabe destacar que', fromLesson: 'L5.7', note: 'Formal academic connector: "It is worth noting that..."' }] },
         { speaker: 'Profesora Salazar', text: 'Excelente. Ahora, ¿alguien podria senalar las limitaciones del estudio?', audio: '/audio/L5.7/phrases/d1-line5.mp3' },
         { speaker: 'Andrea', text: 'Es menester senalar que la muestra solo abarca tres paises. Dicho de otro modo, los hallazgos no son generalizables a toda la region.', audio: '/audio/L5.7/phrases/d1-line6.mp3', annotations: [{ phrase: 'Es menester senalar', fromLesson: 'L5.7', note: 'Very formal: "It is necessary to point out..."' }] },
-        { speaker: 'Diego', text: 'De acuerdo con el propio autor, se necesitan mas estudios longitudinales. El admitio que los datos eran preliminares.', audio: '/audio/L5.7/phrases/d1-line7.mp3' },
-        { speaker: 'Profesora Salazar', text: 'A modo de conclusion, ¿que se puede inferir del articulo para las politicas publicas ecuatorianas?', audio: '/audio/L5.7/phrases/d1-line8.mp3' },
-        { speaker: 'Andrea', text: 'En sintesis, se puede inferir que Ecuador necesita politicas de adaptacion climatica para reducir la presion migratoria interna.', audio: '/audio/L5.7/phrases/d1-line9.mp3' },
+        { speaker: 'Diego', text: 'De acuerdo con el propio autor, se necesitan más estudios longitudinales. Él admitió que los datos eran preliminares.', audio: '/audio/L5.7/phrases/d1-line7.mp3' },
+        { speaker: 'Profesora Salazar', text: 'A modo de conclusión, ¿qué se puede inferir del artículo para las políticas públicas ecuatorianas?', audio: '/audio/L5.7/phrases/d1-line8.mp3' },
+        { speaker: 'Andrea', text: 'En síntesis, se puede inferir que Ecuador necesita políticas de adaptación climática para reducir la presión migratoria interna.', audio: '/audio/L5.7/phrases/d1-line9.mp3' },
       ],
     },
     {

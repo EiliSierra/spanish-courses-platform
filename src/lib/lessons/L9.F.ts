@@ -12,7 +12,7 @@ export const L9F_QUESTION_POOL: ExamQuestion[] = [
   { id: 3, type: 'mc', text: '"La bóveda" is:', options: ['A window', 'An arched ceiling or vault', 'A door frame', 'A staircase'], answer: 1, fromLesson: 'L9.1', topic: 'Structural Elements' },
   { id: 4, type: 'tf', text: '"La arquitectura sostenible" focuses on environmentally friendly building design.', answer: true, fromLesson: 'L9.1', topic: 'Sustainability' },
   { id: 5, type: 'mc', text: '"El plano" in architecture is:', options: ['A flat surface', 'A blueprint or floor plan', 'A type of building', 'A construction tool'], answer: 1, fromLesson: 'L9.1', topic: 'Design' },
-  { id: 6, type: 'fill', text: 'Complete: "La ___ de techos es una característica del estilo colonial" (tile)', answer: 'teja', fromLesson: 'L9.1', topic: 'Materials' },
+  { id: 6, type: 'fill', text: 'Complete: "La ___ distribuye el peso hacia los muros laterales" (vault/dome)', answer: 'bóveda', fromLesson: 'L9.1', topic: 'Architecture' },
 
   // === L9.2 Fashion & Textile Industry (6 questions) ===
   { id: 7, type: 'mc', text: '"La pasarela" in fashion is:', options: ['A fabric type', 'The runway/catwalk', 'A sewing tool', 'A clothing brand'], answer: 1, fromLesson: 'L9.2', topic: 'Fashion Shows' },
@@ -28,7 +28,7 @@ export const L9F_QUESTION_POOL: ExamQuestion[] = [
   { id: 15, type: 'mc', text: '"La soberanía alimentaria" means:', options: ['Food delivery service', 'The right of peoples to control their own food systems', 'A type of restaurant', 'Government food subsidies'], answer: 1, fromLesson: 'L9.3', topic: 'Food Systems' },
   { id: 16, type: 'tf', text: '"El monocultivo" means growing only one type of crop on a large scale.', answer: true, fromLesson: 'L9.3', topic: 'Farming Practices' },
   { id: 17, type: 'mc', text: '"El riego por goteo" is:', options: ['Flood irrigation', 'Drip irrigation', 'Rain-fed farming', 'Hydroponics'], answer: 1, fromLesson: 'L9.3', topic: 'Irrigation' },
-  { id: 18, type: 'fill', text: 'Complete: "La cadena de ___ conecta al productor con el consumidor final" (supply)', answer: 'suministro', fromLesson: 'L9.3', topic: 'Supply Chain' },
+  { id: 18, type: 'fill', text: 'Complete: "La ___ de la cadena garantiza el origen del producto" (traceability)', answer: 'trazabilidad', fromLesson: 'L9.3', topic: 'Supply Chain' },
   { id: 19, type: 'mc', text: '"La agroecología" combines:', options: ['Technology and finance', 'Ecological principles with farming practices', 'Tourism and agriculture', 'Architecture and food'], answer: 1, fromLesson: 'L9.3', topic: 'Sustainability' },
 
   // === L9.4 Tourism & Hospitality (6 questions) ===

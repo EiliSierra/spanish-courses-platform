@@ -386,7 +386,7 @@ export const L82Data: LessonData = {
   culturalGradient: 'from-emerald-50 to-teal-50',
 
   quiz: [
-    { id: 1, type: 'mc', text: '"PIB" stands for:', options: ['Producto Interno Bruto', 'Plan de Inversión Bancaria', 'Presupuesto Integral Base', 'Programa de Integración Bilateral'], answer: 0 },
+    { id: 1, type: 'mc', text: '"PIB" stands for:', options: ['Producto Interno Bruto', 'Plan de Inversión Bancaria', 'Presupuesto Integral Base', 'Programa de Integración Bilateral'], answer: 0 }, // 0-indexed: correct answer is 'Producto Interno Bruto'
     { id: 2, type: 'fill', text: 'Complete: "La tasa de ___ bajó al cuatro por ciento" (unemployment)', answer: 'desempleo' },
     { id: 3, type: 'mc', text: '"Flujo de caja" means:', options: ['Cash register', 'Cash flow', 'Credit line', 'Bank account'], answer: 1 },
     { id: 4, type: 'tf', text: '"FODA" is the Spanish equivalent of "SWOT" (Strengths, Weaknesses, Opportunities, Threats).', answer: true },

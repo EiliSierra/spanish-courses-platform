@@ -331,7 +331,7 @@ export const L75Data: LessonData = {
         { speaker: 'Lucía', text: 'Siento una mezcla de angustia y culpa. Angustia porque sé que la relación se deteriora, y culpa porque quizás fui demasiado dura.', audio: '/audio/L7.5/phrases/d1-line4.mp3' },
         { speaker: 'Dra. Vega', text: 'Es válido sentirse así. La angustia y la culpa a menudo coexisten en las relaciones familiares. No tienes que juzgarte por ello.', audio: '/audio/L7.5/phrases/d1-line5.mp3' },
         { speaker: 'Lucía', text: 'Pero me cuesta aceptar que no puedo controlar cómo reacciona ella. Siempre intento arreglar las cosas y termino exhausta.', audio: '/audio/L7.5/phrases/d1-line6.mp3' },
-        { speaker: 'Dra. Vega', text: 'Ahí hay un patrón interesante. ¿Te doy cuenta de que asumes la responsabilidad emocional de la relación entera?', audio: '/audio/L7.5/phrases/d1-line7.mp3' },
+        { speaker: 'Dra. Vega', text: 'Ahí hay un patrón interesante. ¿Te das cuenta de que asumes la responsabilidad emocional de la relación entera?', audio: '/audio/L7.5/phrases/d1-line7.mp3' },
         { speaker: 'Lucía', text: 'Sí... He aprendido a reconocer ese patrón, pero romperlo es otra cosa. Es como si mi autoestima dependiera de que ella esté bien.', audio: '/audio/L7.5/phrases/d1-line8.mp3' },
         { speaker: 'Dra. Vega', text: 'Eso se relaciona con el apego. Cuando crecemos sintiendo que debemos cuidar emocionalmente a nuestros padres, desarrollamos un apego ansioso.', audio: '/audio/L7.5/phrases/d1-line9.mp3' },
         { speaker: 'Lucía', text: 'Entonces, ¿necesito trabajar en mi tendencia a evitar los conflictos poniéndome en el papel de mediadora?', audio: '/audio/L7.5/phrases/d1-line10.mp3' },

@@ -265,7 +265,7 @@ export const L97Data: LessonData = {
     ] },
   ],
   sortSectionId: 'verb-sorting',
-  sortTitle: 'Verb Sorting',
+  sortTitle: 'Concept Sorting',
 
   dialogues: [
     {

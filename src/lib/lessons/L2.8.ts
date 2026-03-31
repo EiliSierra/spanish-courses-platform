@@ -295,7 +295,7 @@ export const L28Data: LessonData = {
         { text: 'Tengo experiencia', bucket: 'TENER (possession)' },
         { text: 'Tengo una reunión', bucket: 'TENER (possession)' },
         { text: 'Tiene buena actitud', bucket: 'TENER (possession)' },
-        { text: 'Tiene tres idiomas', bucket: 'TENER (possession)' },
+        { text: 'Habla tres idiomas', bucket: 'TENER (possession)' },
       ],
     },
   ],

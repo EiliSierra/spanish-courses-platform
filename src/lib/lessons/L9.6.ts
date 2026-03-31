@@ -317,7 +317,7 @@ export const L96Data: LessonData = {
     },
   ],
   sortSectionId: 'verb-sorting',
-  sortTitle: 'Verb Sorting',
+  sortTitle: 'Concept Sorting',
 
   dialogues: [
     {

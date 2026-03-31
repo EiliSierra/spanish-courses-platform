@@ -313,7 +313,7 @@ export const L47Data: LessonData = {
         { speaker: 'Camila', text: 'Es reggaetón pero con un poco de pop. La letra es muy bonita.', audio: '/audio/L4.7/phrases/d1-line3.mp3', annotations: [{ phrase: 'La letra', fromLesson: 'L3.5', note: 'Hobbies vocabulary from L3.5' }] },
         { speaker: 'Diego', text: 'A mí me gusta más el rock en español. De niño escuchaba mucho Soda Stereo.', audio: '/audio/L4.7/phrases/d1-line4.mp3', annotations: [{ phrase: 'De niño escuchaba', fromLesson: 'L4.1', note: 'Imperfect tense from L4.1 for past habits' }] },
         { speaker: 'Camila', text: '¡Soda Stereo es clásico! Pero tienes que escuchar esta canción. Tiene un ritmo increíble.', audio: '/audio/L4.7/phrases/d1-line5.mp3' },
-        { speaker: 'Diego', text: 'Bueno, la voy a escuchar esta noche. ¿La encontré en Spotify?', audio: '/audio/L4.7/phrases/d1-line6.mp3' },
+        { speaker: 'Diego', text: 'Bueno, la voy a escuchar esta noche. ¿La encuentro en Spotify?', audio: '/audio/L4.7/phrases/d1-line6.mp3' },
         { speaker: 'Camila', text: 'Sí, y también hay un video en YouTube. Fui a su concierto el mes pasado. ¡Fue increíble!', audio: '/audio/L4.7/phrases/d1-line7.mp3' },
         { speaker: 'Diego', text: '¿En serio? Yo quiero ir al próximo concierto. ¿Cuánto costaron las entradas?', audio: '/audio/L4.7/phrases/d1-line8.mp3' },
         { speaker: 'Camila', text: 'Costaron ciento cincuenta mil pesos, pero valió la pena. Te la recomiendo mucho.', audio: '/audio/L4.7/phrases/d1-line9.mp3' },

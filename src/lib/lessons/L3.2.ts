@@ -179,7 +179,7 @@ export const L32Data: LessonData = {
     { spanish: 'Busco un departamento amueblado', pronunciation: 'BOOS-koh oon deh-pahr-tah-MEHN-toh ah-mweh-BLAH-doh', english: 'I\'m looking for a furnished apartment', audio: 'busco-un-departamento', tip: '"Amueblado" has the tricky "mue" diphthong. Say it like "ah-mweh-BLAH-doh" \u2014 don\u2019t separate the M from the UE.' },
     { spanish: 'El vecindario es muy tranquilo', pronunciation: 'ehl beh-seen-DAH-ree-oh ehs mwee trahn-KEE-loh', english: 'The neighborhood is very quiet', audio: 'el-vecindario-es-tranquilo', tip: '"Vecindario" \u2014 five syllables! Stress on DA. And "tranquilo" has QUI = KEE, not KWEE.' },
     { spanish: 'Tiene dos recámaras y un balcón', pronunciation: 'tee-EH-neh dohs reh-KAH-mah-rahs ee oon bahl-KOHN', english: 'It has two bedrooms and a balcony', audio: 'tiene-dos-recamaras', tip: '"Rec\u00e1maras" is the Latin American word for bedrooms. In Spain they say "habitaciones." Stress on KAH.' },
-    { spanish: 'Necesito barrer y pasar la aspiradora', pronunciation: 'neh-seh-SEE-toh bah-RREHR ee pah-SAHR lah ahs-pee-rah-DOH-rah', english: 'I need to sweep and vacuum', audio: 'barrer-el-piso', tip: '"Barrer" has a strong rolled RR. "Aspiradora" = 6 syllables! Break it down: as-pi-ra-DO-ra.' },
+    { spanish: 'Necesito barrer y pasar la aspiradora', pronunciation: 'neh-seh-SEE-toh bah-RREHR ee pah-SAHR lah ahs-pee-rah-DOH-rah', english: 'I need to sweep and vacuum', audio: 'barrer-el-piso', tip: '"Barrer" has a strong rolled RR. "Aspiradora" = 5 syllables! Break it down: as-pi-ra-DO-ra.' },
     { spanish: 'La alfombra está debajo de la mesa', pronunciation: 'lah ahl-FOHM-brah ehs-TAH deh-BAH-hoh deh lah MEH-sah', english: 'The rug is under the table', audio: 'la-alfombra', tip: '"Alfombra" \u2014 the L and F blend together quickly. And "debajo" = under (de-BAH-hoh), not "abajo" which means "down."' },
     { spanish: 'Prefiero vivir cerca del centro', pronunciation: 'preh-fee-EH-roh bee-BEER SEHR-kah dehl SEHN-troh', english: 'I prefer to live near downtown', audio: 'quiero-vivir-cerca', tip: '"Prefiero" \u2014 the IE diphthong is key. Pre-fie-RO, not "pre-FEE-ro." Same pattern as "quiero" from earlier lessons.' },
   ],
@@ -263,7 +263,7 @@ export const L32Data: LessonData = {
     },
     {
       title: 'Chore Infinitives \u2014 The -AR Pattern',
-      content: 'Most chores use -AR infinitives: lavar, barrer, limpiar, cocinar, pasar. When giving instructions or saying what you need to do, use "necesito + infinitive" or "hay que + infinitive" (one must). The infinitive is the base form \u2014 no conjugation needed!',
+      content: 'Most chores use -AR infinitives: lavar, limpiar, cocinar, pasar. Note: barrer is -ER but follows the same pattern. When giving instructions or saying what you need to do, use "necesito + infinitive" or "hay que + infinitive" (one must). The infinitive is the base form \u2014 no conjugation needed!',
       example: 'Necesito lavar los platos | Hay que barrer el piso | Voy a limpiar la casa',
     },
   ],

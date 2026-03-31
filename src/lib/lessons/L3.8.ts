@@ -180,7 +180,7 @@ export const L38Data: LessonData = {
     { spanish: 'Probé la comida local y me encantó', pronunciation: 'proh-BEH lah koh-MEE-dah loh-KAHL ee meh ehn-kahn-TOH', english: 'I tried the local food and loved it', audio: 'probe-la-comida-local', tip: '"Probé" from "probar" — regular -AR preterite. "Me encantó" uses the gustar-like pattern from earlier lessons.' },
     { spanish: 'Te recomiendo ir en verano', pronunciation: 'teh reh-koh-mee-EHN-doh eer ehn beh-RAH-noh', english: 'I recommend you go in summer', audio: 'te-recomiendo-ir', tip: '"Recomiendo" is present tense — you\'re giving the recommendation NOW about a trip you already took.' },
     { spanish: 'Fue el mejor viaje de mi vida', pronunciation: 'fweh ehl meh-HOHR bee-AH-heh deh mee BEE-dah', english: 'It was the best trip of my life', audio: 'fue-el-mejor-viaje', tip: '"Fue" from ser (it was) — same irregular preterite from L3.1. "Mejor" = best/better, always the same form.' },
-    { spanish: 'No te pierdas el centro histórico', pronunciation: 'noh teh pee-EHR-dahs ehl SEHN-troh ees-TOH-ree-koh', english: 'Don\'t miss the historic center', audio: 'no-te-pierdas', tip: '"Pierdas" is subjunctive after "no" — a sneak peek at a future tense! For now, memorize this useful phrase.' },
+    { spanish: 'No te pierdas el centro histórico', pronunciation: 'noh teh pee-EHR-dahs ehl SEHN-troh ees-TOH-ree-koh', english: 'Don\'t miss the historic center', audio: 'no-te-pierdas', tip: '"Pierdas" is subjunctive after "no" — a sneak peek at the subjunctive mood! For now, memorize this useful phrase.' },
     { spanish: 'El viaje cambió mi vida', pronunciation: 'ehl bee-AH-heh kahm-bee-OH mee BEE-dah', english: 'The trip changed my life', audio: 'el-viaje-cambio', tip: '"Cambió" — regular -AR preterite third person. The accent on -ó is crucial: "cambio" (I change) vs. "cambió" (it changed).' },
   ],
 
@@ -362,7 +362,7 @@ export const L38Data: LessonData = {
         { speaker: 'Valentina', text: 'Lo mejor fue caminar por la ciudad vieja de Cartagena. Los colores, la música, la comida...', audio: '/audio/L3.8/phrases/d2-line5.mp3', annotations: [{ phrase: 'ciudad vieja', fromLesson: 'L2.5', note: 'City navigation vocabulary from L2.5' }] },
         { speaker: 'Mateo', text: '¿Y Medellín? Dicen que es muy bonita.', audio: '/audio/L3.8/phrases/d2-line6.mp3' },
         { speaker: 'Valentina', text: 'Medellín me encantó. Tomé el metrocable y vi toda la ciudad desde arriba.', audio: '/audio/L3.8/phrases/d2-line7.mp3' },
-        { speaker: 'Mateo', text: '¿Deberías llevar mucha ropa?', audio: '/audio/L3.8/phrases/d2-line8.mp3', annotations: [{ phrase: 'ropa', fromLesson: 'L2.4', note: 'Packing/hotel context from L2.4' }] },
+        { speaker: 'Mateo', text: '¿Debo llevar mucha ropa?', audio: '/audio/L3.8/phrases/d2-line8.mp3', annotations: [{ phrase: 'ropa', fromLesson: 'L2.4', note: 'Packing/hotel context from L2.4' }] },
         { speaker: 'Valentina', text: 'Lleva ropa cómoda y no olvides el protector solar. ¡Hace mucho calor en la costa!', audio: '/audio/L3.8/phrases/d2-line9.mp3' },
       ],
     },
