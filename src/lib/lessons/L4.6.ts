@@ -297,7 +297,7 @@ export const L46Data: LessonData = {
         { text: 'Pagar a plazos', bucket: 'Gastar 🛒' },
         { text: 'Tarjeta de crédito', bucket: 'Gastar 🛒' },
         { text: 'Retirar efectivo', bucket: 'Gastar 🛒' },
-        { text: 'Cobrar un cheque', bucket: 'Gastar 🛒' },
+        { text: 'Cobrar un cheque', bucket: 'Ahorrar 💰' },
       ],
     },
   ],

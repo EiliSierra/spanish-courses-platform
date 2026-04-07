@@ -279,17 +279,17 @@ export const L61Data: LessonData = {
   sortActivities: [
     {
       title: 'Relative Pronoun Selection',
-      instruction: 'Classify each relative pronoun by its function: refers to PEOPLE or refers to THINGS/IDEAS.',
-      buckets: ['People', 'Things / Ideas'],
+      instruction: 'Classify each relative pronoun by its primary function: refers ONLY to people, or can refer to things/ideas/abstract concepts.',
+      buckets: ['Only People', 'Things / Ideas / Both'],
       items: [
-        { text: 'quien / quienes', bucket: 'People' },
-        { text: 'con quien', bucket: 'People' },
-        { text: 'a quienes', bucket: 'People' },
-        { text: 'el cual / la cual', bucket: 'Things / Ideas' },
-        { text: 'lo que', bucket: 'Things / Ideas' },
-        { text: 'lo cual', bucket: 'Things / Ideas' },
-        { text: 'cuyo / cuya', bucket: 'Things / Ideas' },
-        { text: 'por quien', bucket: 'People' },
+        { text: 'quien / quienes', bucket: 'Only People' },
+        { text: 'con quien', bucket: 'Only People' },
+        { text: 'a quienes', bucket: 'Only People' },
+        { text: 'el cual / la cual', bucket: 'Things / Ideas / Both' },
+        { text: 'lo que', bucket: 'Things / Ideas / Both' },
+        { text: 'lo cual', bucket: 'Things / Ideas / Both' },
+        { text: 'cuyo / cuya', bucket: 'Things / Ideas / Both' },
+        { text: 'por quien', bucket: 'Only People' },
       ],
     },
     {
