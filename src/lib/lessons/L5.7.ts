@@ -10,15 +10,15 @@ const PHRASES = [
   { spanish: 'Según el investigador, los resultados son prometedores', english: 'According to the researcher, the results are promising', pronunciation: 'seh-GOON ehl een-behs-tee-gah-DOHR lohs reh-sool-TAH-dohs sohn proh-meh-teh-DOH-rehs', category: 'reported-speech', audio: 'segun-el-investigador' },
   { spanish: 'De acuerdo con el estudio, la hipótesis se cumple', english: 'According to the study, the hypothesis holds true', pronunciation: 'deh ah-KWEHR-doh kohn ehl ehs-TOO-dee-oh lah ee-POH-teh-sees seh KOOM-pleh', category: 'reported-speech', audio: 'de-acuerdo-con-el-estudio' },
   { spanish: 'Señaló que habría cambios significativos', english: 'He pointed out there would be significant changes', pronunciation: 'seh-nyah-LOH keh ah-BREE-ah KAHM-bee-ohs seeg-nee-fee-kah-TEE-bohs', category: 'reported-speech', audio: 'senalo-que-habria-cambios' },
-  { spanish: 'Sostuvo que la metodología era adecuada', english: 'She maintained that the methodology was adequate', pronunciation: 'sohs-TOO-boh keh lah meh-toh-doh-loh-HEE-ah EH-rah ah-deh-KWAH-dah', category: 'reported-speech', audio: 'sostuvo-que-la-metodología' },
+  { spanish: 'Sostuvo que la metodología era adecuada', english: 'She maintained that the methodology was adequate', pronunciation: 'sohs-TOO-boh keh lah meh-toh-doh-loh-HEE-ah EH-rah ah-deh-KWAH-dah', category: 'reported-speech', audio: 'sostuvo-que-la-metodologia' },
   { spanish: 'Concluyó que se necesitaba más investigación', english: 'He concluded that more research was needed', pronunciation: 'kohn-kloo-YOH keh seh neh-seh-see-TAH-bah mahs een-behs-tee-gah-see-OHN', category: 'reported-speech', audio: 'concluyo-que-se-necesitaba' },
   { spanish: 'Admitió que el modelo tenía limitaciones', english: 'She admitted that the model had limitations', pronunciation: 'ahd-mee-tee-OH keh ehl moh-DEH-loh teh-NEE-ah lee-mee-tah-see-OH-nehs', category: 'reported-speech', audio: 'admitio-que-el-modelo-tenia' },
   { spanish: 'Insistió en que los resultados eran confiables', english: 'He insisted that the results were reliable', pronunciation: 'een-sees-tee-OH ehn keh lohs reh-sool-TAH-dohs EH-rahn kohn-fee-AH-blehs', category: 'reported-speech', audio: 'insistio-en-que-los-resultados' },
 
   // === Academic Vocabulary (12) ===
-  { spanish: 'La hipótesis fue rechazada por los datos', english: 'The hypothesis was rejected by the data', pronunciation: 'lah ee-POH-teh-sees fweh reh-chah-SAH-dah pohr lohs DAH-tohs', category: 'academic-vocabulary', audio: 'la-hipótesis-fue-rechazada' },
+  { spanish: 'La hipótesis fue rechazada por los datos', english: 'The hypothesis was rejected by the data', pronunciation: 'lah ee-POH-teh-sees fweh reh-chah-SAH-dah pohr lohs DAH-tohs', category: 'academic-vocabulary', audio: 'la-hipotesis-fue-rechazada' },
   { spanish: 'El marco teórico se basa en tres pilares', english: 'The theoretical framework is based on three pillars', pronunciation: 'ehl MAHR-koh teh-OH-ree-koh seh BAH-sah ehn trehs pee-LAH-rehs', category: 'academic-vocabulary', audio: 'el-marco-teorico-se-basa' },
-  { spanish: 'La metodología combina enfoques cualitativos y cuantitativos', english: 'The methodology combines qualitative and quantitative approaches', pronunciation: 'lah meh-toh-doh-loh-HEE-ah kohm-BEE-nah ehn-FOH-kehs kwah-lee-tah-TEE-bohs ee kwahn-tee-tah-TEE-bohs', category: 'academic-vocabulary', audio: 'la-metodología-combina-enfoques' },
+  { spanish: 'La metodología combina enfoques cualitativos y cuantitativos', english: 'The methodology combines qualitative and quantitative approaches', pronunciation: 'lah meh-toh-doh-loh-HEE-ah kohm-BEE-nah ehn-FOH-kehs kwah-lee-tah-TEE-bohs ee kwahn-tee-tah-TEE-bohs', category: 'academic-vocabulary', audio: 'la-metodologia-combina-enfoques' },
   { spanish: 'Los hallazgos contradicen estudios previos', english: 'The findings contradict previous studies', pronunciation: 'lohs ah-YAHS-gohs kohn-trah-DEE-sehn ehs-TOO-dee-ohs PREH-bee-ohs', category: 'academic-vocabulary', audio: 'los-hallazgos-contradicen' },
   { spanish: 'Cabe destacar que la muestra es representativa', english: 'It is worth noting that the sample is representative', pronunciation: 'KAH-beh dehs-tah-KAHR keh lah MWEHS-trah ehs reh-preh-sehn-tah-TEE-bah', category: 'academic-vocabulary', audio: 'cabe-destacar-que-la-muestra' },
   { spanish: 'Es menester señalar las limitaciones del estudio', english: 'It is necessary to point out the study\'s limitations', pronunciation: 'ehs meh-nehs-TEHR seh-nyah-LAHR lahs lee-mee-tah-see-OH-nehs dehl ehs-TOO-dee-oh', category: 'academic-vocabulary', audio: 'es-menester-senalar' },
@@ -197,7 +197,7 @@ export const L57Data: LessonData = {
   ],
 
   pronunciationChallenges: [
-    { spanish: 'La hipótesis fue corroborada por los datos empiricos', pronunciation: 'lah ee-POH-teh-sees fweh koh-rroh-boh-RAH-dah pohr lohs DAH-tohs ehm-PEE-ree-kohs', english: 'The hypothesis was corroborated by the empirical data', audio: 'la-hipótesis-fue-rechazada', tip: '"Hipotesis" has the stress on the third-to-last syllable: hi-PO-te-sis. Most words ending in -sis follow this pattern: analisis, sintesis, tesis.' },
+    { spanish: 'La hipótesis fue corroborada por los datos empiricos', pronunciation: 'lah ee-POH-teh-sees fweh koh-rroh-boh-RAH-dah pohr lohs DAH-tohs ehm-PEE-ree-kohs', english: 'The hypothesis was corroborated by the empirical data', audio: 'la-hipotesis-fue-rechazada', tip: '"Hipotesis" has the stress on the third-to-last syllable: hi-PO-te-sis. Most words ending in -sis follow this pattern: analisis, sintesis, tesis.' },
     { spanish: 'El narrador omnisciente revela el desenlace', pronunciation: 'ehl nah-rrah-DOHR ohm-nee-see-EHN-teh reh-BEH-lah ehl deh-sehn-LAH-seh', english: 'The omniscient narrator reveals the ending', audio: 'el-narrador-omnisciente', tip: '"Omnisciente" is pronounced ohm-nee-see-EHN-teh — the "sc" before "i" sounds like "s" in Latin American Spanish, not "sh."' },
     { spanish: 'Afirmo que la metodología era adecuada', pronunciation: 'ah-feer-MOH keh lah meh-toh-doh-loh-HEE-ah EH-rah ah-deh-KWAH-dah', english: 'She affirmed that the methodology was adequate', audio: 'afirmo-que-el-proyecto-era-viable', tip: 'In reported speech, present tense "es" becomes imperfect "era." This tense backshifting is automatic in academic Spanish.' },
     { spanish: 'La metafora del rio simboliza el paso del tiempo', pronunciation: 'lah meh-TAH-foh-rah dehl RREE-oh seem-boh-LEE-sah ehl PAH-soh dehl tee-EHM-poh', english: 'The river metaphor symbolizes the passage of time', audio: 'la-metafora-del-rio', tip: '"Metafora" is esdrujula (stress on third-to-last syllable): me-TA-fo-ra. All esdrujulas carry a written accent mark.' },
@@ -293,12 +293,12 @@ export const L57Data: LessonData = {
     {
       key: 'reported-speech',
       label: 'Reported Speech',
-      audioKeys: ['dijo-que-estaba-cansado', 'afirmo-que-el-proyecto-era-viable', 'nego-que-hubiera-participado', 'explico-que-los-datos-confirmaban', 'menciono-que-vendria-al-congreso', 'segun-el-investigador', 'de-acuerdo-con-el-estudio', 'senalo-que-habria-cambios', 'sostuvo-que-la-metodología', 'concluyo-que-se-necesitaba'],
+      audioKeys: ['dijo-que-estaba-cansado', 'afirmo-que-el-proyecto-era-viable', 'nego-que-hubiera-participado', 'explico-que-los-datos-confirmaban', 'menciono-que-vendria-al-congreso', 'segun-el-investigador', 'de-acuerdo-con-el-estudio', 'senalo-que-habria-cambios', 'sostuvo-que-la-metodologia', 'concluyo-que-se-necesitaba'],
     },
     {
       key: 'academic-literary',
       label: 'Academic & Literary',
-      audioKeys: ['la-hipótesis-fue-rechazada', 'el-marco-teorico-se-basa', 'la-metodología-combina-enfoques', 'los-hallazgos-contradicen', 'el-argumento-de-la-novela', 'la-trama-se-desarrolla', 'el-desenlace-fue-inesperado', 'el-narrador-omnisciente', 'la-metafora-del-rio', 'el-simbolismo-es-central'],
+      audioKeys: ['la-hipotesis-fue-rechazada', 'el-marco-teorico-se-basa', 'la-metodologia-combina-enfoques', 'los-hallazgos-contradicen', 'el-argumento-de-la-novela', 'la-trama-se-desarrolla', 'el-desenlace-fue-inesperado', 'el-narrador-omnisciente', 'la-metafora-del-rio', 'el-simbolismo-es-central'],
     },
     {
       key: 'summarizing',
