@@ -5,7 +5,7 @@ export const dynamic = 'force-dynamic'
 
 function lessonImage(id: string): string {
   const special: Record<string, string> = {
-    'L1.1': '/images/L1.1/hero-vowels.png',
+    'L1.1': '/images/L1.1/hero-unique.png',
     'L1.2': '/images/L1.2/hero-meeting.png',
     'L1.3': '/images/L1.3/hero-numbers.png',
   }
