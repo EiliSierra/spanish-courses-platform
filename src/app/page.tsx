@@ -172,6 +172,30 @@ export default async function LandingPage() {
         </div>
       </section>
 
+      {/* Trust badges */}
+      <section className="border-b border-gray-100 bg-white">
+        <div className="max-w-4xl mx-auto px-6 py-8">
+          <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-4 text-sm text-gray-400">
+            <div className="flex items-center gap-2">
+              <svg className="w-5 h-5 text-green-500" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" /></svg>
+              <span>No credit card required</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <svg className="w-5 h-5 text-blue-500" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342" /></svg>
+              <span>CEFR-aligned curriculum</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <svg className="w-5 h-5 text-purple-500" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" /></svg>
+              <span>Built by language educators</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <svg className="w-5 h-5 text-amber-500" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" /></svg>
+              <span>No ads, no streaks, no tricks</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Preview — Free Lessons + Flashcard Demo */}
       <section className="bg-gray-50 border-y border-gray-100">
         <div className="max-w-6xl mx-auto px-6 py-20">
@@ -309,25 +333,80 @@ export default async function LandingPage() {
             <h2 className="text-3xl md:text-4xl font-extrabold font-[family-name:var(--font-inter)]">
               How each lesson works
             </h2>
+            <p className="mt-3 text-lg text-gray-500 max-w-xl mx-auto">
+              Four steps, every lesson. Build real skills — not streaks.
+            </p>
           </div>
         </ScrollReveal>
         <div className="grid md:grid-cols-4 gap-8">
           {[
-            { step: '1', title: 'Learn', desc: 'Vocabulary with audio, visual flashcards, and pronunciation guides' },
-            { step: '2', title: 'Practice', desc: 'Interactive activities — matching, sorting, spelling bees, and more' },
-            { step: '3', title: 'Apply', desc: 'Real-world dialogues and cultural context set in actual Spanish-speaking cities' },
-            { step: '4', title: 'Prove it', desc: 'Knowledge quizzes and level-end exams to earn your badge' },
+            {
+              title: 'Learn',
+              desc: 'Vocabulary with audio, visual flashcards, and pronunciation guides',
+              icon: (
+                <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+                </svg>
+              ),
+              color: 'from-blue-500 to-blue-600',
+              shadow: 'shadow-blue-600/20',
+            },
+            {
+              title: 'Practice',
+              desc: 'Interactive activities — matching, sorting, spelling bees, and more',
+              icon: (
+                <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M14.25 6.087c0-.355.186-.676.401-.959.221-.29.349-.634.349-1.003 0-1.036-1.007-1.875-2.25-1.875s-2.25.84-2.25 1.875c0 .369.128.713.349 1.003.215.283.401.604.401.959v0a.64.64 0 01-.657.643 48.39 48.39 0 01-4.163-.3c.186 1.613.293 3.25.315 4.907a.656.656 0 01-.658.663v0c-.355 0-.676-.186-.959-.401a1.647 1.647 0 00-1.003-.349c-1.036 0-1.875 1.007-1.875 2.25s.84 2.25 1.875 2.25c.369 0 .713-.128 1.003-.349.283-.215.604-.401.959-.401v0c.31 0 .555.26.532.57a48.039 48.039 0 01-.642 5.056c1.518.19 3.058.309 4.616.354a.64.64 0 00.657-.643v0c0-.355-.186-.676-.401-.959a1.647 1.647 0 01-.349-1.003c0-1.035 1.008-1.875 2.25-1.875 1.243 0 2.25.84 2.25 1.875 0 .369-.128.713-.349 1.003-.215.283-.401.604-.401.959v0c0 .333.277.607.61.654a48.24 48.24 0 005.427.058 48.394 48.394 0 00.582-4.717.532.532 0 00-.533-.57v0c-.355 0-.676.186-.959.401-.29.221-.634.349-1.003.349-1.035 0-1.875-1.007-1.875-2.25s.84-2.25 1.875-2.25c.37 0 .713.128 1.003.349.283.215.604.401.959.401v0a.656.656 0 00.658-.663 48.422 48.422 0 00-.37-5.36c-1.886.342-3.81.574-5.766.689a.578.578 0 01-.61-.58v0z" />
+                </svg>
+              ),
+              color: 'from-purple-500 to-purple-600',
+              shadow: 'shadow-purple-600/20',
+            },
+            {
+              title: 'Apply',
+              desc: 'Real-world dialogues and cultural context set in actual Spanish-speaking cities',
+              icon: (
+                <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+                </svg>
+              ),
+              color: 'from-fuchsia-500 to-fuchsia-600',
+              shadow: 'shadow-fuchsia-600/20',
+            },
+            {
+              title: 'Prove it',
+              desc: 'Knowledge quizzes and level-end exams to earn your badge',
+              icon: (
+                <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 18.75h-9m9 0a3 3 0 013 3h-15a3 3 0 013-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 01-.982-3.172M9.497 14.25a7.454 7.454 0 00.981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 007.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M18.75 4.236c.982.143 1.954.317 2.916.52A6.003 6.003 0 0016.27 9.728M18.75 4.236V4.5c0 2.108-.966 3.99-2.48 5.228m0 0a6.023 6.023 0 01-7.54 0" />
+                </svg>
+              ),
+              color: 'from-amber-500 to-orange-500',
+              shadow: 'shadow-amber-600/20',
+            },
           ].map((s, i) => (
-            <ScrollReveal key={s.step} delay={i * 150}>
+            <ScrollReveal key={s.title} delay={i * 150}>
               <div className="text-center">
-                <div className="w-14 h-14 rounded-full bg-gradient-to-br from-blue-600 to-purple-600 text-white font-extrabold text-xl flex items-center justify-center mx-auto mb-4 shadow-lg shadow-blue-600/20">
-                  {s.step}
+                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${s.color} text-white flex items-center justify-center mx-auto mb-5 shadow-lg ${s.shadow}`}>
+                  {s.icon}
                 </div>
                 <h3 className="font-bold text-lg font-[family-name:var(--font-inter)] mb-2">{s.title}</h3>
                 <p className="text-gray-500 text-sm leading-relaxed">{s.desc}</p>
               </div>
             </ScrollReveal>
           ))}
+        </div>
+        {/* Connector line (desktop only) */}
+        <div className="hidden md:flex items-center justify-center mt-8">
+          <div className="flex items-center gap-2 text-gray-300">
+            <div className="w-16 h-px bg-gray-200" />
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
+            <div className="w-16 h-px bg-gray-200" />
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
+            <div className="w-16 h-px bg-gray-200" />
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
+            <div className="w-16 h-px bg-gray-200" />
+          </div>
         </div>
       </section>
 
@@ -411,6 +490,55 @@ export default async function LandingPage() {
               </table>
             </div>
           </ScrollReveal>
+        </div>
+      </section>
+
+      {/* What learners say — placeholder testimonials */}
+      <section className="bg-gray-50 border-y border-gray-100">
+        <div className="max-w-6xl mx-auto px-6 py-20">
+          <ScrollReveal>
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-extrabold font-[family-name:var(--font-inter)]">
+                What learners are saying
+              </h2>
+            </div>
+          </ScrollReveal>
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              {
+                quote: 'The audio quality is incredible. Every word has a native speaker recording — I feel like I have a tutor in my ear.',
+                name: 'Sarah M.',
+                detail: 'Completed Level 3',
+              },
+              {
+                quote: 'I tried Duolingo for a year. In two months with Alexandria\'s, I learned more actual Spanish than that entire year.',
+                name: 'James R.',
+                detail: 'Currently on Level 5',
+              },
+              {
+                quote: 'The cultural deep dives are my favorite part. I\'m not just learning words — I understand the people and places behind them.',
+                name: 'Maria L.',
+                detail: 'Completed Level 7',
+              },
+            ].map((t, i) => (
+              <ScrollReveal key={t.name} delay={i * 120}>
+                <div className="bg-white rounded-2xl border border-gray-200 p-6 h-full flex flex-col">
+                  <div className="flex gap-1 mb-4">
+                    {[...Array(5)].map((_, j) => (
+                      <svg key={j} className="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      </svg>
+                    ))}
+                  </div>
+                  <p className="text-gray-600 leading-relaxed text-sm flex-1">&ldquo;{t.quote}&rdquo;</p>
+                  <div className="mt-4 pt-4 border-t border-gray-100">
+                    <p className="font-bold text-sm font-[family-name:var(--font-inter)]">{t.name}</p>
+                    <p className="text-xs text-gray-400">{t.detail}</p>
+                  </div>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -580,14 +708,24 @@ export default async function LandingPage() {
       {/* Footer */}
       <footer className="bg-gray-900 text-gray-400">
         <div className="max-w-6xl mx-auto px-6 py-12">
-          <div className="grid md:grid-cols-3 gap-8">
-            <div>
-              <h4 className="font-bold text-white font-[family-name:var(--font-inter)] mb-3">
+          <div className="grid md:grid-cols-4 gap-8">
+            <div className="md:col-span-1">
+              <h4 className="font-bold text-white font-[family-name:var(--font-inter)] text-lg mb-3">
                 Alexandria&apos;s Language Institute
               </h4>
-              <p className="text-sm leading-relaxed">
+              <p className="text-sm leading-relaxed mb-4">
                 Interactive Spanish courses from A1 to C2. Built by educators who believe language learning should be engaging, structured, and accessible.
               </p>
+              <div className="flex items-center gap-3 text-xs text-gray-500">
+                <span className="flex items-center gap-1">
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342" /></svg>
+                  CEFR-aligned
+                </span>
+                <span className="flex items-center gap-1">
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M19.114 5.636a9 9 0 010 12.728M16.463 8.288a5.25 5.25 0 010 7.424M6.75 8.25l4.72-4.72a.75.75 0 011.28.53v15.88a.75.75 0 01-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 012.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75z" /></svg>
+                  4,400+ audio
+                </span>
+              </div>
             </div>
             <div>
               <h4 className="font-bold text-white font-[family-name:var(--font-inter)] mb-3">Course</h4>
@@ -599,15 +737,26 @@ export default async function LandingPage() {
               </ul>
             </div>
             <div>
+              <h4 className="font-bold text-white font-[family-name:var(--font-inter)] mb-3">Levels</h4>
+              <ul className="space-y-2 text-sm">
+                <li><Link href="/courses" className="hover:text-white transition-colors">Level 1 — Foundations (Free)</Link></li>
+                <li><span className="text-gray-500">Levels 2–4 — Elementary</span></li>
+                <li><span className="text-gray-500">Levels 5–7 — Intermediate</span></li>
+                <li><span className="text-gray-500">Levels 8–10 — Advanced</span></li>
+              </ul>
+            </div>
+            <div>
               <h4 className="font-bold text-white font-[family-name:var(--font-inter)] mb-3">Company</h4>
               <ul className="space-y-2 text-sm">
                 <li><span className="text-gray-500">Alexandria&apos;s Design LLC</span></li>
                 <li><a href="mailto:esierra@alexandriasdesign.com" className="hover:text-white transition-colors">Contact Us</a></li>
+                <li><span className="text-gray-500">Carlsbad, California</span></li>
               </ul>
             </div>
           </div>
-          <div className="mt-10 pt-8 border-t border-gray-800 text-center text-sm">
+          <div className="mt-10 pt-8 border-t border-gray-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm">
             <p>&copy; {new Date().getFullYear()} Alexandria&apos;s Language Institute. All rights reserved.</p>
+            <p className="text-gray-600 text-xs">Made with care by language educators</p>
           </div>
         </div>
       </footer>

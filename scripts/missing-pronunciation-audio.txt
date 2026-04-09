@@ -1,0 +1,399 @@
+public/audio/L1.1/phrases/hola-buenos-dias.mp3  # Hola, buenos d\u00edas
+public/audio/L1.1/phrases/nino.mp3  # Ni\u00f1o
+public/audio/L1.1/phrases/guitarra.mp3  # Guitarra
+public/audio/L1.1/phrases/perro-vs-pero.mp3  # Perro vs Pero
+public/audio/L1.1/phrases/zapato.mp3  # Zapato
+public/audio/L1.1/phrases/calle.mp3  # Calle
+public/audio/L1.2/phrases/hola-buenos-dias.mp3  # Hola, buenos días
+public/audio/L1.2/phrases/me-llamo-ana.mp3  # Me llamo Ana
+public/audio/L1.2/phrases/mas-despacio-por-favor.mp3  # Más despacio, por favor
+public/audio/L1.2/phrases/encantado-de-conocerle.mp3  # Encantado de conocerle
+public/audio/L1.3/phrases/son-las-tres-y-media.mp3  # Son las tres y media
+public/audio/L1.3/phrases/cincuenta-y-ocho.mp3  # Cincuenta y ocho
+public/audio/L1.3/phrases/son-las-nueve-de-la-noche.mp3  # Son las nueve de la noche
+public/audio/L1.3/phrases/mi-numero-es-tres-dos-ocho-uno.mp3  # Mi número es tres, dos, ocho, uno
+public/audio/L1.5/phrases/donde-esta-el-hotel.mp3  # \u00bfD\u00f3nde est\u00e1 el hotel?
+public/audio/L1.5/phrases/quiero-ir-al-aeropuerto.mp3  # Quiero ir al aeropuerto
+public/audio/L1.5/phrases/esta-en-la-esquina.mp3  # Est\u00e1 en la esquina
+public/audio/L1.5/phrases/pare-aqui-por-favor.mp3  # Pare aqu\u00ed, por favor
+public/audio/L1.5/phrases/cuanto-cuesta-el-taxi.mp3  # \u00bfCu\u00e1nto cuesta el taxi?
+public/audio/L1.6/phrases/mi-hermano-se-llama-carlos.mp3  # Mi hermano se llama Carlos
+public/audio/L1.6/phrases/tengo-dos-hijos.mp3  # Tengo dos hijos
+public/audio/L1.6/phrases/como-se-llama-tu-abuela.mp3  # ¿Cómo se llama tu abuela?
+public/audio/L1.6/phrases/nuestro-primo-vive-en-mexico.mp3  # Nuestro primo vive en México
+public/audio/L1.6/phrases/mi-tia-tiene-cincuenta-anos.mp3  # Mi tía tiene cincuenta años
+public/audio/L1.6/phrases/sus-abuelos-son-de-colombia.mp3  # Sus abuelos son de Colombia
+public/audio/L1.7/phrases/quiero-el-pollo-asado-con-arroz.mp3  # Quiero el pollo asado con arroz
+public/audio/L1.7/phrases/tiene-postre.mp3  # ¿Tiene postre?
+public/audio/L1.7/phrases/el-pescado-esta-muy-fresco.mp3  # El pescado está muy fresco
+public/audio/L1.7/phrases/de-postre-quiero-flan.mp3  # De postre, quiero flan
+public/audio/L1.7/phrases/los-camarones-estan-picantes.mp3  # Los camarones están picantes
+public/audio/L1.8/phrases/me-levanto-a-las-siete-de-la-manana.mp3  # Me levanto a las siete de la mañana
+public/audio/L1.8/phrases/me-gusta-cocinar-por-la-noche.mp3  # Me gusta cocinar por la noche
+public/audio/L1.8/phrases/siempre-desayuno-a-las-ocho.mp3  # Siempre desayuno a las ocho
+public/audio/L1.8/phrases/hago-ejercicio-los-sabados.mp3  # Hago ejercicio los sábados
+public/audio/L1.8/phrases/me-acuesto-tarde-los-viernes.mp3  # Me acuesto tarde los viernes
+public/audio/L1.8/phrases/almuerzo-a-la-una.mp3  # Almuerzo a la una
+public/audio/L2.2/phrases/hace-mucho-calor-hoy.mp3  # Hace mucho calor hoy
+public/audio/L2.2/phrases/llueve-mucho-en-abril.mp3  # Llueve mucho en abril
+public/audio/L2.2/phrases/el-otono-es-bonito.mp3  # El oto\u00f1o es bonito
+public/audio/L2.3/phrases/voy-a-ir-al-cine-el-viernes.mp3  # Voy a ir al cine el viernes
+public/audio/L2.3/phrases/quieres-ir-al-parque-manana.mp3  # \u00bfQuieres ir al parque ma\u00f1ana?
+public/audio/L2.3/phrases/claro-que-si-me-encanta-la-idea.mp3  # \u00a1Claro que s\u00ed! Me encanta la idea
+public/audio/L2.3/phrases/lo-siento-tengo-otros-planes.mp3  # Lo siento, tengo otros planes
+public/audio/L2.3/phrases/vamos-a-salir-este-sabado.mp3  # Vamos a salir este s\u00e1bado
+public/audio/L2.4/phrases/tengo-una-reservacion-a-nombre-de-martinez.mp3  # Tengo una reservación a nombre de Martínez
+public/audio/L2.4/phrases/la-llave-de-la-habitacion-no-funciona.mp3  # La llave de la habitación no funciona
+public/audio/L2.4/phrases/puede-ayudarme-con-el-equipaje.mp3  # ¿Puede ayudarme con el equipaje?
+public/audio/L2.4/phrases/necesito-una-toalla-mas-por-favor.mp3  # Necesito una toalla más, por favor
+public/audio/L2.4/phrases/el-aire-acondicionado-no-funciona.mp3  # El aire acondicionado no funciona
+public/audio/L2.4/phrases/el-desayuno-es-a-las-siete.mp3  # El desayuno es a las siete
+public/audio/L2.5/phrases/donde-esta-la-puerta-b12.mp3  # ¿Dónde está la puerta B12?
+public/audio/L2.5/phrases/mi-vuelo-sale-a-las-tres.mp3  # Mi vuelo sale a las tres
+public/audio/L2.5/phrases/quiero-facturar-dos-maletas.mp3  # Quiero facturar dos maletas
+public/audio/L2.5/phrases/el-vuelo-tiene-una-escala.mp3  # El vuelo tiene una escala
+public/audio/L2.5/phrases/ida-y-vuelta-a-bogota.mp3  # Ida y vuelta a Bogotá
+public/audio/L2.5/phrases/perdi-mi-equipaje-de-mano.mp3  # Perdí mi equipaje de mano
+public/audio/L2.6/phrases/cuanto-cuesta-la-camisa.mp3  # ¿Cuánto cuesta la camisa?
+public/audio/L2.6/phrases/me-queda-muy-bien.mp3  # Me queda muy bien
+public/audio/L2.6/phrases/busco-una-falda-azul.mp3  # Busco una falda azul
+public/audio/L2.6/phrases/tiene-talla-pequena.mp3  # ¿Tiene talla pequeña?
+public/audio/L2.6/phrases/los-zapatos-negros.mp3  # Los zapatos negros
+public/audio/L2.7/phrases/tiene-los-ojos-verdes.mp3  # Tiene los ojos verdes
+public/audio/L2.7/phrases/esta-cansado-hoy.mp3  # Está cansado hoy
+public/audio/L2.7/phrases/tiene-el-pelo-castano.mp3  # Tiene el pelo castaño
+public/audio/L2.7/phrases/como-es-tu-hermano.mp3  # ¿Cómo es tu hermano?
+public/audio/L2.8/phrases/soy-ingeniero.mp3  # Soy ingeniero
+public/audio/L2.8/phrases/tengo-una-reunion-a-las-tres.mp3  # Tengo una reunión a las tres
+public/audio/L2.8/phrases/es-responsable-y-puntual.mp3  # Es responsable y puntual
+public/audio/L3.1/phrases/hable-con-mi-amigo-ayer.mp3  # Hablé con mi amigo ayer
+public/audio/L3.1/phrases/fui-al-cine-anoche.mp3  # Fui al cine anoche
+public/audio/L3.1/phrases/comimos-en-un-restaurante.mp3  # Comimos en un restaurante
+public/audio/L3.1/phrases/tuve-que-trabajar-el-sabado.mp3  # Tuve que trabajar el sábado
+public/audio/L3.1/phrases/hice-la-tarea-y-despues-sali.mp3  # Hice la tarea y después salí
+public/audio/L3.1/phrases/la-semana-pasada-viajamos.mp3  # La semana pasada viajamos
+public/audio/L3.2/phrases/busco-un-departamento-amueblado.mp3  # Busco un departamento amueblado
+public/audio/L3.2/phrases/el-vecindario-es-muy-tranquilo.mp3  # El vecindario es muy tranquilo
+public/audio/L3.2/phrases/tiene-dos-recamaras-y-un-balcon.mp3  # Tiene dos recámaras y un balcón
+public/audio/L3.2/phrases/necesito-barrer-y-pasar-la-aspiradora.mp3  # Necesito barrer y pasar la aspiradora
+public/audio/L3.2/phrases/la-alfombra-esta-debajo-de-la-mesa.mp3  # La alfombra está debajo de la mesa
+public/audio/L3.2/phrases/prefiero-vivir-cerca-del-centro.mp3  # Prefiero vivir cerca del centro
+public/audio/L3.3/phrases/necesito-descargar-la-aplicacion.mp3  # Necesito descargar la aplicación
+public/audio/L3.3/phrases/las-redes-sociales-son-adictivas.mp3  # Las redes sociales son adictivas
+public/audio/L3.3/phrases/publica-fotos-y-comparte-videos.mp3  # Publica fotos y comparte videos
+public/audio/L3.3/phrases/conectarse-al-wifi-inalambrico.mp3  # Conectarse al wifi inalámbrico
+public/audio/L3.4/phrases/cortar-en-pedazos-pequenos.mp3  # Cortar en pedazos pequeños
+public/audio/L3.4/phrases/hervir-el-agua-con-sal.mp3  # Hervir el agua con sal
+public/audio/L3.4/phrases/freir-las-cebollas-en-aceite.mp3  # Freír las cebollas en aceite
+public/audio/L3.4/phrases/picar-la-cebolla-bien-fina.mp3  # Picar la cebolla bien fina
+public/audio/L3.4/phrases/mezclar-todo-con-una-cuchara.mp3  # Mezclar todo con una cuchara
+public/audio/L3.4/phrases/cocinar-a-fuego-lento-veinte-minutos.mp3  # Cocinar a fuego lento veinte minutos
+public/audio/L3.5/phrases/juego-al-futbol-los-sabados.mp3  # Juego al f\u00fatbol los s\u00e1bados
+public/audio/L3.5/phrases/me-encanta-bailar-salsa.mp3  # Me encanta bailar salsa
+public/audio/L3.5/phrases/practico-baloncesto-dos-veces-a-la-semana.mp3  # Practico baloncesto dos veces a la semana
+public/audio/L3.5/phrases/hago-senderismo-en-las-montanas.mp3  # Hago senderismo en las monta\u00f1as
+public/audio/L3.5/phrases/prefiero-deportes-al-aire-libre.mp3  # Prefiero deportes al aire libre
+public/audio/L3.5/phrases/toco-la-guitarra-desde-nino.mp3  # Toco la guitarra desde ni\u00f1o
+public/audio/L3.6/phrases/la-selva-tropical-del-amazonas.mp3  # La selva tropical del Amazonas
+public/audio/L3.6/phrases/las-especies-en-peligro-de-extincion.mp3  # Las especies en peligro de extinción
+public/audio/L3.6/phrases/el-arrecife-de-coral-es-hermoso.mp3  # El arrecife de coral es hermoso
+public/audio/L3.6/phrases/debemos-cuidar-el-medio-ambiente.mp3  # Debemos cuidar el medio ambiente
+public/audio/L3.6/phrases/la-biodiversidad-de-colombia-es-increible.mp3  # La biodiversidad de Colombia es increíble
+public/audio/L3.6/phrases/el-cambio-climatico-afecta-a-todos.mp3  # El cambio climático afecta a todos
+public/audio/L3.7/phrases/pusimos-flores-de-cempasuchil.mp3  # Pusimos flores de cempasúchil
+public/audio/L3.7/phrases/cantamos-villancicos-toda-la-noche.mp3  # Cantamos villancicos toda la noche
+public/audio/L3.7/phrases/felicidades-enhorabuena.mp3  # ¡Felicidades! ¡Enhorabuena!
+public/audio/L3.8/phrases/visite-las-ruinas-de-machu-picchu.mp3  # Visité las ruinas de Machu Picchu
+public/audio/L3.8/phrases/probe-la-comida-local-y-me-encanto.mp3  # Probé la comida local y me encantó
+public/audio/L3.8/phrases/te-recomiendo-ir-en-verano.mp3  # Te recomiendo ir en verano
+public/audio/L3.8/phrases/fue-el-mejor-viaje-de-mi-vida.mp3  # Fue el mejor viaje de mi vida
+public/audio/L3.8/phrases/no-te-pierdas-el-centro-historico.mp3  # No te pierdas el centro histórico
+public/audio/L3.8/phrases/el-viaje-cambio-mi-vida.mp3  # El viaje cambió mi vida
+public/audio/L4.1/phrases/yo-hablaba-con-mi-abuela-todos-los-dias.mp3  # Yo hablaba con mi abuela todos los días
+public/audio/L4.1/phrases/comia-en-casa-de-mi-abuela.mp3  # Comía en casa de mi abuela
+public/audio/L4.1/phrases/era-muy-timido-de-nino.mp3  # Era muy tímido de niño
+public/audio/L4.1/phrases/iba-a-la-playa-cada-verano.mp3  # Iba a la playa cada verano
+public/audio/L4.1/phrases/veiamos-las-estrellas-desde-el-techo.mp3  # Veíamos las estrellas desde el techo
+public/audio/L4.1/phrases/mientras-dormia-sonaba-con-volar.mp3  # Mientras dormía, soñaba con volar
+public/audio/L4.2/phrases/quiero-que-vengas-a-mi-fiesta.mp3  # Quiero que vengas a mi fiesta
+public/audio/L4.2/phrases/es-importante-que-estudies-mucho.mp3  # Es importante que estudies mucho
+public/audio/L4.2/phrases/me-alegra-que-estes-aqui.mp3  # Me alegra que estés aquí
+public/audio/L4.2/phrases/dudo-que-llueva-esta-tarde.mp3  # Dudo que llueva esta tarde
+public/audio/L4.2/phrases/ojala-que-todo-salga-bien.mp3  # Ojalá que todo salga bien
+public/audio/L4.4/phrases/el-periodico-publico-un-reportaje.mp3  # El periódico publicó un reportaje
+public/audio/L4.4/phrases/segun-las-noticias-de-hoy.mp3  # Según las noticias de hoy
+public/audio/L4.4/phrases/en-mi-opinion-es-exagerado.mp3  # En mi opinión, es exagerado
+public/audio/L4.4/phrases/informaron-que-hubo-un-terremoto.mp3  # Informaron que hubo un terremoto
+public/audio/L4.4/phrases/el-titular-dice-que-el-presidente-viajo.mp3  # El titular dice que el presidente viajó
+public/audio/L4.4/phrases/las-autoridades-confirmaron-la-noticia.mp3  # Las autoridades confirmaron la noticia
+public/audio/L4.5/phrases/me-siento-estresado-y-ansioso.mp3  # Me siento estresado y ansioso
+public/audio/L4.5/phrases/practico-la-meditacion-cada-manana.mp3  # Practico la meditación cada mañana
+public/audio/L4.5/phrases/te-recomiendo-que-duermas-ocho-horas.mp3  # Te recomiendo que duermas ocho horas
+public/audio/L4.5/phrases/es-importante-que-hagas-ejercicio.mp3  # Es importante que hagas ejercicio
+public/audio/L4.5/phrases/llevo-una-dieta-equilibrada.mp3  # Llevo una dieta equilibrada
+public/audio/L4.5/phrases/deberias-consultar-a-un-especialista.mp3  # Deberías consultar a un especialista
+public/audio/L4.6/phrases/quiero-abrir-una-cuenta-de-ahorros.mp3  # Quiero abrir una cuenta de ahorros
+public/audio/L4.6/phrases/cual-es-el-tipo-de-cambio-hoy.mp3  # ¿Cuál es el tipo de cambio hoy?
+public/audio/L4.6/phrases/necesito-retirar-quinientos-dolares.mp3  # Necesito retirar quinientos dólares
+public/audio/L4.6/phrases/la-tasa-de-interes-es-del-cinco-por-ciento.mp3  # La tasa de interés es del cinco por ciento
+public/audio/L4.6/phrases/quiero-transferir-fondos-a-otra-cuenta.mp3  # Quiero transferir fondos a otra cuenta
+public/audio/L4.6/phrases/ingrese-su-numero-de-identificacion-personal.mp3  # Ingrese su número de identificación personal
+public/audio/L4.7/phrases/que-musica-te-gusta-escuchar.mp3  # ¿Qué música te gusta escuchar?
+public/audio/L4.7/phrases/la-pelicula-fue-increible.mp3  # La película fue increíble
+public/audio/L4.7/phrases/fui-a-un-concierto-de-salsa.mp3  # Fui a un concierto de salsa
+public/audio/L4.7/phrases/me-parecio-aburrida-la-obra.mp3  # Me pareció aburrida la obra
+public/audio/L4.7/phrases/la-recomiendo-tiene-buenas-actuaciones.mp3  # La recomiendo, tiene buenas actuaciones
+public/audio/L4.7/phrases/es-la-mejor-novela-que-he-leido.mp3  # Es la mejor novela que he leído
+public/audio/L4.8/phrases/hablare-espanol-con-fluidez.mp3  # Hablaré español con fluidez
+public/audio/L4.8/phrases/comeria-tacos-todos-los-dias.mp3  # Comería tacos todos los días
+public/audio/L4.8/phrases/si-tuviera-tiempo-aprenderia-piano.mp3  # Si tuviera tiempo, aprendería piano
+public/audio/L4.8/phrases/tendre-mi-propia-casa-el-proximo-ano.mp3  # Tendré mi propia casa el próximo año
+public/audio/L4.8/phrases/podria-cambiar-el-mundo.mp3  # Podría cambiar el mundo
+public/audio/L4.8/phrases/mi-sueno-es-ser-profesor-de-espanol.mp3  # Mi sueño es ser profesor de español
+public/audio/L5.1/phrases/ya-habia-terminado-cuando-llegaste.mp3  # Ya había terminado cuando llegaste
+public/audio/L5.1/phrases/nunca-habia-visto-algo-tan-hermoso.mp3  # Nunca había visto algo tan hermoso
+public/audio/L5.1/phrases/para-cuando-llegamos-ya-se-habian-ido.mp3  # Para cuando llegamos, ya se habían ido
+public/audio/L5.1/phrases/habia-escrito-tres-novelas-antes-de-cumplir-treinta.mp3  # Había escrito tres novelas antes de cumplir treinta
+public/audio/L5.1/phrases/una-vez-que-habian-llegado-todos-empezo-la-fiesta.mp3  # Una vez que habían llegado todos, empezó la fiesta
+public/audio/L5.1/phrases/me-di-cuenta-de-que-habia-olvidado-las-llaves.mp3  # Me di cuenta de que había olvidado las llaves
+public/audio/L5.2/phrases/si-hubiera-podido-habria-cambiado-todo.mp3  # Si hubiera podido, habría cambiado todo
+public/audio/L5.2/phrases/quisiera-un-cafe-por-favor.mp3  # Quisiera un café, por favor
+public/audio/L5.2/phrases/ojala-hubiera-viajado-a-japon.mp3  # Ojalá hubiera viajado a Japón
+public/audio/L5.2/phrases/si-supiese-la-verdad-no-callaria.mp3  # Si supiese la verdad, no callaría
+public/audio/L5.2/phrases/si-no-hubiera-conocido-a-maria-mi-vida-seria-diferente.mp3  # Si no hubiera conocido a María, mi vida sería diferente
+public/audio/L5.3/phrases/la-casa-fue-construida-en-mil-novecientos-veinte.mp3  # La casa fue construida en mil novecientos veinte
+public/audio/L5.3/phrases/se-vendieron-todas-las-entradas-en-una-hora.mp3  # Se vendieron todas las entradas en una hora
+public/audio/L5.3/phrases/se-habla-espanol-en-veintiun-paises.mp3  # Se habla español en veintiún países
+public/audio/L5.3/phrases/la-puerta-esta-cerrada-con-llave.mp3  # La puerta está cerrada con llave
+public/audio/L5.3/phrases/se-prohibe-fumar-en-lugares-publicos.mp3  # Se prohíbe fumar en lugares públicos
+public/audio/L5.3/phrases/el-problema-fue-resuelto-por-el-equipo-tecnico.mp3  # El problema fue resuelto por el equipo técnico
+public/audio/L5.4/phrases/sin-embargo-los-datos-no-respaldan-esa-afirmacion.mp3  # Sin embargo, los datos no respaldan esa afirmación
+public/audio/L5.4/phrases/no-obstante-debemos-considerar-todas-las-variables.mp3  # No obstante, debemos considerar todas las variables
+public/audio/L5.4/phrases/por-consiguiente-la-hipotesis-queda-confirmada.mp3  # Por consiguiente, la hipótesis queda confirmada
+public/audio/L5.4/phrases/cabria-preguntarse-si-estamos-ante-un-punto-de-inflexion.mp3  # Cabría preguntarse si estamos ante un punto de inflexión
+public/audio/L5.4/phrases/a-pesar-de-que-la-evidencia-es-mixta-la-tendencia-es-clara.mp3  # A pesar de que la evidencia es mixta, la tendencia es clara
+public/audio/L5.4/phrases/de-ahi-que-sea-imprescindible-reformar-el-sistema.mp3  # De ahí que sea imprescindible reformar el sistema
+public/audio/L5.5/phrases/adjunto-encontrara-el-informe-trimestral.mp3  # Adjunto encontrará el informe trimestral
+public/audio/L5.5/phrases/propongo-que-revisemos-los-resultados.mp3  # Propongo que revisemos los resultados
+public/audio/L5.5/phrases/necesitamos-llegar-a-un-acuerdo.mp3  # Necesitamos llegar a un acuerdo
+public/audio/L5.5/phrases/como-pueden-observar-en-esta-grafica.mp3  # Como pueden observar en esta gráfica
+public/audio/L5.5/phrases/lamentablemente-no-podemos-aceptar-esas-condiciones.mp3  # Lamentablemente no podemos aceptar esas condiciones
+public/audio/L5.5/phrases/quisiera-abrir-el-turno-de-preguntas-y-respuestas.mp3  # Quisiera abrir el turno de preguntas y respuestas
+public/audio/L5.6/phrases/camaron-que-se-duerme-se-lo-lleva-la-corriente.mp3  # Camarón que se duerme, se lo lleva la corriente
+public/audio/L5.6/phrases/a-caballo-regalado-no-le-mires-el-diente.mp3  # A caballo regalado no le mires el diente
+public/audio/L5.7/phrases/la-hipotesis-fue-corroborada-por-los-datos-empiricos.mp3  # La hipótesis fue corroborada por los datos empiricos
+public/audio/L5.7/phrases/el-narrador-omnisciente-revela-el-desenlace.mp3  # El narrador omnisciente revela el desenlace
+public/audio/L5.7/phrases/afirmo-que-la-metodologia-era-adecuada.mp3  # Afirmo que la metodología era adecuada
+public/audio/L5.7/phrases/la-metafora-del-rio-simboliza-el-paso-del-tiempo.mp3  # La metafora del rio simboliza el paso del tiempo
+public/audio/L5.7/phrases/dicho-de-otro-modo-la-correlacion-no-implica-causalidad.mp3  # Dicho de otro modo, la correlacion no implica causalidad
+public/audio/L5.7/phrases/cabe-concluir-que-los-hallazgos-respaldan-la-tesis.mp3  # Cabe concluir que los hallazgos respaldan la tesis
+public/audio/L5.8/phrases/tal-vez-deberiamos-pensarlo-mejor.mp3  # Tal vez deberíamos pensarlo mejor
+public/audio/L5.8/phrases/que-casualidad-que-siempre-llegas-tarde.mp3  # ¡Qué casualidad que siempre llegas tarde!
+public/audio/L5.8/phrases/esta-bien-chido-guey.mp3  # ¡Está bien chido, güey!
+public/audio/L5.8/phrases/le-importaria-cerrar-la-puerta.mp3  # ¿Le importaría cerrar la puerta?
+public/audio/L5.8/phrases/posta-que-re-copado-boludo.mp3  # ¡Posta que re copado, boludo!
+public/audio/L5.8/phrases/ey-parce-que-bacano.mp3  # ¡Ey, parce, qué bacano!
+public/audio/L6.1/phrases/la-razon-por-la-cual-renuncio-sigue-siendo-un-misterio.mp3  # La razón por la cual renunció sigue siendo un misterio
+public/audio/L6.1/phrases/de-haberlo-sabido-antes-habria-tomado-otra-decision.mp3  # De haberlo sabido antes, habría tomado otra decisión
+public/audio/L6.1/phrases/el-hecho-de-que-no-hayan-respondido-es-preocupante.mp3  # El hecho de que no hayan respondido es preocupante
+public/audio/L6.1/phrases/siempre-y-cuando-se-mantengan-las-condiciones-actuales.mp3  # Siempre y cuando se mantengan las condiciones actuales
+public/audio/L6.1/phrases/es-una-situacion-cuya-complejidad-nadie-anticipo.mp3  # Es una situación cuya complejidad nadie anticipó
+public/audio/L6.1/phrases/lo-que-no-entiendo-es-por-que-insisten-en-que-aceptemos.mp3  # Lo que no entiendo es por qué insisten en que aceptemos
+public/audio/L6.2/phrases/es-hielo-abrasador-es-fuego-helado.mp3  # Es hielo abrasador, es fuego helado
+public/audio/L6.2/phrases/verde-que-te-quiero-verde-verde-viento-verde-ramas.mp3  # Verde que te quiero verde, verde viento, verde ramas
+public/audio/L6.2/phrases/con-el-ala-aleve-del-leve-abanico.mp3  # Con el ala aleve del leve abanico
+public/audio/L6.2/phrases/la-intertextualidad-conecta-obras-entre-si.mp3  # La intertextualidad conecta obras entre sí
+public/audio/L6.2/phrases/el-narrador-omnisciente-lo-sabe-todo.mp3  # El narrador omnisciente lo sabe todo
+public/audio/L6.2/phrases/el-realismo-magico-mezcla-lo-cotidiano-con-lo-fantastico.mp3  # El realismo mágico mezcla lo cotidiano con lo fantástico
+public/audio/L6.3/phrases/el-recurso-de-apelacion-fue-admitido.mp3  # El recurso de apelación fue admitido
+public/audio/L6.3/phrases/las-partes-contratantes-firman-de-comun-acuerdo.mp3  # Las partes contratantes firman de común acuerdo
+public/audio/L6.3/phrases/la-declaracion-jurada-debe-estar-notarizada.mp3  # La declaración jurada debe estar notarizada
+public/audio/L6.3/phrases/sin-perjuicio-de-lo-anteriormente-establecido.mp3  # Sin perjuicio de lo anteriormente establecido
+public/audio/L6.3/phrases/el-plazo-de-vigencia-del-contrato-es-de-un-ano.mp3  # El plazo de vigencia del contrato es de un año
+public/audio/L6.3/phrases/conforme-a-la-ley-el-ciudadano-tiene-garantias.mp3  # Conforme a la ley, el ciudadano tiene garantías
+public/audio/L6.4/phrases/lo-stalkee-en-instagram-y-me-dio-cringe.mp3  # Lo stalkeé en Instagram y me dio cringe
+public/audio/L6.4/phrases/la-rae-acepto-selfi-con-i-latina-no-con-ie.mp3  # La RAE aceptó "selfi" con i latina, no con ie
+public/audio/L6.4/phrases/es-que-literal-tipo-o-sea-no-se-que-decir.mp3  # Es que literal, tipo, o sea, no sé qué decir
+public/audio/L6.4/phrases/el-feedback-del-equipo-fue-que-necesitamos-mas-marketing.mp3  # El feedback del equipo fue que necesitamos más marketing
+public/audio/L6.4/phrases/escucho-un-podcast-sobre-posverdad-y-resiliencia.mp3  # Escucho un pódcast sobre posverdad y resiliencia
+public/audio/L6.4/phrases/los-boomers-no-entienden-y-los-zoomers-no-explican.mp3  # Los boomers no entienden y los zoomers no explican
+public/audio/L6.5/phrases/estoy-embarazada-no-avergonzada.mp3  # Estoy embarazada, no avergonzada
+public/audio/L6.5/phrases/la-sobremesa-es-una-tradicion-espanola.mp3  # La sobremesa es una tradición española
+public/audio/L6.5/phrases/llevo-cinco-anos-aprendiendo-espanol.mp3  # Llevo cinco años aprendiendo español
+public/audio/L6.5/phrases/me-puso-nerviosa-el-examen.mp3  # Me puso nerviosa el examen
+public/audio/L6.5/phrases/le-ruego-tenga-a-bien-considerar-mi-solicitud.mp3  # Le ruego tenga a bien considerar mi solicitud
+public/audio/L6.5/phrases/me-echas-una-mano-con-esto.mp3  # ¿Me echas una mano con esto?
+public/audio/L6.6/phrases/el-existencialismo-plantea-que-la-existencia-precede-a-la-esencia.mp3  # El existencialismo plantea que la existencia precede a la esencia
+public/audio/L6.6/phrases/la-etica-estudia-los-principios-del-comportamiento-moral.mp3  # La ética estudia los principios del comportamiento moral
+public/audio/L6.6/phrases/correlacion-no-implica-causalidad.mp3  # Correlación no implica causalidad
+public/audio/L6.6/phrases/la-dialectica-permite-la-sintesis-de-ideas-opuestas.mp3  # La dialéctica permite la síntesis de ideas opuestas
+public/audio/L6.6/phrases/el-imperativo-categorico-exige-actuar-segun-principios-universales.mp3  # El imperativo categórico exige actuar según principios universales
+public/audio/L6.6/phrases/la-hermeneutica-se-ocupa-de-la-interpretacion-de-textos.mp3  # La hermenéutica se ocupa de la interpretación de textos
+public/audio/L6.7/phrases/hijo-proviene-del-latin-filius-la-f-se-convirtio-en-h.mp3  # "Hijo" proviene del latín "filius"; la f se convirtió en h
+public/audio/L6.7/phrases/ojala-proviene-del-arabe-inshallah-si-dios-quiere.mp3  # "Ojalá" proviene del árabe "inshallah" (si Dios quiere)
+public/audio/L6.7/phrases/chocolate-tomate-y-aguacate-vienen-del-nahuatl.mp3  # "Chocolate", "tomate" y "aguacate" vienen del náhuatl
+public/audio/L6.7/phrases/en-espanol-medieval-se-decia-fablar-en-vez-de-hablar.mp3  # En español medieval se decía "fablar" en vez de "hablar"
+public/audio/L6.7/phrases/mexico-conserva-la-ortografia-antigua-con-x-que-se-pronuncia-como-j.mp3  # "México" conserva la ortografía antigua con "x" que se pronuncia como "j"
+public/audio/L6.7/phrases/la-rae-ahora-acepta-neologismos-como-tuitear-y-wasapear.mp3  # La RAE ahora acepta neologismos como "tuitear" y "wasapear"
+public/audio/L6.8/phrases/queremos-paz-queremos-justicia-queremos-dignidad.mp3  # Queremos paz. Queremos justicia. Queremos dignidad.
+public/audio/L6.8/phrases/hago-un-llamado-a-la-accion-no-podemos-esperar-mas.mp3  # Hago un llamado a la acción: no podemos esperar más
+public/audio/L6.8/phrases/los-datos-son-contundentes-el-ochenta-por-ciento-coincide.mp3  # Los datos son contundentes: el ochenta por ciento coincide
+public/audio/L6.8/phrases/permitanme-comenzar-con-una-pregunta-fundamental.mp3  # Permítanme comenzar con una pregunta fundamental
+public/audio/L6.8/phrases/la-patria-es-dicha-de-todos-y-dolor-de-todos-jose-marti.mp3  # "La patria es dicha de todos, y dolor de todos" — José Martí
+public/audio/L6.8/phrases/el-pueblo-unido-jamas-sera-vencido.mp3  # El pueblo unido jamás será vencido
+public/audio/L7.1/phrases/en-argentina-se-pronuncia-yo-y-calle-con-sonido-sh-sho-y-cashe.mp3  # En Argentina se pronuncia "yo" y "calle" con sonido "sh": "sho" y "cashe"
+public/audio/L7.1/phrases/en-el-caribe-la-s-final-se-aspira-o-desaparece-estos-suena-como-ehtoh.mp3  # En el Caribe, la "s" final se aspira o desaparece: "estos" suena como "ehtoh"
+public/audio/L7.1/phrases/el-voseo-argentino-cambia-la-conjugacion-vos-tenes-vos-podes-vos-queres.mp3  # El voseo argentino cambia la conjugación: "vos tenés", "vos podés", "vos querés"
+public/audio/L7.1/phrases/el-spanglish-mezcla-ingles-y-espanol-fluidamente-voy-a-parkear-el-carro.mp3  # El spanglish mezcla inglés y español fluidamente: "Voy a parkear el carro"
+public/audio/L7.1/phrases/el-lunfardo-porteno-nacio-en-los-conventillos-de-buenos-aires-laburo-mina-afanar.mp3  # El lunfardo porteño nació en los conventillos de Buenos Aires: "laburo", "mina", "afanar"
+public/audio/L7.1/phrases/el-code-switching-no-es-un-defecto-es-una-habilidad-cognitiva-avanzada-de-los-hablantes-bilingues.mp3  # El code-switching no es un defecto: es una habilidad cognitiva avanzada de los hablantes bilingües
+public/audio/L7.2/phrases/que-le-dijo-el-0-al-8-bonito-cinturon.mp3  # ¿Qué le dijo el 0 al 8? Bonito cinturón
+public/audio/L7.2/phrases/no-me-digas-que-sorpresa.mp3  # ¡No me digas! ¡Qué sorpresa!
+public/audio/L7.2/phrases/el-albur-es-un-duelo-verbal-mexicano.mp3  # El albur es un duelo verbal mexicano
+public/audio/L7.2/phrases/soy-tan-malo-cocinando-que-queme-el-agua.mp3  # Soy tan malo cocinando que quemé el agua
+public/audio/L7.2/phrases/y-resulta-que-era-el-mesero.mp3  # Y resulta que era el mesero
+public/audio/L7.2/phrases/genial-justo-lo-que-necesitaba.mp3  # ¡Genial, justo lo que necesitaba!
+public/audio/L7.3/phrases/la-desinformacion-se-propaga-mas-rapido-que-la-verdad.mp3  # La desinformación se propaga más rápido que la verdad
+public/audio/L7.3/phrases/el-sesgo-de-confirmacion-nos-impide-ver-la-realidad-objetivamente.mp3  # El sesgo de confirmación nos impide ver la realidad objetivamente
+public/audio/L7.3/phrases/la-camara-de-eco-refuerza-nuestras-creencias-preexistentes.mp3  # La cámara de eco refuerza nuestras creencias preexistentes
+public/audio/L7.3/phrases/el-reportaje-de-investigacion-requiere-contrastar-multiples-fuentes.mp3  # El reportaje de investigación requiere contrastar múltiples fuentes
+public/audio/L7.3/phrases/el-encuadre-mediatico-determina-como-percibimos-los-eventos.mp3  # El encuadre mediático determina cómo percibimos los eventos
+public/audio/L7.3/phrases/la-triangulacion-de-fuentes-es-esencial-para-el-periodismo-riguroso.mp3  # La triangulación de fuentes es esencial para el periodismo riguroso
+public/audio/L7.4/phrases/los-resultados-son-estadisticamente-significativos.mp3  # Los resultados son estadísticamente significativos
+public/audio/L7.4/phrases/la-biodiversidad-de-la-region-esta-amenazada.mp3  # La biodiversidad de la región está amenazada
+public/audio/L7.4/phrases/se-observo-una-correlacion-entre-la-temperatura-y-la-productividad.mp3  # Se observó una correlación entre la temperatura y la productividad
+public/audio/L7.4/phrases/el-efecto-invernadero-atrapa-el-calor-dentro-de-la-atmosfera.mp3  # El efecto invernadero atrapa el calor dentro de la atmósfera
+public/audio/L7.4/phrases/la-divulgacion-cientifica-acerca-la-ciencia-al-publico.mp3  # La divulgación científica acerca la ciencia al público
+public/audio/L7.4/phrases/la-evidencia-empirica-respalda-la-hipotesis-planteada.mp3  # La evidencia empírica respalda la hipótesis planteada
+public/audio/L7.5/phrases/la-vulnerabilidad-no-es-debilidad-es-valentia-emocional.mp3  # La vulnerabilidad no es debilidad; es valentía emocional
+public/audio/L7.5/phrases/como-te-hace-sentir-eso.mp3  # ¿Cómo te hace sentir eso?
+public/audio/L7.5/phrases/la-empatia-nos-permite-ponernos-en-el-lugar-del-otro.mp3  # La empatía nos permite ponernos en el lugar del otro
+public/audio/L7.5/phrases/la-resiliencia-es-la-capacidad-de-recuperarse-de-la-adversidad.mp3  # La resiliencia es la capacidad de recuperarse de la adversidad
+public/audio/L7.5/phrases/me-doy-cuenta-de-que-mis-reacciones-reflejan-mis-heridas-internas.mp3  # Me doy cuenta de que mis reacciones reflejan mis heridas internas
+public/audio/L7.5/phrases/la-retroalimentacion-constructiva-ayuda-a-crecer-sin-herir.mp3  # La retroalimentación constructiva ayuda a crecer sin herir
+public/audio/L7.6/phrases/exhortamos-a-las-partes-a-retomar-las-negociaciones-de-buena-fe.mp3  # Exhortamos a las partes a retomar las negociaciones de buena fe
+public/audio/L7.6/phrases/hacemos-un-llamado-a-la-paz-y-al-dialogo-como-unica-via-de-solucion.mp3  # Hacemos un llamado a la paz y al diálogo como única vía de solución
+public/audio/L7.6/phrases/la-propuesta-es-mutuamente-beneficiosa-para-todas-las-partes-involucradas.mp3  # La propuesta es mutuamente beneficiosa para todas las partes involucradas
+public/audio/L7.6/phrases/el-derecho-internacional-humanitario-protege-a-los-civiles-en-zonas-de-conflicto.mp3  # El derecho internacional humanitario protege a los civiles en zonas de conflicto
+public/audio/L7.6/phrases/busquemos-una-solucion-de-compromiso-que-respete-los-intereses-de-todos.mp3  # Busquemos una solución de compromiso que respete los intereses de todos
+public/audio/L7.6/phrases/los-acuerdos-de-paz-de-colombia-representan-un-hito-en-la-diplomacia-regional.mp3  # Los acuerdos de paz de Colombia representan un hito en la diplomacia regional
+public/audio/L7.7/phrases/el-silencio-era-ensordecedor-como-si-el-mundo-hubiera-dejado-de-respirar.mp3  # El silencio era ensordecedor, como si el mundo hubiera dejado de respirar
+public/audio/L7.7/phrases/una-brisa-tenue-acariciaba-los-campos-de-trigo-dorado.mp3  # Una brisa tenue acariciaba los campos de trigo dorado
+public/audio/L7.7/phrases/suspiro-antes-de-responder-como-si-buscara-las-palabras-exactas.mp3  # —suspiró antes de responder, como si buscara las palabras exactas
+public/audio/L7.7/phrases/el-giro-argumental-sorprende-al-lector-al-cambiar-el-rumbo-de-la-trama.mp3  # El giro argumental sorprende al lector al cambiar el rumbo de la trama
+public/audio/L7.7/phrases/la-niebla-envolvia-el-pueblo-como-un-manto-de-algodon-gris.mp3  # La niebla envolvía el pueblo como un manto de algodón gris
+public/audio/L7.7/phrases/el-arco-del-personaje-muestra-su-transformacion-a-lo-largo-de-la-historia.mp3  # El arco del personaje muestra su transformación a lo largo de la historia
+public/audio/L7.8/phrases/no-soy-ni-de-aqui-ni-de-alla-soy-de-los-dos-lugares-a-la-vez.mp3  # No soy ni de aquí ni de allá; soy de los dos lugares a la vez
+public/audio/L7.8/phrases/la-lengua-es-mi-patria-donde-hablo-mi-idioma-estoy-en-casa.mp3  # La lengua es mi patria; donde hablo mi idioma, estoy en casa
+public/audio/L7.8/phrases/la-morrina-o-anoranza-es-el-dolor-profundo-de-estar-lejos-de-casa.mp3  # La morriña o añoranza es el dolor profundo de estar lejos de casa
+public/audio/L7.8/phrases/el-desarraigo-es-la-dolorosa-sensacion-de-no-pertenecer-a-ningun-lugar.mp3  # El desarraigo es la dolorosa sensación de no pertenecer a ningún lugar
+public/audio/L7.8/phrases/la-hibridez-cultural-crea-identidades-ricas-que-combinan-multiples-tradiciones.mp3  # La hibridez cultural crea identidades ricas que combinan múltiples tradiciones
+public/audio/L7.8/phrases/cada-migrante-lleva-consigo-una-historia-que-merece-ser-escuchada.mp3  # Cada migrante lleva consigo una historia que merece ser escuchada
+public/audio/L8.1/phrases/el-diagnostico-preliminar-indica-una-infeccion-urinaria.mp3  # El diagnóstico preliminar indica una infección urinaria
+public/audio/L8.1/phrases/la-presion-arterial-sistolica-esta-en-ciento-cuarenta.mp3  # La presión arterial sistólica está en ciento cuarenta
+public/audio/L8.1/phrases/trastorno-de-estres-postraumatico-requiere-terapia-especializada.mp3  # Trastorno de estrés postraumático requiere terapia especializada
+public/audio/L8.1/phrases/administren-epinefrina-intramuscular-de-inmediato.mp3  # Administren epinefrina intramuscular de inmediato
+public/audio/L8.1/phrases/la-terapia-cognitivo-conductual-es-el-tratamiento-de-primera-linea.mp3  # La terapia cognitivo-conductual es el tratamiento de primera línea
+public/audio/L8.1/phrases/el-electrocardiograma-muestra-arritmia-ventricular.mp3  # El electrocardiograma muestra arritmia ventricular
+public/audio/L8.2/phrases/el-producto-interno-bruto-crecio-significativamente.mp3  # El producto interno bruto creció significativamente
+public/audio/L8.2/phrases/los-dividendos-se-distribuiran-trimestralmente.mp3  # Los dividendos se distribuirán trimestralmente
+public/audio/L8.2/phrases/la-escalabilidad-garantiza-el-crecimiento-sostenido.mp3  # La escalabilidad garantiza el crecimiento sostenido
+public/audio/L8.2/phrases/la-ventaja-competitiva-radica-en-la-innovacion.mp3  # La ventaja competitiva radica en la innovación
+public/audio/L8.2/phrases/debemos-reestructurar-la-cadena-de-suministro.mp3  # Debemos reestructurar la cadena de suministro
+public/audio/L8.2/phrases/el-retorno-sobre-la-inversion-supera-las-expectativas.mp3  # El retorno sobre la inversión supera las expectativas
+public/audio/L8.3/phrases/arquitectura-de-microservicios.mp3  # Arquitectura de microservicios
+public/audio/L8.3/phrases/vulnerabilidad-de-dia-cero.mp3  # Vulnerabilidad de día cero
+public/audio/L8.3/phrases/autenticacion-de-dos-factores.mp3  # Autenticación de dos factores
+public/audio/L8.3/phrases/procesamiento-de-lenguaje-natural.mp3  # Procesamiento de lenguaje natural
+public/audio/L8.3/phrases/integracion-continua-detecto-un-fallo.mp3  # Integración continua detectó un fallo
+public/audio/L8.3/phrases/encriptacion-de-extremo-a-extremo.mp3  # Encriptación de extremo a extremo
+public/audio/L8.4/phrases/emulsiona-el-aceite-con-el-vinagre.mp3  # Emulsiona el aceite con el vinagre
+public/audio/L8.4/phrases/el-mole-oaxaqueno-lleva-treinta-ingredientes.mp3  # El mole oaxaqueño lleva treinta ingredientes
+public/audio/L8.4/phrases/la-paella-valenciana-lleva-arroz-y-conejo.mp3  # La paella valenciana lleva arroz y conejo
+public/audio/L8.4/phrases/los-taninos-son-suaves-y-redondos-en-boca.mp3  # Los taninos son suaves y redondos en boca
+public/audio/L8.4/phrases/flamea-el-postre-con-ron-anejo.mp3  # Flamea el postre con ron añejo
+public/audio/L8.4/phrases/el-ceviche-se-cura-con-jugo-de-limon.mp3  # El ceviche se cura con jugo de limón
+public/audio/L8.5/phrases/contraataque-fulminante-tres-toques-y-gol.mp3  # ¡Contraataque fulminante! ¡Tres toques y gol!
+public/audio/L8.5/phrases/el-estadio-se-vino-abajo-con-el-gol.mp3  # El estadio se vino abajo con el gol
+public/audio/L8.5/phrases/la-barra-brava-alienta-sin-parar.mp3  # La barra brava alienta sin parar
+public/audio/L8.5/phrases/saca-de-banda-desde-la-linea-lateral.mp3  # Saca de banda desde la línea lateral
+public/audio/L8.5/phrases/penal-el-arbitro-senala-el-punto.mp3  # ¡Penal! ¡El árbitro señala el punto!
+public/audio/L8.5/phrases/el-director-tecnico-hizo-cambios-tacticos-acertados.mp3  # El director técnico hizo cambios tácticos acertados
+public/audio/L8.6/phrases/el-tango-milonguero-se-baila-en-abrazo-cerrado.mp3  # El tango milonguero se baila en abrazo cerrado
+public/audio/L8.6/phrases/la-coreografia-deslumbro-al-publico.mp3  # La coreografía deslumbró al público
+public/audio/L8.6/phrases/el-flamenco-jondo-es-la-expresion-mas-profunda.mp3  # El flamenco jondo es la expresión más profunda
+public/audio/L8.6/phrases/la-improvisacion-en-el-jazz-latino-es-fascinante.mp3  # La improvisación en el jazz latino es fascinante
+public/audio/L8.6/phrases/el-ensayo-general-se-hace-con-vestuario-completo.mp3  # El ensayo general se hace con vestuario completo
+public/audio/L8.6/phrases/la-voz-del-solista-estremecio-al-publico.mp3  # La voz del solista estremeció al público
+public/audio/L8.7/phrases/la-separacion-de-poderes-impide-la-concentracion-del-poder-en-una-sola-persona.mp3  # La separación de poderes impide la concentración del poder en una sola persona
+public/audio/L8.7/phrases/la-campana-electoral-busca-persuadir-a-los-votantes-con-propuestas-concretas.mp3  # La campaña electoral busca persuadir a los votantes con propuestas concretas
+public/audio/L8.7/phrases/la-rendicion-de-cuentas-obliga-a-los-funcionarios-a-explicar-sus-acciones.mp3  # La rendición de cuentas obliga a los funcionarios a explicar sus acciones
+public/audio/L8.7/phrases/la-corrupcion-sistemica-socava-las-instituciones-y-la-confianza-del-pueblo.mp3  # La corrupción sistémica socava las instituciones y la confianza del pueblo
+public/audio/L8.7/phrases/el-activismo-juvenil-esta-transformando-el-panorama-politico-de-america-latina.mp3  # El activismo juvenil está transformando el panorama político de América Latina
+public/audio/L8.7/phrases/la-consulta-popular-somete-decisiones-clave-a-la-voluntad-directa-del-pueblo.mp3  # La consulta popular somete decisiones clave a la voluntad directa del pueblo
+public/audio/L8.8/phrases/la-zona-de-desarrollo-proximo-es-la-distancia-entre-lo-que-el-alumno-sabe-y-lo-que-puede-lograr-con-ayuda.mp3  # La zona de desarrollo próximo es la distancia entre lo que el alumno sabe y lo que puede lograr con ayuda
+public/audio/L8.8/phrases/la-taxonomia-de-bloom-clasifica-los-niveles-de-pensamiento-desde-recordar-hasta-crear.mp3  # La taxonomía de Bloom clasifica los niveles de pensamiento desde recordar hasta crear
+public/audio/L8.8/phrases/la-retroalimentacion-efectiva-es-especifica-oportuna-y-orientada-al-mejoramiento.mp3  # La retroalimentación efectiva es específica, oportuna y orientada al mejoramiento
+public/audio/L8.8/phrases/el-aula-invertida-transfiere-la-instruccion-directa-fuera-del-aula.mp3  # El aula invertida transfiere la instrucción directa fuera del aula
+public/audio/L8.8/phrases/la-gamificacion-aplica-elementos-de-juego-al-proceso-educativo-para-aumentar-la-motivacion.mp3  # La gamificación aplica elementos de juego al proceso educativo para aumentar la motivación
+public/audio/L8.8/phrases/la-brecha-digital-excluye-a-millones-de-estudiantes-del-acceso-a-la-educacion-tecnologica.mp3  # La brecha digital excluye a millones de estudiantes del acceso a la educación tecnológica
+public/audio/L9.1/phrases/el-hormigon-armado-es-fundamental-en-la-construccion-moderna.mp3  # El hormigón armado es fundamental en la construcción moderna
+public/audio/L9.1/phrases/la-zonificacion-regula-el-desarrollo-urbano.mp3  # La zonificación regula el desarrollo urbano
+public/audio/L9.1/phrases/el-modernismo-catalan-revoluciono-la-arquitectura.mp3  # El modernismo catalán revolucionó la arquitectura
+public/audio/L9.1/phrases/los-cimientos-son-la-base-de-cualquier-estructura.mp3  # Los cimientos son la base de cualquier estructura
+public/audio/L9.1/phrases/la-certificacion-leed-promueve-edificios-sostenibles.mp3  # La certificación LEED promueve edificios sostenibles
+public/audio/L9.1/phrases/la-azotea-verde-reduce-la-huella-ecologica.mp3  # La azotea verde reduce la huella ecológica
+public/audio/L9.2/phrases/el-disenador-presento-su-coleccion-primavera-verano.mp3  # El diseñador presentó su colección primavera-verano
+public/audio/L9.2/phrases/el-terciopelo-aporta-una-textura-lujosa-a-la-prenda.mp3  # El terciopelo aporta una textura lujosa a la prenda
+public/audio/L9.2/phrases/la-moda-circular-elimina-los-residuos-textiles.mp3  # La moda circular elimina los residuos textiles
+public/audio/L9.2/phrases/el-corte-al-bies-crea-una-caida-elegante.mp3  # El corte al bies crea una caída elegante
+public/audio/L9.2/phrases/el-patronaje-define-las-proporciones-de-cada-pieza.mp3  # El patronaje define las proporciones de cada pieza
+public/audio/L9.2/phrases/la-trazabilidad-garantiza-transparencia-en-la-cadena-de-produccion.mp3  # La trazabilidad garantiza transparencia en la cadena de producción
+public/audio/L9.3/phrases/la-trashumancia-lleva-siglos-practicandose.mp3  # La trashumancia lleva siglos practicándose
+public/audio/L9.3/phrases/el-riego-por-goteo-ahorra-un-sesenta-por-ciento-de-agua.mp3  # El riego por goteo ahorra un sesenta por ciento de agua
+public/audio/L9.3/phrases/la-soberania-alimentaria-protege-a-los-pueblos-indigenas.mp3  # La soberanía alimentaria protege a los pueblos indígenas
+public/audio/L9.3/phrases/la-permacultura-imita-los-ciclos-naturales-del-ecosistema.mp3  # La permacultura imita los ciclos naturales del ecosistema
+public/audio/L9.3/phrases/la-vendimia-es-una-fiesta-en-los-valles-de-mendoza.mp3  # La vendimia es una fiesta en los valles de Mendoza
+public/audio/L9.3/phrases/la-minga-comunitaria-fortalece-los-lazos-entre-vecinos.mp3  # La minga comunitaria fortalece los lazos entre vecinos
+public/audio/L9.4/phrases/el-servicio-de-conserjeria-esta-a-su-disposicion.mp3  # El servicio de conserjería está a su disposición
+public/audio/L9.4/phrases/patrimonio-de-la-humanidad-certificado-por-la-unesco.mp3  # Patrimonio de la humanidad certificado por la UNESCO
+public/audio/L9.4/phrases/el-paquete-todo-incluido-cubre-alimentacion-y-entretenimiento.mp3  # El paquete todo incluido cubre alimentación y entretenimiento
+public/audio/L9.4/phrases/la-coordinacion-logistica-del-evento-requiere-atencion-al-detalle.mp3  # La coordinación logística del evento requiere atención al detalle
+public/audio/L9.4/phrases/el-turismo-sostenible-beneficia-a-las-comunidades-locales.mp3  # El turismo sostenible beneficia a las comunidades locales
+public/audio/L9.4/phrases/la-suite-ejecutiva-incluye-acceso-al-salon-vip.mp3  # La suite ejecutiva incluye acceso al salón VIP
+public/audio/L9.5/phrases/la-sala-de-redaccion-esta-en-estado-de-alerta-maxima.mp3  # La sala de redacción está en estado de alerta máxima
+public/audio/L9.5/phrases/la-fuente-confidencial-exige-anonimato-absoluto.mp3  # La fuente confidencial exige anonimato absoluto
+public/audio/L9.5/phrases/el-periodismo-de-datos-revela-patrones-ocultos-en-las-cifras.mp3  # El periodismo de datos revela patrones ocultos en las cifras
+public/audio/L9.5/phrases/la-verificacion-de-hechos-es-fundamental-para-combatir-la-desinformacion.mp3  # La verificación de hechos es fundamental para combatir la desinformación
+public/audio/L9.5/phrases/el-sesgo-editorial-puede-distorsionar-la-percepcion-publica-de-la-realidad.mp3  # El sesgo editorial puede distorsionar la percepción pública de la realidad
+public/audio/L9.5/phrases/el-corresponsal-de-guerra-transmite-la-noticia-desde-la-primera-linea-del-conflicto.mp3  # El corresponsal de guerra transmite la noticia desde la primera línea del conflicto
+public/audio/L9.6/phrases/la-segmentacion-de-audiencia-es-fundamental-para-cualquier-campana.mp3  # La segmentación de audiencia es fundamental para cualquier campaña
+public/audio/L9.6/phrases/el-retorno-de-inversion-justifica-el-presupuesto-de-marketing.mp3  # El retorno de inversión justifica el presupuesto de marketing
+public/audio/L9.6/phrases/las-palabras-clave-determinan-el-posicionamiento-en-buscadores.mp3  # Las palabras clave determinan el posicionamiento en buscadores
+public/audio/L9.6/phrases/el-contenido-patrocinado-debe-ser-transparente-para-los-seguidores.mp3  # El contenido patrocinado debe ser transparente para los seguidores
+public/audio/L9.6/phrases/la-prueba-a/b-optimiza-las-tasas-de-conversion-del-embudo-de-ventas.mp3  # La prueba A/B optimiza las tasas de conversión del embudo de ventas
+public/audio/L9.6/phrases/el-microinfluencer-ofrece-mayor-engagement-que-las-celebridades-tradicionales.mp3  # El microinfluencer ofrece mayor engagement que las celebridades tradicionales
+public/audio/L9.7/phrases/la-peregrinacion-al-santuario-de-la-virgen-de-guadalupe.mp3  # La peregrinación al santuario de la Virgen de Guadalupe
+public/audio/L9.7/phrases/el-sacramento-del-bautismo-purifica-el-alma-del-creyente.mp3  # El sacramento del bautismo purifica el alma del creyente
+public/audio/L9.7/phrases/la-semana-santa-en-sevilla-es-una-tradicion-de-siglos-de-devocion.mp3  # La Semana Santa en Sevilla es una tradición de siglos de devoción
+public/audio/L9.7/phrases/el-dialogo-interreligioso-promueve-la-coexistencia-pacifica.mp3  # El diálogo interreligioso promueve la coexistencia pacífica
+public/audio/L9.7/phrases/la-ceremonia-de-limpia-purifica-con-hierbas-y-oraciones-ancestrales.mp3  # La ceremonia de limpia purifica con hierbas y oraciones ancestrales
+public/audio/L9.7/phrases/el-sincretismo-religioso-mezcla-tradiciones-indigenas-con-el-catolicismo.mp3  # El sincretismo religioso mezcla tradiciones indígenas con el catolicismo
+public/audio/L9.8/phrases/la-validacion-del-mercado-confirma-la-demanda-del-producto.mp3  # La validación del mercado confirma la demanda del producto
+public/audio/L9.8/phrases/el-inversor-angel-quiere-ver-traccion-antes-de-invertir.mp3  # El inversor ángel quiere ver tracción antes de invertir
+public/audio/L9.8/phrases/la-escalabilidad-determina-el-potencial-de-crecimiento.mp3  # La escalabilidad determina el potencial de crecimiento
+public/audio/L9.8/phrases/el-emprendimiento-social-genera-triple-impacto.mp3  # El emprendimiento social genera triple impacto
+public/audio/L9.8/phrases/la-ronda-serie-a-financia-el-crecimiento-de-la-startup.mp3  # La ronda serie A financia el crecimiento de la startup
+public/audio/L9.8/phrases/la-cooperativa-es-propiedad-colectiva-de-todos-sus-miembros.mp3  # La cooperativa es propiedad colectiva de todos sus miembros
+public/audio/L10.1/phrases/perdona-que-te-interrumpa-pero-queria-decir-algo.mp3  # Perdona que te interrumpa, pero quería decir algo
+public/audio/L10.1/phrases/que-barbaridad-no-tenia-ni-idea.mp3  # ¡Qué barbaridad! No tenía ni idea
+public/audio/L10.1/phrases/es-decir-lo-que-intento-explicar-es-otra-cosa.mp3  # Es decir, lo que intento explicar es otra cosa
+public/audio/L10.1/phrases/bueno-cambiando-de-tema-que-tal-tu-trabajo.mp3  # Bueno, cambiando de tema, ¿qué tal tu trabajo?
+public/audio/L10.1/phrases/retomando-el-hilo-como-te-decia-antes.mp3  # Retomando el hilo, como te decía antes...
+public/audio/L10.1/phrases/nos-ponemos-al-dia-la-proxima-vez-vale.mp3  # Nos ponemos al día la próxima vez, ¿vale?
+public/audio/L10.2/phrases/si-yo-hubiera-sabido-que-el-espanol-me-cambiaria-la-vida-habria-empezado-antes.mp3  # Si yo hubiera sabido que el español me cambiaría la vida, habría empezado antes
+public/audio/L10.2/phrases/la-embajadora-cuyo-discurso-fue-aplaudido-por-todos-representaba-a-colombia.mp3  # La embajadora cuyo discurso fue aplaudido por todos representaba a Colombia
+public/audio/L10.2/phrases/estimados-colegas-les-ruego-que-consideren-esta-propuesta-con-la-seriedad-que-merece.mp3  # Estimados colegas, les ruego que consideren esta propuesta con la seriedad que merece
+public/audio/L10.2/phrases/no-es-por-nada-pero-si-me-hubieras-preguntado-te-habria-dado-mejor-consejo-compadre.mp3  # No es por nada, pero si me hubieras preguntado, te habría dado mejor consejo, compadre
+public/audio/L10.2/phrases/para-el-proximo-ano-ya-habre-visitado-los-veintiun-paises-hispanohablantes.mp3  # Para el próximo año, ya habré visitado los veintiún países hispanohablantes
+public/audio/L10.2/phrases/ojala-que-el-mundo-entero-pudiera-experimentar-la-riqueza-del-espanol-como-yo-lo-he-hecho.mp3  # Ojalá que el mundo entero pudiera experimentar la riqueza del español como yo lo he hecho

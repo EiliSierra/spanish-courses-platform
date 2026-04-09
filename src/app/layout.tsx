@@ -21,6 +21,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <ClerkProvider>
       <html lang="en" className={`${inter.variable} ${sourceSans.variable}`}>
         <body className="font-[family-name:var(--font-source-sans)] antialiased">
+          <script dangerouslySetInnerHTML={{ __html: `document.documentElement.classList.add('js-ready')` }} />
           {children}
         </body>
       </html>
