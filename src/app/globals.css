@@ -73,6 +73,35 @@
   margin-bottom: 1.25rem;
 }
 
+/* Landing page scroll reveal animations */
+.reveal-hidden {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animated gradient text shimmer */
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+.animate-gradient-text {
+  background-size: 200% auto;
+  animation: gradient-shift 4s ease-in-out infinite;
+}
+
+/* Comparison table checkmark/x pulse */
+@keyframes check-pop {
+  0% { transform: scale(0); }
+  60% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+.check-pop { animation: check-pop 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+
 /* Timer bar */
 @keyframes timer-shrink {
   from { width: 100%; }
