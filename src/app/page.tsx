@@ -78,7 +78,7 @@ const FEATURES = [
 ]
 
 const SAMPLE_LESSONS = [
-  { id: 'L1.1', title: 'Sounds & Letters', sub: 'The Spanish Alphabet', image: '/images/L1.1/hero-unique.png' },
+  { id: 'L1.1', title: 'Sounds & Letters', sub: 'The Spanish Alphabet', image: '/images/L1.1/L1.1.jpg' },
   { id: 'L1.2', title: 'Greetings & Introductions', sub: 'Meeting People', image: '/images/L1.2/hero-meeting.png' },
   { id: 'L1.4', title: 'At the Cafe', sub: 'Ordering Food & Drinks', image: '/images/L1.4/L1.4.jpg' },
   { id: 'L1.6', title: 'Family & Relationships', sub: 'La Familia', image: '/images/L1.6/L1.6.jpg' },
