@@ -78,8 +78,8 @@ const FEATURES = [
 ]
 
 const SAMPLE_LESSONS = [
-  { id: 'L1.1', title: 'Sounds & Letters', sub: 'The Spanish Alphabet', image: '/images/L1.1/bg-learning.jpg' },
-  { id: 'L1.2', title: 'Greetings & Introductions', sub: 'Meeting People', image: '/images/L1.2/bg-learning.jpg' },
+  { id: 'L1.1', title: 'Sounds & Letters', sub: 'The Spanish Alphabet', image: '/images/L1.1/hero-vowels.png' },
+  { id: 'L1.2', title: 'Greetings & Introductions', sub: 'Meeting People', image: '/images/L1.2/hero-meeting.png' },
   { id: 'L1.4', title: 'At the Cafe', sub: 'Ordering Food & Drinks', image: '/images/L1.4/L1.4.jpg' },
   { id: 'L1.6', title: 'Family & Relationships', sub: 'La Familia', image: '/images/L1.6/L1.6.jpg' },
 ]
@@ -162,8 +162,8 @@ export default async function LandingPage() {
               <div className="relative">
                 <div className="rounded-2xl overflow-hidden shadow-2xl shadow-blue-600/10 border border-gray-200">
                   <Image
-                    src="/images/L1.1/bg-learning.jpg"
-                    alt="Spanish lesson interface preview"
+                    src="/images/L1.4/L1.4.jpg"
+                    alt="Vibrant Latin American cafe scene — learn real-world Spanish"
                     width={600}
                     height={400}
                     className="w-full object-cover"
