@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { auth } from '@clerk/nextjs/server'
 import { HeroCTA, NavAuth, PricingCTA, FinalCTA } from '@/components/landing/AuthButtons'
 import { ScrollReveal } from '@/components/landing/ScrollReveal'
@@ -77,10 +78,10 @@ const FEATURES = [
 ]
 
 const SAMPLE_LESSONS = [
-  { id: 'L1.1', title: 'Sounds & Letters', sub: 'The Spanish Alphabet' },
-  { id: 'L1.2', title: 'Greetings & Introductions', sub: 'Meeting People' },
-  { id: 'L1.4', title: 'At the Cafe', sub: 'Ordering Food & Drinks' },
-  { id: 'L1.6', title: 'Family & Relationships', sub: 'La Familia' },
+  { id: 'L1.1', title: 'Sounds & Letters', sub: 'The Spanish Alphabet', image: '/images/L1.1/bg-learning.jpg' },
+  { id: 'L1.2', title: 'Greetings & Introductions', sub: 'Meeting People', image: '/images/L1.2/bg-learning.jpg' },
+  { id: 'L1.4', title: 'At the Cafe', sub: 'Ordering Food & Drinks', image: '/images/L1.4/L1.4.jpg' },
+  { id: 'L1.6', title: 'Family & Relationships', sub: 'La Familia', image: '/images/L1.6/L1.6.jpg' },
 ]
 
 const FAQ = [
@@ -126,37 +127,66 @@ export default async function LandingPage() {
         <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-purple-50" />
         <AnimatedGradientOrbs />
         <div className="relative max-w-6xl mx-auto px-6 py-24 md:py-36">
-          <div className="max-w-3xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 text-blue-700 text-sm font-medium px-4 py-1.5 rounded-full mb-8">
-              <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-              74 lessons available — A1 to C2
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="text-center md:text-left">
+              <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 text-blue-700 text-sm font-medium px-4 py-1.5 rounded-full mb-8">
+                <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+                74 lessons available — A1 to C2
+              </div>
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.1] font-[family-name:var(--font-inter)] tracking-tight">
+                Learn Spanish{' '}
+                <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-fuchsia-600 bg-clip-text text-transparent animate-gradient-text">
+                  the interactive way
+                </span>
+              </h1>
+              <p className="mt-6 text-xl md:text-2xl text-gray-500 leading-relaxed">
+                Master Spanish from zero to fluency with audio-powered lessons,
+                real-world dialogues, and hands-on activities. No boring textbooks.
+              </p>
+              <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                <HeroCTA isSignedIn={isSignedIn} />
+                <a
+                  href="#curriculum"
+                  className="inline-flex items-center justify-center px-8 py-4 bg-white text-gray-700 font-bold rounded-xl border-2 border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-all text-lg"
+                >
+                  See Curriculum
+                </a>
+              </div>
+              <p className="mt-6 text-sm text-gray-400">
+                No credit card required. Level 1 is completely free.
+              </p>
             </div>
-            <h1 className="text-5xl md:text-7xl font-extrabold leading-[1.1] font-[family-name:var(--font-inter)] tracking-tight">
-              Learn Spanish{' '}
-              <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-fuchsia-600 bg-clip-text text-transparent animate-gradient-text">
-                the interactive way
-              </span>
-            </h1>
-            <p className="mt-6 text-xl md:text-2xl text-gray-500 leading-relaxed max-w-2xl mx-auto">
-              Master Spanish from zero to fluency with audio-powered lessons,
-              real-world dialogues, and hands-on activities. No boring textbooks.
-            </p>
-            <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-              <HeroCTA isSignedIn={isSignedIn} />
-              <a
-                href="#curriculum"
-                className="inline-flex items-center justify-center px-8 py-4 bg-white text-gray-700 font-bold rounded-xl border-2 border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-all text-lg"
-              >
-                See Curriculum
-              </a>
+
+            {/* Hero preview image */}
+            <div className="hidden md:block">
+              <div className="relative">
+                <div className="rounded-2xl overflow-hidden shadow-2xl shadow-blue-600/10 border border-gray-200">
+                  <Image
+                    src="/images/L1.1/bg-learning.jpg"
+                    alt="Spanish lesson interface preview"
+                    width={600}
+                    height={400}
+                    className="w-full object-cover"
+                    priority
+                  />
+                </div>
+                <div className="absolute -bottom-4 -left-4 bg-white rounded-xl shadow-lg border border-gray-200 px-4 py-3 flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white font-bold text-sm">A1</div>
+                  <div>
+                    <div className="text-sm font-bold">Level 1 — Free</div>
+                    <div className="text-xs text-gray-500">8 lessons + final exam</div>
+                  </div>
+                </div>
+                <div className="absolute -top-3 -right-3 bg-white rounded-xl shadow-lg border border-gray-200 px-4 py-2 text-center">
+                  <div className="text-2xl font-extrabold font-[family-name:var(--font-inter)] text-blue-600">4,400+</div>
+                  <div className="text-xs text-gray-500">Audio clips</div>
+                </div>
+              </div>
             </div>
-            <p className="mt-6 text-sm text-gray-400">
-              No credit card required. Level 1 is completely free.
-            </p>
           </div>
 
           {/* Stats bar */}
-          <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
+          <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto md:mx-0">
             {[
               { num: '74', label: 'Lessons' },
               { num: '4,400+', label: 'Audio Clips' },
@@ -218,18 +248,27 @@ export default async function LandingPage() {
                   <Link
                     key={l.id}
                     href={`/courses/${l.id}`}
-                    className="group bg-white rounded-xl border border-gray-200 p-5 hover:border-blue-300 hover:shadow-lg hover:shadow-blue-600/5 transition-all"
+                    className="group overflow-hidden bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-lg hover:shadow-blue-600/5 transition-all"
                   >
-                    <div className="text-xs font-bold text-blue-600 mb-2">{l.id}</div>
-                    <h3 className="font-bold text-lg font-[family-name:var(--font-inter)] group-hover:text-blue-600 transition-colors">
-                      {l.title}
-                    </h3>
-                    <p className="text-gray-500 text-sm mt-1">{l.sub}</p>
-                    <div className="mt-4 text-blue-600 text-sm font-semibold flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
-                      Start lesson
-                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                      </svg>
+                    <Image
+                      src={l.image}
+                      alt={`${l.title} lesson preview`}
+                      width={400}
+                      height={200}
+                      className="h-[140px] w-full object-cover"
+                    />
+                    <div className="p-5">
+                      <div className="text-xs font-bold text-blue-600 mb-2">{l.id}</div>
+                      <h3 className="font-bold text-lg font-[family-name:var(--font-inter)] group-hover:text-blue-600 transition-colors">
+                        {l.title}
+                      </h3>
+                      <p className="text-gray-500 text-sm mt-1">{l.sub}</p>
+                      <div className="mt-4 text-blue-600 text-sm font-semibold flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                        Start lesson
+                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                        </svg>
+                      </div>
                     </div>
                   </Link>
                 ))}
