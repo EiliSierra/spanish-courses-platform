@@ -88,11 +88,11 @@ export default function RecipeBuilderL34({ onComplete }: { onComplete?: () => vo
     return (
       <section id="recipe-builder">
         <h2 className="text-2xl font-bold font-[family-name:var(--font-inter)] mb-2">Recipe Builder</h2>
-        <p className="text-gray-400 mb-4">Put the recipe steps in the correct order!</p>
-        <div className="bg-gray-800 rounded-xl border border-gray-700 p-8 text-center">
+        <p className="text-gray-500 dark:text-gray-400 mb-4">Put the recipe steps in the correct order!</p>
+        <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-8 text-center">
           <div className="text-5xl mb-4">&#127859;</div>
-          <p className="text-gray-400 mb-2">{totalRecipes} recipes. Arrange the 5 steps in order for each Latin American dish.</p>
-          <p className="text-sm text-gray-400 mb-6">Click steps in the order you think is correct.</p>
+          <p className="text-gray-500 dark:text-gray-400 mb-2">{totalRecipes} recipes. Arrange the 5 steps in order for each Latin American dish.</p>
+          <p className="text-sm text-gray-500 dark:text-gray-400 mb-6">Click steps in the order you think is correct.</p>
           <button onClick={startGame} className="px-8 py-3 bg-gradient-to-r from-red-500 to-orange-500 text-white rounded-xl font-bold text-lg hover:from-red-600 hover:to-orange-600 transition-all shadow-lg hover:shadow-xl">
             Start Cooking!
           </button>
@@ -108,11 +108,11 @@ export default function RecipeBuilderL34({ onComplete }: { onComplete?: () => vo
     return (
       <section id="recipe-builder">
         <h2 className="text-2xl font-bold font-[family-name:var(--font-inter)] mb-2">Recipe Builder</h2>
-        <div className="bg-gray-800 rounded-xl border border-gray-700 p-8 text-center">
+        <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-8 text-center">
           <div className="text-4xl mb-2">{'\u2b50'.repeat(stars)}{'\u2606'.repeat(3 - stars)}</div>
           <div className="text-4xl font-bold text-orange-600 mb-1">{totalCorrect}/{totalRecipes}</div>
-          <p className="text-gray-400 mb-4">{pct === 100 ? 'Perfect chef! Every recipe in order!' : pct >= 50 ? 'Good cooking! Some steps need rearranging.' : 'Keep practicing those recipes!'}</p>
-          <div className="bg-orange-950 rounded-xl p-4 mb-4 text-left">
+          <p className="text-gray-500 dark:text-gray-400 mb-4">{pct === 100 ? 'Perfect chef! Every recipe in order!' : pct >= 50 ? 'Good cooking! Some steps need rearranging.' : 'Keep practicing those recipes!'}</p>
+          <div className="bg-orange-50 dark:bg-orange-950 rounded-xl p-4 mb-4 text-left">
             <p className="text-xs font-semibold text-orange-600 uppercase mb-2">Results:</p>
             {RECIPE_CHALLENGES.map((r, i) => (
               <p key={i} className="text-sm text-gray-700 mb-1">
@@ -130,7 +130,7 @@ export default function RecipeBuilderL34({ onComplete }: { onComplete?: () => vo
     <section id="recipe-builder">
       <h2 className="text-2xl font-bold font-[family-name:var(--font-inter)] mb-2">Recipe Builder</h2>
       <div className="flex justify-between text-sm mb-3">
-        <span className="text-gray-400">Recipe {recipeIdx + 1} of {totalRecipes}</span>
+        <span className="text-gray-500 dark:text-gray-400">Recipe {recipeIdx + 1} of {totalRecipes}</span>
         <span className="font-semibold text-orange-600">{recipe.emoji} {recipe.title}</span>
       </div>
 
@@ -139,21 +139,21 @@ export default function RecipeBuilderL34({ onComplete }: { onComplete?: () => vo
         <p className="text-xs font-semibold text-orange-500 uppercase mb-2">Your order ({selected.length}/5):</p>
         <div className="space-y-2 min-h-[80px]">
           {selected.length === 0 && (
-            <p className="text-sm text-gray-400 italic py-4 text-center">Click steps below in the correct order...</p>
+            <p className="text-sm text-gray-500 dark:text-gray-400 italic py-4 text-center">Click steps below in the correct order...</p>
           )}
           {selected.map((step, i) => (
             <button key={step.order} onClick={() => !checked && handleSelectStep(step)}
               className={`w-full text-left px-4 py-3 rounded-xl border-2 text-sm transition-all ${
                 checked
                   ? step.order === i + 1
-                    ? 'border-green-400 bg-green-950 text-green-200'
-                    : 'border-red-700 bg-red-950 text-red-700'
-                  : 'border-orange-300 bg-orange-950 text-gray-200 cursor-pointer hover:border-orange-400'
+                    ? 'border-green-400 bg-green-50 dark:bg-green-950 text-green-800 dark:text-green-200'
+                    : 'border-red-400 bg-red-50 dark:bg-red-950 text-red-700 dark:text-red-300'
+                  : 'border-orange-300 bg-orange-950 text-gray-700 dark:text-gray-200 cursor-pointer hover:border-orange-400'
               }`}>
               <span className="font-bold mr-2">{i + 1}.</span>
               {step.step}
               {checked && (
-                <span className="block text-xs mt-1 italic text-gray-400">{step.english}</span>
+                <span className="block text-xs mt-1 italic text-gray-500 dark:text-gray-400">{step.english}</span>
               )}
             </button>
           ))}
@@ -163,11 +163,11 @@ export default function RecipeBuilderL34({ onComplete }: { onComplete?: () => vo
       {/* Available steps (scrambled, not yet picked) */}
       {!checked && availableSteps.length > 0 && (
         <div className="mb-4">
-          <p className="text-xs font-semibold text-gray-400 uppercase mb-2">Available steps:</p>
+          <p className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase mb-2">Available steps:</p>
           <div className="space-y-2">
             {availableSteps.map((step) => (
               <button key={step.order} onClick={() => handleSelectStep(step)}
-                className="w-full text-left px-4 py-3 rounded-xl border-2 border-gray-700 text-sm text-gray-700 hover:border-orange-400 hover:bg-orange-950/50 cursor-pointer transition-all">
+                className="w-full text-left px-4 py-3 rounded-xl border-2 border-gray-200 dark:border-gray-700 text-sm text-gray-700 hover:border-orange-400 hover:bg-orange-50 dark:hover:bg-orange-950/50 cursor-pointer transition-all">
                 {step.step}
               </button>
             ))}
@@ -177,19 +177,19 @@ export default function RecipeBuilderL34({ onComplete }: { onComplete?: () => vo
 
       {/* Check / correct answer area */}
       {checked && !isCorrect && (
-        <div className="bg-red-950 border border-red-200 rounded-xl p-4 mb-4">
+        <div className="bg-red-50 dark:bg-red-950 border border-red-200 dark:border-red-700 rounded-xl p-4 mb-4">
           <p className="text-sm font-semibold text-red-700 mb-2">Correct order:</p>
           {[...recipe.steps].sort((a, b) => a.order - b.order).map((step) => (
             <p key={step.order} className="text-sm text-red-800 mb-1">
               <span className="font-bold">{step.order}.</span> {step.step}
-              <span className="text-xs text-gray-400 italic ml-1">({step.english})</span>
+              <span className="text-xs text-gray-500 dark:text-gray-400 italic ml-1">({step.english})</span>
             </p>
           ))}
         </div>
       )}
 
       {checked && isCorrect && (
-        <div className="bg-green-950 border border-green-200 rounded-xl p-3 mb-4 text-center">
+        <div className="bg-green-50 dark:bg-green-950 border border-green-200 dark:border-green-700 rounded-xl p-3 mb-4 text-center">
           <p className="text-sm font-semibold text-green-800">Perfect! Every step in the right order! 🎉</p>
         </div>
       )}
@@ -201,7 +201,7 @@ export default function RecipeBuilderL34({ onComplete }: { onComplete?: () => vo
           </button>
         )}
         {!checked && selected.length > 0 && selected.length < 5 && (
-          <button onClick={handleReset} className="px-4 py-2 text-gray-400 text-sm hover:text-gray-700">
+          <button onClick={handleReset} className="px-4 py-2 text-gray-500 dark:text-gray-400 text-sm hover:text-gray-700">
             Reset
           </button>
         )}

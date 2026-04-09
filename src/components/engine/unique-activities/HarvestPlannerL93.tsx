@@ -69,11 +69,11 @@ export default function HarvestPlannerL93({ onComplete }: { onComplete?: () => v
     return (
       <section id="harvest-planner">
         <h2 className="text-2xl font-bold font-[family-name:var(--font-inter)] mb-2">Harvest Planner</h2>
-        <p className="text-gray-400 mb-4">Read each agricultural scenario and choose the best course of action!</p>
-        <div className="bg-gray-800 rounded-xl border border-gray-700 p-8 text-center">
+        <p className="text-gray-500 dark:text-gray-400 mb-4">Read each agricultural scenario and choose the best course of action!</p>
+        <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-8 text-center">
           <div className="text-5xl mb-4">&#127807;</div>
-          <p className="text-gray-400 mb-2">{totalRounds} scenarios. Pick the smartest farming decision for each challenge.</p>
-          <p className="text-sm text-gray-400 mb-6">22 seconds per scenario.</p>
+          <p className="text-gray-500 dark:text-gray-400 mb-2">{totalRounds} scenarios. Pick the smartest farming decision for each challenge.</p>
+          <p className="text-sm text-gray-500 dark:text-gray-400 mb-6">22 seconds per scenario.</p>
           <button onClick={startGame} className="px-8 py-3 bg-gradient-to-r from-emerald-500 to-green-500 text-white rounded-xl font-bold text-lg hover:from-emerald-600 hover:to-green-600 transition-all shadow-lg hover:shadow-xl">
             Start Planning
           </button>
@@ -88,14 +88,14 @@ export default function HarvestPlannerL93({ onComplete }: { onComplete?: () => v
     return (
       <section id="harvest-planner">
         <h2 className="text-2xl font-bold font-[family-name:var(--font-inter)] mb-2">Harvest Planner</h2>
-        <div className="bg-gray-800 rounded-xl border border-gray-700 p-8 text-center">
+        <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-8 text-center">
           <div className="text-4xl mb-2">{'\u2b50'.repeat(stars)}{'\u2606'.repeat(3 - stars)}</div>
           <div className="text-4xl font-bold text-emerald-600 mb-1">{score}/{totalRounds}</div>
-          <p className="text-gray-400 mb-4">{pct >= 80 ? 'Expert farmer! You made all the right decisions!' : pct >= 50 ? 'Good instincts! Some farming decisions need more thought.' : 'Keep learning — sustainable farming takes practice!'}</p>
-          <div className="bg-emerald-950 rounded-xl p-4 mb-4 text-left space-y-2">
+          <p className="text-gray-500 dark:text-gray-400 mb-4">{pct >= 80 ? 'Expert farmer! You made all the right decisions!' : pct >= 50 ? 'Good instincts! Some farming decisions need more thought.' : 'Keep learning — sustainable farming takes practice!'}</p>
+          <div className="bg-emerald-50 dark:bg-emerald-950 rounded-xl p-4 mb-4 text-left space-y-2">
             <p className="text-xs font-semibold text-emerald-600 uppercase mb-2">Your Results:</p>
             {answers.map((a, i) => (
-              <div key={i} className={`text-sm p-2 rounded-lg ${a.correct ? 'bg-green-950 text-green-200' : 'bg-red-950 text-red-200'}`}>
+              <div key={i} className={`text-sm p-2 rounded-lg ${a.correct ? 'bg-green-50 dark:bg-green-950 text-green-800 dark:text-green-200' : 'bg-red-50 dark:bg-red-950 text-red-800 dark:text-red-200'}`}>
                 <p className="font-medium">{a.scenario}</p>
                 {!a.correct && <p className="text-xs mt-1">Your answer: {a.chosen} — Correct: <span className="font-semibold">{a.answer}</span></p>}
               </div>
@@ -113,16 +113,16 @@ export default function HarvestPlannerL93({ onComplete }: { onComplete?: () => v
     <section id="harvest-planner">
       <h2 className="text-2xl font-bold font-[family-name:var(--font-inter)] mb-2">Harvest Planner</h2>
       <div className="flex justify-between text-sm mb-2">
-        <span className="text-gray-400">Scenario {round + 1} of {totalRounds}</span>
+        <span className="text-gray-500 dark:text-gray-400">Scenario {round + 1} of {totalRounds}</span>
         <span className="font-semibold text-emerald-600">Score: {score}</span>
       </div>
       <div className="h-2 bg-gray-200 rounded-full overflow-hidden mb-4">
         <div className={`h-full rounded-full transition-all duration-100 ${timerColor}`} style={{ width: `${timeLeft}%` }} />
       </div>
 
-      <div className="bg-emerald-950 border border-emerald-800 rounded-xl p-5 mb-5">
-        <p className="font-semibold text-gray-200 text-lg">{challenge.scenario}</p>
-        {feedback && <p className="text-sm text-gray-400 mt-2 italic">{challenge.english}</p>}
+      <div className="bg-emerald-50 dark:bg-emerald-950 border border-emerald-200 dark:border-emerald-800 rounded-xl p-5 mb-5">
+        <p className="font-semibold text-gray-700 dark:text-gray-200 text-lg">{challenge.scenario}</p>
+        {feedback && <p className="text-sm text-gray-500 dark:text-gray-400 mt-2 italic">{challenge.english}</p>}
       </div>
 
       <div className="space-y-3">
@@ -133,14 +133,14 @@ export default function HarvestPlannerL93({ onComplete }: { onComplete?: () => v
           return (
             <button key={opt} onClick={() => handleSelect(opt)} disabled={!!feedback}
               className={`w-full text-left px-4 py-4 rounded-xl border-2 font-medium text-sm transition-all ${
-                show ? isCorrect ? 'border-green-400 bg-green-950 text-green-200' : isSelected && !isCorrect ? 'border-red-700 bg-red-950 text-red-700' : 'border-gray-700 opacity-40'
-                  : 'border-gray-700 hover:border-emerald-400 hover:bg-emerald-950/50 cursor-pointer'
+                show ? isCorrect ? 'border-green-400 bg-green-50 dark:bg-green-950 text-green-800 dark:text-green-200' : isSelected && !isCorrect ? 'border-red-400 bg-red-50 dark:bg-red-950 text-red-700 dark:text-red-300' : 'border-gray-200 dark:border-gray-700 opacity-40'
+                  : 'border-gray-200 dark:border-gray-700 hover:border-emerald-400 hover:bg-emerald-50 dark:hover:bg-emerald-950/50 cursor-pointer'
               }`}>{opt}</button>
           )
         })}
       </div>
       {feedback && (
-        <div className={`text-center text-sm font-semibold p-3 rounded-lg mt-4 ${feedback.correct ? 'bg-green-950 text-green-200' : 'bg-red-950 text-red-200'}`}>
+        <div className={`text-center text-sm font-semibold p-3 rounded-lg mt-4 ${feedback.correct ? 'bg-green-50 dark:bg-green-950 text-green-800 dark:text-green-200' : 'bg-red-50 dark:bg-red-950 text-red-800 dark:text-red-200'}`}>
           {feedback.correct ? 'Smart farming decision!' : `Best action: ${challenge.correctAction}`}
         </div>
       )}

@@ -157,12 +157,12 @@ export const L24Data: LessonData = {
   ],
 
   pronunciationChallenges: [
-    { spanish: 'Tengo una reservación a nombre de Martínez', pronunciation: 'TEHN-goh OO-nah reh-sehr-bah-see-OHN ah NOHM-breh deh mahr-TEE-nehs', english: 'I have a reservation under Martínez', audio: 'la-reservacion', tip: '"Reservación" has the stress on the last syllable: reh-sehr-bah-see-OHN.' },
-    { spanish: 'La llave de la habitación no funciona', pronunciation: 'lah YAH-beh deh lah ah-bee-tah-see-OHN noh foon-see-OH-nah', english: 'The room key does not work', audio: 'la-llave-de-la-habitacion', tip: 'LL = "Y" sound in most Latin America. "Llave" = YAH-beh, not "LAH-beh."' },
-    { spanish: '¿Puede ayudarme con el equipaje?', pronunciation: 'PWEH-deh ah-yoo-DAHR-meh kohn ehl eh-kee-PAH-heh', english: 'Can you help me with the luggage?', audio: 'puede-ayudarme', tip: '"Equipaje" — the J makes an "H" sound: eh-kee-PAH-heh.' },
-    { spanish: 'Necesito una toalla más, por favor', pronunciation: 'neh-seh-SEE-toh OO-nah toh-AH-yah mahs pohr fah-BOHR', english: 'I need one more towel, please', audio: 'necesito-mas-toallas', tip: '"Toalla" has the LL = Y: toh-AH-yah. Two syllables after "to."' },
-    { spanish: 'El aire acondicionado no funciona', pronunciation: 'ehl AH-ee-reh ah-kohn-dee-see-oh-NAH-doh noh foon-see-OH-nah', english: 'The AC does not work', audio: 'el-aire-acondicionado', tip: '"Acondicionado" is long! Break it: a-con-di-cio-NA-do. Stress on NA.' },
-    { spanish: 'El desayuno es a las siete', pronunciation: 'ehl deh-sah-YOO-noh ehs ah lahs see-EH-teh', english: 'Breakfast is at seven', audio: 'a-que-hora-es-el-desayuno', tip: '"Desayuno" — stress on YOO: deh-sah-YOO-noh.' },
+    { spanish: 'Tengo una reservación a nombre de Martínez', pronunciation: 'TEHN-goh OO-nah reh-sehr-bah-see-OHN ah NOHM-breh deh mahr-TEE-nehs', english: 'I have a reservation under Martínez', audio: 'tengo-una-reservacion-a-nombre-de-martinez', tip: '"Reservación" has the stress on the last syllable: reh-sehr-bah-see-OHN.' },
+    { spanish: 'La llave de la habitación no funciona', pronunciation: 'lah YAH-beh deh lah ah-bee-tah-see-OHN noh foon-see-OH-nah', english: 'The room key does not work', audio: 'la-llave-de-la-habitacion-no-funciona', tip: 'LL = "Y" sound in most Latin America. "Llave" = YAH-beh, not "LAH-beh."' },
+    { spanish: '¿Puede ayudarme con el equipaje?', pronunciation: 'PWEH-deh ah-yoo-DAHR-meh kohn ehl eh-kee-PAH-heh', english: 'Can you help me with the luggage?', audio: 'puede-ayudarme-con-el-equipaje', tip: '"Equipaje" — the J makes an "H" sound: eh-kee-PAH-heh.' },
+    { spanish: 'Necesito una toalla más, por favor', pronunciation: 'neh-seh-SEE-toh OO-nah toh-AH-yah mahs pohr fah-BOHR', english: 'I need one more towel, please', audio: 'necesito-una-toalla-mas-por-favor', tip: '"Toalla" has the LL = Y: toh-AH-yah. Two syllables after "to."' },
+    { spanish: 'El aire acondicionado no funciona', pronunciation: 'ehl AH-ee-reh ah-kohn-dee-see-oh-NAH-doh noh foon-see-OH-nah', english: 'The AC does not work', audio: 'el-aire-acondicionado-no-funciona', tip: '"Acondicionado" is long! Break it: a-con-di-cio-NA-do. Stress on NA.' },
+    { spanish: 'El desayuno es a las siete', pronunciation: 'ehl deh-sah-YOO-noh ehs ah lahs see-EH-teh', english: 'Breakfast is at seven', audio: 'el-desayuno-es-a-las-siete', tip: '"Desayuno" — stress on YOO: deh-sah-YOO-noh.' },
   ],
 
   sections: [

@@ -146,11 +146,11 @@ export const L26Data: LessonData = {
   ],
 
   pronunciationChallenges: [
-    { spanish: '¿Cuánto cuesta la camisa?', pronunciation: 'KWAHN-toh KWEHS-tah lah kah-MEE-sah', english: 'How much is the shirt?', audio: 'cuanto-cuesta', tip: 'Both "cuánto" and "cuesta" have the CU = "KW" sound. Keep them crisp!' },
-    { spanish: 'Me queda muy bien', pronunciation: 'meh KEH-dah mooy bee-EHN', english: 'It fits me very well', audio: 'me-queda-bien', tip: '"Queda" — QU = "K" sound (never say "kweh-da"). Stress on KE.' },
-    { spanish: 'Busco una falda azul', pronunciation: 'BOOS-koh OO-nah FAHL-dah ah-SOOL', english: 'I\u2019m looking for a blue skirt', audio: 'la-falda', tip: '"Azul" — stress on the last syllable: ah-SOOL. Z = S sound in Latin America.' },
-    { spanish: '¿Tiene talla pequeña?', pronunciation: 'tee-EH-neh TAH-yah peh-KEH-nyah', english: 'Do you have a small size?', audio: 'la-talla', tip: '"Talla" — LL = Y sound: TAH-yah. "Pequeña" has the Ñ = NY from L1.1.' },
-    { spanish: 'Los zapatos negros', pronunciation: 'lohs sah-PAH-tohs NEH-grohs', english: 'The black shoes', audio: 'los-zapatos', tip: '"Zapatos" — Z = S in Latin America. Adjective "negros" comes AFTER the noun in Spanish.' },
+    { spanish: '¿Cuánto cuesta la camisa?', pronunciation: 'KWAHN-toh KWEHS-tah lah kah-MEE-sah', english: 'How much is the shirt?', audio: 'cuanto-cuesta-la-camisa', tip: 'Both "cuánto" and "cuesta" have the CU = "KW" sound. Keep them crisp!' },
+    { spanish: 'Me queda muy bien', pronunciation: 'meh KEH-dah mooy bee-EHN', english: 'It fits me very well', audio: 'me-queda-muy-bien', tip: '"Queda" — QU = "K" sound (never say "kweh-da"). Stress on KE.' },
+    { spanish: 'Busco una falda azul', pronunciation: 'BOOS-koh OO-nah FAHL-dah ah-SOOL', english: 'I\u2019m looking for a blue skirt', audio: 'busco-una-falda-azul', tip: '"Azul" — stress on the last syllable: ah-SOOL. Z = S sound in Latin America.' },
+    { spanish: '¿Tiene talla pequeña?', pronunciation: 'tee-EH-neh TAH-yah peh-KEH-nyah', english: 'Do you have a small size?', audio: 'tiene-talla-pequena', tip: '"Talla" — LL = Y sound: TAH-yah. "Pequeña" has the Ñ = NY from L1.1.' },
+    { spanish: 'Los zapatos negros', pronunciation: 'lohs sah-PAH-tohs NEH-grohs', english: 'The black shoes', audio: 'los-zapatos-negros', tip: '"Zapatos" — Z = S in Latin America. Adjective "negros" comes AFTER the noun in Spanish.' },
     { spanish: 'Está en oferta', pronunciation: 'ehs-TAH ehn oh-FEHR-tah', english: 'It\u2019s on sale', audio: 'esta-en-oferta', tip: '"Oferta" = sale/offer. Stress on FEHR. Very useful word in Latin American markets!' },
   ],
 

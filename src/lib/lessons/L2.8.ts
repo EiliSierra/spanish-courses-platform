@@ -147,10 +147,10 @@ export const L28Data: LessonData = {
 
   pronunciationChallenges: [
     { spanish: '¿A qué te dedicas?', pronunciation: 'ah keh teh deh-DEE-kahs', english: 'What do you do for work?', audio: 'a-que-te-dedicas', tip: '"Dedicarse" is reflexive. This is THE question for asking about jobs. Stress on DEE.' },
-    { spanish: 'Soy ingeniero', pronunciation: 'soy een-heh-nee-EH-roh', english: 'I am an engineer', audio: 'el-ingeniero', tip: 'No article needed! "Soy ingeniero" NOT "Soy un ingeniero." This is unique to professions in Spanish.' },
+    { spanish: 'Soy ingeniero', pronunciation: 'soy een-heh-nee-EH-roh', english: 'I am an engineer', audio: 'soy-ingeniero', tip: 'No article needed! "Soy ingeniero" NOT "Soy un ingeniero." This is unique to professions in Spanish.' },
     { spanish: 'Trabajo de lunes a viernes', pronunciation: 'trah-BAH-hoh deh LOO-nehs ah bee-EHR-nehs', english: 'I work Monday to Friday', audio: 'trabajo-de-lunes-a-viernes', tip: 'Days of the week from L1.3! No capitals in Spanish: lunes, martes, miércoles...' },
-    { spanish: 'Tengo una reunión a las tres', pronunciation: 'TEHN-goh OO-nah reh-oo-nee-OHN ah lahs trehs', english: 'I have a meeting at three', audio: 'tengo-una-reunion', tip: '"Reunión" — stress on the last syllable. "A las tres" = time from L1.3.' },
-    { spanish: 'Es responsable y puntual', pronunciation: 'ehs rehs-pohn-SAH-bleh ee poon-too-AHL', english: 'He/She is responsible and punctual', audio: 'es-responsable', tip: 'These adjectives end in -E/-AL, so they DON\u2019T change for masculine/feminine!' },
+    { spanish: 'Tengo una reunión a las tres', pronunciation: 'TEHN-goh OO-nah reh-oo-nee-OHN ah lahs trehs', english: 'I have a meeting at three', audio: 'tengo-una-reunion-a-las-tres', tip: '"Reunión" — stress on the last syllable. "A las tres" = time from L1.3.' },
+    { spanish: 'Es responsable y puntual', pronunciation: 'ehs rehs-pohn-SAH-bleh ee poon-too-AHL', english: 'He/She is responsible and punctual', audio: 'es-responsable-y-puntual', tip: 'These adjectives end in -E/-AL, so they DON\u2019T change for masculine/feminine!' },
     { spanish: 'Trabajo por mi cuenta', pronunciation: 'trah-BAH-hoh pohr mee KWEHN-tah', english: 'I am self-employed', audio: 'trabajo-por-mi-cuenta', tip: '"Por mi cuenta" = on my own. Very common in Latin America where many people are freelancers.' },
   ],
 

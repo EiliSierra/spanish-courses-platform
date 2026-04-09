@@ -170,7 +170,7 @@ export default function PronunciationPractice({ challenges, audioBase }: Props) 
     : ''
 
   const scoreBg = feedback
-    ? feedback.score >= 90 ? 'bg-green-950 border-green-200' : feedback.score >= 70 ? 'bg-amber-950 border-amber-800' : 'bg-red-950 border-red-200'
+    ? feedback.score >= 90 ? 'bg-green-50 dark:bg-green-950 border-green-200 dark:border-green-800' : feedback.score >= 70 ? 'bg-amber-50 dark:bg-amber-950 border-amber-200 dark:border-amber-800' : 'bg-red-50 dark:bg-red-950 border-red-200 dark:border-red-800'
     : ''
 
   if (!challenges || challenges.length === 0) return null
@@ -183,18 +183,18 @@ export default function PronunciationPractice({ challenges, audioBase }: Props) 
           AI
         </span>
       </div>
-      <p className="text-gray-400 mb-5">
+      <p className="text-gray-500 dark:text-gray-400 mb-5">
         Listen to the phrase, then record yourself saying it. AI will analyze your pronunciation and give feedback.
       </p>
 
       {!speechSupported && (
-        <div className="bg-amber-950 border border-amber-800 rounded-xl p-4 mb-4">
-          <p className="text-amber-200 text-sm">Speech recognition is not supported in your browser. Please use <strong>Google Chrome</strong> for the best experience.</p>
+        <div className="bg-amber-50 dark:bg-amber-950 border border-amber-200 dark:border-amber-800 rounded-xl p-4 mb-4">
+          <p className="text-amber-800 dark:text-amber-200 text-sm">Speech recognition is not supported in your browser. Please use <strong>Google Chrome</strong> for the best experience.</p>
         </div>
       )}
 
       {/* Challenge Card */}
-      <div className="bg-gray-800 rounded-2xl border border-gray-700 shadow-sm overflow-hidden">
+      <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm overflow-hidden">
         {/* Header with counter */}
         <div className="bg-gradient-to-r from-blue-50 to-indigo-50 px-6 py-3 flex items-center justify-between border-b border-blue-100">
           <span className="text-sm font-semibold text-blue-700">
@@ -209,13 +209,13 @@ export default function PronunciationPractice({ challenges, audioBase }: Props) 
 
         {/* Phrase to practice */}
         <div className="p-6">
-          <p className="text-2xl font-bold text-gray-100 mb-1">{challenge.spanish}</p>
+          <p className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-1">{challenge.spanish}</p>
           <p className="text-gray-500 text-sm mb-1">{challenge.english}</p>
           <p className="text-blue-600 text-xs font-mono">{challenge.pronunciation}</p>
 
           {challenge.tip && (
-            <div className="mt-3 bg-amber-950 border-l-3 border-amber-400 px-3 py-2 rounded-r-lg">
-              <p className="text-xs text-amber-200">{challenge.tip}</p>
+            <div className="mt-3 bg-amber-50 dark:bg-amber-950 border-l-3 border-amber-400 px-3 py-2 rounded-r-lg">
+              <p className="text-xs text-amber-800 dark:text-amber-800 dark:text-amber-800 dark:text-amber-200">{challenge.tip}</p>
             </div>
           )}
 
@@ -223,7 +223,7 @@ export default function PronunciationPractice({ challenges, audioBase }: Props) 
           <div className="flex gap-3 mt-5">
             <button
               onClick={playReference}
-              className="flex items-center gap-2 px-4 py-2.5 bg-gray-800 text-gray-300 rounded-xl text-sm font-medium hover:bg-gray-200 transition-colors"
+              className="flex items-center gap-2 px-4 py-2.5 bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 rounded-xl text-sm font-medium hover:bg-gray-200 transition-colors"
             >
               <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/></svg>
               Listen First
@@ -256,16 +256,16 @@ export default function PronunciationPractice({ challenges, audioBase }: Props) 
 
           {/* Error */}
           {error && (
-            <div className="mt-4 bg-red-950 border border-red-200 rounded-xl p-3">
-              <p className="text-red-700 text-sm">{error}</p>
+            <div className="mt-4 bg-red-50 dark:bg-red-950 border border-red-200 dark:border-red-800 rounded-xl p-3">
+              <p className="text-red-700 dark:text-red-300 text-sm">{error}</p>
             </div>
           )}
 
           {/* Transcript */}
           {transcript && (
-            <div className="mt-4 bg-gray-900 rounded-xl p-4 border border-gray-700">
+            <div className="mt-4 bg-gray-50 dark:bg-gray-900 rounded-xl p-4 border border-gray-200 dark:border-gray-700">
               <p className="text-xs text-gray-500 mb-1 font-semibold uppercase tracking-wide">What we heard:</p>
-              <p className="text-lg text-gray-100 font-medium">{transcript}</p>
+              <p className="text-lg text-gray-900 dark:text-gray-100 font-medium">{transcript}</p>
             </div>
           )}
 
@@ -273,7 +273,7 @@ export default function PronunciationPractice({ challenges, audioBase }: Props) 
           {loadingFeedback && (
             <div className="mt-4 flex items-center gap-3 justify-center py-6">
               <div className="w-5 h-5 border-2 border-blue-300 border-t-blue-600 rounded-full animate-spin" />
-              <span className="text-gray-400 text-sm">AI is analyzing your pronunciation...</span>
+              <span className="text-gray-500 dark:text-gray-400 text-sm">AI is analyzing your pronunciation...</span>
             </div>
           )}
 
@@ -281,10 +281,10 @@ export default function PronunciationPractice({ challenges, audioBase }: Props) 
           {feedback && !loadingFeedback && (
             <div className={`mt-4 rounded-xl p-5 border ${scoreBg}`}>
               <div className="flex items-center justify-between mb-3">
-                <span className="text-sm font-semibold text-gray-300">AI Feedback</span>
+                <span className="text-sm font-semibold text-gray-600 dark:text-gray-300">AI Feedback</span>
                 <div className="flex items-center gap-2">
                   <span className={`text-2xl font-bold ${scoreColor}`}>{feedback.score}</span>
-                  <span className="text-gray-400 text-sm">/100</span>
+                  <span className="text-gray-500 dark:text-gray-400 text-sm">/100</span>
                 </div>
               </div>
 
@@ -298,14 +298,14 @@ export default function PronunciationPractice({ challenges, audioBase }: Props) 
                 </span>
               </div>
 
-              <p className="text-sm text-gray-300 mb-3">{feedback.feedback}</p>
+              <p className="text-sm text-gray-600 dark:text-gray-300 mb-3">{feedback.feedback}</p>
 
               {feedback.corrections.length > 0 && (
                 <div>
                   <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-1">Tips to improve:</p>
                   <ul className="space-y-1">
                     {feedback.corrections.map((c, i) => (
-                      <li key={i} className="text-sm text-gray-400 flex items-start gap-2">
+                      <li key={i} className="text-sm text-gray-500 dark:text-gray-400 flex items-start gap-2">
                         <span className="text-blue-500 mt-0.5">&#8250;</span>
                         {c}
                       </li>
@@ -327,13 +327,13 @@ export default function PronunciationPractice({ challenges, audioBase }: Props) 
           <div className="flex justify-between mt-6 pt-4 border-t border-gray-100">
             <button
               onClick={prevChallenge}
-              className="text-sm text-gray-500 hover:text-gray-300 font-medium"
+              className="text-sm text-gray-500 hover:text-gray-600 dark:text-gray-300 font-medium"
             >
               &#8592; Previous
             </button>
             <button
               onClick={nextChallenge}
-              className="text-sm text-blue-600 hover:text-blue-200 font-medium"
+              className="text-sm text-blue-600 hover:text-blue-800 dark:hover:text-blue-300 font-medium"
             >
               Next Phrase &#8594;
             </button>

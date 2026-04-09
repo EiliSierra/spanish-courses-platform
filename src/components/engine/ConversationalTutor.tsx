@@ -85,7 +85,7 @@ export default function ConversationalTutor({ lessonId, lessonTitle }: Props) {
       <button
         onClick={() => setIsOpen(!isOpen)}
         className={`fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full shadow-lg flex items-center justify-center transition-all hover:scale-105 ${
-          isOpen ? 'bg-gray-700 hover:bg-gray-800' : 'bg-gradient-to-br from-violet-600 to-indigo-600 hover:from-violet-700 hover:to-indigo-700'
+          isOpen ? 'bg-gray-100 dark:bg-gray-700 hover:bg-white dark:bg-gray-800' : 'bg-gradient-to-br from-violet-600 to-indigo-600 hover:from-violet-700 hover:to-indigo-700'
         }`}
         aria-label={isOpen ? 'Close tutor' : 'Open AI tutor'}
       >
@@ -105,14 +105,14 @@ export default function ConversationalTutor({ lessonId, lessonTitle }: Props) {
 
       {/* Badge */}
       {!isOpen && messages.length === 0 && (
-        <div className="fixed bottom-[5.5rem] right-6 z-50 bg-gray-800 rounded-lg shadow-md px-3 py-1.5 text-xs font-semibold text-violet-700 border border-violet-100 animate-bounce">
+        <div className="fixed bottom-[5.5rem] right-6 z-50 bg-white dark:bg-gray-800 rounded-lg shadow-md px-3 py-1.5 text-xs font-semibold text-violet-700 border border-violet-100 animate-bounce">
           Ask your AI Tutor!
         </div>
       )}
 
       {/* Chat Window */}
       {isOpen && (
-        <div className="fixed bottom-24 right-6 z-50 w-[360px] max-h-[500px] bg-gray-800 rounded-2xl shadow-2xl border border-gray-700 flex flex-col overflow-hidden">
+        <div className="fixed bottom-24 right-6 z-50 w-[360px] max-h-[500px] bg-white dark:bg-gray-800 rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700 flex flex-col overflow-hidden">
           {/* Header */}
           <div className="bg-gradient-to-r from-violet-600 to-indigo-600 px-4 py-3 flex items-center gap-3">
             <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
@@ -188,7 +188,7 @@ export default function ConversationalTutor({ lessonId, lessonTitle }: Props) {
                 <button
                   key={q}
                   onClick={() => { setInput(q); setTimeout(sendMessage, 50) }}
-                  className="text-[11px] px-2.5 py-1.5 bg-violet-950 text-violet-700 rounded-lg hover:bg-violet-100 transition-colors text-left"
+                  className="text-[11px] px-2.5 py-1.5 bg-violet-50 dark:bg-violet-950 text-violet-700 dark:text-violet-300 rounded-lg hover:bg-violet-100 transition-colors text-left"
                 >
                   {q}
                 </button>

@@ -27,7 +27,7 @@ export default function LessonSidebar({ progressPct, sectionStates, activeSectio
       {/* Mobile hamburger */}
       <button
         onClick={() => setOpen(!open)}
-        className="fixed top-4 left-4 z-50 lg:hidden bg-gray-800 text-gray-200 rounded-lg shadow-md p-2 border border-gray-700"
+        className="fixed top-4 left-4 z-50 lg:hidden bg-white text-gray-700 dark:bg-gray-800 dark:text-gray-200 rounded-lg shadow-md p-2 border border-gray-200 dark:border-gray-700"
         aria-label="Toggle navigation"
         aria-expanded={open}
       >
@@ -43,23 +43,23 @@ export default function LessonSidebar({ progressPct, sectionStates, activeSectio
 
       {/* Sidebar */}
       <nav
-        className={`fixed top-0 left-0 h-full w-[280px] bg-gray-900 border-r border-gray-800 z-40 overflow-y-auto transition-transform lg:translate-x-0 ${
+        className={`fixed top-0 left-0 h-full w-[280px] bg-white border-r border-gray-200 dark:bg-gray-900 dark:border-gray-800 z-40 overflow-y-auto transition-transform lg:translate-x-0 ${
           open ? 'translate-x-0' : '-translate-x-full'
         }`}
         aria-label="Lesson navigation"
       >
-        <div className="p-5 border-b border-gray-800">
-          <h2 className="font-bold text-lg font-[family-name:var(--font-inter)] text-gray-100">Spanish Course</h2>
-          <div className="text-sm text-gray-400">{lessonLabel ?? 'Lesson 1.1'}</div>
+        <div className="p-5 border-b border-gray-200 dark:border-gray-800">
+          <h2 className="font-bold text-lg font-[family-name:var(--font-inter)] text-gray-900 dark:text-gray-100">Spanish Course</h2>
+          <div className="text-sm text-gray-500 dark:text-gray-400">{lessonLabel ?? 'Lesson 1.1'}</div>
         </div>
 
         {/* Progress */}
-        <div className="px-5 py-4 border-b border-gray-800">
+        <div className="px-5 py-4 border-b border-gray-200 dark:border-gray-800">
           <div className="flex justify-between text-sm mb-1.5">
-            <span className="text-gray-400">Progress</span>
-            <span className="font-semibold text-blue-400">{progressPct}%</span>
+            <span className="text-gray-500 dark:text-gray-400">Progress</span>
+            <span className="font-semibold text-blue-600 dark:text-blue-400">{progressPct}%</span>
           </div>
-          <div className="h-2 bg-gray-700 rounded-full overflow-hidden">
+          <div className="h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
             <div
               className="h-full bg-gradient-to-r from-blue-500 to-purple-500 rounded-full transition-all duration-500"
               style={{ width: `${progressPct}%` }}
@@ -90,8 +90,8 @@ export default function LessonSidebar({ progressPct, sectionStates, activeSectio
                 }}
                 className={`flex items-center gap-3 px-5 py-2.5 text-sm transition-colors ${
                   isActive
-                    ? 'bg-blue-950 text-blue-300 font-semibold border-r-3 border-blue-500'
-                    : 'text-gray-400 hover:bg-gray-800 hover:text-gray-200'
+                    ? 'bg-blue-50 text-blue-700 font-semibold border-r-3 border-blue-500 dark:bg-blue-950 dark:text-blue-300'
+                    : 'text-gray-600 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-200'
                 }`}
               >
                 <span
@@ -100,7 +100,7 @@ export default function LessonSidebar({ progressPct, sectionStates, activeSectio
                       ? 'bg-green-500'
                       : isActive
                         ? 'bg-blue-500'
-                        : 'bg-gray-600'
+                        : 'bg-gray-300 dark:bg-gray-600'
                   }`}
                 />
                 {title}

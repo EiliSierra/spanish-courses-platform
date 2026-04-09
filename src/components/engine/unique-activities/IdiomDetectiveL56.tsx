@@ -68,11 +68,11 @@ export default function IdiomDetectiveL56({ onComplete }: { onComplete?: () => v
     return (
       <section id="idiom-detective">
         <h2 className="text-2xl font-bold font-[family-name:var(--font-inter)] mb-2">Idiom Detective</h2>
-        <p className="text-gray-400 mb-4">Read each conversation and figure out what the idiom really means!</p>
-        <div className="bg-gray-800 rounded-xl border border-gray-700 p-8 text-center">
+        <p className="text-gray-500 dark:text-gray-400 mb-4">Read each conversation and figure out what the idiom really means!</p>
+        <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-8 text-center">
           <div className="text-5xl mb-4">&#128373;</div>
-          <p className="text-gray-400 mb-2">{totalRounds} conversations. Spot the idiom and choose the correct figurative meaning.</p>
-          <p className="text-sm text-gray-400 mb-6">20 seconds per challenge.</p>
+          <p className="text-gray-500 dark:text-gray-400 mb-2">{totalRounds} conversations. Spot the idiom and choose the correct figurative meaning.</p>
+          <p className="text-sm text-gray-500 dark:text-gray-400 mb-6">20 seconds per challenge.</p>
           <button onClick={startGame} className="px-8 py-3 bg-gradient-to-r from-amber-500 to-yellow-500 text-white rounded-xl font-bold text-lg hover:from-amber-600 hover:to-yellow-600 transition-all shadow-lg hover:shadow-xl">
             Start Investigating
           </button>
@@ -87,14 +87,14 @@ export default function IdiomDetectiveL56({ onComplete }: { onComplete?: () => v
     return (
       <section id="idiom-detective">
         <h2 className="text-2xl font-bold font-[family-name:var(--font-inter)] mb-2">Idiom Detective</h2>
-        <div className="bg-gray-800 rounded-xl border border-gray-700 p-8 text-center">
+        <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-8 text-center">
           <div className="text-4xl mb-2">{'\u2b50'.repeat(stars)}{'\u2606'.repeat(3 - stars)}</div>
           <div className="text-4xl font-bold text-amber-600 mb-1">{score}/{totalRounds}</div>
-          <p className="text-gray-400 mb-4">{pct >= 80 ? 'Master detective! You cracked every idiom!' : pct >= 50 ? 'Good instincts! Some idioms need more investigation.' : 'Keep investigating — idioms take practice!'}</p>
-          <div className="bg-amber-950 rounded-xl p-4 mb-4 text-left space-y-2">
+          <p className="text-gray-500 dark:text-gray-400 mb-4">{pct >= 80 ? 'Master detective! You cracked every idiom!' : pct >= 50 ? 'Good instincts! Some idioms need more investigation.' : 'Keep investigating — idioms take practice!'}</p>
+          <div className="bg-amber-50 dark:bg-amber-950 rounded-xl p-4 mb-4 text-left space-y-2">
             <p className="text-xs font-semibold text-amber-600 uppercase mb-2">Case Files:</p>
             {answers.map((a, i) => (
-              <div key={i} className={`text-sm p-2 rounded-lg ${a.correct ? 'bg-green-950 text-green-200' : 'bg-red-950 text-red-200'}`}>
+              <div key={i} className={`text-sm p-2 rounded-lg ${a.correct ? 'bg-green-50 dark:bg-green-950 text-green-800 dark:text-green-200' : 'bg-red-50 dark:bg-red-950 text-red-800 dark:text-red-200'}`}>
                 <p className="font-medium">&ldquo;{a.idiom}&rdquo;</p>
                 {!a.correct && <p className="text-xs mt-1">Your answer: {a.chosen} — Correct: <span className="font-semibold">{a.answer}</span></p>}
               </div>
@@ -114,17 +114,17 @@ export default function IdiomDetectiveL56({ onComplete }: { onComplete?: () => v
     <section id="idiom-detective">
       <h2 className="text-2xl font-bold font-[family-name:var(--font-inter)] mb-2">Idiom Detective</h2>
       <div className="flex justify-between text-sm mb-2">
-        <span className="text-gray-400">Case {round + 1} of {totalRounds}</span>
+        <span className="text-gray-500 dark:text-gray-400">Case {round + 1} of {totalRounds}</span>
         <span className="font-semibold text-amber-600">Score: {score}</span>
       </div>
       <div className="h-2 bg-gray-200 rounded-full overflow-hidden mb-4">
         <div className={`h-full rounded-full transition-all duration-100 ${timerColor}`} style={{ width: `${timeLeft}%` }} />
       </div>
 
-      <div className="bg-amber-950 border border-amber-700 rounded-xl p-5 mb-3">
+      <div className="bg-amber-50 dark:bg-amber-950 border border-amber-200 dark:border-amber-700 rounded-xl p-5 mb-3">
         <div className="space-y-2">
           {conversationLines.map((line, i) => (
-            <p key={i} className="text-gray-200">
+            <p key={i} className="text-gray-700 dark:text-gray-200">
               {line.split(challenge.idiomUsed).map((part, j, arr) => (
                 <span key={j}>
                   {part}
@@ -136,7 +136,7 @@ export default function IdiomDetectiveL56({ onComplete }: { onComplete?: () => v
             </p>
           ))}
         </div>
-        {feedback && <p className="text-sm text-gray-400 mt-3 italic border-t border-amber-800 pt-2">{challenge.english}</p>}
+        {feedback && <p className="text-sm text-gray-500 dark:text-gray-400 mt-3 italic border-t border-amber-800 pt-2">{challenge.english}</p>}
       </div>
 
       <p className="text-sm font-semibold text-amber-700 mb-3">What does &ldquo;{challenge.idiomUsed}&rdquo; mean in this context?</p>
@@ -149,14 +149,14 @@ export default function IdiomDetectiveL56({ onComplete }: { onComplete?: () => v
           return (
             <button key={opt} onClick={() => handleSelect(opt)} disabled={!!feedback}
               className={`w-full text-left px-4 py-4 rounded-xl border-2 font-medium text-sm transition-all ${
-                show ? isCorrect ? 'border-green-400 bg-green-950 text-green-200' : isSelected && !isCorrect ? 'border-red-700 bg-red-950 text-red-700' : 'border-gray-700 opacity-40'
-                  : 'border-gray-700 hover:border-amber-400 hover:bg-amber-950/50 cursor-pointer'
+                show ? isCorrect ? 'border-green-400 bg-green-50 dark:bg-green-950 text-green-800 dark:text-green-200' : isSelected && !isCorrect ? 'border-red-400 bg-red-50 dark:bg-red-950 text-red-700 dark:text-red-300' : 'border-gray-200 dark:border-gray-700 opacity-40'
+                  : 'border-gray-200 dark:border-gray-700 hover:border-amber-400 hover:bg-amber-950/50 cursor-pointer'
               }`}>{opt}</button>
           )
         })}
       </div>
       {feedback && (
-        <div className={`text-center text-sm font-semibold p-3 rounded-lg mt-4 ${feedback.correct ? 'bg-green-950 text-green-200' : 'bg-red-950 text-red-200'}`}>
+        <div className={`text-center text-sm font-semibold p-3 rounded-lg mt-4 ${feedback.correct ? 'bg-green-50 dark:bg-green-950 text-green-800 dark:text-green-200' : 'bg-red-50 dark:bg-red-950 text-red-800 dark:text-red-200'}`}>
           {feedback.correct ? 'Correct! You cracked it!' : `Correct meaning: ${challenge.correctMeaning}`}
         </div>
       )}

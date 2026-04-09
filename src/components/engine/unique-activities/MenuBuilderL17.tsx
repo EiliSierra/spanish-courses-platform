@@ -62,7 +62,7 @@ export default function MenuBuilderL17({ onComplete }: { onComplete?: () => void
     return (
       <div id="menu-builder" className="text-center py-8">
         <h2 className="text-2xl font-bold mb-3">Menu Builder</h2>
-        <p className="text-gray-400 mb-6 max-w-lg mx-auto">
+        <p className="text-gray-500 dark:text-gray-400 mb-6 max-w-lg mx-auto">
           Read a dining scenario and build the perfect order! Pick the right dishes from each course based on the requirements.
         </p>
         <button
@@ -101,16 +101,16 @@ export default function MenuBuilderL17({ onComplete }: { onComplete?: () => void
     <div id="menu-builder" className="py-6">
       <div className="flex items-center justify-between mb-4">
         <h2 className="text-xl font-bold">Menu Builder</h2>
-        <span className="text-sm text-gray-400 font-medium">{round + 1} / {totalRounds} — Score: {score}</span>
+        <span className="text-sm text-gray-500 dark:text-gray-400 font-medium">{round + 1} / {totalRounds} — Score: {score}</span>
       </div>
 
       <div className="w-full h-2 bg-gray-200 rounded-full mb-6">
         <div className="h-2 bg-orange-500 rounded-full transition-all duration-500" style={{ width: `${(round / totalRounds) * 100}%` }} />
       </div>
 
-      <div className="bg-orange-950 border border-orange-800 rounded-xl p-5 mb-6">
+      <div className="bg-orange-50 dark:bg-orange-950 border border-orange-200 dark:border-orange-800 rounded-xl p-5 mb-6">
         <p className="text-sm text-orange-600 font-semibold mb-1">Your dining scenario:</p>
-        <p className="text-lg font-medium text-gray-200">{currentRound.scenario}</p>
+        <p className="text-lg font-medium text-gray-700 dark:text-gray-200">{currentRound.scenario}</p>
       </div>
 
       {/* Courses */}
@@ -178,20 +178,20 @@ function CourseSection({ title, items, selected, onSelect, feedback, disabled }:
           const isSelected = selected === item.name
           let cls = 'border rounded-lg p-3 text-center cursor-pointer transition-all text-sm '
           if (feedback !== undefined) {
-            if (isSelected && feedback) cls += 'border-green-500 bg-green-950'
-            else if (isSelected && !feedback) cls += 'border-red-400 bg-red-950'
-            else cls += 'border-gray-700 bg-gray-50 opacity-50'
+            if (isSelected && feedback) cls += 'border-green-500 bg-green-50 dark:bg-green-950'
+            else if (isSelected && !feedback) cls += 'border-red-400 bg-red-50 dark:bg-red-950'
+            else cls += 'border-gray-200 dark:border-gray-700 bg-gray-50 opacity-50'
           } else if (isSelected) {
-            cls += 'border-orange-500 bg-orange-950 ring-2 ring-orange-300'
+            cls += 'border-orange-500 bg-orange-50 dark:bg-orange-950 ring-2 ring-orange-300'
           } else {
-            cls += 'border-gray-700 bg-white hover:border-orange-300'
+            cls += 'border-gray-200 dark:border-gray-700 bg-white hover:border-orange-300'
           }
 
           return (
             <button key={item.name} onClick={() => !disabled && onSelect(item.name)} disabled={disabled} className={cls}>
               <span className="text-xl">{item.emoji}</span>
               <p className="font-medium mt-1">{item.name}</p>
-              <p className="text-xs text-gray-400 mt-0.5">{item.tags.join(', ')}</p>
+              <p className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">{item.tags.join(', ')}</p>
             </button>
           )
         })}

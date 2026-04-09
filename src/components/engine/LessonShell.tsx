@@ -142,7 +142,7 @@ export default function LessonShell({ data, phraseByAudio }: LessonShellProps) {
 
           {/* Prior Knowledge (What You Already Know) */}
           {data.priorKnowledge && data.priorKnowledge.length > 0 && (
-            <div className={`section-card ${sc['prior-knowledge']?.bg ?? 'bg-indigo-950/30'} ${sc['prior-knowledge']?.border ?? 'border-indigo-100'}`}>
+            <div className={`section-card ${sc['prior-knowledge']?.bg ?? 'bg-indigo-50 dark:bg-indigo-950/30'} ${sc['prior-knowledge']?.border ?? 'border-indigo-200 dark:border-indigo-100'}`}>
               <PriorKnowledge items={data.priorKnowledge} />
             </div>
           )}
@@ -153,11 +153,11 @@ export default function LessonShell({ data, phraseByAudio }: LessonShellProps) {
               <h2 className="text-2xl font-bold font-[family-name:var(--font-inter)] mb-5">What You&apos;ll Learn</h2>
               <div className="grid sm:grid-cols-2 gap-4">
                 {data.objectives.map((obj) => (
-                  <div key={obj.title} className="flex gap-4 p-4 bg-gray-900 rounded-xl border border-gray-100">
+                  <div key={obj.title} className="flex gap-4 p-4 bg-gray-50 dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700">
                     <span className="text-3xl">{obj.icon}</span>
                     <div>
-                      <h3 className="font-bold text-gray-100">{obj.title}</h3>
-                      <p className="text-sm text-gray-400 mt-1">{obj.desc}</p>
+                      <h3 className="font-bold text-gray-900 dark:text-gray-100">{obj.title}</h3>
+                      <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">{obj.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -167,7 +167,7 @@ export default function LessonShell({ data, phraseByAudio }: LessonShellProps) {
 
           {/* Personalized Context (AI) */}
           {data.personalizedVocab && data.personalizedVocab.length > 0 && (
-            <div className={`section-card ${sc['personalized-context']?.bg ?? 'bg-violet-950/30'} ${sc['personalized-context']?.border ?? 'border-violet-100'}`}>
+            <div className={`section-card ${sc['personalized-context']?.bg ?? 'bg-violet-50 dark:bg-violet-950/30'} ${sc['personalized-context']?.border ?? 'border-violet-200 dark:border-violet-100'}`}>
               <PersonalizedContext words={data.personalizedVocab} lessonId={data.id} />
             </div>
           )}
@@ -192,7 +192,7 @@ export default function LessonShell({ data, phraseByAudio }: LessonShellProps) {
 
           {/* Pronunciation Practice (AI) */}
           {data.pronunciationChallenges && data.pronunciationChallenges.length > 0 && (
-            <div className={`section-card ${sc['pronunciation-practice']?.bg ?? 'bg-blue-950/30'} ${sc['pronunciation-practice']?.border ?? 'border-blue-800'}`}>
+            <div className={`section-card ${sc['pronunciation-practice']?.bg ?? 'bg-blue-50 dark:bg-blue-950/30'} ${sc['pronunciation-practice']?.border ?? 'border-blue-200 dark:border-blue-800'}`}>
               <PronunciationPractice challenges={data.pronunciationChallenges} audioBase={data.audioBase} />
             </div>
           )}
@@ -220,7 +220,7 @@ export default function LessonShell({ data, phraseByAudio }: LessonShellProps) {
 
           {/* Cultural Notes */}
           <div className={`section-card ${sc.cultural?.bg ?? ''} ${sc.cultural?.border ?? ''}`}>
-            <CulturalNotes notes={data.culturalNotes} gradient={data.culturalGradient} />
+            <CulturalNotes notes={data.culturalNotes} />
           </div>
           <TransitionText afterSection="cultural" />
 

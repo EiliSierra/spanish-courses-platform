@@ -68,11 +68,11 @@ export default function DialectDecoderL71({ onComplete }: { onComplete?: () => v
     return (
       <section id="dialect-decoder">
         <h2 className="text-2xl font-bold font-[family-name:var(--font-inter)] mb-2">Dialect Decoder</h2>
-        <p className="text-gray-400 mb-4">Read each phrase and guess which country or region it comes from. Can you decode the dialect?</p>
-        <div className="bg-gray-800 rounded-xl border border-gray-700 p-8 text-center">
+        <p className="text-gray-500 dark:text-gray-400 mb-4">Read each phrase and guess which country or region it comes from. Can you decode the dialect?</p>
+        <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-8 text-center">
           <div className="text-5xl mb-4">&#127758;</div>
-          <p className="text-gray-400 mb-2">{totalRounds} phrases. Identify the country of origin from the slang and expressions used.</p>
-          <p className="text-sm text-gray-400 mb-6">20 seconds per phrase.</p>
+          <p className="text-gray-500 dark:text-gray-400 mb-2">{totalRounds} phrases. Identify the country of origin from the slang and expressions used.</p>
+          <p className="text-sm text-gray-500 dark:text-gray-400 mb-6">20 seconds per phrase.</p>
           <button onClick={startGame} className="px-8 py-3 bg-gradient-to-r from-teal-500 to-emerald-500 text-white rounded-xl font-bold text-lg hover:from-teal-600 hover:to-emerald-600 transition-all shadow-lg hover:shadow-xl">
             Start Decoding
           </button>
@@ -87,14 +87,14 @@ export default function DialectDecoderL71({ onComplete }: { onComplete?: () => v
     return (
       <section id="dialect-decoder">
         <h2 className="text-2xl font-bold font-[family-name:var(--font-inter)] mb-2">Dialect Decoder</h2>
-        <div className="bg-gray-800 rounded-xl border border-gray-700 p-8 text-center">
+        <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-8 text-center">
           <div className="text-4xl mb-2">{'\u2b50'.repeat(stars)}{'\u2606'.repeat(3 - stars)}</div>
           <div className="text-4xl font-bold text-teal-600 mb-1">{score}/{totalRounds}</div>
-          <p className="text-gray-400 mb-4">{pct >= 80 ? 'You\'re a true dialect detective!' : pct >= 50 ? 'Good ear! Keep exploring regional varieties.' : 'Keep listening — every dialect has unique markers!'}</p>
-          <div className="bg-teal-950 rounded-xl p-4 mb-4 text-left space-y-2">
+          <p className="text-gray-500 dark:text-gray-400 mb-4">{pct >= 80 ? 'You\'re a true dialect detective!' : pct >= 50 ? 'Good ear! Keep exploring regional varieties.' : 'Keep listening — every dialect has unique markers!'}</p>
+          <div className="bg-teal-50 dark:bg-teal-950 rounded-xl p-4 mb-4 text-left space-y-2">
             <p className="text-xs font-semibold text-teal-600 uppercase mb-2">Your Results:</p>
             {answers.map((a, i) => (
-              <div key={i} className={`text-sm p-2 rounded-lg ${a.correct ? 'bg-green-950 text-green-200' : 'bg-red-950 text-red-200'}`}>
+              <div key={i} className={`text-sm p-2 rounded-lg ${a.correct ? 'bg-green-50 dark:bg-green-950 text-green-800 dark:text-green-200' : 'bg-red-50 dark:bg-red-950 text-red-800 dark:text-red-200'}`}>
                 <p className="font-medium">{a.phrase}</p>
                 {!a.correct && <p className="text-xs mt-1">Your answer: {a.chosen} — Correct: <span className="font-semibold">{a.answer}</span></p>}
               </div>
@@ -112,20 +112,20 @@ export default function DialectDecoderL71({ onComplete }: { onComplete?: () => v
     <section id="dialect-decoder">
       <h2 className="text-2xl font-bold font-[family-name:var(--font-inter)] mb-2">Dialect Decoder</h2>
       <div className="flex justify-between text-sm mb-2">
-        <span className="text-gray-400">Phrase {round + 1} of {totalRounds}</span>
+        <span className="text-gray-500 dark:text-gray-400">Phrase {round + 1} of {totalRounds}</span>
         <span className="font-semibold text-teal-600">Score: {score}</span>
       </div>
       <div className="h-2 bg-gray-200 rounded-full overflow-hidden mb-4">
         <div className={`h-full rounded-full transition-all duration-100 ${timerColor}`} style={{ width: `${timeLeft}%` }} />
       </div>
 
-      <div className="bg-teal-950 border border-teal-800 rounded-xl p-5 mb-3">
-        <p className="text-lg font-bold text-gray-200 text-center mb-1">&ldquo;{challenge.phrase}&rdquo;</p>
-        <p className="text-sm text-gray-400 text-center italic">{challenge.english}</p>
+      <div className="bg-teal-50 dark:bg-teal-950 border border-teal-200 dark:border-teal-800 rounded-xl p-5 mb-3">
+        <p className="text-lg font-bold text-gray-800 dark:text-gray-200 text-center mb-1">&ldquo;{challenge.phrase}&rdquo;</p>
+        <p className="text-sm text-gray-500 dark:text-gray-400 text-center italic">{challenge.english}</p>
       </div>
 
-      <div className="bg-emerald-950 border border-emerald-800 rounded-xl p-4 mb-5">
-        <p className="text-sm font-medium text-emerald-200 text-center">Which country or region does this phrase come from?</p>
+      <div className="bg-emerald-50 dark:bg-emerald-950 border border-emerald-200 dark:border-emerald-800 rounded-xl p-4 mb-5">
+        <p className="text-sm font-medium text-emerald-800 dark:text-emerald-200 text-center">Which country or region does this phrase come from?</p>
       </div>
 
       <div className="grid grid-cols-2 gap-3">
@@ -136,14 +136,14 @@ export default function DialectDecoderL71({ onComplete }: { onComplete?: () => v
           return (
             <button key={opt} onClick={() => handleSelect(opt)} disabled={!!feedback}
               className={`px-4 py-4 rounded-xl border-2 font-medium text-sm transition-all text-center ${
-                show ? isCorrect ? 'border-green-400 bg-green-950 text-green-200' : isSelected && !isCorrect ? 'border-red-700 bg-red-950 text-red-700' : 'border-gray-700 opacity-40'
-                  : 'border-gray-700 hover:border-teal-400 hover:bg-teal-950/50 cursor-pointer'
+                show ? isCorrect ? 'border-green-400 bg-green-50 dark:bg-green-950 text-green-800 dark:text-green-200' : isSelected && !isCorrect ? 'border-red-400 bg-red-50 dark:bg-red-950 text-red-700 dark:text-red-300' : 'border-gray-200 dark:border-gray-700 opacity-40'
+                  : 'border-gray-200 dark:border-gray-700 hover:border-teal-400 hover:bg-teal-50 dark:hover:bg-teal-950/50 cursor-pointer text-gray-700 dark:text-gray-200'
               }`}>{opt}</button>
           )
         })}
       </div>
       {feedback && (
-        <div className={`text-center text-sm font-semibold p-3 rounded-lg mt-4 ${feedback.correct ? 'bg-green-950 text-green-200' : 'bg-red-950 text-red-200'}`}>
+        <div className={`text-center text-sm font-semibold p-3 rounded-lg mt-4 ${feedback.correct ? 'bg-green-50 dark:bg-green-950 text-green-800 dark:text-green-200' : 'bg-red-50 dark:bg-red-950 text-red-800 dark:text-red-200'}`}>
           {feedback.correct ? 'Correct country!' : `Correct: ${challenge.correctCountry}`}
         </div>
       )}

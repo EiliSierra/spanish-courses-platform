@@ -170,11 +170,11 @@ export const L56Data: LessonData = {
   ],
 
   pronunciationChallenges: [
-    { spanish: 'Camarón que se duerme, se lo lleva la corriente', pronunciation: 'kah-mah-ROHN keh seh DWEHR-meh seh loh YEH-bah lah koh-rree-EHN-teh', english: 'You snooze, you lose', audio: 'camaron-que-se-duerme', tip: 'This proverb has a musical rhythm. Practice the natural flow: ca-ma-RÓN que se DUER-me. The double RR in "corriente" needs a strong trill.' },
+    { spanish: 'Camarón que se duerme, se lo lleva la corriente', pronunciation: 'kah-mah-ROHN keh seh DWEHR-meh seh loh YEH-bah lah koh-rree-EHN-teh', english: 'You snooze, you lose', audio: 'camaron-que-se-duerme-se-lo-lleva-la-corriente', tip: 'This proverb has a musical rhythm. Practice the natural flow: ca-ma-RÓN que se DUER-me. The double RR in "corriente" needs a strong trill.' },
     { spanish: 'No tener pelos en la lengua', pronunciation: 'noh teh-NEHR PEH-lohs ehn lah LEHN-gwah', english: 'To not mince words', audio: 'no-tener-pelos-en-la-lengua', tip: 'Watch the "gua" in "lengua" — it\'s LEHN-gwah, not LEHN-gah. The "u" is pronounced.' },
     { spanish: 'Matar dos pájaros de un tiro', pronunciation: 'mah-TAHR dohs PAH-hah-rohs deh oon TEE-roh', english: 'To kill two birds with one stone', audio: 'matar-dos-pajaros-de-un-tiro', tip: 'The "j" in "pájaros" makes the Spanish "h" sound (like English "h" but stronger). PAH-hah-rohs.' },
     { spanish: '¡Qué chévere!', pronunciation: 'keh CHEH-beh-reh', english: 'How cool!', audio: 'que-chevere', tip: 'This Colombian/Venezuelan expression has stress on the first syllable of "chévere": CHEH-beh-reh. The "ch" is like English "ch" in "cheese."' },
-    { spanish: 'A caballo regalado no le mires el diente', pronunciation: 'ah kah-BAH-yoh rreh-gah-LAH-doh noh leh MEE-rehs ehl dee-EHN-teh', english: 'Don\'t look a gift horse in the mouth', audio: 'a-caballo-regalado', tip: 'Long proverb! Break it into chunks: "A caballo regalado" / "no le mires" / "el diente." The double RR in "regalado" needs a trill.' },
+    { spanish: 'A caballo regalado no le mires el diente', pronunciation: 'ah kah-BAH-yoh rreh-gah-LAH-doh noh leh MEE-rehs ehl dee-EHN-teh', english: 'Don\'t look a gift horse in the mouth', audio: 'a-caballo-regalado-no-le-mires-el-diente', tip: 'Long proverb! Break it into chunks: "A caballo regalado" / "no le mires" / "el diente." The double RR in "regalado" needs a trill.' },
     { spanish: '¡Estoy flipando!', pronunciation: 'ehs-TOY flee-PAHN-doh', english: 'I\'m freaking out!', audio: 'estoy-flipando', tip: 'This Spain slang comes from English "flipping out." The "fl" combination is the same as English. Stress on -PAHN-: flee-PAHN-doh.' },
   ],
 

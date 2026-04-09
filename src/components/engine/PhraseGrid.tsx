@@ -4,13 +4,13 @@ import { useCallback, useState, useRef } from 'react'
 import type { PhraseData, PhraseSection } from '@/lib/types/lesson'
 
 const COLOR_MAP: Record<string, { bg: string; border: string; activeBorder: string; text: string; sub: string }> = {
-  orange: { bg: 'bg-orange-950/40', border: 'border-orange-800', activeBorder: 'border-orange-400', text: 'text-orange-200', sub: 'text-orange-300' },
-  amber: { bg: 'bg-amber-950/40', border: 'border-amber-800', activeBorder: 'border-amber-400', text: 'text-amber-200', sub: 'text-amber-300' },
-  blue: { bg: 'bg-blue-950/40', border: 'border-blue-800', activeBorder: 'border-blue-400', text: 'text-blue-200', sub: 'text-blue-300' },
-  rose: { bg: 'bg-rose-950/40', border: 'border-rose-800', activeBorder: 'border-rose-400', text: 'text-rose-200', sub: 'text-rose-300' },
-  purple: { bg: 'bg-purple-950/40', border: 'border-purple-800', activeBorder: 'border-purple-400', text: 'text-purple-200', sub: 'text-purple-300' },
-  emerald: { bg: 'bg-emerald-950/40', border: 'border-emerald-800', activeBorder: 'border-emerald-400', text: 'text-emerald-200', sub: 'text-emerald-300' },
-  teal: { bg: 'bg-teal-950/40', border: 'border-teal-800', activeBorder: 'border-teal-400', text: 'text-teal-200', sub: 'text-teal-300' },
+  orange: { bg: 'bg-orange-50 dark:bg-orange-950/40', border: 'border-orange-200 dark:border-orange-800', activeBorder: 'border-orange-400', text: 'text-orange-800 dark:text-orange-200', sub: 'text-orange-600 dark:text-orange-300' },
+  amber: { bg: 'bg-amber-50 dark:bg-amber-950/40', border: 'border-amber-200 dark:border-amber-800', activeBorder: 'border-amber-400', text: 'text-amber-800 dark:text-amber-200', sub: 'text-amber-600 dark:text-amber-300' },
+  blue: { bg: 'bg-blue-50 dark:bg-blue-950/40', border: 'border-blue-200 dark:border-blue-800', activeBorder: 'border-blue-400', text: 'text-blue-800 dark:text-blue-200', sub: 'text-blue-600 dark:text-blue-300' },
+  rose: { bg: 'bg-rose-50 dark:bg-rose-950/40', border: 'border-rose-200 dark:border-rose-800', activeBorder: 'border-rose-400', text: 'text-rose-800 dark:text-rose-200', sub: 'text-rose-600 dark:text-rose-300' },
+  purple: { bg: 'bg-purple-50 dark:bg-purple-950/40', border: 'border-purple-200 dark:border-purple-800', activeBorder: 'border-purple-400', text: 'text-purple-800 dark:text-purple-200', sub: 'text-purple-600 dark:text-purple-300' },
+  emerald: { bg: 'bg-emerald-50 dark:bg-emerald-950/40', border: 'border-emerald-200 dark:border-emerald-800', activeBorder: 'border-emerald-400', text: 'text-emerald-800 dark:text-emerald-200', sub: 'text-emerald-600 dark:text-emerald-300' },
+  teal: { bg: 'bg-teal-50 dark:bg-teal-950/40', border: 'border-teal-200 dark:border-teal-800', activeBorder: 'border-teal-400', text: 'text-teal-800 dark:text-teal-200', sub: 'text-teal-600 dark:text-teal-300' },
 }
 
 const DIALECTS = [
@@ -115,13 +115,13 @@ function PhraseCard({ item, color, audioBase, dialect, longForm }: { item: Phras
     <button
       onClick={handleClick}
       className={`flex flex-col ${longForm ? 'items-start text-left' : 'items-center'} p-5 rounded-2xl border transition-all cursor-pointer shadow-sm hover:shadow-lg hover:-translate-y-1 ${
-        active ? `${c.activeBorder} bg-amber-950 shadow-lg scale-105` : `${c.border} ${c.bg}`
+        active ? `${c.activeBorder} bg-amber-100 dark:bg-amber-950 shadow-lg scale-105` : `${c.border} ${c.bg}`
       }`}
     >
       <span className={`${longForm ? 'text-base' : 'text-lg'} font-extrabold ${c.text}`}>{item.spanish}</span>
       <span className={`text-sm font-semibold mt-1 ${c.sub}`}>{item.english}</span>
-      <span className="text-xs text-gray-300 mt-1 italic">{item.pronunciation}</span>
-      <svg className="mt-2 text-gray-300" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+      <span className="text-xs text-gray-600 dark:text-gray-300 mt-1 italic">{item.pronunciation}</span>
+      <svg className="mt-2 text-gray-600 dark:text-gray-300" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
         <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z" />
       </svg>
     </button>
@@ -137,7 +137,7 @@ function TabGroup({ tabs, children }: { tabs: string[]; children: React.ReactNod
           {tabs.map((label, i) => (
             <button key={label} onClick={() => setActive(i)}
               className={`px-4 py-2 rounded-lg text-sm font-semibold transition-colors ${
-                i === active ? 'bg-blue-600 text-white' : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
+                i === active ? 'bg-blue-600 text-white' : 'bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:bg-gray-700'
               }`}>
               {label}
             </button>
@@ -162,8 +162,8 @@ function DialectSelector({ selected, onChange }: { selected: string; onChange: (
           title={d.label}
           className={`inline-flex items-center gap-1 px-2 py-1 rounded-lg text-xs font-medium transition-all ${
             selected === d.code
-              ? 'bg-indigo-900 text-indigo-200 ring-1 ring-indigo-500'
-              : 'bg-gray-800 text-gray-400 hover:bg-gray-700'
+              ? 'bg-indigo-600 text-white ring-1 ring-indigo-400'
+              : 'bg-white dark:bg-gray-800 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:bg-gray-700'
           }`}
         >
           <span>{d.flag}</span>
@@ -184,7 +184,7 @@ export default function PhraseGrid({ sections, audioBase }: { sections: PhraseSe
           <div className="flex items-start justify-between gap-4 mb-2 flex-wrap">
             <div>
               <h2 className="text-2xl font-bold font-[family-name:var(--font-inter)]">{section.title}</h2>
-              <p className="text-gray-400 mt-1">{section.description}</p>
+              <p className="text-gray-500 dark:text-gray-400 mt-1">{section.description}</p>
             </div>
           </div>
           <div className="mb-4">

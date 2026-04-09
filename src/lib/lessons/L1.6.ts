@@ -88,12 +88,12 @@ export const L16Data: LessonData = {
     { spanish: 'Somos ___ en mi familia', english: 'We are ___ in my family' },
   ],
   pronunciationChallenges: [
-    { spanish: 'Mi hermano se llama Carlos', pronunciation: 'mee ehr-MAH-noh seh YAH-mah KAR-lohs', english: 'My brother\'s name is Carlos', audio: 'el-hermano', tip: 'Remember: H is silent (L1.1). "Hermano" = ehr-MAH-noh, not "her-MAH-noh."' },
-    { spanish: 'Tengo dos hijos', pronunciation: 'TEHN-goh dohs EE-hohs', english: 'I have two children', audio: 'el-hijo', tip: 'The J in "hijos" sounds like English H: EE-hohs. And H is silent!' },
-    { spanish: '¿Cómo se llama tu abuela?', pronunciation: 'KOH-moh seh YAH-mah too ah-BWEH-lah', english: 'What is your grandmother\'s name?', audio: 'la-abuela', tip: '"Se llama" from L1.2! LL = "Y" sound in most Latin America.' },
-    { spanish: 'Nuestro primo vive en México', pronunciation: 'NWEHS-troh PREE-moh BEE-beh ehn MEH-hee-koh', english: 'Our cousin lives in Mexico', audio: 'el-primo', tip: '"Nuestro" starts with NW — press lips together. V in "vive" sounds like B.' },
-    { spanish: 'Mi tía tiene cincuenta años', pronunciation: 'mee TEE-ah tee-EH-neh seen-KWEHN-tah AH-nyohs', english: 'My aunt is fifty years old', audio: 'la-tia', tip: '"Tiene ___ años" from L1.3! "Cincuenta" = seen-KWEHN-tah.' },
-    { spanish: 'Sus abuelos son de Colombia', pronunciation: 'soos ah-BWEH-lohs sohn deh koh-LOHM-bee-ah', english: 'Their grandparents are from Colombia', audio: 'el-abuelo', tip: '"Sus" = their/his/her (context tells which). "Son de" = they are from (L1.2).' },
+    { spanish: 'Mi hermano se llama Carlos', pronunciation: 'mee ehr-MAH-noh seh YAH-mah KAR-lohs', english: 'My brother\'s name is Carlos', audio: 'mi-hermano-se-llama-carlos', tip: 'Remember: H is silent (L1.1). "Hermano" = ehr-MAH-noh, not "her-MAH-noh."' },
+    { spanish: 'Tengo dos hijos', pronunciation: 'TEHN-goh dohs EE-hohs', english: 'I have two children', audio: 'tengo-dos-hijos', tip: 'The J in "hijos" sounds like English H: EE-hohs. And H is silent!' },
+    { spanish: '¿Cómo se llama tu abuela?', pronunciation: 'KOH-moh seh YAH-mah too ah-BWEH-lah', english: 'What is your grandmother\'s name?', audio: 'como-se-llama-tu-abuela', tip: '"Se llama" from L1.2! LL = "Y" sound in most Latin America.' },
+    { spanish: 'Nuestro primo vive en México', pronunciation: 'NWEHS-troh PREE-moh BEE-beh ehn MEH-hee-koh', english: 'Our cousin lives in Mexico', audio: 'nuestro-primo-vive-en-mexico', tip: '"Nuestro" starts with NW — press lips together. V in "vive" sounds like B.' },
+    { spanish: 'Mi tía tiene cincuenta años', pronunciation: 'mee TEE-ah tee-EH-neh seen-KWEHN-tah AH-nyohs', english: 'My aunt is fifty years old', audio: 'mi-tia-tiene-cincuenta-anos', tip: '"Tiene ___ años" from L1.3! "Cincuenta" = seen-KWEHN-tah.' },
+    { spanish: 'Sus abuelos son de Colombia', pronunciation: 'soos ah-BWEH-lohs sohn deh koh-LOHM-bee-ah', english: 'Their grandparents are from Colombia', audio: 'sus-abuelos-son-de-colombia', tip: '"Sus" = their/his/her (context tells which). "Son de" = they are from (L1.2).' },
   ],
   objectives: [
     { icon: '👨‍👩‍👧‍👦', title: 'Name Family Members', desc: 'Learn words for parents, siblings, grandparents, aunts, uncles, and cousins' },

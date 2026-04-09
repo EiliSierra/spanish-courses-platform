@@ -115,9 +115,9 @@ export default function FinalExam({ questions, totalQuestions, passingScore, tit
         <div className="text-6xl mb-4">{badgeEmoji}</div>
         <h1 className="text-3xl font-bold mb-2">{title}</h1>
         <p className="text-lg text-gray-500 mb-6">{subtitle}</p>
-        <div className="bg-indigo-950 border border-indigo-800 rounded-xl p-6 mb-8 text-left">
-          <p className="text-gray-300 mb-4">{description}</p>
-          <ul className="space-y-2 text-sm text-gray-400">
+        <div className="bg-indigo-50 dark:bg-indigo-950 border border-indigo-200 dark:border-indigo-800 rounded-xl p-6 mb-8 text-left">
+          <p className="text-gray-600 dark:text-gray-300 mb-4">{description}</p>
+          <ul className="space-y-2 text-sm text-gray-500 dark:text-gray-400">
             <li className="flex items-center gap-2"><span className="text-indigo-500">📝</span> {totalQuestions} questions from all 8 lessons</li>
             <li className="flex items-center gap-2"><span className="text-indigo-500">🎯</span> {passingScore}% to pass ({Math.ceil(totalQuestions * passingScore / 100)}/{totalQuestions} correct)</li>
             <li className="flex items-center gap-2"><span className="text-indigo-500">📊</span> Feedback shown at the end (not per question)</li>
@@ -132,7 +132,7 @@ export default function FinalExam({ questions, totalQuestions, passingScore, tit
           Start Exam
         </button>
         <div className="mt-6">
-          <Link href="/courses" className="text-sm text-gray-400 hover:text-gray-400">← Back to courses</Link>
+          <Link href="/courses" className="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-500 dark:text-gray-400">← Back to courses</Link>
         </div>
       </div>
     )
@@ -147,13 +147,13 @@ export default function FinalExam({ questions, totalQuestions, passingScore, tit
           <h1 className="text-3xl font-bold mb-2">
             {results.passed ? '¡Felicidades!' : 'Keep Practicing!'}
           </h1>
-          <p className="text-xl text-gray-400">
+          <p className="text-xl text-gray-500 dark:text-gray-400">
             You scored <strong className={results.passed ? 'text-green-600' : 'text-red-500'}>{results.correct}/{results.total}</strong> ({results.pct}%)
           </p>
           {results.passed && (
             <div className="mt-4 inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-amber-100 to-yellow-100 border border-amber-300 rounded-full">
               <span className="text-2xl">{badgeEmoji}</span>
-              <span className="font-bold text-amber-200">{badgeName}</span>
+              <span className="font-bold text-amber-800 dark:text-amber-800 dark:text-amber-200">{badgeName}</span>
             </div>
           )}
           {!results.passed && (
@@ -165,11 +165,11 @@ export default function FinalExam({ questions, totalQuestions, passingScore, tit
         <h2 className="text-xl font-bold mb-4">Review Your Answers</h2>
         <div className="space-y-3 mb-8">
           {results.details.map((d, i) => (
-            <div key={i} className={`p-4 rounded-xl border ${d.correct ? 'bg-green-950 border-green-200' : 'bg-red-950 border-red-200'}`}>
+            <div key={i} className={`p-4 rounded-xl border ${d.correct ? 'bg-green-50 dark:bg-green-950 border-green-200 dark:border-green-800' : 'bg-red-50 dark:bg-red-950 border-red-200 dark:border-red-800'}`}>
               <div className="flex items-start justify-between gap-2">
                 <div className="flex-1">
-                  <p className="font-medium text-gray-200 text-sm">
-                    <span className="text-gray-400 mr-1">Q{i + 1}.</span>
+                  <p className="font-medium text-gray-700 dark:text-gray-200 text-sm">
+                    <span className="text-gray-500 dark:text-gray-400 mr-1">Q{i + 1}.</span>
                     {d.q.text}
                   </p>
                   <div className="mt-1 text-xs text-gray-500">
@@ -178,7 +178,7 @@ export default function FinalExam({ questions, totalQuestions, passingScore, tit
                   {!d.correct && (
                     <p className="text-sm mt-1">
                       <span className="text-red-600">Your answer: {d.q.type === 'mc' ? d.q.options?.[d.userAnswer as number] : String(d.userAnswer)}</span>
-                      <span className="text-gray-400 mx-1">|</span>
+                      <span className="text-gray-500 dark:text-gray-400 mx-1">|</span>
                       <span className="text-green-700">Correct: {d.q.type === 'mc' ? d.q.options?.[d.q.answer as number] : d.q.type === 'tf' ? (d.q.answer ? 'True' : 'False') : String(d.q.answer)}</span>
                     </p>
                   )}
@@ -198,7 +198,7 @@ export default function FinalExam({ questions, totalQuestions, passingScore, tit
           >
             {results.passed ? 'Retake Exam' : 'Try Again'}
           </button>
-          <Link href="/courses" className="px-6 py-3 bg-gray-800 text-gray-300 rounded-xl font-semibold hover:bg-gray-200 transition-colors">
+          <Link href="/courses" className="px-6 py-3 bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 rounded-xl font-semibold hover:bg-gray-200 transition-colors">
             Back to Courses
           </Link>
         </div>
@@ -216,7 +216,7 @@ export default function FinalExam({ questions, totalQuestions, passingScore, tit
     <div className="max-w-2xl mx-auto px-4 py-8">
       {/* Header */}
       <div className="flex items-center justify-between mb-2">
-        <h2 className="text-lg font-bold text-gray-200">Level 1 Final Exam</h2>
+        <h2 className="text-lg font-bold text-gray-700 dark:text-gray-200">Level 1 Final Exam</h2>
         <span className="text-sm text-gray-500">{totalAnswered}/{totalQuestions} answered</span>
       </div>
 
@@ -226,15 +226,15 @@ export default function FinalExam({ questions, totalQuestions, passingScore, tit
       </div>
 
       {/* Question Card */}
-      <div className="bg-gray-800 border border-gray-700 rounded-2xl shadow-sm p-6 mb-6">
+      <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl shadow-sm p-6 mb-6">
         <div className="flex items-center gap-2 mb-4">
           <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-indigo-100 text-indigo-700 text-sm font-bold">
             {currentQ + 1}
           </span>
-          <span className="text-xs text-gray-400">{question.fromLesson} — {question.topic}</span>
+          <span className="text-xs text-gray-500 dark:text-gray-400">{question.fromLesson} — {question.topic}</span>
         </div>
 
-        <p className="text-lg font-medium text-gray-100 mb-5">{question.text}</p>
+        <p className="text-lg font-medium text-gray-900 dark:text-gray-100 mb-5">{question.text}</p>
 
         {/* MC Options */}
         {question.type === 'mc' && question.options && (
@@ -245,11 +245,11 @@ export default function FinalExam({ questions, totalQuestions, passingScore, tit
                 onClick={() => selectAnswer(i)}
                 className={`w-full text-left px-4 py-3 rounded-xl border transition-all text-sm ${
                   currentAnswer === i
-                    ? 'border-indigo-500 bg-indigo-950 ring-2 ring-indigo-300 font-medium'
-                    : 'border-gray-700 hover:border-indigo-300 hover:bg-indigo-950/30'
+                    ? 'border-indigo-500 bg-indigo-50 dark:bg-indigo-950 ring-2 ring-indigo-300 font-medium'
+                    : 'border-gray-200 dark:border-gray-700 hover:border-indigo-300 hover:bg-indigo-950/30'
                 }`}
               >
-                <span className="text-gray-400 mr-2">{String.fromCharCode(65 + i)}.</span>
+                <span className="text-gray-500 dark:text-gray-400 mr-2">{String.fromCharCode(65 + i)}.</span>
                 {opt}
               </button>
             ))}
@@ -265,8 +265,8 @@ export default function FinalExam({ questions, totalQuestions, passingScore, tit
                 onClick={() => selectAnswer(val)}
                 className={`flex-1 py-3 rounded-xl border font-medium transition-all ${
                   currentAnswer === val
-                    ? 'border-indigo-500 bg-indigo-950 ring-2 ring-indigo-300'
-                    : 'border-gray-700 hover:border-indigo-300'
+                    ? 'border-indigo-500 bg-indigo-50 dark:bg-indigo-950 ring-2 ring-indigo-300'
+                    : 'border-gray-200 dark:border-gray-700 hover:border-indigo-300'
                 }`}
               >
                 {val ? 'True' : 'False'}
@@ -286,7 +286,7 @@ export default function FinalExam({ questions, totalQuestions, passingScore, tit
                 selectAnswer(e.target.value)
               }}
               placeholder="Type your answer..."
-              className="w-full px-4 py-3 rounded-xl border border-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-300 focus:border-indigo-400 text-lg"
+              className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-300 focus:border-indigo-400 text-lg"
               autoComplete="off"
             />
           </div>
@@ -298,7 +298,7 @@ export default function FinalExam({ questions, totalQuestions, passingScore, tit
         <button
           onClick={prevQuestion}
           disabled={currentQ === 0}
-          className="px-4 py-2 text-sm font-medium text-gray-400 hover:text-gray-100 disabled:opacity-30 disabled:cursor-not-allowed"
+          className="px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:text-gray-100 disabled:opacity-30 disabled:cursor-not-allowed"
         >
           ← Previous
         </button>

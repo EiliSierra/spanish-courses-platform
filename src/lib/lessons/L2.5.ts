@@ -202,12 +202,12 @@ export const L25Data: LessonData = {
   ],
 
   pronunciationChallenges: [
-    { spanish: '¿Dónde está la puerta B12?', pronunciation: 'DOHN-deh ehs-TAH lah PWEHR-tah beh DOH-seh', english: 'Where is gate B12?', audio: 'donde-esta-la-puerta-cinco', tip: '"Puerta" has the UE diphthong: PWEHR-tah. Gate numbers use letters + numbers.' },
-    { spanish: 'Mi vuelo sale a las tres', pronunciation: 'mee BWEH-loh SAH-leh ah lahs trehs', english: 'My flight leaves at three', audio: 'a-que-hora-sale-el-vuelo', tip: '"Vuelo" has the UE diphthong: BWEH-loh. "Sale" = it leaves (irregular salir).' },
-    { spanish: 'Quiero facturar dos maletas', pronunciation: 'kee-EH-roh fahk-too-RAHR dohs mah-LEH-tahs', english: 'I want to check two suitcases', audio: 'facturar-el-equipaje', tip: '"Facturar" is the verb for checking luggage. Stress the last syllable: fahk-too-RAHR.' },
-    { spanish: 'El vuelo tiene una escala', pronunciation: 'ehl BWEH-loh tee-EH-neh OO-nah ehs-KAH-lah', english: 'The flight has a layover', audio: 'la-escala', tip: '"Escala" = layover/stopover. "Tiene" from L2.4 — tee-EH-neh.' },
-    { spanish: 'Ida y vuelta a Bogotá', pronunciation: 'EE-dah ee BWEHL-tah ah boh-goh-TAH', english: 'Round trip to Bogotá', audio: 'ida-y-vuelta', tip: '"Ida" = one way, "vuelta" = return. Together = round trip. Both have clean vowels.' },
-    { spanish: 'Perdí mi equipaje de mano', pronunciation: 'pehr-DEE mee eh-kee-PAH-heh deh MAH-noh', english: 'I lost my carry-on', audio: 'el-equipaje-de-mano', tip: '"Perdí" = I lost (past tense). "Equipaje" — the J makes an "H" sound (L2.4).' },
+    { spanish: '¿Dónde está la puerta B12?', pronunciation: 'DOHN-deh ehs-TAH lah PWEHR-tah beh DOH-seh', english: 'Where is gate B12?', audio: 'donde-esta-la-puerta-b12', tip: '"Puerta" has the UE diphthong: PWEHR-tah. Gate numbers use letters + numbers.' },
+    { spanish: 'Mi vuelo sale a las tres', pronunciation: 'mee BWEH-loh SAH-leh ah lahs trehs', english: 'My flight leaves at three', audio: 'mi-vuelo-sale-a-las-tres', tip: '"Vuelo" has the UE diphthong: BWEH-loh. "Sale" = it leaves (irregular salir).' },
+    { spanish: 'Quiero facturar dos maletas', pronunciation: 'kee-EH-roh fahk-too-RAHR dohs mah-LEH-tahs', english: 'I want to check two suitcases', audio: 'quiero-facturar-dos-maletas', tip: '"Facturar" is the verb for checking luggage. Stress the last syllable: fahk-too-RAHR.' },
+    { spanish: 'El vuelo tiene una escala', pronunciation: 'ehl BWEH-loh tee-EH-neh OO-nah ehs-KAH-lah', english: 'The flight has a layover', audio: 'el-vuelo-tiene-una-escala', tip: '"Escala" = layover/stopover. "Tiene" from L2.4 — tee-EH-neh.' },
+    { spanish: 'Ida y vuelta a Bogotá', pronunciation: 'EE-dah ee BWEHL-tah ah boh-goh-TAH', english: 'Round trip to Bogotá', audio: 'ida-y-vuelta-a-bogota', tip: '"Ida" = one way, "vuelta" = return. Together = round trip. Both have clean vowels.' },
+    { spanish: 'Perdí mi equipaje de mano', pronunciation: 'pehr-DEE mee eh-kee-PAH-heh deh MAH-noh', english: 'I lost my carry-on', audio: 'perdi-mi-equipaje-de-mano', tip: '"Perdí" = I lost (past tense). "Equipaje" — the J makes an "H" sound (L2.4).' },
   ],
 
   sections: [

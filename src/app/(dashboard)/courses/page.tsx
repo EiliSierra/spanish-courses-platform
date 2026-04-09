@@ -111,7 +111,7 @@ export default function CoursesPage() {
     <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10">
       <div className="mb-8">
         <h1 className="text-3xl font-bold font-[family-name:var(--font-inter)]">Level 1 — Foundations</h1>
-        <p className="text-gray-400 mt-1">8 lessons to build your Spanish base</p>
+        <p className="text-gray-500 dark:text-gray-400 mt-1">8 lessons to build your Spanish base</p>
       </div>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -119,21 +119,21 @@ export default function CoursesPage() {
           <div key={lesson.id} className="relative">
             {lesson.available ? (
               <Link href={`/courses/${lesson.id}`} className="block group">
-                <div className="bg-gray-800 rounded-2xl border border-gray-700 p-6 shadow-sm hover:shadow-md hover:border-blue-300 transition-all">
+                <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-6 shadow-sm hover:shadow-md hover:border-blue-300 transition-all">
                   <div className="text-xs font-semibold text-blue-600 mb-2">{lesson.id}</div>
                   <h3 className="font-bold text-lg font-[family-name:var(--font-inter)] group-hover:text-blue-700 transition-colors">
                     {lesson.title}
                   </h3>
-                  <p className="text-gray-400 text-sm mt-1">{lesson.subtitle}</p>
+                  <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">{lesson.subtitle}</p>
                 </div>
               </Link>
             ) : (
-              <div className="bg-gray-800/50 rounded-2xl border border-gray-700 p-6 opacity-60 cursor-not-allowed">
-                <div className="text-xs font-semibold text-gray-400 mb-2">{lesson.id}</div>
+              <div className="bg-gray-100 dark:bg-gray-800/50 rounded-2xl border border-gray-200 dark:border-gray-700 p-6 opacity-60 cursor-not-allowed">
+                <div className="text-xs font-semibold text-gray-500 dark:text-gray-400 mb-2">{lesson.id}</div>
                 <h3 className="font-bold text-lg font-[family-name:var(--font-inter)] text-gray-500">
                   {lesson.title}
                 </h3>
-                <p className="text-gray-400 text-sm mt-1">{lesson.subtitle}</p>
+                <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">{lesson.subtitle}</p>
                 <span className="mt-3 inline-block text-xs bg-gray-200 text-gray-500 px-3 py-1 rounded-full">Coming Soon</span>
               </div>
             )}
@@ -144,7 +144,7 @@ export default function CoursesPage() {
       {/* Final Assessment */}
       <div className="mt-10">
         <Link href="/courses/L1.F" className="block group">
-          <div className="bg-gradient-to-r from-indigo-950 to-violet-950 rounded-2xl border-2 border-indigo-800 p-6 shadow-sm hover:shadow-md hover:border-indigo-400 transition-all">
+          <div className="bg-gradient-to-r from-indigo-50 to-violet-50 dark:from-indigo-950 dark:to-violet-950 rounded-2xl border-2 border-indigo-200 dark:border-indigo-800 p-6 shadow-sm hover:shadow-md hover:border-indigo-400 transition-all">
             <div className="flex items-center gap-4">
               <span className="text-4xl">🏆</span>
               <div>
@@ -152,7 +152,7 @@ export default function CoursesPage() {
                 <h3 className="font-bold text-lg font-[family-name:var(--font-inter)] group-hover:text-indigo-700 transition-colors">
                   Level 1 — Final Exam
                 </h3>
-                <p className="text-gray-400 text-sm mt-1">25 questions from all 8 lessons. Score 70% to earn your badge!</p>
+                <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">25 questions from all 8 lessons. Score 70% to earn your badge!</p>
               </div>
             </div>
           </div>
@@ -162,7 +162,7 @@ export default function CoursesPage() {
       {/* Level 2 — Building Blocks */}
       <div className="mt-16 mb-8">
         <h1 className="text-3xl font-bold font-[family-name:var(--font-inter)]">Level 2 — Building Blocks</h1>
-        <p className="text-gray-400 mt-1">8 lessons to expand your Spanish abilities</p>
+        <p className="text-gray-500 dark:text-gray-400 mt-1">8 lessons to expand your Spanish abilities</p>
       </div>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -170,21 +170,21 @@ export default function CoursesPage() {
           <div key={lesson.id} className="relative">
             {lesson.available ? (
               <Link href={`/courses/${lesson.id}`} className="block group">
-                <div className="bg-gray-800 rounded-2xl border border-gray-700 p-6 shadow-sm hover:shadow-md hover:border-green-300 transition-all">
+                <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-6 shadow-sm hover:shadow-md hover:border-green-300 transition-all">
                   <div className="text-xs font-semibold text-green-600 mb-2">{lesson.id}</div>
                   <h3 className="font-bold text-lg font-[family-name:var(--font-inter)] group-hover:text-green-700 transition-colors">
                     {lesson.title}
                   </h3>
-                  <p className="text-gray-400 text-sm mt-1">{lesson.subtitle}</p>
+                  <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">{lesson.subtitle}</p>
                 </div>
               </Link>
             ) : (
-              <div className="bg-gray-800/50 rounded-2xl border border-gray-700 p-6 opacity-60 cursor-not-allowed">
-                <div className="text-xs font-semibold text-gray-400 mb-2">{lesson.id}</div>
+              <div className="bg-gray-100 dark:bg-gray-800/50 rounded-2xl border border-gray-200 dark:border-gray-700 p-6 opacity-60 cursor-not-allowed">
+                <div className="text-xs font-semibold text-gray-500 dark:text-gray-400 mb-2">{lesson.id}</div>
                 <h3 className="font-bold text-lg font-[family-name:var(--font-inter)] text-gray-500">
                   {lesson.title}
                 </h3>
-                <p className="text-gray-400 text-sm mt-1">{lesson.subtitle}</p>
+                <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">{lesson.subtitle}</p>
                 <span className="mt-3 inline-block text-xs bg-gray-200 text-gray-500 px-3 py-1 rounded-full">Coming Soon</span>
               </div>
             )}
@@ -203,7 +203,7 @@ export default function CoursesPage() {
                 <h3 className="font-bold text-lg font-[family-name:var(--font-inter)] group-hover:text-green-700 transition-colors">
                   Level 2 — Final Exam
                 </h3>
-                <p className="text-gray-400 text-sm mt-1">25 questions from all 8 lessons. Score 70% to earn your badge!</p>
+                <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">25 questions from all 8 lessons. Score 70% to earn your badge!</p>
               </div>
             </div>
           </div>
@@ -213,7 +213,7 @@ export default function CoursesPage() {
       {/* Level 3 — Intermediate Spanish */}
       <div className="mt-16 mb-8">
         <h1 className="text-3xl font-bold font-[family-name:var(--font-inter)]">Level 3 — Intermediate Spanish</h1>
-        <p className="text-gray-400 mt-1">8 lessons to reach conversational fluency</p>
+        <p className="text-gray-500 dark:text-gray-400 mt-1">8 lessons to reach conversational fluency</p>
       </div>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -221,21 +221,21 @@ export default function CoursesPage() {
           <div key={lesson.id} className="relative">
             {lesson.available ? (
               <Link href={`/courses/${lesson.id}`} className="block group">
-                <div className="bg-gray-800 rounded-2xl border border-gray-700 p-6 shadow-sm hover:shadow-md hover:border-amber-300 transition-all">
+                <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-6 shadow-sm hover:shadow-md hover:border-amber-300 transition-all">
                   <div className="text-xs font-semibold text-amber-600 mb-2">{lesson.id}</div>
                   <h3 className="font-bold text-lg font-[family-name:var(--font-inter)] group-hover:text-amber-700 transition-colors">
                     {lesson.title}
                   </h3>
-                  <p className="text-gray-400 text-sm mt-1">{lesson.subtitle}</p>
+                  <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">{lesson.subtitle}</p>
                 </div>
               </Link>
             ) : (
-              <div className="bg-gray-800/50 rounded-2xl border border-gray-700 p-6 opacity-60 cursor-not-allowed">
-                <div className="text-xs font-semibold text-gray-400 mb-2">{lesson.id}</div>
+              <div className="bg-gray-100 dark:bg-gray-800/50 rounded-2xl border border-gray-200 dark:border-gray-700 p-6 opacity-60 cursor-not-allowed">
+                <div className="text-xs font-semibold text-gray-500 dark:text-gray-400 mb-2">{lesson.id}</div>
                 <h3 className="font-bold text-lg font-[family-name:var(--font-inter)] text-gray-500">
                   {lesson.title}
                 </h3>
-                <p className="text-gray-400 text-sm mt-1">{lesson.subtitle}</p>
+                <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">{lesson.subtitle}</p>
                 <span className="mt-3 inline-block text-xs bg-gray-200 text-gray-500 px-3 py-1 rounded-full">Coming Soon</span>
               </div>
             )}
@@ -254,7 +254,7 @@ export default function CoursesPage() {
                 <h3 className="font-bold text-lg font-[family-name:var(--font-inter)] group-hover:text-amber-700 transition-colors">
                   Level 3 — Final Exam
                 </h3>
-                <p className="text-gray-400 text-sm mt-1">25 questions from all 8 lessons. Score 70% to earn your badge!</p>
+                <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">25 questions from all 8 lessons. Score 70% to earn your badge!</p>
               </div>
             </div>
           </div>
@@ -264,7 +264,7 @@ export default function CoursesPage() {
       {/* Level 4 — Upper-Intermediate */}
       <div className="mt-16 mb-8">
         <h1 className="text-3xl font-bold font-[family-name:var(--font-inter)]">Level 4 — Upper-Intermediate</h1>
-        <p className="text-gray-400 mt-1">8 lessons to master complex Spanish grammar and real-world topics</p>
+        <p className="text-gray-500 dark:text-gray-400 mt-1">8 lessons to master complex Spanish grammar and real-world topics</p>
       </div>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -272,21 +272,21 @@ export default function CoursesPage() {
           <div key={lesson.id} className="relative">
             {lesson.available ? (
               <Link href={`/courses/${lesson.id}`} className="block group">
-                <div className="bg-gray-800 rounded-2xl border border-gray-700 p-6 shadow-sm hover:shadow-md hover:border-purple-300 transition-all">
+                <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-6 shadow-sm hover:shadow-md hover:border-purple-300 transition-all">
                   <div className="text-xs font-semibold text-purple-600 mb-2">{lesson.id}</div>
                   <h3 className="font-bold text-lg font-[family-name:var(--font-inter)] group-hover:text-purple-700 transition-colors">
                     {lesson.title}
                   </h3>
-                  <p className="text-gray-400 text-sm mt-1">{lesson.subtitle}</p>
+                  <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">{lesson.subtitle}</p>
                 </div>
               </Link>
             ) : (
-              <div className="bg-gray-800/50 rounded-2xl border border-gray-700 p-6 opacity-60 cursor-not-allowed">
-                <div className="text-xs font-semibold text-gray-400 mb-2">{lesson.id}</div>
+              <div className="bg-gray-100 dark:bg-gray-800/50 rounded-2xl border border-gray-200 dark:border-gray-700 p-6 opacity-60 cursor-not-allowed">
+                <div className="text-xs font-semibold text-gray-500 dark:text-gray-400 mb-2">{lesson.id}</div>
                 <h3 className="font-bold text-lg font-[family-name:var(--font-inter)] text-gray-500">
                   {lesson.title}
                 </h3>
-                <p className="text-gray-400 text-sm mt-1">{lesson.subtitle}</p>
+                <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">{lesson.subtitle}</p>
                 <span className="mt-3 inline-block text-xs bg-gray-200 text-gray-500 px-3 py-1 rounded-full">Coming Soon</span>
               </div>
             )}
@@ -297,7 +297,7 @@ export default function CoursesPage() {
       {/* Level 4 Final Assessment */}
       <div className="mt-10">
         <Link href="/courses/L4.F" className="block group">
-          <div className="bg-gradient-to-r from-purple-950 to-indigo-950 rounded-2xl border-2 border-purple-800 p-6 shadow-sm hover:shadow-md hover:border-purple-400 transition-all">
+          <div className="bg-gradient-to-r from-purple-50 to-indigo-50 dark:from-purple-950 dark:to-indigo-950 rounded-2xl border-2 border-purple-200 dark:border-purple-800 p-6 shadow-sm hover:shadow-md hover:border-purple-400 transition-all">
             <div className="flex items-center gap-4">
               <span className="text-4xl">👑</span>
               <div>
@@ -305,7 +305,7 @@ export default function CoursesPage() {
                 <h3 className="font-bold text-lg font-[family-name:var(--font-inter)] group-hover:text-purple-700 transition-colors">
                   Level 4 — Final Exam
                 </h3>
-                <p className="text-gray-400 text-sm mt-1">25 questions from all 8 lessons. Score 70% to earn your badge!</p>
+                <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">25 questions from all 8 lessons. Score 70% to earn your badge!</p>
               </div>
             </div>
           </div>
@@ -315,7 +315,7 @@ export default function CoursesPage() {
       {/* Level 5 — Advanced Spanish */}
       <div className="mt-16 mb-8">
         <h1 className="text-3xl font-bold font-[family-name:var(--font-inter)]">Level 5 — Advanced Spanish</h1>
-        <p className="text-gray-400 mt-1">8 lessons to master complex grammar and real-world fluency</p>
+        <p className="text-gray-500 dark:text-gray-400 mt-1">8 lessons to master complex grammar and real-world fluency</p>
       </div>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -323,21 +323,21 @@ export default function CoursesPage() {
           <div key={lesson.id} className="relative">
             {lesson.available ? (
               <Link href={`/courses/${lesson.id}`} className="block group">
-                <div className="bg-gray-800 rounded-2xl border border-gray-700 p-6 shadow-sm hover:shadow-md hover:border-rose-300 transition-all">
+                <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-6 shadow-sm hover:shadow-md hover:border-rose-300 transition-all">
                   <div className="text-xs font-semibold text-rose-600 mb-2">{lesson.id}</div>
                   <h3 className="font-bold text-lg font-[family-name:var(--font-inter)] group-hover:text-rose-700 transition-colors">
                     {lesson.title}
                   </h3>
-                  <p className="text-gray-400 text-sm mt-1">{lesson.subtitle}</p>
+                  <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">{lesson.subtitle}</p>
                 </div>
               </Link>
             ) : (
-              <div className="bg-gray-800/50 rounded-2xl border border-gray-700 p-6 opacity-60 cursor-not-allowed">
-                <div className="text-xs font-semibold text-gray-400 mb-2">{lesson.id}</div>
+              <div className="bg-gray-100 dark:bg-gray-800/50 rounded-2xl border border-gray-200 dark:border-gray-700 p-6 opacity-60 cursor-not-allowed">
+                <div className="text-xs font-semibold text-gray-500 dark:text-gray-400 mb-2">{lesson.id}</div>
                 <h3 className="font-bold text-lg font-[family-name:var(--font-inter)] text-gray-500">
                   {lesson.title}
                 </h3>
-                <p className="text-gray-400 text-sm mt-1">{lesson.subtitle}</p>
+                <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">{lesson.subtitle}</p>
                 <span className="mt-3 inline-block text-xs bg-gray-200 text-gray-500 px-3 py-1 rounded-full">Coming Soon</span>
               </div>
             )}
@@ -356,7 +356,7 @@ export default function CoursesPage() {
                 <h3 className="font-bold text-lg font-[family-name:var(--font-inter)] group-hover:text-rose-700 transition-colors">
                   Level 5 — Final Exam
                 </h3>
-                <p className="text-gray-400 text-sm mt-1">25 questions from all 8 lessons. Score 70% to earn your badge!</p>
+                <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">25 questions from all 8 lessons. Score 70% to earn your badge!</p>
               </div>
             </div>
           </div>
@@ -366,7 +366,7 @@ export default function CoursesPage() {
       {/* Level 6 — Mastery Spanish */}
       <div className="mt-16 mb-8">
         <h1 className="text-3xl font-bold font-[family-name:var(--font-inter)]">Level 6 — Mastery Spanish</h1>
-        <p className="text-gray-400 mt-1">8 lessons to achieve full proficiency and cultural mastery</p>
+        <p className="text-gray-500 dark:text-gray-400 mt-1">8 lessons to achieve full proficiency and cultural mastery</p>
       </div>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -374,21 +374,21 @@ export default function CoursesPage() {
           <div key={lesson.id} className="relative">
             {lesson.available ? (
               <Link href={`/courses/${lesson.id}`} className="block group">
-                <div className="bg-gray-800 rounded-2xl border border-gray-700 p-6 shadow-sm hover:shadow-md hover:border-cyan-300 transition-all">
+                <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-6 shadow-sm hover:shadow-md hover:border-cyan-300 transition-all">
                   <div className="text-xs font-semibold text-cyan-600 mb-2">{lesson.id}</div>
                   <h3 className="font-bold text-lg font-[family-name:var(--font-inter)] group-hover:text-cyan-700 transition-colors">
                     {lesson.title}
                   </h3>
-                  <p className="text-gray-400 text-sm mt-1">{lesson.subtitle}</p>
+                  <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">{lesson.subtitle}</p>
                 </div>
               </Link>
             ) : (
-              <div className="bg-gray-800/50 rounded-2xl border border-gray-700 p-6 opacity-60 cursor-not-allowed">
-                <div className="text-xs font-semibold text-gray-400 mb-2">{lesson.id}</div>
+              <div className="bg-gray-100 dark:bg-gray-800/50 rounded-2xl border border-gray-200 dark:border-gray-700 p-6 opacity-60 cursor-not-allowed">
+                <div className="text-xs font-semibold text-gray-500 dark:text-gray-400 mb-2">{lesson.id}</div>
                 <h3 className="font-bold text-lg font-[family-name:var(--font-inter)] text-gray-500">
                   {lesson.title}
                 </h3>
-                <p className="text-gray-400 text-sm mt-1">{lesson.subtitle}</p>
+                <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">{lesson.subtitle}</p>
                 <span className="mt-3 inline-block text-xs bg-gray-200 text-gray-500 px-3 py-1 rounded-full">Coming Soon</span>
               </div>
             )}
@@ -407,7 +407,7 @@ export default function CoursesPage() {
                 <h3 className="font-bold text-lg font-[family-name:var(--font-inter)] group-hover:text-cyan-700 transition-colors">
                   Level 6 — Final Exam
                 </h3>
-                <p className="text-gray-400 text-sm mt-1">25 questions from all 8 lessons. Score 70% to earn your badge!</p>
+                <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">25 questions from all 8 lessons. Score 70% to earn your badge!</p>
               </div>
             </div>
           </div>
@@ -417,7 +417,7 @@ export default function CoursesPage() {
       {/* Level 7 — Native Fluency */}
       <div className="mt-16 mb-8">
         <h1 className="text-3xl font-bold font-[family-name:var(--font-inter)]">Level 7 — Native Fluency</h1>
-        <p className="text-gray-400 mt-1">8 lessons to think, create, and express like a native speaker</p>
+        <p className="text-gray-500 dark:text-gray-400 mt-1">8 lessons to think, create, and express like a native speaker</p>
       </div>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -425,21 +425,21 @@ export default function CoursesPage() {
           <div key={lesson.id} className="relative">
             {lesson.available ? (
               <Link href={`/courses/${lesson.id}`} className="block group">
-                <div className="bg-gray-800 rounded-2xl border border-gray-700 p-6 shadow-sm hover:shadow-md hover:border-teal-300 transition-all">
+                <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-6 shadow-sm hover:shadow-md hover:border-teal-300 transition-all">
                   <div className="text-xs font-semibold text-teal-600 mb-2">{lesson.id}</div>
                   <h3 className="font-bold text-lg font-[family-name:var(--font-inter)] group-hover:text-teal-700 transition-colors">
                     {lesson.title}
                   </h3>
-                  <p className="text-gray-400 text-sm mt-1">{lesson.subtitle}</p>
+                  <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">{lesson.subtitle}</p>
                 </div>
               </Link>
             ) : (
-              <div className="bg-gray-800/50 rounded-2xl border border-gray-700 p-6 opacity-60 cursor-not-allowed">
-                <div className="text-xs font-semibold text-gray-400 mb-2">{lesson.id}</div>
+              <div className="bg-gray-100 dark:bg-gray-800/50 rounded-2xl border border-gray-200 dark:border-gray-700 p-6 opacity-60 cursor-not-allowed">
+                <div className="text-xs font-semibold text-gray-500 dark:text-gray-400 mb-2">{lesson.id}</div>
                 <h3 className="font-bold text-lg font-[family-name:var(--font-inter)] text-gray-500">
                   {lesson.title}
                 </h3>
-                <p className="text-gray-400 text-sm mt-1">{lesson.subtitle}</p>
+                <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">{lesson.subtitle}</p>
                 <span className="mt-3 inline-block text-xs bg-gray-200 text-gray-500 px-3 py-1 rounded-full">Coming Soon</span>
               </div>
             )}
@@ -458,7 +458,7 @@ export default function CoursesPage() {
                 <h3 className="font-bold text-lg font-[family-name:var(--font-inter)] group-hover:text-teal-700 transition-colors">
                   Level 7 — Final Exam
                 </h3>
-                <p className="text-gray-400 text-sm mt-1">25 questions from all 8 lessons. Score 70% to earn your badge!</p>
+                <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">25 questions from all 8 lessons. Score 70% to earn your badge!</p>
               </div>
             </div>
           </div>
@@ -468,7 +468,7 @@ export default function CoursesPage() {
       {/* Level 8 — Specialization */}
       <div className="mt-16 mb-8">
         <h1 className="text-3xl font-bold font-[family-name:var(--font-inter)]">Level 8 — Specialization</h1>
-        <p className="text-gray-400 mt-1">8 lessons mastering real-world professional domains</p>
+        <p className="text-gray-500 dark:text-gray-400 mt-1">8 lessons mastering real-world professional domains</p>
       </div>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -476,21 +476,21 @@ export default function CoursesPage() {
           <div key={lesson.id} className="relative">
             {lesson.available ? (
               <Link href={`/courses/${lesson.id}`} className="block group">
-                <div className="bg-gray-800 rounded-2xl border border-gray-700 p-6 shadow-sm hover:shadow-md hover:border-orange-300 transition-all">
+                <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-6 shadow-sm hover:shadow-md hover:border-orange-300 transition-all">
                   <div className="text-xs font-semibold text-orange-600 mb-2">{lesson.id}</div>
                   <h3 className="font-bold text-lg font-[family-name:var(--font-inter)] group-hover:text-orange-700 transition-colors">
                     {lesson.title}
                   </h3>
-                  <p className="text-gray-400 text-sm mt-1">{lesson.subtitle}</p>
+                  <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">{lesson.subtitle}</p>
                 </div>
               </Link>
             ) : (
-              <div className="bg-gray-800/50 rounded-2xl border border-gray-700 p-6 opacity-60 cursor-not-allowed">
-                <div className="text-xs font-semibold text-gray-400 mb-2">{lesson.id}</div>
+              <div className="bg-gray-100 dark:bg-gray-800/50 rounded-2xl border border-gray-200 dark:border-gray-700 p-6 opacity-60 cursor-not-allowed">
+                <div className="text-xs font-semibold text-gray-500 dark:text-gray-400 mb-2">{lesson.id}</div>
                 <h3 className="font-bold text-lg font-[family-name:var(--font-inter)] text-gray-500">
                   {lesson.title}
                 </h3>
-                <p className="text-gray-400 text-sm mt-1">{lesson.subtitle}</p>
+                <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">{lesson.subtitle}</p>
                 <span className="mt-3 inline-block text-xs bg-gray-200 text-gray-500 px-3 py-1 rounded-full">Coming Soon</span>
               </div>
             )}
@@ -509,7 +509,7 @@ export default function CoursesPage() {
                 <h3 className="font-bold text-lg font-[family-name:var(--font-inter)] group-hover:text-orange-700 transition-colors">
                   Level 8 — Final Exam
                 </h3>
-                <p className="text-gray-400 text-sm mt-1">25 questions from all 8 lessons. Score 70% to earn your badge!</p>
+                <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">25 questions from all 8 lessons. Score 70% to earn your badge!</p>
               </div>
             </div>
           </div>
@@ -519,7 +519,7 @@ export default function CoursesPage() {
       {/* Level 9 — Cultural Immersion */}
       <div className="mt-16 mb-8">
         <h1 className="text-3xl font-bold font-[family-name:var(--font-inter)]">Level 9 — Cultural Immersion</h1>
-        <p className="text-gray-400 mt-1">8 lessons exploring specialized cultural and professional domains</p>
+        <p className="text-gray-500 dark:text-gray-400 mt-1">8 lessons exploring specialized cultural and professional domains</p>
       </div>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -527,21 +527,21 @@ export default function CoursesPage() {
           <div key={lesson.id} className="relative">
             {lesson.available ? (
               <Link href={`/courses/${lesson.id}`} className="block group">
-                <div className="bg-gray-800 rounded-2xl border border-gray-700 p-6 shadow-sm hover:shadow-md hover:border-violet-300 transition-all">
+                <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-6 shadow-sm hover:shadow-md hover:border-violet-300 transition-all">
                   <div className="text-xs font-semibold text-violet-600 mb-2">{lesson.id}</div>
                   <h3 className="font-bold text-lg font-[family-name:var(--font-inter)] group-hover:text-violet-700 transition-colors">
                     {lesson.title}
                   </h3>
-                  <p className="text-gray-400 text-sm mt-1">{lesson.subtitle}</p>
+                  <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">{lesson.subtitle}</p>
                 </div>
               </Link>
             ) : (
-              <div className="bg-gray-800/50 rounded-2xl border border-gray-700 p-6 opacity-60 cursor-not-allowed">
-                <div className="text-xs font-semibold text-gray-400 mb-2">{lesson.id}</div>
+              <div className="bg-gray-100 dark:bg-gray-800/50 rounded-2xl border border-gray-200 dark:border-gray-700 p-6 opacity-60 cursor-not-allowed">
+                <div className="text-xs font-semibold text-gray-500 dark:text-gray-400 mb-2">{lesson.id}</div>
                 <h3 className="font-bold text-lg font-[family-name:var(--font-inter)] text-gray-500">
                   {lesson.title}
                 </h3>
-                <p className="text-gray-400 text-sm mt-1">{lesson.subtitle}</p>
+                <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">{lesson.subtitle}</p>
                 <span className="mt-3 inline-block text-xs bg-gray-200 text-gray-500 px-3 py-1 rounded-full">Coming Soon</span>
               </div>
             )}
@@ -552,7 +552,7 @@ export default function CoursesPage() {
       {/* Level 9 Final Assessment */}
       <div className="mt-10">
         <Link href="/courses/L9.F" className="block group">
-          <div className="bg-gradient-to-r from-violet-950 to-purple-950 rounded-2xl border-2 border-violet-800 p-6 shadow-sm hover:shadow-md hover:border-violet-400 transition-all">
+          <div className="bg-gradient-to-r from-violet-50 to-purple-50 dark:from-violet-950 dark:to-purple-950 rounded-2xl border-2 border-violet-200 dark:border-violet-800 p-6 shadow-sm hover:shadow-md hover:border-violet-400 transition-all">
             <div className="flex items-center gap-4">
               <span className="text-4xl">🎯</span>
               <div>
@@ -560,7 +560,7 @@ export default function CoursesPage() {
                 <h3 className="font-bold text-lg font-[family-name:var(--font-inter)] group-hover:text-violet-700 transition-colors">
                   Level 9 — Final Exam
                 </h3>
-                <p className="text-gray-400 text-sm mt-1">25 questions from all 8 lessons. Score 70% to earn your badge!</p>
+                <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">25 questions from all 8 lessons. Score 70% to earn your badge!</p>
               </div>
             </div>
           </div>
@@ -570,19 +570,19 @@ export default function CoursesPage() {
       {/* Level 10 — Capstone */}
       <div className="mt-16 mb-8">
         <h1 className="text-3xl font-bold font-[family-name:var(--font-inter)]">Level 10 — Capstone</h1>
-        <p className="text-gray-400 mt-1">The final 2 lessons — complete mastery and celebration</p>
+        <p className="text-gray-500 dark:text-gray-400 mt-1">The final 2 lessons — complete mastery and celebration</p>
       </div>
 
       <div className="grid sm:grid-cols-2 gap-6">
         {LEVEL10_LESSONS.map((lesson) => (
           <div key={lesson.id} className="relative">
             <Link href={`/courses/${lesson.id}`} className="block group">
-              <div className="bg-gray-800 rounded-2xl border border-gray-700 p-6 shadow-sm hover:shadow-md hover:border-amber-300 transition-all">
+              <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-6 shadow-sm hover:shadow-md hover:border-amber-300 transition-all">
                 <div className="text-xs font-semibold text-amber-600 mb-2">{lesson.id}</div>
                 <h3 className="font-bold text-lg font-[family-name:var(--font-inter)] group-hover:text-amber-700 transition-colors">
                   {lesson.title}
                 </h3>
-                <p className="text-gray-400 text-sm mt-1">{lesson.subtitle}</p>
+                <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">{lesson.subtitle}</p>
               </div>
             </Link>
           </div>
@@ -600,7 +600,7 @@ export default function CoursesPage() {
                 <h3 className="font-bold text-lg font-[family-name:var(--font-inter)] group-hover:text-amber-700 transition-colors">
                   Level 10 — Ultimate Exam
                 </h3>
-                <p className="text-gray-400 text-sm mt-1">20 questions across all levels. Score 70% to become a Spanish Master!</p>
+                <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">20 questions across all levels. Score 70% to become a Spanish Master!</p>
               </div>
             </div>
           </div>

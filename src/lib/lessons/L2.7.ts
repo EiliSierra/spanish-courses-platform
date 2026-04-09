@@ -144,11 +144,11 @@ export const L27Data: LessonData = {
   ],
 
   pronunciationChallenges: [
-    { spanish: 'Tiene los ojos verdes', pronunciation: 'tee-EH-neh lohs OH-hohs BEHR-dehs', english: 'He/She has green eyes', audio: 'los-ojos-verdes', tip: '"Ojos" — the J sounds like H: OH-hohs. "Verdes" changes to match the plural noun.' },
+    { spanish: 'Tiene los ojos verdes', pronunciation: 'tee-EH-neh lohs OH-hohs BEHR-dehs', english: 'He/She has green eyes', audio: 'tiene-los-ojos-verdes', tip: '"Ojos" — the J sounds like H: OH-hohs. "Verdes" changes to match the plural noun.' },
     { spanish: 'Es simpática y divertida', pronunciation: 'ehs seem-PAH-tee-kah ee dee-behr-TEE-dah', english: 'She is nice and fun', audio: 'es-simpatica-y-divertida', tip: 'Both adjectives end in -A because they describe a woman. For a man: simpático, divertido.' },
-    { spanish: 'Está cansado hoy', pronunciation: 'ehs-TAH kahn-SAH-doh oy', english: 'He is tired today', audio: 'esta-cansado', tip: 'ESTAR for temporary states. "Está cansado" = tired right now. "Es cansado" would be wrong!' },
-    { spanish: 'Tiene el pelo castaño', pronunciation: 'tee-EH-neh ehl PEH-loh kahs-TAH-nyoh', english: 'He/She has brown hair', audio: 'el-pelo-castano', tip: '"Castaño" has the Ñ sound from L1.1: kahs-TAH-nyoh. It specifically means chestnut brown.' },
-    { spanish: '¿Cómo es tu hermano?', pronunciation: 'KOH-moh ehs too ehr-MAH-noh', english: 'What is your brother like?', audio: 'como-es-el', tip: '"¿Cómo es?" asks about permanent traits. "¿Cómo está?" asks about current state/feelings.' },
+    { spanish: 'Está cansado hoy', pronunciation: 'ehs-TAH kahn-SAH-doh oy', english: 'He is tired today', audio: 'esta-cansado-hoy', tip: 'ESTAR for temporary states. "Está cansado" = tired right now. "Es cansado" would be wrong!' },
+    { spanish: 'Tiene el pelo castaño', pronunciation: 'tee-EH-neh ehl PEH-loh kahs-TAH-nyoh', english: 'He/She has brown hair', audio: 'tiene-el-pelo-castano', tip: '"Castaño" has the Ñ sound from L1.1: kahs-TAH-nyoh. It specifically means chestnut brown.' },
+    { spanish: '¿Cómo es tu hermano?', pronunciation: 'KOH-moh ehs too ehr-MAH-noh', english: 'What is your brother like?', audio: 'como-es-tu-hermano', tip: '"¿Cómo es?" asks about permanent traits. "¿Cómo está?" asks about current state/feelings.' },
     { spanish: 'Lleva una camisa azul', pronunciation: 'YEH-bah OO-nah kah-MEE-sah ah-SOOL', english: 'He/She is wearing a blue shirt', audio: 'lleva-una-camisa-azul', tip: '"Llevar" from L2.6! Here it means "to wear." LL = Y: YEH-bah.' },
   ],
 

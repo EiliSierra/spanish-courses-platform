@@ -87,12 +87,12 @@ export const L15Data: LessonData = {
     { spanish: 'Pare aqu\u00ed', english: 'Stop here' },
   ],
   pronunciationChallenges: [
-    { spanish: '\u00bfD\u00f3nde est\u00e1 el hotel?', pronunciation: 'DOHN-deh ehs-TAH ehl oh-TEHL', english: 'Where is the hotel?', audio: 'donde-esta', tip: 'Remember: H is silent (L1.1). "Hotel" = oh-TEHL, not "hoh-TEHL."' },
+    { spanish: '\u00bfD\u00f3nde est\u00e1 el hotel?', pronunciation: 'DOHN-deh ehs-TAH ehl oh-TEHL', english: 'Where is the hotel?', audio: 'donde-esta-el-hotel', tip: 'Remember: H is silent (L1.1). "Hotel" = oh-TEHL, not "hoh-TEHL."' },
     { spanish: 'A la izquierda', pronunciation: 'ah lah ees-kee-EHR-dah', english: 'To the left', audio: 'a-la-izquierda', tip: 'The Z sounds like "s" in Latin America (L1.1). QU = "k" sound.' },
-    { spanish: 'Quiero ir al aeropuerto', pronunciation: 'kee-EH-roh eer ahl ah-eh-roh-PWEHR-toh', english: 'I want to go to the airport', audio: 'quiero-ir-a', tip: '"Quiero" from L1.4! "Aeropuerto" has 5 syllables \u2014 take it slow.' },
-    { spanish: 'Est\u00e1 en la esquina', pronunciation: 'ehs-TAH ehn lah ehs-KEE-nah', english: 'It is on the corner', audio: 'en-la-esquina', tip: 'QU before I = "k" sound (L1.1 rule). "Esquina" = ehs-KEE-nah.' },
-    { spanish: 'Pare aqu\u00ed, por favor', pronunciation: 'PAH-reh ah-KEE pohr fah-BOHR', english: 'Stop here, please', audio: 'pare-aqui', tip: '"Por favor" from L1.2. Stress "ah-KEE" on the last syllable.' },
-    { spanish: '\u00bfCu\u00e1nto cuesta el taxi?', pronunciation: 'KWAHN-toh KWEHS-tah ehl TAHK-see', english: 'How much is the taxi?', audio: 'cuanto-cuesta-taxi', tip: '"\u00bfCu\u00e1nto cuesta?" from L1.4 \u2014 now applied to transportation.' },
+    { spanish: 'Quiero ir al aeropuerto', pronunciation: 'kee-EH-roh eer ahl ah-eh-roh-PWEHR-toh', english: 'I want to go to the airport', audio: 'quiero-ir-al-aeropuerto', tip: '"Quiero" from L1.4! "Aeropuerto" has 5 syllables \u2014 take it slow.' },
+    { spanish: 'Est\u00e1 en la esquina', pronunciation: 'ehs-TAH ehn lah ehs-KEE-nah', english: 'It is on the corner', audio: 'esta-en-la-esquina', tip: 'QU before I = "k" sound (L1.1 rule). "Esquina" = ehs-KEE-nah.' },
+    { spanish: 'Pare aqu\u00ed, por favor', pronunciation: 'PAH-reh ah-KEE pohr fah-BOHR', english: 'Stop here, please', audio: 'pare-aqui-por-favor', tip: '"Por favor" from L1.2. Stress "ah-KEE" on the last syllable.' },
+    { spanish: '\u00bfCu\u00e1nto cuesta el taxi?', pronunciation: 'KWAHN-toh KWEHS-tah ehl TAHK-see', english: 'How much is the taxi?', audio: 'cuanto-cuesta-el-taxi', tip: '"\u00bfCu\u00e1nto cuesta?" from L1.4 \u2014 now applied to transportation.' },
   ],
   objectives: [
     { icon: '\uD83D\uDDFA\uFE0F', title: 'Ask for Directions', desc: 'Ask where places are and understand basic directions' },

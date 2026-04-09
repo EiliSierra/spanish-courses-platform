@@ -68,12 +68,12 @@ export default function MemoryLaneL41({ onComplete }: { onComplete?: () => void 
     return (
       <section id="memory-lane">
         <h2 className="text-2xl font-bold font-[family-name:var(--font-inter)] mb-2">Memory Lane</h2>
-        <p className="text-gray-400 mb-4">Read each sentence and decide: is it Imperfect or Preterite?</p>
-        <div className="bg-gray-800 rounded-xl border border-gray-700 p-8 text-center">
+        <p className="text-gray-500 dark:text-gray-400 mb-4">Read each sentence and decide: is it Imperfect or Preterite?</p>
+        <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-8 text-center">
           <div className="text-5xl mb-4">&#128173;</div>
-          <p className="text-gray-400 mb-2">{totalRounds} memory scenarios. Pick the correct tense for each one.</p>
-          <p className="text-sm text-gray-400 mb-2">Imperfect = habitual, ongoing, background descriptions.</p>
-          <p className="text-sm text-gray-400 mb-6">Preterite = completed, one-time, specific events.</p>
+          <p className="text-gray-500 dark:text-gray-400 mb-2">{totalRounds} memory scenarios. Pick the correct tense for each one.</p>
+          <p className="text-sm text-gray-500 dark:text-gray-400 mb-2">Imperfect = habitual, ongoing, background descriptions.</p>
+          <p className="text-sm text-gray-500 dark:text-gray-400 mb-6">Preterite = completed, one-time, specific events.</p>
           <button onClick={startGame} className="px-8 py-3 bg-gradient-to-r from-purple-500 to-violet-500 text-white rounded-xl font-bold text-lg hover:from-purple-600 hover:to-violet-600 transition-all shadow-lg hover:shadow-xl">
             Start Memory Lane
           </button>
@@ -88,16 +88,16 @@ export default function MemoryLaneL41({ onComplete }: { onComplete?: () => void 
     return (
       <section id="memory-lane">
         <h2 className="text-2xl font-bold font-[family-name:var(--font-inter)] mb-2">Memory Lane</h2>
-        <div className="bg-gray-800 rounded-xl border border-gray-700 p-8 text-center">
+        <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-8 text-center">
           <div className="text-4xl mb-2">{'\u2b50'.repeat(stars)}{'\u2606'.repeat(3 - stars)}</div>
           <div className="text-4xl font-bold text-purple-600 mb-1">{score}/{totalRounds}</div>
-          <p className="text-gray-400 mb-4">{pct >= 80 ? 'Excellent! You really understand the difference!' : pct >= 50 ? 'Good job! Keep practicing the imperfect vs. preterite contrast.' : 'Keep working on distinguishing imperfect from preterite!'}</p>
-          <div className="bg-purple-950 rounded-xl p-4 mb-4 text-left max-h-64 overflow-y-auto">
+          <p className="text-gray-500 dark:text-gray-400 mb-4">{pct >= 80 ? 'Excellent! You really understand the difference!' : pct >= 50 ? 'Good job! Keep practicing the imperfect vs. preterite contrast.' : 'Keep working on distinguishing imperfect from preterite!'}</p>
+          <div className="bg-purple-50 dark:bg-purple-950 rounded-xl p-4 mb-4 text-left max-h-64 overflow-y-auto">
             <p className="text-xs font-semibold text-purple-600 uppercase mb-2">Review:</p>
             {answers.map((a, i) => (
-              <div key={i} className={`text-sm mb-3 p-2 rounded-lg ${a.correct ? 'bg-green-950' : 'bg-red-950'}`}>
-                <p className="font-medium text-gray-200">{a.correct ? '\u2705' : '\u274c'} {a.sentence}</p>
-                <p className="text-gray-400 text-xs mt-1">{a.explanation}</p>
+              <div key={i} className={`text-sm mb-3 p-2 rounded-lg ${a.correct ? 'bg-green-50 dark:bg-green-950' : 'bg-red-50 dark:bg-red-950'}`}>
+                <p className="font-medium text-gray-700 dark:text-gray-200">{a.correct ? '\u2705' : '\u274c'} {a.sentence}</p>
+                <p className="text-gray-500 dark:text-gray-400 text-xs mt-1">{a.explanation}</p>
               </div>
             ))}
           </div>
@@ -113,16 +113,16 @@ export default function MemoryLaneL41({ onComplete }: { onComplete?: () => void 
     <section id="memory-lane">
       <h2 className="text-2xl font-bold font-[family-name:var(--font-inter)] mb-2">Memory Lane</h2>
       <div className="flex justify-between text-sm mb-2">
-        <span className="text-gray-400">Scenario {round + 1} of {totalRounds}</span>
+        <span className="text-gray-500 dark:text-gray-400">Scenario {round + 1} of {totalRounds}</span>
         <span className="font-semibold text-purple-600">Score: {score}</span>
       </div>
       <div className="h-2 bg-gray-200 rounded-full overflow-hidden mb-4">
         <div className={`h-full rounded-full transition-all duration-100 ${timerColor}`} style={{ width: `${timeLeft}%` }} />
       </div>
 
-      <div className="bg-purple-950 border border-purple-800 rounded-xl p-5 mb-5">
-        <p className="font-semibold text-gray-200 text-lg leading-relaxed">&ldquo;{challenge.sentence}&rdquo;</p>
-        <p className="text-sm text-gray-400 mt-2 italic">{challenge.english}</p>
+      <div className="bg-purple-50 dark:bg-purple-950 border border-purple-200 dark:border-purple-800 rounded-xl p-5 mb-5">
+        <p className="font-semibold text-gray-700 dark:text-gray-200 text-lg leading-relaxed">&ldquo;{challenge.sentence}&rdquo;</p>
+        <p className="text-sm text-gray-500 dark:text-gray-400 mt-2 italic">{challenge.english}</p>
       </div>
 
       <div className="grid grid-cols-2 gap-4 mb-4">
@@ -132,11 +132,11 @@ export default function MemoryLaneL41({ onComplete }: { onComplete?: () => void 
           className={`px-4 py-5 rounded-xl border-2 font-bold text-lg transition-all ${
             feedback
               ? challenge.correctTense === 'imperfect'
-                ? 'border-green-400 bg-green-950 text-green-200'
+                ? 'border-green-400 bg-green-50 dark:bg-green-950 text-green-800 dark:text-green-200'
                 : selected === 'imperfect'
-                  ? 'border-red-700 bg-red-950 text-red-700'
-                  : 'border-gray-700 opacity-40'
-              : 'border-purple-800 hover:border-purple-400 hover:bg-purple-950/50 cursor-pointer text-purple-700'
+                  ? 'border-red-400 bg-red-50 dark:bg-red-950 text-red-700 dark:text-red-300'
+                  : 'border-gray-200 dark:border-gray-700 opacity-40'
+              : 'border-purple-800 hover:border-purple-400 hover:bg-purple-50 dark:hover:bg-purple-950/50 cursor-pointer text-purple-700'
           }`}
         >
           Imperfecto
@@ -148,11 +148,11 @@ export default function MemoryLaneL41({ onComplete }: { onComplete?: () => void 
           className={`px-4 py-5 rounded-xl border-2 font-bold text-lg transition-all ${
             feedback
               ? challenge.correctTense === 'preterite'
-                ? 'border-green-400 bg-green-950 text-green-200'
+                ? 'border-green-400 bg-green-50 dark:bg-green-950 text-green-800 dark:text-green-200'
                 : selected === 'preterite'
-                  ? 'border-red-700 bg-red-950 text-red-700'
-                  : 'border-gray-700 opacity-40'
-              : 'border-violet-800 hover:border-violet-400 hover:bg-violet-950/50 cursor-pointer text-violet-700'
+                  ? 'border-red-400 bg-red-50 dark:bg-red-950 text-red-700 dark:text-red-300'
+                  : 'border-gray-200 dark:border-gray-700 opacity-40'
+              : 'border-violet-800 hover:border-violet-400 hover:bg-violet-50 dark:hover:bg-violet-950/50 cursor-pointer text-violet-700'
           }`}
         >
           Pretérito
@@ -161,7 +161,7 @@ export default function MemoryLaneL41({ onComplete }: { onComplete?: () => void 
       </div>
 
       {feedback && (
-        <div className={`text-center text-sm font-semibold p-3 rounded-lg ${feedback.correct ? 'bg-green-950 text-green-200' : 'bg-red-950 text-red-200'}`}>
+        <div className={`text-center text-sm font-semibold p-3 rounded-lg ${feedback.correct ? 'bg-green-50 dark:bg-green-950 text-green-800 dark:text-green-200' : 'bg-red-50 dark:bg-red-950 text-red-800 dark:text-red-200'}`}>
           {feedback.correct ? `Correct! ${challenge.explanation}` : `Not quite. ${challenge.explanation}`}
         </div>
       )}

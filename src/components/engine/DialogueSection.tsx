@@ -26,7 +26,7 @@ function AnnotatedText({ text, annotations, isLight }: { text: string; annotatio
         <span className={`underline decoration-dotted ${isLight ? 'decoration-amber-300' : 'decoration-amber-400'}`}>
           {ann.phrase}
         </span>
-        <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-1 px-2 py-1 rounded text-xs font-semibold bg-gray-900 text-white whitespace-nowrap opacity-0 group-hover/ann:opacity-100 transition-opacity pointer-events-none z-10">
+        <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-1 px-2 py-1 rounded text-xs font-semibold bg-gray-800 dark:bg-gray-900 text-white whitespace-nowrap opacity-0 group-hover/ann:opacity-100 transition-opacity pointer-events-none z-10 shadow-lg">
           {ann.fromLesson}{ann.note ? ` — ${ann.note}` : ''}
         </span>
       </span>
@@ -51,20 +51,20 @@ export default function DialogueSection({ dialogues, description }: { dialogues:
   return (
     <section id="dialogues">
       <h2 className="text-2xl font-bold font-[family-name:var(--font-inter)] mb-2">Real-World Dialogues</h2>
-      <p className="text-gray-400 mb-5">{description}</p>
+      <p className="text-gray-500 dark:text-gray-400 mb-5">{description}</p>
 
       <div className="flex gap-2 mb-5">
         {dialogues.map((d, i) => (
           <button key={d.id} onClick={() => setActiveDialogue(i)}
             className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-              i === activeDialogue ? 'bg-blue-600 text-white' : 'bg-gray-800 text-gray-400 hover:bg-gray-200'
+              i === activeDialogue ? 'bg-blue-600 text-white' : 'bg-white dark:bg-gray-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200'
             }`}>
             {d.location}
           </button>
         ))}
       </div>
 
-      <div className="bg-gray-800 rounded-xl border border-gray-700 p-6">
+      <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-6">
         <h3 className="font-bold text-lg mb-4">{dialogue.title}</h3>
         <div className="space-y-4">
           {dialogue.lines.map((line, i) => {
@@ -72,9 +72,9 @@ export default function DialogueSection({ dialogues, description }: { dialogues:
             return (
               <div key={i} className={`flex items-start gap-3 ${!isFirstSpeaker ? 'flex-row-reverse' : ''}`}>
                 <div className={`max-w-[80%] rounded-2xl px-5 py-3 ${
-                  isFirstSpeaker ? 'bg-gray-800 rounded-tl-sm' : 'bg-amber-600 text-white rounded-tr-sm'
+                  isFirstSpeaker ? 'bg-gray-100 dark:bg-gray-800 rounded-tl-sm' : 'bg-blue-600 text-white rounded-tr-sm'
                 }`}>
-                  <div className={`text-xs font-semibold mb-1 ${isFirstSpeaker ? 'text-gray-500' : 'text-amber-200'}`}>
+                  <div className={`text-xs font-semibold mb-1 ${isFirstSpeaker ? 'text-gray-500 dark:text-gray-400' : 'text-blue-200'}`}>
                     {line.speaker}
                   </div>
                   <p className="text-sm">

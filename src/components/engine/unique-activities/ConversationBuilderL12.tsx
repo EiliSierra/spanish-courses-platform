@@ -82,10 +82,10 @@ export default function ConversationBuilderL12({ onComplete }: { onComplete?: ()
     return (
       <section id="conversation-builder">
         <h2 className="text-2xl font-bold font-[family-name:var(--font-inter)] mb-2">Conversation Builder</h2>
-        <p className="text-gray-400 mb-4">Put the scrambled conversation lines in the correct order. Think about what makes sense as a natural dialogue!</p>
-        <div className="bg-gray-800 rounded-xl border border-gray-700 p-8 text-center">
+        <p className="text-gray-500 dark:text-gray-400 mb-4">Put the scrambled conversation lines in the correct order. Think about what makes sense as a natural dialogue!</p>
+        <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-8 text-center">
           <div className="text-5xl mb-4">&#128172;</div>
-          <p className="text-gray-400 mb-6">{totalRounds} conversations to build. Drag or click lines in the right order.</p>
+          <p className="text-gray-500 dark:text-gray-400 mb-6">{totalRounds} conversations to build. Drag or click lines in the right order.</p>
           <button onClick={startGame} className="px-8 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 text-white rounded-xl font-bold text-lg hover:from-emerald-600 hover:to-teal-600 transition-all shadow-lg hover:shadow-xl">
             Start Building
           </button>
@@ -100,10 +100,10 @@ export default function ConversationBuilderL12({ onComplete }: { onComplete?: ()
     return (
       <section id="conversation-builder">
         <h2 className="text-2xl font-bold font-[family-name:var(--font-inter)] mb-2">Conversation Builder</h2>
-        <div className="bg-gray-800 rounded-xl border border-gray-700 p-8 text-center">
+        <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-8 text-center">
           <div className="text-4xl mb-2">{Array(stars).fill(null).map((_, i) => <span key={i}>&#11088;</span>)}{Array(3 - stars).fill(null).map((_, i) => <span key={i}>&#9734;</span>)}</div>
           <div className="text-4xl font-bold text-emerald-600 mb-1">{score}/{totalRounds}</div>
-          <p className="text-gray-400 mb-4">
+          <p className="text-gray-500 dark:text-gray-400 mb-4">
             {pct >= 80 ? 'Excellent conversation skills!' : pct >= 50 ? 'Good work! Practice makes perfect.' : 'Keep practicing the conversation flow!'}
           </p>
           <button onClick={startGame} className="px-6 py-2 bg-emerald-600 text-white rounded-lg font-medium hover:bg-emerald-700">Try Again</button>
@@ -118,26 +118,26 @@ export default function ConversationBuilderL12({ onComplete }: { onComplete?: ()
     <section id="conversation-builder">
       <h2 className="text-2xl font-bold font-[family-name:var(--font-inter)] mb-2">Conversation Builder</h2>
       <div className="flex justify-between text-sm mb-2">
-        <span className="text-gray-400">Conversation {round + 1} of {totalRounds}: {currentRound.title}</span>
+        <span className="text-gray-500 dark:text-gray-400">Conversation {round + 1} of {totalRounds}: {currentRound.title}</span>
         <span className="font-semibold text-emerald-600">Score: {score}</span>
       </div>
 
-      <div className="bg-gray-800 rounded-xl border border-gray-700 p-6">
+      <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-6">
         {/* Built conversation so far */}
         <div className="mb-5">
-          <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2">Your conversation:</p>
-          <div className="min-h-[120px] bg-gray-50 rounded-xl p-4 border-2 border-dashed border-gray-700 space-y-2">
+          <p className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-2">Your conversation:</p>
+          <div className="min-h-[120px] bg-gray-50 rounded-xl p-4 border-2 border-dashed border-gray-200 dark:border-gray-700 space-y-2">
             {selected.length === 0 && (
-              <p className="text-gray-400 text-sm text-center py-4">Click lines below to build the conversation...</p>
+              <p className="text-gray-500 dark:text-gray-400 text-sm text-center py-4">Click lines below to build the conversation...</p>
             )}
             {selected.map((line, i) => {
               const isCorrectPos = feedback && line === currentRound.correctOrder[i]
               const isWrongPos = feedback && line !== currentRound.correctOrder[i]
               return (
                 <div key={`${line}-${i}`} className={`px-4 py-2.5 rounded-lg text-sm font-medium transition-all ${
-                  isCorrectPos ? 'bg-green-950 text-green-200 border border-green-300'
-                  : isWrongPos ? 'bg-red-950 text-red-200 border border-red-300'
-                  : 'bg-emerald-950 text-emerald-200 border border-emerald-800'
+                  isCorrectPos ? 'bg-green-50 dark:bg-green-950 text-green-800 dark:text-green-200 border border-green-300 dark:border-green-700'
+                  : isWrongPos ? 'bg-red-50 dark:bg-red-950 text-red-800 dark:text-red-200 border border-red-300 dark:border-red-700'
+                  : 'bg-emerald-50 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-200 border border-emerald-200 dark:border-emerald-800'
                 }`}>
                   <span className="text-emerald-400 mr-2">{i + 1}.</span>
                   {line}
@@ -146,7 +146,7 @@ export default function ConversationBuilderL12({ onComplete }: { onComplete?: ()
             })}
           </div>
           {!feedback && selected.length > 0 && (
-            <button onClick={handleUndoLast} className="mt-2 text-sm text-gray-400 hover:text-gray-700 font-medium">
+            <button onClick={handleUndoLast} className="mt-2 text-sm text-gray-500 dark:text-gray-400 hover:text-gray-700 font-medium">
               &#8592; Undo last
             </button>
           )}
@@ -155,11 +155,11 @@ export default function ConversationBuilderL12({ onComplete }: { onComplete?: ()
         {/* Available lines to choose from */}
         {!feedback && (
           <div>
-            <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2">Available lines:</p>
+            <p className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-2">Available lines:</p>
             <div className="space-y-2">
               {available.map((line, i) => (
                 <button key={`${line}-${i}`} onClick={() => handleSelectLine(line)}
-                  className="w-full text-left px-4 py-2.5 rounded-lg text-sm font-medium bg-white border-2 border-gray-700 text-gray-200 hover:border-emerald-400 hover:bg-emerald-950 cursor-pointer transition-all">
+                  className="w-full text-left px-4 py-2.5 rounded-lg text-sm font-medium bg-white border-2 border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-200 hover:border-emerald-400 hover:bg-emerald-950 cursor-pointer transition-all">
                   {line}
                 </button>
               ))}
@@ -177,7 +177,7 @@ export default function ConversationBuilderL12({ onComplete }: { onComplete?: ()
 
         {/* Feedback */}
         {feedback && (
-          <div className={`mt-4 text-center text-sm font-semibold p-3 rounded-lg ${feedback.correct ? 'bg-green-950 text-green-200' : 'bg-red-950 text-red-200'}`}>
+          <div className={`mt-4 text-center text-sm font-semibold p-3 rounded-lg ${feedback.correct ? 'bg-green-50 dark:bg-green-950 text-green-800 dark:text-green-200' : 'bg-red-50 dark:bg-red-950 text-red-800 dark:text-red-200'}`}>
             {feedback.correct ? 'Perfect conversation flow!' : 'Not quite — check the highlighted lines. The correct order is shown.'}
           </div>
         )}

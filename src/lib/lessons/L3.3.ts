@@ -146,12 +146,12 @@ export const L33Data: LessonData = {
   ],
 
   pronunciationChallenges: [
-    { spanish: 'Necesito descargar la aplicación', pronunciation: 'neh-seh-SEE-toh dehs-kahr-GAHR lah ah-plee-kah-see-OHN', english: 'I need to download the app', audio: 'descargar-una-aplicacion', tip: '"Aplicación" has four syllables with the stress on the last one: a-pli-ca-CIÓN. The accent mark tells you to stress -ción.' },
+    { spanish: 'Necesito descargar la aplicación', pronunciation: 'neh-seh-SEE-toh dehs-kahr-GAHR lah ah-plee-kah-see-OHN', english: 'I need to download the app', audio: 'necesito-descargar-la-aplicacion', tip: '"Aplicación" has four syllables with the stress on the last one: a-pli-ca-CIÓN. The accent mark tells you to stress -ción.' },
     { spanish: 'Se me olvidó la contraseña', pronunciation: 'seh meh ohl-bee-DOH lah kohn-trah-SEH-nyah', english: 'I forgot my password', audio: 'se-me-olvido-la-contrasena', tip: '"Contraseña" — the Ñ makes "nyah": contra-SE-ña. Don\'t skip the Ñ sound or it becomes a different word!' },
-    { spanish: 'Las redes sociales son adictivas', pronunciation: 'lahs RREH-dehs soh-see-AH-lehs sohn ah-deek-TEE-bahs', english: 'Social media is addictive', audio: 'las-redes-sociales', tip: '"Redes" uses a strong rolled RR at the start. "Sociales" — the C before I sounds like S (Latin America) or TH (Spain).' },
+    { spanish: 'Las redes sociales son adictivas', pronunciation: 'lahs RREH-dehs soh-see-AH-lehs sohn ah-deek-TEE-bahs', english: 'Social media is addictive', audio: 'las-redes-sociales-son-adictivas', tip: '"Redes" uses a strong rolled RR at the start. "Sociales" — the C before I sounds like S (Latin America) or TH (Spain).' },
     { spanish: 'Mi teléfono se congeló', pronunciation: 'mee teh-LEH-foh-noh seh kohn-heh-LOH', english: 'My phone froze', audio: 'mi-telefono-se-congelo', tip: '"Congeló" — the G before E makes an H sound: con-he-LÓ. Same rule from L1.1: G before E/I = /h/.' },
-    { spanish: 'Publica fotos y comparte videos', pronunciation: 'poo-BLEE-kah FOH-tohs ee kohm-PAHR-teh BEE-deh-ohs', english: 'Post photos and share videos', audio: 'publicar-una-foto', tip: '"Video" in Spanish sounds like BEE-deh-oh — the V sounds like B, same as all Spanish V\'s.' },
-    { spanish: 'Conectarse al wifi inalámbrico', pronunciation: 'koh-nehk-TAHR-seh ahl WAI-fai ee-nah-LAHM-bree-koh', english: 'To connect to wireless wifi', audio: 'conectarse-al-wifi', tip: '"Inalámbrico" — five syllables: i-na-LÁM-bri-co. The stress is on LÁM. This is a great word to practice syllable rhythm.' },
+    { spanish: 'Publica fotos y comparte videos', pronunciation: 'poo-BLEE-kah FOH-tohs ee kohm-PAHR-teh BEE-deh-ohs', english: 'Post photos and share videos', audio: 'publica-fotos-y-comparte-videos', tip: '"Video" in Spanish sounds like BEE-deh-oh — the V sounds like B, same as all Spanish V\'s.' },
+    { spanish: 'Conectarse al wifi inalámbrico', pronunciation: 'koh-nehk-TAHR-seh ahl WAI-fai ee-nah-LAHM-bree-koh', english: 'To connect to wireless wifi', audio: 'conectarse-al-wifi-inalambrico', tip: '"Inalámbrico" — five syllables: i-na-LÁM-bri-co. The stress is on LÁM. This is a great word to practice syllable rhythm.' },
   ],
 
   sections: [

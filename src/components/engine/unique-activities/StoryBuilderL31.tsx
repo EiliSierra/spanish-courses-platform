@@ -68,11 +68,11 @@ export default function StoryBuilderL31({ onComplete }: { onComplete?: () => voi
     return (
       <section id="story-builder">
         <h2 className="text-2xl font-bold font-[family-name:var(--font-inter)] mb-2">Story Builder</h2>
-        <p className="text-gray-400 mb-4">Build a story about your day using the correct preterite form!</p>
-        <div className="bg-gray-800 rounded-xl border border-gray-700 p-8 text-center">
+        <p className="text-gray-500 dark:text-gray-400 mb-4">Build a story about your day using the correct preterite form!</p>
+        <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-8 text-center">
           <div className="text-5xl mb-4">&#128214;</div>
-          <p className="text-gray-400 mb-2">{totalRounds} steps. Pick the correct past tense sentence for each part of the story.</p>
-          <p className="text-sm text-gray-400 mb-6">18 seconds per step.</p>
+          <p className="text-gray-500 dark:text-gray-400 mb-2">{totalRounds} steps. Pick the correct past tense sentence for each part of the story.</p>
+          <p className="text-sm text-gray-500 dark:text-gray-400 mb-6">18 seconds per step.</p>
           <button onClick={startGame} className="px-8 py-3 bg-gradient-to-r from-orange-500 to-amber-500 text-white rounded-xl font-bold text-lg hover:from-orange-600 hover:to-amber-600 transition-all shadow-lg hover:shadow-xl">
             Start Your Story
           </button>
@@ -87,11 +87,11 @@ export default function StoryBuilderL31({ onComplete }: { onComplete?: () => voi
     return (
       <section id="story-builder">
         <h2 className="text-2xl font-bold font-[family-name:var(--font-inter)] mb-2">Story Builder</h2>
-        <div className="bg-gray-800 rounded-xl border border-gray-700 p-8 text-center">
+        <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-8 text-center">
           <div className="text-4xl mb-2">{'\u2b50'.repeat(stars)}{'\u2606'.repeat(3 - stars)}</div>
           <div className="text-4xl font-bold text-amber-600 mb-1">{score}/{totalRounds}</div>
-          <p className="text-gray-400 mb-4">{pct >= 80 ? 'Great storyteller!' : pct >= 50 ? 'Good story! Some verb forms need practice.' : 'Keep working on those verb forms!'}</p>
-          <div className="bg-amber-950 rounded-xl p-4 mb-4 text-left">
+          <p className="text-gray-500 dark:text-gray-400 mb-4">{pct >= 80 ? 'Great storyteller!' : pct >= 50 ? 'Good story! Some verb forms need practice.' : 'Keep working on those verb forms!'}</p>
+          <div className="bg-amber-50 dark:bg-amber-950 rounded-xl p-4 mb-4 text-left">
             <p className="text-xs font-semibold text-amber-600 uppercase mb-2">Your Story:</p>
             {story.map((s, i) => <p key={i} className="text-sm text-gray-700 mb-1">{s}</p>)}
           </div>
@@ -107,7 +107,7 @@ export default function StoryBuilderL31({ onComplete }: { onComplete?: () => voi
     <section id="story-builder">
       <h2 className="text-2xl font-bold font-[family-name:var(--font-inter)] mb-2">Story Builder</h2>
       <div className="flex justify-between text-sm mb-2">
-        <span className="text-gray-400">Step {round + 1} of {totalRounds}</span>
+        <span className="text-gray-500 dark:text-gray-400">Step {round + 1} of {totalRounds}</span>
         <span className="font-semibold text-amber-600">Score: {score}</span>
       </div>
       <div className="h-2 bg-gray-200 rounded-full overflow-hidden mb-4">
@@ -115,15 +115,15 @@ export default function StoryBuilderL31({ onComplete }: { onComplete?: () => voi
       </div>
 
       {story.length > 0 && (
-        <div className="bg-amber-950/50 rounded-lg p-3 mb-4 border border-amber-100">
+        <div className="bg-amber-50 dark:bg-amber-950/50 rounded-lg p-3 mb-4 border border-amber-100">
           <p className="text-xs font-semibold text-amber-500 mb-1">Story so far:</p>
-          {story.map((s, i) => <span key={i} className="text-sm text-gray-400">{s}{i < story.length - 1 ? '. ' : '...'}</span>)}
+          {story.map((s, i) => <span key={i} className="text-sm text-gray-500 dark:text-gray-400">{s}{i < story.length - 1 ? '. ' : '...'}</span>)}
         </div>
       )}
 
-      <div className="bg-amber-950 border border-amber-700 rounded-xl p-4 mb-5">
-        <p className="font-semibold text-gray-200 text-lg">{step.prompt}</p>
-        {feedback && <p className="text-sm text-gray-400 mt-1 italic">{step.english}</p>}
+      <div className="bg-amber-50 dark:bg-amber-950 border border-amber-200 dark:border-amber-700 rounded-xl p-4 mb-5">
+        <p className="font-semibold text-gray-700 dark:text-gray-200 text-lg">{step.prompt}</p>
+        {feedback && <p className="text-sm text-gray-500 dark:text-gray-400 mt-1 italic">{step.english}</p>}
       </div>
 
       <div className="space-y-3">
@@ -134,14 +134,14 @@ export default function StoryBuilderL31({ onComplete }: { onComplete?: () => voi
           return (
             <button key={opt} onClick={() => handleSelect(opt)} disabled={!!feedback}
               className={`w-full text-left px-4 py-4 rounded-xl border-2 font-medium text-sm transition-all ${
-                show ? isCorrect ? 'border-green-400 bg-green-950 text-green-200' : isSelected && !isCorrect ? 'border-red-700 bg-red-950 text-red-700' : 'border-gray-700 opacity-40'
-                  : 'border-gray-700 hover:border-amber-400 hover:bg-amber-950/50 cursor-pointer'
+                show ? isCorrect ? 'border-green-400 bg-green-50 dark:bg-green-950 text-green-800 dark:text-green-200' : isSelected && !isCorrect ? 'border-red-400 bg-red-50 dark:bg-red-950 text-red-700 dark:text-red-300' : 'border-gray-200 dark:border-gray-700 opacity-40'
+                  : 'border-gray-200 dark:border-gray-700 hover:border-amber-400 hover:bg-amber-950/50 cursor-pointer'
               }`}>{opt}</button>
           )
         })}
       </div>
       {feedback && (
-        <div className={`text-center text-sm font-semibold p-3 rounded-lg mt-4 ${feedback.correct ? 'bg-green-950 text-green-200' : 'bg-red-950 text-red-200'}`}>
+        <div className={`text-center text-sm font-semibold p-3 rounded-lg mt-4 ${feedback.correct ? 'bg-green-50 dark:bg-green-950 text-green-800 dark:text-green-200' : 'bg-red-50 dark:bg-red-950 text-red-800 dark:text-red-200'}`}>
           {feedback.correct ? 'Correct preterite!' : `Correct: ${step.correctSentence}`}
         </div>
       )}

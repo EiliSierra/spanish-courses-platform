@@ -165,11 +165,11 @@ export const L23Data: LessonData = {
   ],
 
   pronunciationChallenges: [
-    { spanish: 'Voy a ir al cine el viernes', pronunciation: 'boy ah eer ahl SEE-neh ehl bee-EHR-nehs', english: 'I am going to go to the movies on Friday', audio: 'voy-a-estudiar', tip: '"Voy a ir" has two V sounds. In Spanish, V sounds like B: BOY ah EER.' },
-    { spanish: '\u00bfQuieres ir al parque ma\u00f1ana?', pronunciation: 'kee-EH-rehs eer ahl PAHR-keh mah-NYAH-nah', english: 'Do you want to go to the park tomorrow?', audio: 'quieres-ir-al-cine', tip: 'QU = "k" (from L1.1). "Quieres" = kee-EH-rehs, not "kwee-EH-rehs."' },
-    { spanish: '\u00a1Claro que s\u00ed! Me encanta la idea', pronunciation: 'KLAH-roh keh see meh ehn-KAHN-tah', english: 'Of course! I love the idea', audio: 'claro-que-si', tip: '"Encanta" has the stress on the second-to-last syllable: ehn-KAHN-tah.' },
-    { spanish: 'Lo siento, tengo otros planes', pronunciation: 'loh see-EHN-toh TEHN-goh OH-trohs PLAH-nehs', english: 'I\u2019m sorry, I have other plans', audio: 'lo-siento-no-puedo', tip: '"Siento" has the diphthong IE: see-EHN-toh. Stress the EHN.' },
-    { spanish: 'Vamos a salir este s\u00e1bado', pronunciation: 'BAH-mohs ah sah-LEER EHS-teh SAH-bah-doh', english: 'We are going to go out this Saturday', audio: 'vamos-a-salir', tip: '"Vamos" is the nosotros form of "ir." BAH-mohs, not VAH-mohs.' },
+    { spanish: 'Voy a ir al cine el viernes', pronunciation: 'boy ah eer ahl SEE-neh ehl bee-EHR-nehs', english: 'I am going to go to the movies on Friday', audio: 'voy-a-ir-al-cine-el-viernes', tip: '"Voy a ir" has two V sounds. In Spanish, V sounds like B: BOY ah EER.' },
+    { spanish: '\u00bfQuieres ir al parque ma\u00f1ana?', pronunciation: 'kee-EH-rehs eer ahl PAHR-keh mah-NYAH-nah', english: 'Do you want to go to the park tomorrow?', audio: 'quieres-ir-al-parque-manana', tip: 'QU = "k" (from L1.1). "Quieres" = kee-EH-rehs, not "kwee-EH-rehs."' },
+    { spanish: '\u00a1Claro que s\u00ed! Me encanta la idea', pronunciation: 'KLAH-roh keh see meh ehn-KAHN-tah', english: 'Of course! I love the idea', audio: 'claro-que-si-me-encanta-la-idea', tip: '"Encanta" has the stress on the second-to-last syllable: ehn-KAHN-tah.' },
+    { spanish: 'Lo siento, tengo otros planes', pronunciation: 'loh see-EHN-toh TEHN-goh OH-trohs PLAH-nehs', english: 'I\u2019m sorry, I have other plans', audio: 'lo-siento-tengo-otros-planes', tip: '"Siento" has the diphthong IE: see-EHN-toh. Stress the EHN.' },
+    { spanish: 'Vamos a salir este s\u00e1bado', pronunciation: 'BAH-mohs ah sah-LEER EHS-teh SAH-bah-doh', english: 'We are going to go out this Saturday', audio: 'vamos-a-salir-este-sabado', tip: '"Vamos" is the nosotros form of "ir." BAH-mohs, not VAH-mohs.' },
     { spanish: 'Mi\u00e9rcoles', pronunciation: 'mee-EHR-koh-lehs', english: 'Wednesday', audio: 'miercoles', tip: 'The hardest day to pronounce! Four syllables: mee-EHR-koh-lehs. Stress on EHR.' },
   ],
 

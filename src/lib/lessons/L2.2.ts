@@ -175,9 +175,9 @@ export const L22Data: LessonData = {
   ],
 
   pronunciationChallenges: [
-    { spanish: 'Hace mucho calor hoy', pronunciation: 'AH-seh MOO-choh kah-LOHR oy', english: 'It is very hot today', audio: 'hoy-hace-mucho-calor', tip: '"Hace" starts with a silent H. It sounds like AH-seh, not HAH-seh.' },
-    { spanish: 'Llueve mucho en abril', pronunciation: 'YOO-eh-beh MOO-choh ehn ah-BREEL', english: 'It rains a lot in April', audio: 'llueve', tip: 'LL = "y" sound in most Latin America. YOOH-eh-beh, not LYOOH-eh-beh.' },
-    { spanish: 'El oto\u00f1o es bonito', pronunciation: 'ehl oh-TOH-nyoh ehs boh-NEE-toh', english: 'Fall is beautiful', audio: 'el-otono', tip: 'The \u00d1 in "oto\u00f1o" makes the "ny" sound from L1.1: oh-TOH-nyoh.' },
+    { spanish: 'Hace mucho calor hoy', pronunciation: 'AH-seh MOO-choh kah-LOHR oy', english: 'It is very hot today', audio: 'hace-mucho-calor-hoy', tip: '"Hace" starts with a silent H. It sounds like AH-seh, not HAH-seh.' },
+    { spanish: 'Llueve mucho en abril', pronunciation: 'YOO-eh-beh MOO-choh ehn ah-BREEL', english: 'It rains a lot in April', audio: 'llueve-mucho-en-abril', tip: 'LL = "y" sound in most Latin America. YOOH-eh-beh, not LYOOH-eh-beh.' },
+    { spanish: 'El oto\u00f1o es bonito', pronunciation: 'ehl oh-TOH-nyoh ehs boh-NEE-toh', english: 'Fall is beautiful', audio: 'el-otono-es-bonito', tip: 'The \u00d1 in "oto\u00f1o" makes the "ny" sound from L1.1: oh-TOH-nyoh.' },
     { spanish: 'Necesito un paraguas', pronunciation: 'neh-seh-SEE-toh oon pah-RAH-gwahs', english: 'I need an umbrella', audio: 'necesito-un-paraguas', tip: 'The GUA in "paraguas" is a diphthong: GWAHS, not GOO-ahs.' },
     { spanish: 'Ma\u00f1ana va a llover', pronunciation: 'mah-NYAH-nah bah ah yoh-BEHR', english: 'Tomorrow it is going to rain', audio: 'manana-va-a-llover', tip: '"Ir + a + infinitivo" is how you say what is going to happen. This is your first future expression!' },
     { spanish: '\u00bfEn qu\u00e9 mes estamos?', pronunciation: 'ehn keh mehs ehs-TAH-mohs', english: 'What month are we in?', audio: 'en-que-mes-estamos', tip: '"Estamos" uses the nosotros form of estar. It means "we are (in)."' },

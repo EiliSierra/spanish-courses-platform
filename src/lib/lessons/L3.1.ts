@@ -150,12 +150,12 @@ export const L31Data: LessonData = {
   ],
 
   pronunciationChallenges: [
-    { spanish: 'Hablé con mi amigo ayer', pronunciation: 'ah-BLEH kohn mee ah-MEE-goh ah-YEHR', english: 'I talked with my friend yesterday', audio: 'hable-con-mi-mama', tip: 'The accent on -É is crucial! "Hablé" (I spoke) vs. "hable" (speak — subjunctive). Stress the last syllable.' },
-    { spanish: 'Fui al cine anoche', pronunciation: 'fwee ahl SEE-neh ah-NOH-cheh', english: 'I went to the movies last night', audio: 'fui-al-cine', tip: '"Fui" = I went AND I was (ser/ir share the same preterite!). Context tells which: "Fui al cine" = went.' },
-    { spanish: 'Comimos en un restaurante', pronunciation: 'koh-MEE-mohs ehn oon rehs-tow-RAHN-teh', english: 'We ate at a restaurant', audio: 'comi-en-un-restaurante', tip: 'Notice: "comimos" (preterite) sounds like "comemos" (present) but with -I-! Listen carefully.' },
-    { spanish: 'Tuve que trabajar el sábado', pronunciation: 'TOO-beh keh trah-bah-HAHR ehl SAH-bah-doh', english: 'I had to work on Saturday', audio: 'tuve-mucho-trabajo', tip: '"Tuve" is irregular — it\u2019s NOT "tenié." The stem changes to "tuv-." Same pattern: pude, supe, puse.' },
-    { spanish: 'Hice la tarea y después salí', pronunciation: 'EE-seh lah tah-REH-ah ee dehs-PWEHS sah-LEE', english: 'I did the homework and then left', audio: 'hice-la-tarea', tip: '"Hice" from "hacer" — C changes to Z before O: "hizo" (he/she did). But "hice" keeps the C.' },
-    { spanish: 'La semana pasada viajamos', pronunciation: 'lah seh-MAH-nah pah-SAH-dah bee-ah-HAH-mohs', english: 'Last week we traveled', audio: 'la-semana-pasada', tip: '"Viajamos" — same form for present AND preterite! Only context (la semana pasada) tells you it\u2019s past.' },
+    { spanish: 'Hablé con mi amigo ayer', pronunciation: 'ah-BLEH kohn mee ah-MEE-goh ah-YEHR', english: 'I talked with my friend yesterday', audio: 'hable-con-mi-amigo-ayer', tip: 'The accent on -É is crucial! "Hablé" (I spoke) vs. "hable" (speak — subjunctive). Stress the last syllable.' },
+    { spanish: 'Fui al cine anoche', pronunciation: 'fwee ahl SEE-neh ah-NOH-cheh', english: 'I went to the movies last night', audio: 'fui-al-cine-anoche', tip: '"Fui" = I went AND I was (ser/ir share the same preterite!). Context tells which: "Fui al cine" = went.' },
+    { spanish: 'Comimos en un restaurante', pronunciation: 'koh-MEE-mohs ehn oon rehs-tow-RAHN-teh', english: 'We ate at a restaurant', audio: 'comimos-en-un-restaurante', tip: 'Notice: "comimos" (preterite) sounds like "comemos" (present) but with -I-! Listen carefully.' },
+    { spanish: 'Tuve que trabajar el sábado', pronunciation: 'TOO-beh keh trah-bah-HAHR ehl SAH-bah-doh', english: 'I had to work on Saturday', audio: 'tuve-que-trabajar-el-sabado', tip: '"Tuve" is irregular — it\u2019s NOT "tenié." The stem changes to "tuv-." Same pattern: pude, supe, puse.' },
+    { spanish: 'Hice la tarea y después salí', pronunciation: 'EE-seh lah tah-REH-ah ee dehs-PWEHS sah-LEE', english: 'I did the homework and then left', audio: 'hice-la-tarea-y-despues-sali', tip: '"Hice" from "hacer" — C changes to Z before O: "hizo" (he/she did). But "hice" keeps the C.' },
+    { spanish: 'La semana pasada viajamos', pronunciation: 'lah seh-MAH-nah pah-SAH-dah bee-ah-HAH-mohs', english: 'Last week we traveled', audio: 'la-semana-pasada-viajamos', tip: '"Viajamos" — same form for present AND preterite! Only context (la semana pasada) tells you it\u2019s past.' },
   ],
 
   sections: [

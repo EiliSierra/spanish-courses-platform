@@ -147,10 +147,10 @@ export const L37Data: LessonData = {
 
   pronunciationChallenges: [
     { spanish: 'La quinceañera de mi prima', pronunciation: 'lah keen-seh-ah-NYEH-rah deh mee PREE-mah', english: 'My cousin\'s quinceañera', audio: 'la-quinceanera-de-mi-prima', tip: '"Quinceañera" — the Ñ is key! It\'s "keen-seh-ah-NYEH-rah," NOT "keen-seh-ah-NEH-rah." The Ñ adds a Y sound.' },
-    { spanish: 'Pusimos flores de cempasúchil', pronunciation: 'poo-SEE-mohs FLOH-rehs deh sehm-pah-SOO-cheel', english: 'We placed marigold flowers', audio: 'pusimos-flores-cempasuchil', tip: '"Cempasúchil" is a Nahuatl word! Stress the "SU" syllable. These orange marigolds guide the spirits home.' },
+    { spanish: 'Pusimos flores de cempasúchil', pronunciation: 'poo-SEE-mohs FLOH-rehs deh sehm-pah-SOO-cheel', english: 'We placed marigold flowers', audio: 'pusimos-flores-de-cempasuchil', tip: '"Cempasúchil" is a Nahuatl word! Stress the "SU" syllable. These orange marigolds guide the spirits home.' },
     { spanish: 'Rompimos la piñata', pronunciation: 'rohm-PEE-mohs lah pee-NYAH-tah', english: 'We broke the piñata', audio: 'rompimos-la-pinata', tip: 'Another Ñ word! "Piñata" = "pee-NYAH-tah." The Ñ makes it distinctly Spanish — English speakers often forget it.' },
-    { spanish: 'Cantamos villancicos toda la noche', pronunciation: 'kahn-TAH-mohs bee-yahn-SEE-kohs TOH-dah lah NOH-cheh', english: 'We sang Christmas carols all night', audio: 'cantamos-villancicos', tip: '"Villancicos" — double L sounds like Y: "bee-yahn-SEE-kohs." These carols are sung during Las Posadas.' },
-    { spanish: '¡Felicidades! ¡Enhorabuena!', pronunciation: 'feh-lee-see-DAH-dehs ehn-oh-rah-BWEH-nah', english: 'Congratulations!', audio: 'felicidades', tip: '"Felicidades" for birthdays/general, "Enhorabuena" for achievements/weddings. Both mean congratulations!' },
+    { spanish: 'Cantamos villancicos toda la noche', pronunciation: 'kahn-TAH-mohs bee-yahn-SEE-kohs TOH-dah lah NOH-cheh', english: 'We sang Christmas carols all night', audio: 'cantamos-villancicos-toda-la-noche', tip: '"Villancicos" — double L sounds like Y: "bee-yahn-SEE-kohs." These carols are sung during Las Posadas.' },
+    { spanish: '¡Felicidades! ¡Enhorabuena!', pronunciation: 'feh-lee-see-DAH-dehs ehn-oh-rah-BWEH-nah', english: 'Congratulations!', audio: 'felicidades-enhorabuena', tip: '"Felicidades" for birthdays/general, "Enhorabuena" for achievements/weddings. Both mean congratulations!' },
     { spanish: 'Brindamos por los novios', pronunciation: 'breen-DAH-mohs pohr lohs NOH-bee-ohs', english: 'We toasted to the bride and groom', audio: 'brindamos-por-los-novios', tip: '"Brindamos" = we toasted. "Novios" = the couple (bride and groom). At weddings, everyone raises their glass!' },
   ],
 

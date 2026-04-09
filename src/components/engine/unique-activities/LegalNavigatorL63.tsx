@@ -68,11 +68,11 @@ export default function LegalNavigatorL63({ onComplete }: { onComplete?: () => v
     return (
       <section id="legal-navigator">
         <h2 className="text-2xl font-bold font-[family-name:var(--font-inter)] mb-2">Legal Navigator</h2>
-        <p className="text-gray-400 mb-4">Read real legal document excerpts and answer comprehension questions. Can you decode the legalese?</p>
+        <p className="text-gray-500 dark:text-gray-400 mb-4">Read real legal document excerpts and answer comprehension questions. Can you decode the legalese?</p>
         <div className="bg-white rounded-xl border border-stone-200 p-8 text-center">
           <div className="text-5xl mb-4">&#9878;&#65039;</div>
-          <p className="text-gray-400 mb-2">{totalRounds} legal excerpts. Read carefully and answer the comprehension question.</p>
-          <p className="text-sm text-gray-400 mb-6">30 seconds per document — legal texts need careful reading!</p>
+          <p className="text-gray-500 dark:text-gray-400 mb-2">{totalRounds} legal excerpts. Read carefully and answer the comprehension question.</p>
+          <p className="text-sm text-gray-500 dark:text-gray-400 mb-6">30 seconds per document — legal texts need careful reading!</p>
           <button onClick={startGame} className="px-8 py-3 bg-gradient-to-r from-stone-600 to-amber-600 text-white rounded-xl font-bold text-lg hover:from-stone-700 hover:to-amber-700 transition-all shadow-lg hover:shadow-xl">
             Enter the Courtroom
           </button>
@@ -90,11 +90,11 @@ export default function LegalNavigatorL63({ onComplete }: { onComplete?: () => v
         <div className="bg-white rounded-xl border border-stone-200 p-8 text-center">
           <div className="text-4xl mb-2">{'\u2b50'.repeat(stars)}{'\u2606'.repeat(3 - stars)}</div>
           <div className="text-4xl font-bold text-amber-700 mb-1">{score}/{totalRounds}</div>
-          <p className="text-gray-400 mb-4">{pct >= 80 ? 'Objection sustained — you\'re a legal expert!' : pct >= 50 ? 'Good reading! Some legal texts still tripped you up.' : 'The law is complex — keep studying those legal formulas!'}</p>
-          <div className="bg-stone-950 rounded-xl p-4 mb-4 text-left space-y-2">
+          <p className="text-gray-500 dark:text-gray-400 mb-4">{pct >= 80 ? 'Objection sustained — you\'re a legal expert!' : pct >= 50 ? 'Good reading! Some legal texts still tripped you up.' : 'The law is complex — keep studying those legal formulas!'}</p>
+          <div className="bg-stone-50 dark:bg-stone-950 rounded-xl p-4 mb-4 text-left space-y-2">
             <p className="text-xs font-semibold text-amber-700 uppercase mb-2">Your Results:</p>
             {answers.map((a, i) => (
-              <div key={i} className={`text-sm p-2 rounded-lg ${a.correct ? 'bg-green-950 text-green-200' : 'bg-red-950 text-red-200'}`}>
+              <div key={i} className={`text-sm p-2 rounded-lg ${a.correct ? 'bg-green-50 dark:bg-green-950 text-green-800 dark:text-green-200' : 'bg-red-50 dark:bg-red-950 text-red-800 dark:text-red-200'}`}>
                 <p className="font-medium">{a.question}</p>
                 {!a.correct && <p className="text-xs mt-1">Your answer: {a.chosen} — Correct: <span className="font-semibold">{a.answer}</span></p>}
               </div>
@@ -112,21 +112,21 @@ export default function LegalNavigatorL63({ onComplete }: { onComplete?: () => v
     <section id="legal-navigator">
       <h2 className="text-2xl font-bold font-[family-name:var(--font-inter)] mb-2">Legal Navigator</h2>
       <div className="flex justify-between text-sm mb-2">
-        <span className="text-gray-400">Document {round + 1} of {totalRounds}</span>
+        <span className="text-gray-500 dark:text-gray-400">Document {round + 1} of {totalRounds}</span>
         <span className="font-semibold text-amber-700">Score: {score}</span>
       </div>
       <div className="h-2 bg-gray-200 rounded-full overflow-hidden mb-4">
         <div className={`h-full rounded-full transition-all duration-100 ${timerColor}`} style={{ width: `${timeLeft}%` }} />
       </div>
 
-      <div className="bg-stone-950 border border-stone-300 rounded-xl p-5 mb-4">
+      <div className="bg-stone-50 dark:bg-stone-950 border border-stone-200 dark:border-stone-700 rounded-xl p-5 mb-4">
         <p className="text-xs font-semibold text-stone-500 uppercase tracking-wide mb-2">Legal Document Excerpt</p>
-        <p className="font-serif text-gray-200 text-sm leading-relaxed italic">&ldquo;{challenge.document}&rdquo;</p>
+        <p className="font-serif text-gray-700 dark:text-gray-200 text-sm leading-relaxed italic">&ldquo;{challenge.document}&rdquo;</p>
         {feedback && <p className="text-xs text-stone-400 mt-3 not-italic border-t border-stone-200 pt-2">{challenge.english}</p>}
       </div>
 
-      <div className="bg-amber-950 border border-amber-700 rounded-xl p-4 mb-4">
-        <p className="font-semibold text-gray-200">{challenge.question}</p>
+      <div className="bg-amber-50 dark:bg-amber-950 border border-amber-200 dark:border-amber-700 rounded-xl p-4 mb-4">
+        <p className="font-semibold text-gray-700 dark:text-gray-200">{challenge.question}</p>
       </div>
 
       <div className="space-y-3">
@@ -137,14 +137,14 @@ export default function LegalNavigatorL63({ onComplete }: { onComplete?: () => v
           return (
             <button key={opt} onClick={() => handleSelect(opt)} disabled={!!feedback}
               className={`w-full text-left px-4 py-4 rounded-xl border-2 font-medium text-sm transition-all ${
-                show ? isCorrect ? 'border-green-400 bg-green-950 text-green-200' : isSelected && !isCorrect ? 'border-red-700 bg-red-950 text-red-700' : 'border-gray-700 opacity-40'
-                  : 'border-gray-700 hover:border-amber-400 hover:bg-amber-950/50 cursor-pointer'
+                show ? isCorrect ? 'border-green-400 bg-green-50 dark:bg-green-950 text-green-800 dark:text-green-200' : isSelected && !isCorrect ? 'border-red-400 bg-red-50 dark:bg-red-950 text-red-700 dark:text-red-300' : 'border-gray-200 dark:border-gray-700 opacity-40'
+                  : 'border-gray-200 dark:border-gray-700 hover:border-amber-400 hover:bg-amber-950/50 cursor-pointer'
               }`}>{opt}</button>
           )
         })}
       </div>
       {feedback && (
-        <div className={`text-center text-sm font-semibold p-3 rounded-lg mt-4 ${feedback.correct ? 'bg-green-950 text-green-200' : 'bg-red-950 text-red-200'}`}>
+        <div className={`text-center text-sm font-semibold p-3 rounded-lg mt-4 ${feedback.correct ? 'bg-green-50 dark:bg-green-950 text-green-800 dark:text-green-200' : 'bg-red-50 dark:bg-red-950 text-red-800 dark:text-red-200'}`}>
           {feedback.correct ? 'Correct! You read the legalese perfectly.' : `Correct answer: ${challenge.correctAnswer}`}
         </div>
       )}

@@ -91,12 +91,12 @@ export const L12Data: LessonData = {
     { spanish: 'No entiendo', english: "I don't understand" },
   ],
   pronunciationChallenges: [
-    { spanish: 'Hola, buenos días', pronunciation: 'OH-lah BWEH-nos DEE-ahs', english: 'Hello, good morning', audio: 'buenos-dias', tip: 'Remember from L1.1: H is ALWAYS silent! "Hola" starts with the O sound.' },
-    { spanish: 'Me llamo Ana', pronunciation: 'meh YAH-moh AH-nah', english: 'My name is Ana', audio: 'me-llamo', tip: 'LL sounds like "y" — "llamo" = "YAH-moh." You learned this in L1.1!' },
+    { spanish: 'Hola, buenos días', pronunciation: 'OH-lah BWEH-nos DEE-ahs', english: 'Hello, good morning', audio: 'hola-buenos-dias', tip: 'Remember from L1.1: H is ALWAYS silent! "Hola" starts with the O sound.' },
+    { spanish: 'Me llamo Ana', pronunciation: 'meh YAH-moh AH-nah', english: 'My name is Ana', audio: 'me-llamo-ana', tip: 'LL sounds like "y" — "llamo" = "YAH-moh." You learned this in L1.1!' },
     { spanish: 'Mucho gusto', pronunciation: 'MOO-choh GOOS-toh', english: 'Nice to meet you', audio: 'mucho-gusto', tip: 'CH = "ch" as in "church." GU before O = hard "g" — "GOOS-toh."' },
     { spanish: 'Hasta mañana', pronunciation: 'AHS-tah mah-NYAH-nah', english: 'See you tomorrow', audio: 'hasta-manana', tip: 'The Ñ from L1.1! "Mañana" has the "ny" sound — mah-NYAH-nah.' },
-    { spanish: 'Más despacio, por favor', pronunciation: 'mahs dehs-PAH-see-oh pohr fah-BOHR', english: 'Slower, please', audio: 'mas-despacio', tip: 'Your most useful survival phrase! Stress the -PA- in "despacio."' },
-    { spanish: 'Encantado de conocerle', pronunciation: 'ehn-kahn-TAH-doh deh koh-noh-SEHR-leh', english: 'Delighted to meet you', audio: 'encantado', tip: 'A formal, elegant phrase. The C before O = "k" sound (L1.1 rule).' },
+    { spanish: 'Más despacio, por favor', pronunciation: 'mahs dehs-PAH-see-oh pohr fah-BOHR', english: 'Slower, please', audio: 'mas-despacio-por-favor', tip: 'Your most useful survival phrase! Stress the -PA- in "despacio."' },
+    { spanish: 'Encantado de conocerle', pronunciation: 'ehn-kahn-TAH-doh deh koh-noh-SEHR-leh', english: 'Delighted to meet you', audio: 'encantado-de-conocerle', tip: 'A formal, elegant phrase. The C before O = "k" sound (L1.1 rule).' },
   ],
   objectives: [
     { icon: '\uD83D\uDC4B', title: 'Greet & Say Goodbye', desc: 'Use the right greeting for any time of day and say farewell naturally' },

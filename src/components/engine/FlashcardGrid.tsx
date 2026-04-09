@@ -65,13 +65,13 @@ export default function FlashcardGrid({ groups, phraseByAudio, audioBase }: Flas
   return (
     <section id="flashcards">
       <h2 className="text-2xl font-bold mb-2">Flashcards</h2>
-      <p className="text-gray-400 mb-4">Click a card to flip it. Front shows English, back reveals Spanish with audio.</p>
+      <p className="text-gray-500 dark:text-gray-400 mb-4">Click a card to flip it. Front shows English, back reveals Spanish with audio.</p>
 
       <div className="flex gap-2 mb-5 flex-wrap">
         {groups.map((g) => (
           <button key={g.key} onClick={() => switchTab(g.key)}
             className={`px-4 py-2 rounded-lg text-sm font-semibold transition-colors ${
-              g.key === activeTab ? 'bg-blue-600 text-white' : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
+              g.key === activeTab ? 'bg-blue-600 text-white' : 'bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:bg-gray-700'
             }`}>
             {g.label}
             <span className="ml-1 text-xs opacity-70">({g.audioKeys.length})</span>
@@ -90,7 +90,7 @@ export default function FlashcardGrid({ groups, phraseByAudio, audioBase }: Flas
           return (
             <div
               key={item.audio}
-              className={avgLen > 25 ? 'flashcard-3d h-56' : 'flashcard-3d h-48'}
+              className={avgLen > 25 ? 'flashcard-3d min-h-56' : 'flashcard-3d min-h-48'}
               onClick={(e) => {
                 if ((e.target as HTMLElement).closest('.fc-audio-btn')) return
                 toggleFlip(item.audio)
@@ -100,10 +100,10 @@ export default function FlashcardGrid({ groups, phraseByAudio, audioBase }: Flas
               onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleFlip(item.audio) } }}
             >
               <div className="fc-inner" style={isFlipped ? { transform: 'rotateY(180deg)' } : undefined}>
-                <div className="fc-front bg-gray-800 border border-gray-700 shadow-sm hover:shadow-lg rounded-2xl">
-                  <span className="text-base font-extrabold text-gray-100 text-center leading-tight px-2">{item.english}</span>
-                  <span className="text-[10px] text-gray-400 mt-2 uppercase tracking-wide">{item.category}</span>
-                  <span className="flex items-center gap-1 mt-2 text-gray-300 text-[10px] uppercase tracking-wide">
+                <div className="fc-front bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-lg rounded-2xl">
+                  <span className="text-base font-extrabold text-gray-900 dark:text-gray-100 text-center leading-tight px-2">{item.english}</span>
+                  <span className="text-[10px] text-gray-500 dark:text-gray-400 mt-2 uppercase tracking-wide">{item.category}</span>
+                  <span className="flex items-center gap-1 mt-2 text-gray-600 dark:text-gray-300 text-[10px] uppercase tracking-wide">
                     <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" opacity="0.5">
                       <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z" />
                     </svg>
@@ -111,8 +111,8 @@ export default function FlashcardGrid({ groups, phraseByAudio, audioBase }: Flas
                   </span>
                 </div>
                 <div className={`fc-back bg-gradient-to-br ${color} text-white border rounded-2xl`}>
-                  <span className="text-lg font-bold text-center px-2">{item.spanish}</span>
-                  <span className="text-xs text-white/70 mt-1 italic">{item.pronunciation}</span>
+                  <span className="text-lg font-bold text-center px-2 break-words">{item.spanish}</span>
+                  <span className="text-xs text-white/90 mt-1 italic">{item.pronunciation}</span>
                   <button
                     className="fc-audio-btn mt-3 w-10 h-10 rounded-full bg-white/20 hover:bg-white/30 flex items-center justify-center transition-colors"
                     onClick={(e) => { e.stopPropagation(); playAudio(item.audio) }}

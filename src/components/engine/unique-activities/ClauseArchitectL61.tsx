@@ -76,11 +76,11 @@ export default function ClauseArchitectL61({ onComplete }: { onComplete?: () => 
     return (
       <section id="clause-architect">
         <h2 className="text-2xl font-bold font-[family-name:var(--font-inter)] mb-2">Clause Architect</h2>
-        <p className="text-gray-400 mb-4">Arrange scrambled fragments into a grammatically correct complex sentence. Think carefully about clause order, relative pronouns, and punctuation!</p>
-        <div className="bg-gray-800 rounded-xl border border-gray-700 p-8 text-center">
+        <p className="text-gray-500 dark:text-gray-400 mb-4">Arrange scrambled fragments into a grammatically correct complex sentence. Think carefully about clause order, relative pronouns, and punctuation!</p>
+        <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-8 text-center">
           <div className="text-5xl mb-4">&#127959;</div>
-          <p className="text-gray-400 mb-2">{totalRounds} sentences to build. Click fragments in the correct order.</p>
-          <p className="text-sm text-gray-400 mb-6">Look for relative pronouns, conjunctions, and punctuation clues to guide your construction.</p>
+          <p className="text-gray-500 dark:text-gray-400 mb-2">{totalRounds} sentences to build. Click fragments in the correct order.</p>
+          <p className="text-sm text-gray-500 dark:text-gray-400 mb-6">Look for relative pronouns, conjunctions, and punctuation clues to guide your construction.</p>
           <button onClick={startGame} className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-bold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all shadow-lg hover:shadow-xl">
             Start Building
           </button>
@@ -95,15 +95,15 @@ export default function ClauseArchitectL61({ onComplete }: { onComplete?: () => 
     return (
       <section id="clause-architect">
         <h2 className="text-2xl font-bold font-[family-name:var(--font-inter)] mb-2">Clause Architect</h2>
-        <div className="bg-gray-800 rounded-xl border border-gray-700 p-8 text-center">
+        <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-8 text-center">
           <div className="text-4xl mb-2">{'\u2b50'.repeat(stars)}{'\u2606'.repeat(3 - stars)}</div>
           <div className="text-4xl font-bold text-cyan-600 mb-1">{score}/{totalRounds}</div>
-          <p className="text-gray-400 mb-4">{pct >= 80 ? 'Masterful sentence architect! Your clause construction is impeccable.' : pct >= 50 ? 'Good structural sense! Keep practicing complex constructions.' : 'Complex sentences take practice \u2014 review the patterns and try again!'}</p>
-          <div className="bg-cyan-950 rounded-xl p-4 mb-4 text-left space-y-3">
+          <p className="text-gray-500 dark:text-gray-400 mb-4">{pct >= 80 ? 'Masterful sentence architect! Your clause construction is impeccable.' : pct >= 50 ? 'Good structural sense! Keep practicing complex constructions.' : 'Complex sentences take practice \u2014 review the patterns and try again!'}</p>
+          <div className="bg-cyan-50 dark:bg-cyan-950 rounded-xl p-4 mb-4 text-left space-y-3">
             <p className="text-xs font-semibold text-cyan-600 uppercase mb-2">Your Results:</p>
             {answers.map((a, i) => (
-              <div key={i} className={`text-sm p-3 rounded-lg ${a.correct ? 'bg-green-950 text-green-200' : 'bg-red-950 text-red-200'}`}>
-                <p className="font-medium mb-1 italic text-gray-400">{a.english}</p>
+              <div key={i} className={`text-sm p-3 rounded-lg ${a.correct ? 'bg-green-50 dark:bg-green-950 text-green-800 dark:text-green-200' : 'bg-red-50 dark:bg-red-950 text-red-800 dark:text-red-200'}`}>
+                <p className="font-medium mb-1 italic text-gray-500 dark:text-gray-400">{a.english}</p>
                 {a.correct ? (
                   <p className="text-green-700">{a.correctSentence}</p>
                 ) : (
@@ -131,14 +131,14 @@ export default function ClauseArchitectL61({ onComplete }: { onComplete?: () => 
     <section id="clause-architect">
       <h2 className="text-2xl font-bold font-[family-name:var(--font-inter)] mb-2">Clause Architect</h2>
       <div className="flex justify-between text-sm mb-3">
-        <span className="text-gray-400">Sentence {round + 1} of {totalRounds}</span>
+        <span className="text-gray-500 dark:text-gray-400">Sentence {round + 1} of {totalRounds}</span>
         <span className="font-semibold text-cyan-600">Score: {score}</span>
       </div>
 
       {/* English prompt */}
-      <div className="bg-cyan-950 border border-cyan-200 rounded-xl p-5 mb-5">
+      <div className="bg-cyan-50 dark:bg-cyan-950 border border-cyan-200 dark:border-cyan-800 rounded-xl p-5 mb-5">
         <p className="text-sm text-cyan-700 font-semibold uppercase mb-1">Build this sentence in Spanish:</p>
-        <p className="text-gray-200 text-lg italic">{challenge.english}</p>
+        <p className="text-gray-700 dark:text-gray-200 text-lg italic">{challenge.english}</p>
       </div>
 
       {/* Constructed sentence */}
@@ -146,17 +146,17 @@ export default function ClauseArchitectL61({ onComplete }: { onComplete?: () => 
         <p className="text-xs font-semibold text-cyan-600 uppercase mb-2">Your Sentence:</p>
         <div className={`min-h-[80px] p-4 rounded-xl border-2 ${
           feedback
-            ? feedback.correct ? 'border-green-700 bg-green-950' : 'border-red-700 bg-red-950'
+            ? feedback.correct ? 'border-green-400 bg-green-50 dark:bg-green-950' : 'border-red-400 bg-red-50 dark:bg-red-950'
             : 'border-dashed border-cyan-200 bg-white'
         }`}>
           {placed.length === 0 ? (
-            <p className="text-sm text-gray-400 italic">Click fragments below to build your sentence...</p>
+            <p className="text-sm text-gray-500 dark:text-gray-400 italic">Click fragments below to build your sentence...</p>
           ) : (
             <div className="flex flex-wrap gap-1.5">
               {placed.map((fragment, i) => (
                 <span key={i} className={`inline-block px-3 py-1.5 rounded-lg text-sm font-medium ${
                   feedback
-                    ? feedback.correct ? 'bg-green-950 text-green-200' : 'bg-red-950 text-red-200'
+                    ? feedback.correct ? 'bg-green-50 dark:bg-green-950 text-green-800 dark:text-green-200' : 'bg-red-50 dark:bg-red-950 text-red-800 dark:text-red-200'
                     : 'bg-cyan-100 text-cyan-800'
                 }`}>
                   {fragment}
@@ -176,11 +176,11 @@ export default function ClauseArchitectL61({ onComplete }: { onComplete?: () => 
       {/* Available fragments */}
       {remaining.length > 0 && !feedback && (
         <div className="mb-4">
-          <p className="text-xs font-semibold text-gray-400 uppercase mb-2">Available Fragments (click to add):</p>
+          <p className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase mb-2">Available Fragments (click to add):</p>
           <div className="flex flex-wrap gap-2">
             {remaining.map((fragment) => (
               <button key={fragment} onClick={() => handleSelect(fragment)}
-                className="px-4 py-2.5 rounded-xl border-2 border-gray-700 hover:border-cyan-400 hover:bg-cyan-950/50 text-sm font-medium transition-all cursor-pointer bg-white shadow-sm hover:shadow">
+                className="px-4 py-2.5 rounded-xl border-2 border-gray-200 dark:border-gray-700 hover:border-cyan-400 hover:bg-cyan-50 dark:hover:bg-cyan-50 dark:hover:bg-cyan-950/50 text-sm font-medium transition-all cursor-pointer bg-white shadow-sm hover:shadow">
                 {fragment}
               </button>
             ))}
@@ -192,7 +192,7 @@ export default function ClauseArchitectL61({ onComplete }: { onComplete?: () => 
       {!feedback && (
         <div className="flex gap-3 mt-4">
           <button onClick={handleUndo} disabled={placed.length === 0}
-            className="px-4 py-2 border border-gray-300 rounded-lg text-sm font-medium text-gray-400 hover:bg-gray-50 disabled:opacity-30 disabled:cursor-not-allowed">
+            className="px-4 py-2 border border-gray-300 rounded-lg text-sm font-medium text-gray-500 dark:text-gray-400 hover:bg-gray-50 disabled:opacity-30 disabled:cursor-not-allowed">
             Undo
           </button>
           <button onClick={handleCheck} disabled={remaining.length > 0}
@@ -203,7 +203,7 @@ export default function ClauseArchitectL61({ onComplete }: { onComplete?: () => 
       )}
 
       {feedback && (
-        <div className={`text-center text-sm font-semibold p-3 rounded-lg mt-4 ${feedback.correct ? 'bg-green-950 text-green-200' : 'bg-red-950 text-red-200'}`}>
+        <div className={`text-center text-sm font-semibold p-3 rounded-lg mt-4 ${feedback.correct ? 'bg-green-50 dark:bg-green-950 text-green-800 dark:text-green-200' : 'bg-red-50 dark:bg-red-950 text-red-800 dark:text-red-200'}`}>
           {feedback.correct ? 'Perfect construction! Every clause in its right place.' : 'Not quite \u2014 compare your sentence with the correct one above.'}
         </div>
       )}

@@ -42,11 +42,11 @@ export default function SubjunctiveDetectorL42({ onComplete }: { onComplete?: ()
     return (
       <section id="subjunctive-detector">
         <h2 className="text-2xl font-bold font-[family-name:var(--font-inter)] mb-2">Subjunctive Detector</h2>
-        <p className="text-gray-400 mb-4">Read the sentence and decide: is it indicative or subjunctive?</p>
-        <div className="bg-gray-800 rounded-xl border border-gray-700 p-8 text-center">
+        <p className="text-gray-500 dark:text-gray-400 mb-4">Read the sentence and decide: is it indicative or subjunctive?</p>
+        <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-8 text-center">
           <div className="text-5xl mb-4">&#128270;</div>
-          <p className="text-gray-400 mb-2">{totalRounds} sentences. Identify the mood of each one.</p>
-          <p className="text-sm text-gray-400 mb-6">Look for WEIRDO triggers: Wishes, Emotions, Impersonal, Recommendations, Doubt, Ojalá.</p>
+          <p className="text-gray-500 dark:text-gray-400 mb-2">{totalRounds} sentences. Identify the mood of each one.</p>
+          <p className="text-sm text-gray-500 dark:text-gray-400 mb-6">Look for WEIRDO triggers: Wishes, Emotions, Impersonal, Recommendations, Doubt, Ojalá.</p>
           <button onClick={startGame} className="px-8 py-3 bg-gradient-to-r from-indigo-500 to-blue-500 text-white rounded-xl font-bold text-lg hover:from-indigo-600 hover:to-blue-600 transition-all shadow-lg hover:shadow-xl">
             Start Detecting
           </button>
@@ -61,10 +61,10 @@ export default function SubjunctiveDetectorL42({ onComplete }: { onComplete?: ()
     return (
       <section id="subjunctive-detector">
         <h2 className="text-2xl font-bold font-[family-name:var(--font-inter)] mb-2">Subjunctive Detector</h2>
-        <div className="bg-gray-800 rounded-xl border border-gray-700 p-8 text-center">
+        <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-8 text-center">
           <div className="text-4xl mb-2">{'\u2b50'.repeat(stars)}{'\u2606'.repeat(3 - stars)}</div>
           <div className="text-4xl font-bold text-indigo-600 mb-1">{score}/{totalRounds}</div>
-          <p className="text-gray-400 mb-4">{pct >= 80 ? 'Subjunctive master!' : pct >= 50 ? 'Good eye! Keep practicing the tricky ones.' : 'Review the WEIRDO triggers and try again!'}</p>
+          <p className="text-gray-500 dark:text-gray-400 mb-4">{pct >= 80 ? 'Subjunctive master!' : pct >= 50 ? 'Good eye! Keep practicing the tricky ones.' : 'Review the WEIRDO triggers and try again!'}</p>
           <button onClick={startGame} className="px-6 py-2 bg-indigo-600 text-white rounded-lg font-medium hover:bg-indigo-700">Try Again</button>
         </div>
       </section>
@@ -77,18 +77,18 @@ export default function SubjunctiveDetectorL42({ onComplete }: { onComplete?: ()
     <section id="subjunctive-detector">
       <h2 className="text-2xl font-bold font-[family-name:var(--font-inter)] mb-2">Subjunctive Detector</h2>
       <div className="flex justify-between text-sm mb-4">
-        <span className="text-gray-400">Sentence {round + 1} of {totalRounds}</span>
+        <span className="text-gray-500 dark:text-gray-400">Sentence {round + 1} of {totalRounds}</span>
         <span className="font-semibold text-indigo-600">Score: {score}</span>
       </div>
-      <div className="bg-gray-800 rounded-xl border border-gray-700 p-6">
+      <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-6">
         {/* Sentence display */}
-        <div className="bg-indigo-950 border border-indigo-700 rounded-xl p-5 mb-2 text-center">
-          <p className="font-semibold text-gray-200 text-xl mb-1">{scenario.sentence}</p>
-          <p className="text-sm text-gray-400 italic">{scenario.english}</p>
+        <div className="bg-indigo-50 dark:bg-indigo-950 border border-indigo-200 dark:border-indigo-700 rounded-xl p-5 mb-2 text-center">
+          <p className="font-semibold text-gray-700 dark:text-gray-200 text-xl mb-1">{scenario.sentence}</p>
+          <p className="text-sm text-gray-500 dark:text-gray-400 italic">{scenario.english}</p>
         </div>
 
         {/* Question */}
-        <p className="text-sm font-semibold text-gray-400 mb-3 mt-5 text-center">What mood is the underlined clause?</p>
+        <p className="text-sm font-semibold text-gray-500 dark:text-gray-400 mb-3 mt-5 text-center">What mood is the underlined clause?</p>
 
         {/* Two buttons */}
         <div className="grid grid-cols-2 gap-4">
@@ -107,16 +107,16 @@ export default function SubjunctiveDetectorL42({ onComplete }: { onComplete?: ()
                 className={`px-4 py-5 rounded-xl border-2 font-medium transition-all ${
                   show
                     ? isCorrect
-                      ? 'border-green-400 bg-green-950 text-green-200'
+                      ? 'border-green-400 bg-green-50 dark:bg-green-950 text-green-800 dark:text-green-200'
                       : isSelected && !isCorrect
-                        ? 'border-red-700 bg-red-950 text-red-700'
-                        : 'border-gray-700 opacity-40'
-                    : 'border-gray-700 hover:border-indigo-400 hover:bg-indigo-950/50 cursor-pointer'
+                        ? 'border-red-400 bg-red-50 dark:bg-red-950 text-red-700 dark:text-red-300'
+                        : 'border-gray-200 dark:border-gray-700 opacity-40'
+                    : 'border-gray-200 dark:border-gray-700 hover:border-indigo-400 hover:bg-indigo-950/50 cursor-pointer'
                 }`}
               >
                 <div className="text-2xl mb-1">{emoji}</div>
                 <div className="text-lg font-bold">{label}</div>
-                <div className="text-xs text-gray-400 mt-1">{desc}</div>
+                <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">{desc}</div>
               </button>
             )
           })}
@@ -124,7 +124,7 @@ export default function SubjunctiveDetectorL42({ onComplete }: { onComplete?: ()
 
         {/* Feedback with explanation */}
         {feedback && (
-          <div className={`text-sm p-4 rounded-lg mt-4 ${feedback.correct ? 'bg-green-950 text-green-200' : 'bg-red-950 text-red-200'}`}>
+          <div className={`text-sm p-4 rounded-lg mt-4 ${feedback.correct ? 'bg-green-50 dark:bg-green-950 text-green-800 dark:text-green-200' : 'bg-red-50 dark:bg-red-950 text-red-800 dark:text-red-200'}`}>
             <p className="font-bold mb-1">{feedback.correct ? 'Correct!' : 'Not quite!'}</p>
             <p>{feedback.explanation}</p>
           </div>

@@ -137,12 +137,12 @@ export const L34Data: LessonData = {
   ],
 
   pronunciationChallenges: [
-    { spanish: 'Cortar en pedazos pequeños', pronunciation: 'kohr-TAHR ehn peh-DAH-sohs peh-KEH-nyohs', english: 'Cut into small pieces', audio: 'cortar-en-pedazos', tip: 'The R in "cortar" is a single tap, not a trill. Tap the roof of your mouth quickly, like the "tt" in "butter" in American English.' },
-    { spanish: 'Hervir el agua con sal', pronunciation: 'ehr-BEER ehl AH-gwah kohn sahl', english: 'Boil the water with salt', audio: 'hervir-el-agua', tip: 'The H in "hervir" is SILENT! Say "ehr-BEER." Also, "agua" starts with "ah-gwah" — the GU sounds like "gw."' },
-    { spanish: 'Freír las cebollas en aceite', pronunciation: 'freh-EER lahs seh-BOH-yahs ehn ah-SEH-ee-teh', english: 'Fry the onions in oil', audio: 'freir-con-aceite', tip: '"Freír" has a strong accent on the final syllable. The "eí" diphthong sounds like "eh-EE." Practice: fre-ÍR.' },
-    { spanish: 'Picar la cebolla bien fina', pronunciation: 'pee-KAHR lah seh-BOH-yah bee-EHN FEE-nah', english: 'Finely chop the onion', audio: 'picar-la-cebolla', tip: '"Picar" means to chop finely (not just cut). The double L in "cebolla" sounds like Y: "seh-BOH-yah."' },
-    { spanish: 'Mezclar todo con una cuchara', pronunciation: 'mehs-KLAHR TOH-doh kohn OO-nah koo-CHAH-rah', english: 'Mix everything with a spoon', audio: 'mezclar-los-ingredientes', tip: 'The Z in "mezclar" sounds like S in Latin America: "mes-KLAHR." In Spain it sounds like "th." We use the Latin American pronunciation.' },
-    { spanish: 'Cocinar a fuego lento veinte minutos', pronunciation: 'koh-see-NAHR ah FWEH-goh LEHN-toh BEH-een-teh mee-NOO-tohs', english: 'Simmer for twenty minutes', audio: 'cocinar-a-fuego-lento', tip: '"Fuego lento" (slow fire) = simmer. "Fuego" has the diphthong "ue": FWEH-goh. From L1.3 numbers: veinte (20).' },
+    { spanish: 'Cortar en pedazos pequeños', pronunciation: 'kohr-TAHR ehn peh-DAH-sohs peh-KEH-nyohs', english: 'Cut into small pieces', audio: 'cortar-en-pedazos-pequenos', tip: 'The R in "cortar" is a single tap, not a trill. Tap the roof of your mouth quickly, like the "tt" in "butter" in American English.' },
+    { spanish: 'Hervir el agua con sal', pronunciation: 'ehr-BEER ehl AH-gwah kohn sahl', english: 'Boil the water with salt', audio: 'hervir-el-agua-con-sal', tip: 'The H in "hervir" is SILENT! Say "ehr-BEER." Also, "agua" starts with "ah-gwah" — the GU sounds like "gw."' },
+    { spanish: 'Freír las cebollas en aceite', pronunciation: 'freh-EER lahs seh-BOH-yahs ehn ah-SEH-ee-teh', english: 'Fry the onions in oil', audio: 'freir-las-cebollas-en-aceite', tip: '"Freír" has a strong accent on the final syllable. The "eí" diphthong sounds like "eh-EE." Practice: fre-ÍR.' },
+    { spanish: 'Picar la cebolla bien fina', pronunciation: 'pee-KAHR lah seh-BOH-yah bee-EHN FEE-nah', english: 'Finely chop the onion', audio: 'picar-la-cebolla-bien-fina', tip: '"Picar" means to chop finely (not just cut). The double L in "cebolla" sounds like Y: "seh-BOH-yah."' },
+    { spanish: 'Mezclar todo con una cuchara', pronunciation: 'mehs-KLAHR TOH-doh kohn OO-nah koo-CHAH-rah', english: 'Mix everything with a spoon', audio: 'mezclar-todo-con-una-cuchara', tip: 'The Z in "mezclar" sounds like S in Latin America: "mes-KLAHR." In Spain it sounds like "th." We use the Latin American pronunciation.' },
+    { spanish: 'Cocinar a fuego lento veinte minutos', pronunciation: 'koh-see-NAHR ah FWEH-goh LEHN-toh BEH-een-teh mee-NOO-tohs', english: 'Simmer for twenty minutes', audio: 'cocinar-a-fuego-lento-veinte-minutos', tip: '"Fuego lento" (slow fire) = simmer. "Fuego" has the diphthong "ue": FWEH-goh. From L1.3 numbers: veinte (20).' },
   ],
 
   sections: [

@@ -80,7 +80,7 @@ export default function ScheduleBuilderL18({ onComplete }: { onComplete?: () => 
     return (
       <div id="schedule-builder" className="text-center py-8">
         <h2 className="text-2xl font-bold mb-3">Schedule Builder</h2>
-        <p className="text-gray-400 mb-6 max-w-lg mx-auto">
+        <p className="text-gray-500 dark:text-gray-400 mb-6 max-w-lg mx-auto">
           Listen to someone describe their daily routine, then put the activities in the correct order. Use what you learned about time expressions and daily verbs!
         </p>
         <button
@@ -117,7 +117,7 @@ export default function ScheduleBuilderL18({ onComplete }: { onComplete?: () => 
     <div id="schedule-builder" className="py-6">
       <div className="flex items-center justify-between mb-4">
         <h2 className="text-xl font-bold">Schedule Builder</h2>
-        <span className="text-sm text-gray-400 font-medium">{round + 1} / {totalRounds} — Score: {score}</span>
+        <span className="text-sm text-gray-500 dark:text-gray-400 font-medium">{round + 1} / {totalRounds} — Score: {score}</span>
       </div>
 
       <div className="w-full h-2 bg-gray-200 rounded-full mb-6">
@@ -125,12 +125,12 @@ export default function ScheduleBuilderL18({ onComplete }: { onComplete?: () => 
       </div>
 
       {/* Clue */}
-      <div className="bg-cyan-950 border border-cyan-200 rounded-xl p-5 mb-6">
+      <div className="bg-cyan-50 dark:bg-cyan-950 border border-cyan-200 dark:border-cyan-800 rounded-xl p-5 mb-6">
         <div className="flex items-start gap-3">
           <span className="text-2xl">🗣️</span>
           <div className="flex-1">
             <p className="text-sm text-cyan-600 font-semibold mb-1">Listen to the routine:</p>
-            <p className="text-base font-medium text-gray-200 italic">&ldquo;{currentRound.clue}&rdquo;</p>
+            <p className="text-base font-medium text-gray-700 dark:text-gray-200 italic">&ldquo;{currentRound.clue}&rdquo;</p>
           </div>
           <button onClick={replayAudio} className="flex-shrink-0 p-2 rounded-lg bg-cyan-100 hover:bg-cyan-200 transition-colors" title="Replay">
             🔊
@@ -140,16 +140,16 @@ export default function ScheduleBuilderL18({ onComplete }: { onComplete?: () => 
 
       {/* Schedule (placed items) */}
       <p className="text-sm font-semibold text-gray-700 mb-2">Your schedule (in order):</p>
-      <div className={`min-h-[60px] border-2 border-dashed rounded-xl p-3 mb-4 flex flex-wrap gap-2 ${feedback === true ? 'border-green-400 bg-green-950' : feedback === false ? 'border-red-400 bg-red-950' : 'border-cyan-300 bg-cyan-950/30'}`}>
-        {placed.length === 0 && <p className="text-gray-400 text-sm">Tap activities below to add them in order...</p>}
+      <div className={`min-h-[60px] border-2 border-dashed rounded-xl p-3 mb-4 flex flex-wrap gap-2 ${feedback === true ? 'border-green-400 bg-green-950' : feedback === false ? 'border-red-400 bg-red-50 dark:bg-red-950' : 'border-cyan-300 bg-cyan-50 dark:bg-cyan-950/30'}`}>
+        {placed.length === 0 && <p className="text-gray-500 dark:text-gray-400 text-sm">Tap activities below to add them in order...</p>}
         {placed.map((item, i) => (
           <button
             key={`${item}-${i}`}
             onClick={() => !feedback && removeFromSchedule(i)}
             disabled={feedback !== null}
-            className="px-3 py-1.5 bg-white border border-cyan-300 rounded-lg text-sm font-medium hover:bg-red-950 hover:border-red-300 transition-colors flex items-center gap-1"
+            className="px-3 py-1.5 bg-white border border-cyan-300 rounded-lg text-sm font-medium hover:bg-red-50 dark:hover:bg-red-950 hover:border-red-300 transition-colors flex items-center gap-1"
           >
-            <span className="text-gray-400 text-xs">{i + 1}.</span> {item}
+            <span className="text-gray-500 dark:text-gray-400 text-xs">{i + 1}.</span> {item}
             {!feedback && <span className="text-red-400 text-xs ml-1">✕</span>}
           </button>
         ))}
@@ -166,7 +166,7 @@ export default function ScheduleBuilderL18({ onComplete }: { onComplete?: () => 
               <button
                 key={`avail-${item}-${i}`}
                 onClick={() => addToSchedule(item)}
-                className="px-4 py-2 bg-white border border-gray-300 rounded-lg text-sm font-medium hover:border-cyan-400 hover:bg-cyan-950 transition-colors shadow-sm"
+                className="px-4 py-2 bg-white border border-gray-300 rounded-lg text-sm font-medium hover:border-cyan-400 hover:bg-cyan-50 dark:hover:bg-cyan-950 transition-colors shadow-sm"
               >
                 {item}
               </button>

@@ -88,11 +88,11 @@ export const L17Data: LessonData = {
     { spanish: '¡Está muy rico!', english: 'It is very delicious!' },
   ],
   pronunciationChallenges: [
-    { spanish: 'Quiero el pollo asado con arroz', pronunciation: 'kee-EH-roh ehl POH-yoh ah-SAH-doh kohn ah-ROHS', english: 'I want the grilled chicken with rice', audio: 'el-pollo', tip: '"Quiero" from L1.4! "Pollo" = POH-yoh (LL = Y sound). Double R in "arroz" = trilled R.' },
-    { spanish: '¿Tiene postre?', pronunciation: 'tee-EH-neh POHS-treh', english: 'Do you have dessert?', audio: 'sin-gluten', tip: '"¿Tiene?" from L1.4! Simple and practical — just add any noun after "¿Tiene...?"' },
-    { spanish: 'El pescado está muy fresco', pronunciation: 'ehl pehs-KAH-doh ehs-TAH mooy FREHS-koh', english: 'The fish is very fresh', audio: 'el-pescado', tip: '"Está" for description of state (L1.5). "Fresco" — the FR blend is the same as English.' },
-    { spanish: 'De postre, quiero flan', pronunciation: 'deh POHS-treh kee-EH-roh flahn', english: 'For dessert, I want flan', audio: 'el-postre', tip: '"De" = for/of. "Postre" stress on first syllable: POHS-treh.' },
-    { spanish: 'Los camarones están picantes', pronunciation: 'lohs kah-mah-ROH-nehs ehs-TAHN pee-KAHN-tehs', english: 'The shrimp are spicy', audio: 'los-camarones', tip: '"Están" (plural of "está") because "camarones" is plural. Notice the -es ending!' },
+    { spanish: 'Quiero el pollo asado con arroz', pronunciation: 'kee-EH-roh ehl POH-yoh ah-SAH-doh kohn ah-ROHS', english: 'I want the grilled chicken with rice', audio: 'quiero-el-pollo-asado-con-arroz', tip: '"Quiero" from L1.4! "Pollo" = POH-yoh (LL = Y sound). Double R in "arroz" = trilled R.' },
+    { spanish: '¿Tiene postre?', pronunciation: 'tee-EH-neh POHS-treh', english: 'Do you have dessert?', audio: 'tiene-postre', tip: '"¿Tiene?" from L1.4! Simple and practical — just add any noun after "¿Tiene...?"' },
+    { spanish: 'El pescado está muy fresco', pronunciation: 'ehl pehs-KAH-doh ehs-TAH mooy FREHS-koh', english: 'The fish is very fresh', audio: 'el-pescado-esta-muy-fresco', tip: '"Está" for description of state (L1.5). "Fresco" — the FR blend is the same as English.' },
+    { spanish: 'De postre, quiero flan', pronunciation: 'deh POHS-treh kee-EH-roh flahn', english: 'For dessert, I want flan', audio: 'de-postre-quiero-flan', tip: '"De" = for/of. "Postre" stress on first syllable: POHS-treh.' },
+    { spanish: 'Los camarones están picantes', pronunciation: 'lohs kah-mah-ROH-nehs ehs-TAHN pee-KAHN-tehs', english: 'The shrimp are spicy', audio: 'los-camarones-estan-picantes', tip: '"Están" (plural of "está") because "camarones" is plural. Notice the -es ending!' },
     { spanish: '¿Qué recomienda?', pronunciation: 'keh reh-koh-mee-EHN-dah', english: 'What do you recommend?', audio: 'que-recomienda', tip: '"Recomienda" — stress on the -MIEN- syllable. The D sounds soft, almost like English "th."' },
   ],
   objectives: [
