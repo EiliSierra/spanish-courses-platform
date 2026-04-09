@@ -211,7 +211,7 @@ export default function CoursesPage() {
       {/* Level 2 Final Assessment */}
       <div className="mt-10">
         <Link href="/courses/L2.F" className="block group">
-          <div className="bg-gradient-to-r from-green-950 to-emerald-950 rounded-2xl border-2 border-green-800 p-6 shadow-sm hover:shadow-md hover:border-green-400 transition-all">
+          <div className="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-950 dark:to-emerald-950 rounded-2xl border-2 border-green-200 dark:border-green-800 p-6 shadow-sm hover:shadow-md hover:border-green-400 transition-all">
             <div className="flex items-center gap-4">
               <span className="text-4xl">🎖️</span>
               <div>
@@ -265,7 +265,7 @@ export default function CoursesPage() {
       {/* Level 3 Final Assessment */}
       <div className="mt-10">
         <Link href="/courses/L3.F" className="block group">
-          <div className="bg-gradient-to-r from-amber-950 to-orange-950 rounded-2xl border-2 border-amber-800 p-6 shadow-sm hover:shadow-md hover:border-amber-400 transition-all">
+          <div className="bg-gradient-to-r from-amber-50 to-orange-50 dark:from-amber-950 dark:to-orange-950 rounded-2xl border-2 border-amber-200 dark:border-amber-800 p-6 shadow-sm hover:shadow-md hover:border-amber-400 transition-all">
             <div className="flex items-center gap-4">
               <span className="text-4xl">🏅</span>
               <div>
@@ -373,7 +373,7 @@ export default function CoursesPage() {
       {/* Level 5 Final Assessment */}
       <div className="mt-10">
         <Link href="/courses/L5.F" className="block group">
-          <div className="bg-gradient-to-r from-rose-950 to-pink-950 rounded-2xl border-2 border-rose-800 p-6 shadow-sm hover:shadow-md hover:border-rose-400 transition-all">
+          <div className="bg-gradient-to-r from-rose-50 to-pink-50 dark:from-rose-950 dark:to-pink-950 rounded-2xl border-2 border-rose-200 dark:border-rose-800 p-6 shadow-sm hover:shadow-md hover:border-rose-400 transition-all">
             <div className="flex items-center gap-4">
               <span className="text-4xl">🎓</span>
               <div>
@@ -427,7 +427,7 @@ export default function CoursesPage() {
       {/* Level 6 Final Assessment */}
       <div className="mt-10">
         <Link href="/courses/L6.F" className="block group">
-          <div className="bg-gradient-to-r from-cyan-950 to-teal-950 rounded-2xl border-2 border-cyan-800 p-6 shadow-sm hover:shadow-md hover:border-cyan-400 transition-all">
+          <div className="bg-gradient-to-r from-cyan-50 to-teal-50 dark:from-cyan-950 dark:to-teal-950 rounded-2xl border-2 border-cyan-200 dark:border-cyan-800 p-6 shadow-sm hover:shadow-md hover:border-cyan-400 transition-all">
             <div className="flex items-center gap-4">
               <span className="text-4xl">💎</span>
               <div>
@@ -481,7 +481,7 @@ export default function CoursesPage() {
       {/* Level 7 Final Assessment */}
       <div className="mt-10">
         <Link href="/courses/L7.F" className="block group">
-          <div className="bg-gradient-to-r from-teal-950 to-emerald-950 rounded-2xl border-2 border-teal-800 p-6 shadow-sm hover:shadow-md hover:border-teal-400 transition-all">
+          <div className="bg-gradient-to-r from-teal-50 to-emerald-50 dark:from-teal-950 dark:to-emerald-950 rounded-2xl border-2 border-teal-200 dark:border-teal-800 p-6 shadow-sm hover:shadow-md hover:border-teal-400 transition-all">
             <div className="flex items-center gap-4">
               <span className="text-4xl">🌟</span>
               <div>
@@ -535,7 +535,7 @@ export default function CoursesPage() {
       {/* Level 8 Final Assessment */}
       <div className="mt-10">
         <Link href="/courses/L8.F" className="block group">
-          <div className="bg-gradient-to-r from-orange-950 to-amber-950 rounded-2xl border-2 border-orange-800 p-6 shadow-sm hover:shadow-md hover:border-orange-400 transition-all">
+          <div className="bg-gradient-to-r from-orange-50 to-amber-50 dark:from-orange-950 dark:to-amber-950 rounded-2xl border-2 border-orange-200 dark:border-orange-800 p-6 shadow-sm hover:shadow-md hover:border-orange-400 transition-all">
             <div className="flex items-center gap-4">
               <span className="text-4xl">🏅</span>
               <div>
@@ -632,7 +632,7 @@ export default function CoursesPage() {
       {/* Level 10 Ultimate Assessment */}
       <div className="mt-10">
         <Link href="/courses/L10.F" className="block group">
-          <div className="bg-gradient-to-r from-amber-950 via-rose-950 to-purple-950 rounded-2xl border-2 border-amber-800 p-6 shadow-sm hover:shadow-md hover:border-amber-400 transition-all">
+          <div className="bg-gradient-to-r from-amber-50 via-rose-50 to-purple-50 dark:from-amber-950 dark:via-rose-950 dark:to-purple-950 rounded-2xl border-2 border-amber-200 dark:border-amber-800 p-6 shadow-sm hover:shadow-md hover:border-amber-400 transition-all">
             <div className="flex items-center gap-4">
               <span className="text-4xl">👑</span>
               <div>
