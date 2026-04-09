@@ -1,6 +1,16 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 export const dynamic = 'force-dynamic'
+
+function lessonImage(id: string): string {
+  const special: Record<string, string> = {
+    'L1.1': '/images/L1.1/hero-vowels.png',
+    'L1.2': '/images/L1.2/hero-meeting.png',
+    'L1.3': '/images/L1.3/hero-numbers.png',
+  }
+  return special[id] || `/images/${id}/${id}.jpg`
+}
 
 const LESSONS = [
   { id: 'L1.1', title: 'Sounds & Letters', subtitle: 'The Spanish Alphabet', level: 1, available: true },
@@ -119,13 +129,16 @@ export default function CoursesPage() {
           <div key={lesson.id} className="relative">
             {lesson.available ? (
               <Link href={`/courses/${lesson.id}`} className="block group">
-                <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-6 shadow-sm hover:shadow-md hover:border-blue-300 transition-all">
-                  <div className="text-xs font-semibold text-blue-600 mb-2">{lesson.id}</div>
-                  <h3 className="font-bold text-lg font-[family-name:var(--font-inter)] group-hover:text-blue-700 transition-colors">
-                    {lesson.title}
-                  </h3>
-                  <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">{lesson.subtitle}</p>
-                </div>
+                <div className="overflow-hidden bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md hover:border-blue-300 transition-all">
+                    <Image src={lessonImage(lesson.id)} alt={lesson.title} width={400} height={200} className="h-32 w-full object-cover" />
+                    <div className="p-5">
+                      <div className="text-xs font-semibold text-blue-600 mb-2">{lesson.id}</div>
+                      <h3 className="font-bold text-lg font-[family-name:var(--font-inter)] group-hover:text-blue-700 transition-colors">
+                        {lesson.title}
+                      </h3>
+                      <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">{lesson.subtitle}</p>
+                    </div>
+                  </div>
               </Link>
             ) : (
               <div className="bg-gray-100 dark:bg-gray-800/50 rounded-2xl border border-gray-200 dark:border-gray-700 p-6 opacity-60 cursor-not-allowed">
@@ -170,13 +183,16 @@ export default function CoursesPage() {
           <div key={lesson.id} className="relative">
             {lesson.available ? (
               <Link href={`/courses/${lesson.id}`} className="block group">
-                <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-6 shadow-sm hover:shadow-md hover:border-green-300 transition-all">
-                  <div className="text-xs font-semibold text-green-600 mb-2">{lesson.id}</div>
-                  <h3 className="font-bold text-lg font-[family-name:var(--font-inter)] group-hover:text-green-700 transition-colors">
-                    {lesson.title}
-                  </h3>
-                  <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">{lesson.subtitle}</p>
-                </div>
+                <div className="overflow-hidden bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md hover:border-green-300 transition-all">
+                    <Image src={lessonImage(lesson.id)} alt={lesson.title} width={400} height={200} className="h-32 w-full object-cover" />
+                    <div className="p-5">
+                      <div className="text-xs font-semibold text-green-600 mb-2">{lesson.id}</div>
+                      <h3 className="font-bold text-lg font-[family-name:var(--font-inter)] group-hover:text-green-700 transition-colors">
+                        {lesson.title}
+                      </h3>
+                      <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">{lesson.subtitle}</p>
+                    </div>
+                  </div>
               </Link>
             ) : (
               <div className="bg-gray-100 dark:bg-gray-800/50 rounded-2xl border border-gray-200 dark:border-gray-700 p-6 opacity-60 cursor-not-allowed">
@@ -221,13 +237,16 @@ export default function CoursesPage() {
           <div key={lesson.id} className="relative">
             {lesson.available ? (
               <Link href={`/courses/${lesson.id}`} className="block group">
-                <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-6 shadow-sm hover:shadow-md hover:border-amber-300 transition-all">
-                  <div className="text-xs font-semibold text-amber-600 mb-2">{lesson.id}</div>
-                  <h3 className="font-bold text-lg font-[family-name:var(--font-inter)] group-hover:text-amber-700 transition-colors">
-                    {lesson.title}
-                  </h3>
-                  <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">{lesson.subtitle}</p>
-                </div>
+                <div className="overflow-hidden bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md hover:border-amber-300 transition-all">
+                    <Image src={lessonImage(lesson.id)} alt={lesson.title} width={400} height={200} className="h-32 w-full object-cover" />
+                    <div className="p-5">
+                      <div className="text-xs font-semibold text-amber-600 mb-2">{lesson.id}</div>
+                      <h3 className="font-bold text-lg font-[family-name:var(--font-inter)] group-hover:text-amber-700 transition-colors">
+                        {lesson.title}
+                      </h3>
+                      <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">{lesson.subtitle}</p>
+                    </div>
+                  </div>
               </Link>
             ) : (
               <div className="bg-gray-100 dark:bg-gray-800/50 rounded-2xl border border-gray-200 dark:border-gray-700 p-6 opacity-60 cursor-not-allowed">
@@ -272,13 +291,16 @@ export default function CoursesPage() {
           <div key={lesson.id} className="relative">
             {lesson.available ? (
               <Link href={`/courses/${lesson.id}`} className="block group">
-                <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-6 shadow-sm hover:shadow-md hover:border-purple-300 transition-all">
-                  <div className="text-xs font-semibold text-purple-600 mb-2">{lesson.id}</div>
-                  <h3 className="font-bold text-lg font-[family-name:var(--font-inter)] group-hover:text-purple-700 transition-colors">
-                    {lesson.title}
-                  </h3>
-                  <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">{lesson.subtitle}</p>
-                </div>
+                <div className="overflow-hidden bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md hover:border-purple-300 transition-all">
+                    <Image src={lessonImage(lesson.id)} alt={lesson.title} width={400} height={200} className="h-32 w-full object-cover" />
+                    <div className="p-5">
+                      <div className="text-xs font-semibold text-purple-600 mb-2">{lesson.id}</div>
+                      <h3 className="font-bold text-lg font-[family-name:var(--font-inter)] group-hover:text-purple-700 transition-colors">
+                        {lesson.title}
+                      </h3>
+                      <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">{lesson.subtitle}</p>
+                    </div>
+                  </div>
               </Link>
             ) : (
               <div className="bg-gray-100 dark:bg-gray-800/50 rounded-2xl border border-gray-200 dark:border-gray-700 p-6 opacity-60 cursor-not-allowed">
@@ -323,13 +345,16 @@ export default function CoursesPage() {
           <div key={lesson.id} className="relative">
             {lesson.available ? (
               <Link href={`/courses/${lesson.id}`} className="block group">
-                <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-6 shadow-sm hover:shadow-md hover:border-rose-300 transition-all">
-                  <div className="text-xs font-semibold text-rose-600 mb-2">{lesson.id}</div>
-                  <h3 className="font-bold text-lg font-[family-name:var(--font-inter)] group-hover:text-rose-700 transition-colors">
-                    {lesson.title}
-                  </h3>
-                  <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">{lesson.subtitle}</p>
-                </div>
+                <div className="overflow-hidden bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md hover:border-rose-300 transition-all">
+                    <Image src={lessonImage(lesson.id)} alt={lesson.title} width={400} height={200} className="h-32 w-full object-cover" />
+                    <div className="p-5">
+                      <div className="text-xs font-semibold text-rose-600 mb-2">{lesson.id}</div>
+                      <h3 className="font-bold text-lg font-[family-name:var(--font-inter)] group-hover:text-rose-700 transition-colors">
+                        {lesson.title}
+                      </h3>
+                      <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">{lesson.subtitle}</p>
+                    </div>
+                  </div>
               </Link>
             ) : (
               <div className="bg-gray-100 dark:bg-gray-800/50 rounded-2xl border border-gray-200 dark:border-gray-700 p-6 opacity-60 cursor-not-allowed">
@@ -374,13 +399,16 @@ export default function CoursesPage() {
           <div key={lesson.id} className="relative">
             {lesson.available ? (
               <Link href={`/courses/${lesson.id}`} className="block group">
-                <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-6 shadow-sm hover:shadow-md hover:border-cyan-300 transition-all">
-                  <div className="text-xs font-semibold text-cyan-600 mb-2">{lesson.id}</div>
-                  <h3 className="font-bold text-lg font-[family-name:var(--font-inter)] group-hover:text-cyan-700 transition-colors">
-                    {lesson.title}
-                  </h3>
-                  <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">{lesson.subtitle}</p>
-                </div>
+                <div className="overflow-hidden bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md hover:border-cyan-300 transition-all">
+                    <Image src={lessonImage(lesson.id)} alt={lesson.title} width={400} height={200} className="h-32 w-full object-cover" />
+                    <div className="p-5">
+                      <div className="text-xs font-semibold text-cyan-600 mb-2">{lesson.id}</div>
+                      <h3 className="font-bold text-lg font-[family-name:var(--font-inter)] group-hover:text-cyan-700 transition-colors">
+                        {lesson.title}
+                      </h3>
+                      <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">{lesson.subtitle}</p>
+                    </div>
+                  </div>
               </Link>
             ) : (
               <div className="bg-gray-100 dark:bg-gray-800/50 rounded-2xl border border-gray-200 dark:border-gray-700 p-6 opacity-60 cursor-not-allowed">
@@ -425,13 +453,16 @@ export default function CoursesPage() {
           <div key={lesson.id} className="relative">
             {lesson.available ? (
               <Link href={`/courses/${lesson.id}`} className="block group">
-                <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-6 shadow-sm hover:shadow-md hover:border-teal-300 transition-all">
-                  <div className="text-xs font-semibold text-teal-600 mb-2">{lesson.id}</div>
-                  <h3 className="font-bold text-lg font-[family-name:var(--font-inter)] group-hover:text-teal-700 transition-colors">
-                    {lesson.title}
-                  </h3>
-                  <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">{lesson.subtitle}</p>
-                </div>
+                <div className="overflow-hidden bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md hover:border-teal-300 transition-all">
+                    <Image src={lessonImage(lesson.id)} alt={lesson.title} width={400} height={200} className="h-32 w-full object-cover" />
+                    <div className="p-5">
+                      <div className="text-xs font-semibold text-teal-600 mb-2">{lesson.id}</div>
+                      <h3 className="font-bold text-lg font-[family-name:var(--font-inter)] group-hover:text-teal-700 transition-colors">
+                        {lesson.title}
+                      </h3>
+                      <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">{lesson.subtitle}</p>
+                    </div>
+                  </div>
               </Link>
             ) : (
               <div className="bg-gray-100 dark:bg-gray-800/50 rounded-2xl border border-gray-200 dark:border-gray-700 p-6 opacity-60 cursor-not-allowed">
@@ -476,13 +507,16 @@ export default function CoursesPage() {
           <div key={lesson.id} className="relative">
             {lesson.available ? (
               <Link href={`/courses/${lesson.id}`} className="block group">
-                <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-6 shadow-sm hover:shadow-md hover:border-orange-300 transition-all">
-                  <div className="text-xs font-semibold text-orange-600 mb-2">{lesson.id}</div>
-                  <h3 className="font-bold text-lg font-[family-name:var(--font-inter)] group-hover:text-orange-700 transition-colors">
-                    {lesson.title}
-                  </h3>
-                  <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">{lesson.subtitle}</p>
-                </div>
+                <div className="overflow-hidden bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md hover:border-orange-300 transition-all">
+                    <Image src={lessonImage(lesson.id)} alt={lesson.title} width={400} height={200} className="h-32 w-full object-cover" />
+                    <div className="p-5">
+                      <div className="text-xs font-semibold text-orange-600 mb-2">{lesson.id}</div>
+                      <h3 className="font-bold text-lg font-[family-name:var(--font-inter)] group-hover:text-orange-700 transition-colors">
+                        {lesson.title}
+                      </h3>
+                      <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">{lesson.subtitle}</p>
+                    </div>
+                  </div>
               </Link>
             ) : (
               <div className="bg-gray-100 dark:bg-gray-800/50 rounded-2xl border border-gray-200 dark:border-gray-700 p-6 opacity-60 cursor-not-allowed">
@@ -527,13 +561,16 @@ export default function CoursesPage() {
           <div key={lesson.id} className="relative">
             {lesson.available ? (
               <Link href={`/courses/${lesson.id}`} className="block group">
-                <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-6 shadow-sm hover:shadow-md hover:border-violet-300 transition-all">
-                  <div className="text-xs font-semibold text-violet-600 mb-2">{lesson.id}</div>
-                  <h3 className="font-bold text-lg font-[family-name:var(--font-inter)] group-hover:text-violet-700 transition-colors">
-                    {lesson.title}
-                  </h3>
-                  <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">{lesson.subtitle}</p>
-                </div>
+                <div className="overflow-hidden bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md hover:border-violet-300 transition-all">
+                    <Image src={lessonImage(lesson.id)} alt={lesson.title} width={400} height={200} className="h-32 w-full object-cover" />
+                    <div className="p-5">
+                      <div className="text-xs font-semibold text-violet-600 mb-2">{lesson.id}</div>
+                      <h3 className="font-bold text-lg font-[family-name:var(--font-inter)] group-hover:text-violet-700 transition-colors">
+                        {lesson.title}
+                      </h3>
+                      <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">{lesson.subtitle}</p>
+                    </div>
+                  </div>
               </Link>
             ) : (
               <div className="bg-gray-100 dark:bg-gray-800/50 rounded-2xl border border-gray-200 dark:border-gray-700 p-6 opacity-60 cursor-not-allowed">
@@ -577,13 +614,16 @@ export default function CoursesPage() {
         {LEVEL10_LESSONS.map((lesson) => (
           <div key={lesson.id} className="relative">
             <Link href={`/courses/${lesson.id}`} className="block group">
-              <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-6 shadow-sm hover:shadow-md hover:border-amber-300 transition-all">
-                <div className="text-xs font-semibold text-amber-600 mb-2">{lesson.id}</div>
-                <h3 className="font-bold text-lg font-[family-name:var(--font-inter)] group-hover:text-amber-700 transition-colors">
-                  {lesson.title}
-                </h3>
-                <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">{lesson.subtitle}</p>
-              </div>
+              <div className="overflow-hidden bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md hover:border-amber-300 transition-all">
+                    <Image src={lessonImage(lesson.id)} alt={lesson.title} width={400} height={200} className="h-32 w-full object-cover" />
+                    <div className="p-5">
+                      <div className="text-xs font-semibold text-amber-600 mb-2">{lesson.id}</div>
+                      <h3 className="font-bold text-lg font-[family-name:var(--font-inter)] group-hover:text-amber-700 transition-colors">
+                        {lesson.title}
+                      </h3>
+                      <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">{lesson.subtitle}</p>
+                    </div>
+                  </div>
             </Link>
           </div>
         ))}
