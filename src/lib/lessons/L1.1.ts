@@ -48,7 +48,7 @@ export const L11Data: LessonData = {
     title: 'Sounds & Letters',
     subtitle: 'The Spanish alphabet & pronunciation foundations',
     description: 'The Spanish alphabet has 27 letters, including the unique \u00f1. It is entirely phonetic \u2014 each letter has a consistent sound. Mastering pronunciation here builds the foundation for everything that follows.',
-    image: '/images/L1.1/bg-learning.jpg',
+    image: '/images/L1.1/L1.1.jpg',
     gradient: 'from-blue-800/70 via-blue-700/60 to-purple-700/70',
     accentColor: 'amber-300',
   },
