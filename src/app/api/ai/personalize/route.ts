@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from 'next/server'
 
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY
 const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY
+const VERCEL_AI_KEY = process.env.VERCEL_AI_GATEWAY_API_KEY
+const VERCEL_AI_URL = process.env.VERCEL_AI_GATEWAY_BASE_URL || 'https://ai-gateway.vercel.sh/v1'
 const TIMEOUT_MS = 20000
 
 async function callOpenAI(messages: { role: string; content: string }[], maxTokens: number) {
@@ -143,7 +145,29 @@ Generate personalized sentences for each word.`
     }
   }
 
-  // 2) Fallback to OpenRouter free models
+  // 2) Try Vercel AI Gateway
+  if (VERCEL_AI_KEY) {
+    try {
+      const controller = new AbortController()
+      const timer = setTimeout(() => controller.abort(), TIMEOUT_MS)
+      const response = await fetch(`${VERCEL_AI_URL}/chat/completions`, {
+        method: 'POST',
+        headers: { 'Authorization': `Bearer ${VERCEL_AI_KEY}`, 'Content-Type': 'application/json' },
+        body: JSON.stringify({ model: 'gpt-4o-mini', messages, temperature: 0.7, max_tokens: 1500 }),
+        signal: controller.signal,
+      })
+      clearTimeout(timer)
+      if (!response.ok) throw new Error(`Vercel AI Gateway HTTP ${response.status}`)
+      const data = await response.json()
+      const content = data.choices?.[0]?.message?.content ?? '[]'
+      const sentences = parseJSON(content)
+      return NextResponse.json({ sentences })
+    } catch (err) {
+      console.warn('[personalize] Vercel AI Gateway failed:', String(err))
+    }
+  }
+
+  // 3) Fallback to OpenRouter free models
   if (OPENROUTER_API_KEY) {
     const fallbackModels = ['google/gemma-3-27b-it:free', 'google/gemma-3-12b-it:free']
     for (const model of fallbackModels) {
