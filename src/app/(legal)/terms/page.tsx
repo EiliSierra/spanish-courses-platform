@@ -70,7 +70,7 @@ export default function TermsOfServicePage() {
       <p>
         You may cancel your subscription at any time through your Stripe Customer Portal (accessible from your account
         settings) or by emailing us at{' '}
-        <a href="mailto:support@alexandriasdesign.com">support@alexandriasdesign.com</a>. Cancellation takes effect at
+        <a href="mailto:info@alexandriasdesign.com">info@alexandriasdesign.com</a>. Cancellation takes effect at
         the end of your current billing period.
       </p>
 
@@ -150,7 +150,7 @@ export default function TermsOfServicePage() {
       <ul>
         <li>
           <strong>Email:</strong>{' '}
-          <a href="mailto:support@alexandriasdesign.com">support@alexandriasdesign.com</a>
+          <a href="mailto:info@alexandriasdesign.com">info@alexandriasdesign.com</a>
         </li>
         <li>
           <strong>Company:</strong> Alexandria&apos;s Design LLC

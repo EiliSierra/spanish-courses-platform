@@ -165,7 +165,7 @@ export default function PrivacyPolicyPage() {
       </ul>
       <p>
         To exercise any of these rights, please contact us at{' '}
-        <a href="mailto:support@alexandriasdesign.com">support@alexandriasdesign.com</a>. We will respond within 30
+        <a href="mailto:info@alexandriasdesign.com">info@alexandriasdesign.com</a>. We will respond within 30
         days.
       </p>
 
@@ -202,7 +202,7 @@ export default function PrivacyPolicyPage() {
       <ul>
         <li>
           <strong>Email:</strong>{' '}
-          <a href="mailto:support@alexandriasdesign.com">support@alexandriasdesign.com</a>
+          <a href="mailto:info@alexandriasdesign.com">info@alexandriasdesign.com</a>
         </li>
         <li>
           <strong>Company:</strong> Alexandria&apos;s Design LLC

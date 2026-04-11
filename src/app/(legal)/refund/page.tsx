@@ -71,14 +71,14 @@ export default function RefundPolicyPage() {
       <h3>5.2 Email</h3>
       <p>
         Send a cancellation request to{' '}
-        <a href="mailto:support@alexandriasdesign.com">support@alexandriasdesign.com</a> with the email address
+        <a href="mailto:info@alexandriasdesign.com">info@alexandriasdesign.com</a> with the email address
         associated with your account. We will process your cancellation within 1 business day.
       </p>
 
       <h2>6. How to Request a Refund</h2>
       <p>
         If you are eligible for a refund under this policy, email us at{' '}
-        <a href="mailto:support@alexandriasdesign.com">support@alexandriasdesign.com</a> with:
+        <a href="mailto:info@alexandriasdesign.com">info@alexandriasdesign.com</a> with:
       </p>
       <ul>
         <li>Your account email address.</li>
@@ -112,7 +112,7 @@ export default function RefundPolicyPage() {
       <ul>
         <li>
           <strong>Email:</strong>{' '}
-          <a href="mailto:support@alexandriasdesign.com">support@alexandriasdesign.com</a>
+          <a href="mailto:info@alexandriasdesign.com">info@alexandriasdesign.com</a>
         </li>
         <li>
           <strong>Company:</strong> Alexandria&apos;s Design LLC
