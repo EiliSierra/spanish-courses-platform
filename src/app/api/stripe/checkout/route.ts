@@ -20,6 +20,7 @@ export async function POST(req: NextRequest) {
     mode: isSubscription ? 'subscription' : 'payment',
     payment_method_types: ['card'],
     line_items: [{ price: priceId, quantity: 1 }],
+    allow_promotion_codes: true,
     success_url: `${req.nextUrl.origin}/checkout/success?session_id={CHECKOUT_SESSION_ID}`,
     cancel_url: `${req.nextUrl.origin}/#pricing`,
     metadata: { clerkUserId: userId },

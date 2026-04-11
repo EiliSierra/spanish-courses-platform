@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import { ClerkProvider } from '@clerk/nextjs'
+import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import { Inter, Source_Sans_3 } from 'next/font/google'
 import './globals.css'
 
@@ -23,6 +25,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <body className="font-[family-name:var(--font-source-sans)] antialiased">
           <script dangerouslySetInnerHTML={{ __html: `document.documentElement.classList.add('js-ready');(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme:dark)').matches))document.documentElement.classList.add('dark')}catch(e){}})()` }} />
           {children}
+          <Analytics />
+          <SpeedInsights />
         </body>
       </html>
     </ClerkProvider>

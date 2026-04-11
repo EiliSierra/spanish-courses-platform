@@ -26,11 +26,20 @@ export function ScrollReveal({
           observer.unobserve(el)
         }
       },
-      { threshold: 0.15, rootMargin: '0px 0px -40px 0px' }
+      { threshold: 0.01, rootMargin: '200px 0px 200px 0px' }
     )
 
     observer.observe(el)
-    return () => observer.disconnect()
+
+    // Fallback: reveal after 2s in case observer doesn't fire
+    const fallback = setTimeout(() => {
+      el.classList.add('reveal-visible')
+    }, 2000 + delay)
+
+    return () => {
+      observer.disconnect()
+      clearTimeout(fallback)
+    }
   }, [delay])
 
   return (
@@ -67,11 +76,21 @@ export function StaggerReveal({
           observer.unobserve(el)
         }
       },
-      { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+      { threshold: 0.01, rootMargin: '200px 0px 200px 0px' }
     )
 
     observer.observe(el)
-    return () => observer.disconnect()
+
+    // Fallback: reveal all stagger items after 2s
+    const fallback = setTimeout(() => {
+      const items = el.querySelectorAll('.stagger-item')
+      items.forEach((item) => item.classList.add('reveal-visible'))
+    }, 2000)
+
+    return () => {
+      observer.disconnect()
+      clearTimeout(fallback)
+    }
   }, [staggerMs])
 
   return (

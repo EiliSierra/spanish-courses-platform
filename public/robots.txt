@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /courses/
+Disallow: /api/
+Disallow: /sign-in/
+Disallow: /sign-up/
+Disallow: /checkout/
+
+Sitemap: https://spanish-courses-platform.vercel.app/sitemap.xml

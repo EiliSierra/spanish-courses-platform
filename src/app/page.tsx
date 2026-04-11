@@ -323,7 +323,7 @@ export default async function LandingPage() {
       </section>
 
       {/* Curriculum */}
-      <section id="curriculum" className="bg-gray-50 border-y border-gray-100">
+      <section id="curriculum" className="bg-gray-50 border-y border-gray-100 scroll-mt-20">
         <div className="max-w-6xl mx-auto px-6 py-20">
           <ScrollReveal>
             <div className="text-center mb-14">
@@ -532,48 +532,60 @@ export default async function LandingPage() {
         </div>
       </section>
 
-      {/* What learners say — placeholder testimonials */}
+      {/* What's Inside — real product stats */}
       <section className="bg-gray-50 border-y border-gray-100">
         <div className="max-w-6xl mx-auto px-6 py-20">
           <ScrollReveal>
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-extrabold font-[family-name:var(--font-inter)]">
-                What learners are saying
+                What&apos;s inside the course
               </h2>
+              <p className="mt-3 text-lg text-gray-500 max-w-xl mx-auto">
+                Real numbers, no filler. Here&apos;s exactly what you get.
+              </p>
             </div>
           </ScrollReveal>
           <div className="grid md:grid-cols-3 gap-6">
             {[
               {
-                quote: 'The audio quality is incredible. Every word has a native speaker recording — I feel like I have a tutor in my ear.',
-                name: 'Sarah M.',
-                detail: 'Completed Level 3',
+                icon: (
+                  <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19.114 5.636a9 9 0 010 12.728M16.463 8.288a5.25 5.25 0 010 7.424M6.75 8.25l4.72-4.72a.75.75 0 011.28.53v15.88a.75.75 0 01-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 012.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75z" />
+                  </svg>
+                ),
+                stat: '4,400+',
+                label: 'Native Audio Clips',
+                desc: 'Every vocabulary word, phrase, and dialogue has native-speaker audio. No robotic text-to-speech.',
               },
               {
-                quote: 'I tried Duolingo for a year. In two months with Alexandria\'s, I learned more actual Spanish than that entire year.',
-                name: 'James R.',
-                detail: 'Currently on Level 5',
+                icon: (
+                  <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+                  </svg>
+                ),
+                stat: '20+ Cities',
+                label: 'Real-World Settings',
+                desc: 'Dialogues set in actual Spanish-speaking cities. Mexico City, Madrid, Bogota, Buenos Aires, and more.',
               },
               {
-                quote: 'The cultural deep dives are my favorite part. I\'m not just learning words — I understand the people and places behind them.',
-                name: 'Maria L.',
-                detail: 'Completed Level 7',
+                icon: (
+                  <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 00.75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 00-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0112 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 01-.673-.38m0 0A2.18 2.18 0 013 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 013.413-.387m7.5 0V5.25A2.25 2.25 0 0013.5 3h-3a2.25 2.25 0 00-2.25 2.25v.894m7.5 0a48.667 48.667 0 00-7.5 0M12 12.75h.008v.008H12v-.008z" />
+                  </svg>
+                ),
+                stat: '8 Specializations',
+                label: 'Professional Spanish',
+                desc: 'Medical, legal, business, tech, culinary, sports, politics, and education. Skills you can use at work.',
               },
-            ].map((t, i) => (
-              <ScrollReveal key={t.name} delay={i * 120}>
-                <div className="bg-white rounded-2xl border border-gray-200 p-6 h-full flex flex-col">
-                  <div className="flex gap-1 mb-4">
-                    {[...Array(5)].map((_, j) => (
-                      <svg key={j} className="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
-                    ))}
+            ].map((item, i) => (
+              <ScrollReveal key={item.label} delay={i * 120}>
+                <div className="bg-white rounded-2xl border border-gray-200 p-6 h-full text-center">
+                  <div className="w-14 h-14 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center mx-auto mb-4">
+                    {item.icon}
                   </div>
-                  <p className="text-gray-600 leading-relaxed text-sm flex-1">&ldquo;{t.quote}&rdquo;</p>
-                  <div className="mt-4 pt-4 border-t border-gray-100">
-                    <p className="font-bold text-sm font-[family-name:var(--font-inter)]">{t.name}</p>
-                    <p className="text-xs text-gray-400">{t.detail}</p>
-                  </div>
+                  <div className="text-3xl font-extrabold font-[family-name:var(--font-inter)] text-gray-900 mb-1">{item.stat}</div>
+                  <div className="text-sm font-bold text-blue-600 mb-3">{item.label}</div>
+                  <p className="text-gray-500 text-sm leading-relaxed">{item.desc}</p>
                 </div>
               </ScrollReveal>
             ))}
@@ -582,10 +594,13 @@ export default async function LandingPage() {
       </section>
 
       {/* Pricing */}
-      <section id="pricing" className="bg-gray-50 border-y border-gray-100">
+      <section id="pricing" className="bg-gray-50 border-y border-gray-100 scroll-mt-20">
         <div className="max-w-6xl mx-auto px-6 py-20">
           <ScrollReveal>
             <div className="text-center mb-14">
+              <div className="inline-flex items-center gap-2 bg-amber-50 border border-amber-200 text-amber-700 text-sm font-bold px-4 py-1.5 rounded-full mb-6">
+                Founding Member Pricing — Use code FOUNDING40 for 40% off your first 3 months
+              </div>
               <h2 className="text-3xl md:text-4xl font-extrabold font-[family-name:var(--font-inter)]">
                 Simple, transparent pricing
               </h2>
@@ -709,7 +724,7 @@ export default async function LandingPage() {
       </section>
 
       {/* FAQ */}
-      <section id="faq" className="max-w-3xl mx-auto px-6 py-20">
+      <section id="faq" className="max-w-3xl mx-auto px-6 py-20 scroll-mt-20">
         <ScrollReveal>
           <div className="text-center mb-14">
             <h2 className="text-3xl md:text-4xl font-extrabold font-[family-name:var(--font-inter)]">
@@ -789,7 +804,9 @@ export default async function LandingPage() {
               <ul className="space-y-2 text-sm">
                 <li><span className="text-gray-500">Alexandria&apos;s Design LLC</span></li>
                 <li><a href="mailto:esierra@alexandriasdesign.com" className="hover:text-white transition-colors">Contact Us</a></li>
-                <li><span className="text-gray-500">Carlsbad, California</span></li>
+                <li><Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link></li>
+                <li><Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link></li>
+                <li><Link href="/refund" className="hover:text-white transition-colors">Refund Policy</Link></li>
               </ul>
             </div>
           </div>
