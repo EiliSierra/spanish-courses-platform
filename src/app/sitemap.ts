@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next'
 
-const BASE_URL = 'https://spanish-courses-platform.vercel.app'
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://spanish-courses-platform.vercel.app'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
@@ -9,6 +9,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 1,
+    },
+    {
+      url: `${BASE_URL}/sign-up`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
     },
     {
       url: `${BASE_URL}/terms`,
