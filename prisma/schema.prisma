@@ -1,0 +1,50 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+// Lesson progress — one row per user per lesson
+model LessonProgress {
+  id        String   @id @default(cuid())
+  userId    String   // Clerk user ID
+  lessonId  String   // e.g. "L1.1", "L3.F"
+
+  // Section states: { "welcome": { visited: true, completed: true }, ... }
+  sectionStates Json @default("{}")
+
+  // Quiz results (null if not taken yet)
+  quizScore Int?
+  quizMax   Int?
+  quizPassed Boolean @default(false)
+
+  // Progress percentage (0-100)
+  progressPct Int @default(0)
+
+  lastAccess DateTime @default(now()) @updatedAt
+  createdAt  DateTime @default(now())
+
+  @@unique([userId, lessonId])
+  @@index([userId])
+  @@map("lesson_progress")
+}
+
+// Exam results — one row per user per exam attempt
+model ExamResult {
+  id        String   @id @default(cuid())
+  userId    String
+  examId    String   // e.g. "L1.F", "L10.F"
+
+  score     Int
+  total     Int
+  passed    Boolean
+  percentage Int
+
+  createdAt DateTime @default(now())
+
+  @@index([userId])
+  @@index([userId, examId])
+  @@map("exam_results")
+}

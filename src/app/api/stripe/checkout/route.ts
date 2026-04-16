@@ -13,11 +13,27 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Missing priceId' }, { status: 400 })
   }
 
+  // Find existing Stripe customer or create one with clerkUserId metadata
+  const existing = await stripe.customers.search({
+    query: `metadata["clerkUserId"]:"${userId}"`,
+  })
+
+  let customerId: string
+  if (existing.data.length > 0) {
+    customerId = existing.data[0].id
+  } else {
+    const customer = await stripe.customers.create({
+      metadata: { clerkUserId: userId },
+    })
+    customerId = customer.id
+  }
+
   const price = await stripe.prices.retrieve(priceId)
   const isSubscription = !!price.recurring
 
   const session = await stripe.checkout.sessions.create({
     mode: isSubscription ? 'subscription' : 'payment',
+    customer: customerId,
     payment_method_types: ['card'],
     line_items: [{ price: priceId, quantity: 1 }],
     allow_promotion_codes: true,

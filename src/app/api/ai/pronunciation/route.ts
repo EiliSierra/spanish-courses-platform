@@ -1,4 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { auth } from '@clerk/nextjs/server'
+import { isRateLimited } from '@/lib/rate-limit'
 
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY
 const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY
@@ -66,6 +68,14 @@ function parseJSON(content: string) {
 }
 
 export async function POST(req: NextRequest) {
+  const { userId } = await auth()
+  if (!userId) {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+  }
+  if (isRateLimited(userId, 20)) {
+    return NextResponse.json({ error: 'Too many requests. Please wait a moment.' }, { status: 429 })
+  }
+
   if (!OPENAI_API_KEY && !OPENROUTER_API_KEY) {
     return NextResponse.json({ error: 'No API key configured' }, { status: 500 })
   }
