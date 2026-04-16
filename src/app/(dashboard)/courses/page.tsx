@@ -2,8 +2,11 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { currentUser } from '@clerk/nextjs/server'
 import { canAccessLesson, type PlanKey } from '@/lib/stripe'
+import { prisma } from '@/lib/db'
 
 export const dynamic = 'force-dynamic'
+
+type ProgressMap = Record<string, { progressPct: number; quizScore: number | null; quizMax: number | null; quizPassed: boolean }>
 
 function lessonImage(id: string): string {
   const special: Record<string, string> = {
@@ -208,7 +211,40 @@ function LockIcon() {
   )
 }
 
-function LessonCard({ lesson, color, hoverBorder, locked }: { lesson: Lesson; color: string; hoverBorder: string; locked: boolean }) {
+function ProgressBadge({ progress }: { progress?: ProgressMap[string] }) {
+  if (!progress || progress.progressPct === 0) return null
+
+  const pct = progress.progressPct
+  const isComplete = pct === 100
+
+  if (isComplete) {
+    return (
+      <div className="flex items-center gap-1.5">
+        <div className="w-5 h-5 rounded-full bg-green-500 flex items-center justify-center">
+          <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+          </svg>
+        </div>
+        {progress.quizScore != null && progress.quizMax != null && (
+          <span className="text-xs font-semibold text-green-600 dark:text-green-400">
+            {Math.round((progress.quizScore / progress.quizMax) * 100)}%
+          </span>
+        )}
+      </div>
+    )
+  }
+
+  return (
+    <div className="flex items-center gap-2 flex-1">
+      <div className="flex-1 h-1.5 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+        <div className="h-full bg-blue-500 rounded-full transition-all" style={{ width: `${pct}%` }} />
+      </div>
+      <span className="text-xs font-medium text-gray-500 dark:text-gray-400">{pct}%</span>
+    </div>
+  )
+}
+
+function LessonCard({ lesson, color, hoverBorder, locked, progress }: { lesson: Lesson; color: string; hoverBorder: string; locked: boolean; progress?: ProgressMap[string] }) {
   if (locked) {
     return (
       <Link href="/#pricing" className="block group">
@@ -236,12 +272,26 @@ function LessonCard({ lesson, color, hoverBorder, locked }: { lesson: Lesson; co
     )
   }
 
+  const isComplete = progress && progress.progressPct === 100
+
   return (
     <Link href={`/courses/${lesson.id}`} className="block group">
-      <div className={`overflow-hidden bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md ${hoverBorder} transition-all`}>
-        <Image src={lessonImage(lesson.id)} alt={lesson.title} width={400} height={200} className="h-32 w-full object-cover" />
+      <div className={`overflow-hidden bg-white dark:bg-gray-800 rounded-2xl border ${isComplete ? 'border-green-300 dark:border-green-700' : 'border-gray-200 dark:border-gray-700'} shadow-sm hover:shadow-md ${hoverBorder} transition-all`}>
+        <div className="relative">
+          <Image src={lessonImage(lesson.id)} alt={lesson.title} width={400} height={200} className="h-32 w-full object-cover" />
+          {isComplete && (
+            <div className="absolute top-2 right-2 w-7 h-7 rounded-full bg-green-500 flex items-center justify-center shadow-md">
+              <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+              </svg>
+            </div>
+          )}
+        </div>
         <div className="p-5">
-          <div className={`text-xs font-semibold ${color} mb-2`}>{lesson.id}</div>
+          <div className="flex items-center justify-between mb-2">
+            <div className={`text-xs font-semibold ${color}`}>{lesson.id}</div>
+            <ProgressBadge progress={progress} />
+          </div>
           <h3 className="font-bold text-lg font-[family-name:var(--font-inter)] group-hover:text-blue-700 transition-colors">
             {lesson.title}
           </h3>
@@ -252,7 +302,7 @@ function LessonCard({ lesson, color, hoverBorder, locked }: { lesson: Lesson; co
   )
 }
 
-function ExamCard({ level, locked }: { level: typeof LEVELS[number]; locked: boolean }) {
+function ExamCard({ level, locked, progress }: { level: typeof LEVELS[number]; locked: boolean; progress?: ProgressMap[string] }) {
   const examId = `L${level.num}.F`
 
   if (locked) {
@@ -275,18 +325,29 @@ function ExamCard({ level, locked }: { level: typeof LEVELS[number]; locked: boo
     )
   }
 
+  const passed = progress?.quizPassed
+  const score = progress?.quizScore != null && progress?.quizMax != null
+    ? Math.round((progress.quizScore / progress.quizMax) * 100)
+    : null
+
   return (
     <Link href={`/courses/${examId}`} className="block group">
-      <div className={`bg-gradient-to-r ${level.gradientFrom} ${level.gradientTo} ${level.darkFrom} ${level.darkTo} rounded-2xl border-2 ${level.borderColor} ${level.darkBorder} p-6 shadow-sm hover:shadow-md transition-all`}>
+      <div className={`bg-gradient-to-r ${level.gradientFrom} ${level.gradientTo} ${level.darkFrom} ${level.darkTo} rounded-2xl border-2 ${passed ? 'border-green-400 dark:border-green-600' : `${level.borderColor} ${level.darkBorder}`} p-6 shadow-sm hover:shadow-md transition-all`}>
         <div className="flex items-center gap-4">
           <span className="text-4xl">{level.emoji}</span>
-          <div>
+          <div className="flex-1">
             <div className={`text-xs font-semibold ${level.accentColor} mb-1`}>{level.examLabel}</div>
             <h3 className={`font-bold text-lg font-[family-name:var(--font-inter)] group-hover:${level.accentColor} transition-colors`}>
               Level {level.num} — {level.num === 10 ? 'Ultimate Exam' : 'Final Exam'}
             </h3>
             <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">{level.examDesc}</p>
           </div>
+          {score != null && (
+            <div className={`flex flex-col items-center gap-1 ${passed ? 'text-green-600 dark:text-green-400' : 'text-amber-600 dark:text-amber-400'}`}>
+              <span className="text-2xl font-bold">{score}%</span>
+              <span className="text-xs font-semibold">{passed ? 'Passed' : 'Try Again'}</span>
+            </div>
+          )}
         </div>
       </div>
     </Link>
@@ -297,10 +358,35 @@ export default async function CoursesPage() {
   const user = await currentUser()
   const userPlan = (user?.publicMetadata?.plan as PlanKey) || 'free'
 
+  // Fetch all progress for this user
+  let progressMap: ProgressMap = {}
+  if (user?.id) {
+    try {
+      const rows = await prisma.lessonProgress.findMany({
+        where: { userId: user.id },
+        select: { lessonId: true, progressPct: true, quizScore: true, quizMax: true, quizPassed: true },
+      })
+      for (const r of rows) {
+        progressMap[r.lessonId] = {
+          progressPct: r.progressPct,
+          quizScore: r.quizScore,
+          quizMax: r.quizMax,
+          quizPassed: r.quizPassed,
+        }
+      }
+    } catch {
+      // DB unavailable — show page without progress indicators
+    }
+  }
+
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10">
       {LEVELS.map((level) => {
         const levelLocked = !canAccessLesson(`L${level.num}.1`, userPlan)
+
+        const completedLessons = level.lessons.filter(l => progressMap[l.id]?.progressPct === 100).length
+        const totalLessons = level.lessons.length
+        const levelProgress = !levelLocked && completedLessons > 0
 
         return (
           <div key={level.num}>
@@ -311,6 +397,11 @@ export default async function CoursesPage() {
                 {levelLocked && (
                   <span className="text-xs font-bold text-purple-700 bg-purple-100 dark:bg-purple-900/50 dark:text-purple-300 px-3 py-1 rounded-full flex items-center gap-1">
                     <LockIcon /> Premium
+                  </span>
+                )}
+                {levelProgress && (
+                  <span className={`text-xs font-bold ${completedLessons === totalLessons ? 'text-green-700 bg-green-100 dark:bg-green-900/50 dark:text-green-300' : 'text-blue-700 bg-blue-100 dark:bg-blue-900/50 dark:text-blue-300'} px-3 py-1 rounded-full`}>
+                    {completedLessons === totalLessons ? `${totalLessons}/${totalLessons} Complete` : `${completedLessons}/${totalLessons} lessons`}
                   </span>
                 )}
               </div>
@@ -326,6 +417,7 @@ export default async function CoursesPage() {
                     color={level.color}
                     hoverBorder={level.hoverBorder}
                     locked={levelLocked}
+                    progress={progressMap[lesson.id]}
                   />
                 </div>
               ))}
@@ -333,7 +425,7 @@ export default async function CoursesPage() {
 
             {/* Final exam */}
             <div className="mt-10">
-              <ExamCard level={level} locked={levelLocked} />
+              <ExamCard level={level} locked={levelLocked} progress={progressMap[`L${level.num}.F`]} />
             </div>
           </div>
         )
