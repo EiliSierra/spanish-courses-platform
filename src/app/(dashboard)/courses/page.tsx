@@ -360,11 +360,13 @@ export default async function CoursesPage() {
 
   // Fetch all progress for this user
   let progressMap: ProgressMap = {}
+  let lastAccessedLesson: { lessonId: string; progressPct: number } | null = null
   if (user?.id) {
     try {
       const rows = await prisma.lessonProgress.findMany({
         where: { userId: user.id },
-        select: { lessonId: true, progressPct: true, quizScore: true, quizMax: true, quizPassed: true },
+        select: { lessonId: true, progressPct: true, quizScore: true, quizMax: true, quizPassed: true, lastAccess: true },
+        orderBy: { lastAccess: 'desc' },
       })
       for (const r of rows) {
         progressMap[r.lessonId] = {
@@ -374,13 +376,58 @@ export default async function CoursesPage() {
           quizPassed: r.quizPassed,
         }
       }
+      // Find last accessed lesson that isn't 100% complete
+      const inProgress = rows.find(r => r.progressPct > 0 && r.progressPct < 100)
+      if (inProgress) {
+        lastAccessedLesson = { lessonId: inProgress.lessonId, progressPct: inProgress.progressPct }
+      }
     } catch {
       // DB unavailable — show page without progress indicators
     }
   }
 
+  // Look up lesson title for continue banner
+  const allLessons = LEVELS.flatMap(l => l.lessons)
+  const continueLesson = lastAccessedLesson
+    ? allLessons.find(l => l.id === lastAccessedLesson!.lessonId)
+    : null
+
+  // Calculate overall stats
+  const totalCompleted = Object.values(progressMap).filter(p => p.progressPct === 100).length
+  const totalInProgress = Object.values(progressMap).filter(p => p.progressPct > 0 && p.progressPct < 100).length
+
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10">
+      {/* Continue banner */}
+      {continueLesson && lastAccessedLesson && (
+        <Link href={`/courses/${lastAccessedLesson.lessonId}`} className="block mb-8 group">
+          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950 dark:to-indigo-950 rounded-2xl border border-blue-200 dark:border-blue-800 p-5 hover:shadow-md transition-all">
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 rounded-xl bg-blue-500 flex items-center justify-center text-white text-xl font-bold shadow-md">
+                {lastAccessedLesson.progressPct}%
+              </div>
+              <div className="flex-1">
+                <p className="text-xs font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-wider">Continue where you left off</p>
+                <h3 className="font-bold text-lg font-[family-name:var(--font-inter)] group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-colors">
+                  {lastAccessedLesson.lessonId} — {continueLesson.title}
+                </h3>
+              </div>
+              <svg className="w-6 h-6 text-blue-500 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+              </svg>
+            </div>
+          </div>
+        </Link>
+      )}
+
+      {/* Progress summary */}
+      {totalCompleted > 0 && (
+        <div className="flex items-center gap-4 mb-8 text-sm text-gray-600 dark:text-gray-400">
+          <span className="font-semibold text-green-600 dark:text-green-400">{totalCompleted} completed</span>
+          {totalInProgress > 0 && <span>{totalInProgress} in progress</span>}
+          <span>of 84 lessons</span>
+        </div>
+      )}
       {LEVELS.map((level) => {
         const levelLocked = !canAccessLesson(`L${level.num}.1`, userPlan)
 
