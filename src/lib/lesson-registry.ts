@@ -38,6 +38,22 @@ function exam(
   return { type: 'exam', load: loader }
 }
 
+export function getNextLessonId(currentId: string): string | null {
+  const match = currentId.match(/^L(\d+)\.(\d+|F)$/)
+  if (!match) return null
+  const level = Number(match[1])
+  const part = match[2]
+
+  let candidate: string | null = null
+  if (part === 'F') {
+    candidate = `L${level + 1}.1`
+  } else {
+    const n = Number(part)
+    candidate = n < 8 ? `L${level}.${n + 1}` : `L${level}.F`
+  }
+  return candidate && LESSON_REGISTRY[candidate] ? candidate : null
+}
+
 export const LESSON_REGISTRY: Record<string, RegistryEntry> = {
   // Level 1
   'L1.1': lesson(() => import('@/lib/lessons/L1.1').then(m => ({ data: m.L11Data, phraseByAudio: m.L11PhraseByAudio }))),

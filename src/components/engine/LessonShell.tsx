@@ -16,6 +16,7 @@ import SortingActivity from './SortingActivity'
 import DialogueSection from './DialogueSection'
 import CulturalNotes from './CulturalNotes'
 import KnowledgeQuiz from './KnowledgeQuiz'
+import { getNextLessonId } from '@/lib/lesson-registry'
 import ConversationalTutor from './ConversationalTutor'
 import { getUniqueActivity } from './unique-activities/registry'
 import type { LessonData, PhraseData } from '@/lib/types/lesson'
@@ -26,7 +27,7 @@ interface LessonShellProps {
 }
 
 export default function LessonShell({ data, phraseByAudio }: LessonShellProps) {
-  const { sectionStates, progressPct, markVisited, markCompleted, setQuizScore } = useLessonProgress(data.id, data.sections)
+  const { sectionStates, progressPct, markVisited, markCompleted, markAllCompleted, setQuizScore } = useLessonProgress(data.id, data.sections)
   const [activeSection, setActiveSection] = useState('welcome')
   const { showToast } = useToast()
 
@@ -74,7 +75,8 @@ export default function LessonShell({ data, phraseByAudio }: LessonShellProps) {
   useEffect(() => {
     window.scrollTo(0, 0)
     markVisited('welcome')
-  }, [markVisited])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   const handleMatchingComplete = useCallback(() => {
     markCompleted('matching-game')
@@ -95,15 +97,19 @@ export default function LessonShell({ data, phraseByAudio }: LessonShellProps) {
   const handleQuizComplete = useCallback(
     (score: number, max: number) => {
       setQuizScore(score, max)
-      markCompleted('knowledge-check')
+      markAllCompleted()
       const pct = Math.round((score / max) * 100)
       showToast(`Quiz Complete! Score: ${pct}%`, pct >= 80 ? 'success' : 'info')
     },
-    [setQuizScore, markCompleted, showToast],
+    [setQuizScore, markAllCompleted, showToast],
   )
 
   const sc = data.sectionColors
   const lessonNum = data.id.replace('L', '')
+  const nextLessonId = useMemo(() => getNextLessonId(data.id), [data.id])
+  const nextLessonLabel = nextLessonId
+    ? (nextLessonId.endsWith('.F') ? `Final Exam ${nextLessonId.slice(1, -2)}` : `Lesson ${nextLessonId.slice(1)}`)
+    : null
 
   // Build transition lookup: afterSection → text
   const transitionMap = useMemo(() => {
@@ -236,7 +242,7 @@ export default function LessonShell({ data, phraseByAudio }: LessonShellProps) {
 
           {/* Knowledge Check */}
           <div className={`section-card ${sc['knowledge-check']?.bg ?? ''} ${sc['knowledge-check']?.border ?? ''}`}>
-            <KnowledgeQuiz questions={data.quiz} onComplete={handleQuizComplete} />
+            <KnowledgeQuiz questions={data.quiz} onComplete={handleQuizComplete} nextLessonId={nextLessonId} nextLessonLabel={nextLessonLabel} />
           </div>
         </div>
       </div>

@@ -57,11 +57,11 @@ export default function LessonSidebar({ progressPct, sectionStates, activeSectio
         <div className="px-5 py-4 border-b border-gray-200 dark:border-gray-800">
           <div className="flex justify-between text-sm mb-1.5">
             <span className="text-gray-500 dark:text-gray-400">Progress</span>
-            <span className="font-semibold text-blue-600 dark:text-blue-400">{progressPct}%</span>
+            <span className={`font-semibold ${progressPct >= 100 ? 'text-green-600 dark:text-green-400' : 'text-blue-600 dark:text-blue-400'}`}>{progressPct}%</span>
           </div>
           <div className="h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
             <div
-              className="h-full bg-gradient-to-r from-blue-500 to-purple-500 rounded-full transition-all duration-500"
+              className={`h-full rounded-full transition-all duration-500 ${progressPct >= 100 ? 'bg-gradient-to-r from-green-500 to-emerald-500' : 'bg-gradient-to-r from-blue-500 to-purple-500'}`}
               style={{ width: `${progressPct}%` }}
               role="progressbar"
               aria-valuenow={progressPct}
@@ -69,6 +69,12 @@ export default function LessonSidebar({ progressPct, sectionStates, activeSectio
               aria-valuemax={100}
             />
           </div>
+          {progressPct >= 100 && (
+            <div className="mt-3 flex items-center gap-1.5 text-xs font-semibold text-green-700 dark:text-green-400 bg-green-50 dark:bg-green-950/40 border border-green-200 dark:border-green-900 rounded-md px-2.5 py-1.5">
+              <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
+              Lesson Complete
+            </div>
+          )}
         </div>
 
         {/* Nav links */}

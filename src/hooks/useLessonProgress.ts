@@ -135,6 +135,18 @@ export function useLessonProgress(lessonId: string, sections?: { id: string; lab
     [save, quizScore],
   )
 
+  const markAllCompleted = useCallback(() => {
+    const sectionList = sections ?? SECTIONS
+    setSectionStates((prev) => {
+      const next = { ...prev }
+      sectionList.forEach((s) => {
+        next[s.id] = { ...next[s.id], visited: true, completed: true }
+      })
+      save(next, quizScore)
+      return next
+    })
+  }, [save, quizScore, sections])
+
   const setQuizScore = useCallback(
     (score: number, max: number) => {
       const pct = Math.round((score / max) * 100)
@@ -156,6 +168,7 @@ export function useLessonProgress(lessonId: string, sections?: { id: string; lab
     progressPct,
     markVisited,
     markCompleted,
+    markAllCompleted,
     setQuizScore,
   }
 }

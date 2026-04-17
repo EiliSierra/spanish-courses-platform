@@ -7,9 +7,11 @@ import { spawnConfetti } from '@/components/ui/Confetti'
 interface KnowledgeQuizProps {
   questions: QuizQuestion[]
   onComplete?: (score: number, max: number) => void
+  nextLessonId?: string | null
+  nextLessonLabel?: string | null
 }
 
-export default function KnowledgeQuiz({ questions, onComplete }: KnowledgeQuizProps) {
+export default function KnowledgeQuiz({ questions, onComplete, nextLessonId, nextLessonLabel }: KnowledgeQuizProps) {
   const [answered, setAnswered] = useState<Record<number, boolean>>({})
   const [results, setResults] = useState<Record<number, boolean>>({})
   const [correctCount, setCorrectCount] = useState(0)
@@ -70,7 +72,15 @@ export default function KnowledgeQuiz({ questions, onComplete }: KnowledgeQuizPr
               <div className="text-4xl mb-2">{'⭐'.repeat(stars)}{'☆'.repeat(3 - stars)}</div>
               <div className="text-4xl font-bold text-blue-600 mb-1">{pct}%</div>
               <p className="text-gray-500 dark:text-gray-400 mb-4">{correctCount} of {questions.length} correct</p>
-              <button onClick={retry} className="px-6 py-2 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700">Retry Quiz</button>
+              <div className="flex flex-wrap gap-3 justify-center">
+                <button onClick={retry} className="px-6 py-2 bg-white text-blue-600 border-2 border-blue-600 rounded-lg font-medium hover:bg-blue-50 dark:bg-gray-800 dark:hover:bg-gray-700">Retry Quiz</button>
+                {nextLessonId && (
+                  <a href={`/courses/${nextLessonId}`} className="px-6 py-2 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 inline-flex items-center gap-2">
+                    Continue to {nextLessonLabel ?? nextLessonId}
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
+                  </a>
+                )}
+              </div>
             </>)
           })()}
         </div>
