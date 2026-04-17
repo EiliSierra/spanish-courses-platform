@@ -73,7 +73,9 @@ export default function KnowledgeQuiz({ questions, onComplete, nextLessonId, nex
               <div className="text-4xl font-bold text-blue-600 mb-1">{pct}%</div>
               <p className="text-gray-500 dark:text-gray-400 mb-4">{correctCount} of {questions.length} correct</p>
               <div className="flex flex-wrap gap-3 justify-center">
-                <button onClick={retry} className="px-6 py-2 bg-white text-blue-600 border-2 border-blue-600 rounded-lg font-medium hover:bg-blue-50 dark:bg-gray-800 dark:hover:bg-gray-700">Retry Quiz</button>
+                {pct < 70 && (
+                  <button onClick={retry} className="px-6 py-2 bg-white text-blue-600 border-2 border-blue-600 rounded-lg font-medium hover:bg-blue-50 dark:bg-gray-800 dark:hover:bg-gray-700">Retry Quiz</button>
+                )}
                 {nextLessonId && (
                   <a href={`/courses/${nextLessonId}`} className="px-6 py-2 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 inline-flex items-center gap-2">
                     Continue to {nextLessonLabel ?? nextLessonId}
