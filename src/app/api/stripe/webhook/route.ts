@@ -53,16 +53,23 @@ export async function POST(req: NextRequest) {
       if (!clerkUserId) break
 
       if (session.mode === 'payment') {
-        // Lifetime one-time payment
         await setUserPlan(clerkUserId, 'lifetime')
+      } else if (session.mode === 'subscription' && session.subscription) {
+        const subId = typeof session.subscription === 'string' ? session.subscription : session.subscription.id
+        const sub = await stripe.subscriptions.retrieve(subId)
+        const priceId = sub.items.data[0]?.price?.id
+        if (priceId) {
+          await setUserPlan(clerkUserId, getPlanFromPrice(priceId))
+        }
       }
-      // For subscriptions, the plan is set via invoice.paid
       break
     }
 
     case 'invoice.paid': {
       const invoice = event.data.object as Stripe.Invoice
-      const subId = (invoice as unknown as { subscription: string | null }).subscription
+      const subId =
+        (invoice as unknown as { subscription: string | null }).subscription ||
+        (invoice as unknown as { parent?: { subscription_details?: { subscription: string } } }).parent?.subscription_details?.subscription
       if (!subId) break
 
       const sub = await stripe.subscriptions.retrieve(subId)
