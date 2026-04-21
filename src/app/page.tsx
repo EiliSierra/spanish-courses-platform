@@ -598,9 +598,6 @@ export default async function LandingPage() {
         <div className="max-w-6xl mx-auto px-6 py-20">
           <ScrollReveal>
             <div className="text-center mb-14">
-              <div className="inline-flex items-center gap-2 bg-amber-50 border border-amber-200 text-amber-700 text-sm font-bold px-4 py-1.5 rounded-full mb-6">
-                Founding Member Pricing — Use code FOUNDING40 for 40% off your first 3 months
-              </div>
               <h2 className="text-3xl md:text-4xl font-extrabold font-[family-name:var(--font-inter)]">
                 Simple, transparent pricing
               </h2>
