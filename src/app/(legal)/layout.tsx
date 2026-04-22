@@ -1,10 +1,27 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function LegalLayout({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen bg-white dark:bg-gray-950">
       <div className="mx-auto max-w-3xl px-6 py-12 sm:py-16">
-        <nav className="mb-10">
+        <nav className="mb-10 flex items-center justify-between">
+          <Link href="/" className="flex items-center" aria-label="Alexandria's Language Institute — Home">
+            <Image
+              src="/logo-horizontal.png"
+              alt="Alexandria's Language Institute"
+              width={280}
+              height={56}
+              className="h-12 w-auto dark:hidden"
+            />
+            <Image
+              src="/logo-on-dark.png"
+              alt="Alexandria's Language Institute"
+              width={280}
+              height={56}
+              className="h-12 w-auto hidden dark:block"
+            />
+          </Link>
           <Link
             href="/"
             className="inline-flex items-center gap-1.5 text-sm font-medium text-gray-500 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100"
