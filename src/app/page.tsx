@@ -101,11 +101,16 @@ export default async function LandingPage() {
     <main className="min-h-screen bg-white text-gray-900">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-lg border-b border-gray-100">
-        <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2">
-            <span className="text-2xl font-extrabold font-[family-name:var(--font-inter)] bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Alexandria&apos;s Language Institute
-            </span>
+        <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+          <Link href="/" className="flex items-center" aria-label="Alexandria's Language Institute — Home">
+            <Image
+              src="/logo-horizontal.png"
+              alt="Alexandria's Language Institute"
+              width={320}
+              height={64}
+              priority
+              className="h-14 w-auto"
+            />
           </Link>
           <div className="flex items-center gap-6">
             <a href="#curriculum" className="hidden sm:block text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">
@@ -761,9 +766,13 @@ export default async function LandingPage() {
         <div className="max-w-6xl mx-auto px-6 py-12">
           <div className="grid md:grid-cols-4 gap-8">
             <div className="md:col-span-1">
-              <h4 className="font-bold text-white font-[family-name:var(--font-inter)] text-lg mb-3">
-                Alexandria&apos;s Language Institute
-              </h4>
+              <Image
+                src="/logo-on-dark.png"
+                alt="Alexandria's Language Institute"
+                width={320}
+                height={80}
+                className="h-16 w-auto mb-4"
+              />
               <p className="text-sm leading-relaxed mb-4">
                 Interactive Spanish courses from A1 to C2. Built by educators who believe language learning should be engaging, structured, and accessible.
               </p>
