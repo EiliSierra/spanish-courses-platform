@@ -6,4 +6,4 @@ Disallow: /sign-in/
 Disallow: /sign-up/
 Disallow: /checkout/
 
-Sitemap: https://spanish-courses-platform.vercel.app/sitemap.xml
+Sitemap: https://www.alexandriaslanguages.com/sitemap.xml
