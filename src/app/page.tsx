@@ -598,6 +598,124 @@ export default async function LandingPage() {
         </div>
       </section>
 
+      {/* Method */}
+      <section id="method" className="bg-white border-y border-gray-100 scroll-mt-20">
+        <div className="max-w-6xl mx-auto px-6 py-20">
+          <ScrollReveal>
+            <div className="text-center mb-14">
+              <h2 className="text-3xl md:text-4xl font-extrabold font-[family-name:var(--font-inter)]">
+                The Method
+              </h2>
+              <p className="mt-3 text-lg text-gray-500 max-w-2xl mx-auto">
+                Built hand in hand by an experienced classroom teacher and the researcher whose doctoral work grounds the method.
+              </p>
+            </div>
+          </ScrollReveal>
+
+          {/* Eili + Charles cards */}
+          <div className="grid md:grid-cols-2 gap-8 mb-20">
+            <ScrollReveal>
+              <div className="bg-gray-50 rounded-2xl border border-gray-200 p-8 h-full">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white text-xl font-extrabold shadow-md flex-shrink-0">
+                    ES
+                  </div>
+                  <div>
+                    <div className="text-xs font-bold text-blue-600 uppercase tracking-wider mb-1">Created by</div>
+                    <h3 className="text-xl font-bold font-[family-name:var(--font-inter)]">Eili Sierra</h3>
+                  </div>
+                </div>
+                <p className="text-gray-600 leading-relaxed mb-4">
+                  Every lesson — from alphabet drills to C2 literary analysis — is built on instructional design principles refined across more than two decades of educational practice and grounded in active research on second language acquisition in online environments.
+                </p>
+                <p className="text-gray-600 leading-relaxed mb-4">
+                  Eili holds a <strong>Master&apos;s in Educational Innovation</strong> and brings over twenty years of classroom teaching experience to the Institute. A native Spanish speaker from Venezuela (currently based in Colombia), she has spent three years teaching Spanish in addition to her broader teaching career.
+                </p>
+                <p className="text-gray-600 leading-relaxed">
+                  Eili designed and built every lesson, audio, and interactive activity on the platform — translating doctoral research into the practical, lesson-by-lesson reality students experience every day.
+                </p>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal delay={150}>
+              <div className="bg-gray-50 rounded-2xl border border-gray-200 p-8 h-full">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-purple-500 to-fuchsia-600 flex items-center justify-center text-white text-xl font-extrabold shadow-md flex-shrink-0">
+                    CM
+                  </div>
+                  <div>
+                    <div className="text-xs font-bold text-purple-600 uppercase tracking-wider mb-1">Research foundation</div>
+                    <h3 className="text-xl font-bold font-[family-name:var(--font-inter)]">Dr. Charles Martin</h3>
+                  </div>
+                </div>
+                <p className="text-gray-600 leading-relaxed mb-4">
+                  Every pedagogical decision — from how vocabulary is introduced to how feedback is delivered — is grounded in peer-reviewed research on how adults actually acquire a second language in online environments.
+                </p>
+                <p className="text-gray-600 leading-relaxed mb-4">
+                  Dr. Charles Martin holds a <strong>doctorate in Curriculum and Instruction with specialization in Educational Technology</strong> from the University of Florida. His ongoing research on second language acquisition in online environments directly shapes how every lesson on the platform is structured.
+                </p>
+                <p className="text-gray-600 leading-relaxed">
+                  With <strong>eighteen years of teaching experience</strong> of his own, Dr. Martin has also designed evidence-based learning experiences for the U.S. Department of War, UCLA Health, and Microsoft Education — bringing the same standard of rigor previously reserved for institutional clients to anyone learning Spanish.
+                </p>
+              </div>
+            </ScrollReveal>
+          </div>
+
+          {/* What makes the method different */}
+          <ScrollReveal>
+            <div className="text-center mb-10">
+              <h3 className="text-2xl md:text-3xl font-extrabold font-[family-name:var(--font-inter)]">
+                What makes the method different
+              </h3>
+            </div>
+          </ScrollReveal>
+
+          <div className="grid md:grid-cols-2 gap-x-8 gap-y-6 mb-14 max-w-5xl mx-auto">
+            {[
+              {
+                title: 'Backward design from CEFR objectives.',
+                body: 'Every lesson begins with a measurable outcome (A1.1 → C2), then builds scaffolded activities that actively engage you in constructing knowledge — not passive memorization.',
+              },
+              {
+                title: 'Universal Design for Learning (UDL).',
+                body: 'Multiple means of engagement, representation, and expression. Audio-first, visual-rich, interactive. Built to work for every learner.',
+              },
+              {
+                title: 'Technology in service of learning, never the reverse.',
+                body: "AI tutor feedback, native-speaker audio, adaptive review cycles — each tool is integrated because evidence shows it deepens learning, not because it's trendy.",
+              },
+              {
+                title: 'Real-world, culturally sustaining content.',
+                body: 'Dialogues set in Bogotá cafés, Madrid airports, Mexico City markets. Taught by a native Spanish-speaking teacher who understands the multilingual learner experience firsthand.',
+              },
+            ].map((item, i) => (
+              <ScrollReveal key={item.title} delay={i * 100}>
+                <div className="flex gap-4">
+                  <div className="flex-shrink-0 w-9 h-9 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center mt-1">
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="font-bold font-[family-name:var(--font-inter)] mb-1.5">{item.title}</h4>
+                    <p className="text-gray-600 text-sm leading-relaxed">{item.body}</p>
+                  </div>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+
+          {/* Closing quote */}
+          <ScrollReveal>
+            <div className="text-center max-w-3xl mx-auto">
+              <p className="text-xl md:text-2xl italic text-gray-700 leading-relaxed">
+                You&apos;re not just practicing Spanish. You&apos;re learning through a method built collaboratively by an experienced classroom teacher and the researcher whose work it&apos;s based on.
+              </p>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
       {/* Pricing */}
       <section id="pricing" className="bg-gray-50 border-y border-gray-100 scroll-mt-20">
         <div className="max-w-6xl mx-auto px-6 py-20">
