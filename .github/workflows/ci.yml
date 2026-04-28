@@ -1,0 +1,46 @@
+name: CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate Prisma client
+        run: npx prisma generate
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Build
+        run: npm run build
+        env:
+          # Build-time only: clients are instantiated lazily, so dummy values
+          # let the bundler resolve modules without ever opening connections.
+          DATABASE_URL: postgresql://ci:ci@localhost:5432/ci
+          STRIPE_SECRET_KEY: sk_test_ci_dummy
+          STRIPE_WEBHOOK_SECRET: whsec_ci_dummy
+          STRIPE_PRICE_PREMIUM_MONTHLY: price_ci_monthly
+          STRIPE_PRICE_PREMIUM_YEARLY: price_ci_yearly
+          STRIPE_PRICE_LIFETIME: price_ci_lifetime
+          NEXT_PUBLIC_STRIPE_PRICE_PREMIUM_MONTHLY: price_ci_monthly
+          NEXT_PUBLIC_STRIPE_PRICE_PREMIUM_YEARLY: price_ci_yearly
+          NEXT_PUBLIC_STRIPE_PRICE_LIFETIME: price_ci_lifetime
+          CLERK_SECRET_KEY: sk_test_ci_dummy
+          NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY: pk_test_ci_dummy
