@@ -48,3 +48,14 @@ model ExamResult {
   @@index([userId, examId])
   @@map("exam_results")
 }
+
+// Stripe webhook idempotency ledger.
+// Insert only AFTER the event is fully processed; re-deliveries see the row and return 200.
+model StripeEvent {
+  id          String   @id  // Stripe event.id
+  type        String
+  processedAt DateTime @default(now())
+
+  @@index([processedAt])
+  @@map("stripe_events")
+}
