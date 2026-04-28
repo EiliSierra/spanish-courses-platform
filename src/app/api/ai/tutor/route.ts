@@ -50,7 +50,7 @@ async function callOpenRouter(model: string, messages: { role: string; content: 
       headers: {
         'Authorization': `Bearer ${OPENROUTER_API_KEY}`,
         'Content-Type': 'application/json',
-        'HTTP-Referer': 'https://alexandria-language.com',
+        'HTTP-Referer': 'https://www.alexandriaslanguages.com',
         'X-Title': 'Alexandria Language Institute',
       },
       body: JSON.stringify({
