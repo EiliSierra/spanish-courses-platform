@@ -617,19 +617,23 @@ export default async function LandingPage() {
             <ScrollReveal>
               <div className="bg-gray-50 rounded-2xl border border-gray-200 p-8 h-full">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white text-xl font-extrabold shadow-md flex-shrink-0">
-                    ES
-                  </div>
+                  <Image
+                    src="/images/team/eili-sierra.jpg"
+                    alt="Eili Sierra"
+                    width={64}
+                    height={64}
+                    className="w-16 h-16 rounded-full object-cover object-top shadow-md flex-shrink-0"
+                  />
                   <div>
                     <div className="text-xs font-bold text-blue-600 uppercase tracking-wider mb-1">Created by</div>
-                    <h3 className="text-xl font-bold font-[family-name:var(--font-inter)]">Eili Sierra</h3>
+                    <h3 className="text-xl font-bold font-[family-name:var(--font-inter)]">Eili Sierra, M.Ed.</h3>
                   </div>
                 </div>
                 <p className="text-gray-600 leading-relaxed mb-4">
                   Every lesson — from alphabet drills to C2 literary analysis — is built on instructional design principles refined across more than two decades of educational practice and grounded in active research on second language acquisition in online environments.
                 </p>
                 <p className="text-gray-600 leading-relaxed mb-4">
-                  Eili holds a <strong>Master&apos;s in Educational Innovation</strong> and brings over twenty years of classroom teaching experience to the Institute. A native Spanish speaker from Venezuela (currently based in Colombia), she has spent three years teaching Spanish in addition to her broader teaching career.
+                  Eili holds a <strong>Master&apos;s in Educational Innovation</strong> and brings over twenty years of classroom teaching experience to the Institute. A native Spanish speaker from Venezuela, she has spent several years teaching Spanish in addition to her broader teaching career.
                 </p>
                 <p className="text-gray-600 leading-relaxed">
                   Eili designed and built every lesson, audio, and interactive activity on the platform — translating doctoral research into the practical, lesson-by-lesson reality students experience every day.
@@ -640,22 +644,26 @@ export default async function LandingPage() {
             <ScrollReveal delay={150}>
               <div className="bg-gray-50 rounded-2xl border border-gray-200 p-8 h-full">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-purple-500 to-fuchsia-600 flex items-center justify-center text-white text-xl font-extrabold shadow-md flex-shrink-0">
-                    CM
-                  </div>
+                  <Image
+                    src="/images/team/charles-martin.jpg"
+                    alt="Charles Martin"
+                    width={64}
+                    height={64}
+                    className="w-16 h-16 rounded-full object-cover object-top shadow-md flex-shrink-0"
+                  />
                   <div>
                     <div className="text-xs font-bold text-purple-600 uppercase tracking-wider mb-1">Research foundation</div>
-                    <h3 className="text-xl font-bold font-[family-name:var(--font-inter)]">Dr. Charles Martin</h3>
+                    <h3 className="text-xl font-bold font-[family-name:var(--font-inter)]">Charles Martin, Ed.D.</h3>
                   </div>
                 </div>
                 <p className="text-gray-600 leading-relaxed mb-4">
                   Every pedagogical decision — from how vocabulary is introduced to how feedback is delivered — is grounded in peer-reviewed research on how adults actually acquire a second language in online environments.
                 </p>
                 <p className="text-gray-600 leading-relaxed mb-4">
-                  Dr. Charles Martin holds a <strong>doctorate in Curriculum and Instruction with specialization in Educational Technology</strong> from the University of Florida. His ongoing research on second language acquisition in online environments directly shapes how every lesson on the platform is structured.
+                  Charles Martin holds a <strong>doctorate in Curriculum and Instruction with specialization in Educational Technology</strong> from the University of Florida. His ongoing research on second language acquisition in online environments directly shapes how every lesson on the platform is structured.
                 </p>
                 <p className="text-gray-600 leading-relaxed">
-                  With <strong>eighteen years of teaching experience</strong> of his own, Dr. Martin has also designed evidence-based learning experiences for the U.S. Department of War, UCLA Health, and Microsoft Education — bringing the same standard of rigor previously reserved for institutional clients to anyone learning Spanish.
+                  With <strong>eighteen years of teaching experience</strong> of his own, Martin has also designed evidence-based learning experiences for the U.S. Department of War, UCLA Health, and Microsoft Education — bringing the same standard of rigor previously reserved for institutional clients to anyone learning Spanish.
                 </p>
               </div>
             </ScrollReveal>
