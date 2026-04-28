@@ -74,7 +74,7 @@ export async function POST(req: NextRequest) {
   if (!userId) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
   }
-  if (isRateLimited(userId, 30)) {
+  if (await isRateLimited(userId, 30)) {
     return NextResponse.json({ error: 'Too many requests. Please wait a moment.' }, { status: 429 })
   }
 
