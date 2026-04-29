@@ -1,7 +1,26 @@
 import Stripe from 'stripe'
 
-export const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-  typescript: true,
+// Lazy Stripe client. Constructing at import time crashes the build's
+// "collect page data" step when STRIPE_SECRET_KEY isn't present (CI dummies,
+// Preview deploys without env vars). Defer until first request.
+
+let _stripe: Stripe | undefined
+
+function getStripe(): Stripe {
+  if (!_stripe) {
+    const key = process.env.STRIPE_SECRET_KEY
+    if (!key) {
+      throw new Error('STRIPE_SECRET_KEY is not set')
+    }
+    _stripe = new Stripe(key, { typescript: true })
+  }
+  return _stripe
+}
+
+export const stripe = new Proxy({} as Stripe, {
+  get(_target, prop, receiver) {
+    return Reflect.get(getStripe(), prop, receiver)
+  },
 })
 
 export const PLANS = {

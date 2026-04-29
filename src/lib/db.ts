@@ -1,7 +1,12 @@
 import { PrismaClient } from '@prisma/client'
 import { PrismaNeon } from '@prisma/adapter-neon'
 
-const globalForPrisma = globalThis as unknown as { prisma: PrismaClient }
+// Lazy Prisma client. Instantiating on import would crash the build's
+// "collect page data" step whenever DATABASE_URL isn't present (CI dummies,
+// Preview deploys without env vars). We only need a real connection at
+// request time, so defer construction until first access.
+
+const globalForPrisma = globalThis as unknown as { prisma?: PrismaClient }
 
 function createPrismaClient() {
   const connectionString = process.env.DATABASE_URL
@@ -12,6 +17,16 @@ function createPrismaClient() {
   return new PrismaClient({ adapter })
 }
 
-export const prisma = globalForPrisma.prisma || createPrismaClient()
+function getPrisma(): PrismaClient {
+  if (!globalForPrisma.prisma) {
+    globalForPrisma.prisma = createPrismaClient()
+  }
+  return globalForPrisma.prisma
+}
 
-if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma
+// Proxy that defers construction until a property is actually accessed.
+export const prisma = new Proxy({} as PrismaClient, {
+  get(_target, prop, receiver) {
+    return Reflect.get(getPrisma(), prop, receiver)
+  },
+})
