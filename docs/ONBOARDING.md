@@ -1,6 +1,6 @@
 # Onboarding — New team member
 
-**Last updated:** 2026-04-22
+**Last updated:** 2026-04-29
 
 Welcome. This document walks you through everything you need to be operationally productive in ~1 day.
 
@@ -19,15 +19,26 @@ Welcome. This document walks you through everything you need to be operationally
 
 ## 2. Accounts you need (request these on day 1)
 
+### Core platform (required)
+
 | System | Purpose | Who gives access |
 |---|---|---|
-| GitHub `EiliSierra/spanish-courses-platform` | Read/write code | Eili |
-| Vercel (team `charles-martins-projects-94f292e0`) | Deploys, env vars, logs | Charles |
+| GitHub `EiliSierra/spanish-courses-platform` | Read/write code, PRs, CI | Eili |
+| Vercel (team `charles-martins-projects-94f292e0`) | Deploys, env vars, logs, analytics | Charles |
 | Stripe Dashboard (`Alexandria's Design`) | Payments, subscriptions, webhooks | Charles |
-| Clerk Dashboard | User auth, metadata | Charles |
-| Neon Console | Database access | Charles or Eili |
-| OpenRouter | AI usage, billing | Eili (API key in `.env`) |
-| Google Domain / DNS | `alexandriaslanguages.com` | Charles |
+| Clerk Dashboard | User auth, metadata, JWT inspection | Charles |
+| Neon Console | Database queries, schema, connection pool | Charles or Eili |
+| Upstash Console | Rate-limit Redis (`alexandria-languages-prod`) — usage, command counts, token | Charles or Eili |
+| OpenRouter | AI usage, billing, model selection | Eili (API key in `.env`) |
+| Google Domain / DNS | `alexandriaslanguages.com` records | Charles |
+
+### Adjacent (request only if you'll touch them)
+
+| System | Purpose | Who gives access |
+|---|---|---|
+| ElevenLabs | Voice clone for narration / social media | Charles (shared Creator account) |
+| GoDaddy / Outlook (`info@alexandriasdesign.com`) | Customer support inbox | Charles |
+| GitHub Actions (already covered above) | CI logs, re-run failed jobs | Same as GitHub |
 
 Ask for **read-only** access by default — upgrade to admin only when needed.
 
@@ -58,6 +69,15 @@ npm run dev
 ```
 
 Visit http://localhost:3000. Changes hot-reload automatically.
+
+### Run the test suite
+
+```bash
+npm run test:run         # one-shot, same command CI runs
+npm run test             # watch mode for active development
+```
+
+12 unit tests across `src/__tests__/` cover the Stripe checkout allowlist, webhook idempotency, and rate limiter. All external services (Stripe, Clerk, Prisma, fetch) are mocked — running tests does NOT touch any real account. CI gates merges on `master` with this same command on Linux.
 
 ### Database (Neon)
 
@@ -135,6 +155,11 @@ src/
 - Server Components by default. `'use client'` only when interactivity needed.
 - API routes return JSON.
 
+### Tests
+- Tests live in `src/__tests__/`. Use Vitest, mock external services, never hit real Stripe / Clerk / Neon / Upstash.
+- CI runs `typecheck → test:run → build` on every push and PR. Red CI blocks merge by convention.
+- If you change a route in `src/app/api/`, check the matching test file. The tests reflect a real audit finding — do not delete a failing test, update both the test and the production code together when the contract changes.
+
 ### Naming
 - Lessons: `L{level}.{number}` (e.g. `L3.5`) or `L{level}.F` for final exams.
 - Audio files: same pattern, in `public/audio/L{level}.{number}/`.
@@ -177,8 +202,9 @@ See `RUNBOOK.md` for specific operational procedures:
 ## 9. Your first week (suggested)
 
 ### Day 1
-- Get accounts provisioned
+- Get accounts provisioned (see section 2 — at minimum GitHub + Vercel + Stripe + Clerk)
 - Clone repo, run locally, explore Level 1 end-to-end as a free user
+- Run `npm run test:run` and confirm all 12 tests pass
 - Read `ARCHITECTURE.md`
 
 ### Day 2

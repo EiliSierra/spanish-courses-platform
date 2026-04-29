@@ -1,6 +1,6 @@
 # Runbook — Operational Playbook
 
-**Last updated:** 2026-04-22
+**Last updated:** 2026-04-29
 
 This document is a "what to do when X happens" playbook. Look up the situation → follow the steps. Each entry is self-contained.
 
@@ -18,6 +18,8 @@ This document is a "what to do when X happens" playbook. Look up the situation �
 8. [An env var needs updating](#8-an-env-var-needs-updating)
 9. [The site is down or slow](#9-the-site-is-down-or-slow)
 10. [Weekly health check](#10-weekly-health-check)
+11. [CI / tests are failing](#11-ci--tests-are-failing)
+12. [Upstash Redis is down or misconfigured](#12-upstash-redis-is-down-or-misconfigured)
 
 ---
 
@@ -68,8 +70,16 @@ This document is a "what to do when X happens" playbook. Look up the situation �
 3. **If "404 Not Found" or similar:** the endpoint URL is wrong. Current URL should be `https://spanish-courses-platform.vercel.app/api/stripe/webhook` (the Vercel canonical alias) or equivalent for the custom domain. Update in Stripe if needed.
 
 4. **If "500 Internal Server Error":** bug in our code. Check Vercel runtime logs, fix, redeploy.
+   - **Important:** since 2026-04-28 the webhook is idempotent and retry-safe. A 500 means processing failed (typically the Clerk PATCH call). We deliberately do NOT mark the event as processed in this case, so Stripe retries with exponential backoff. You usually do not need to manually resend — Stripe will retry up to ~3 days. Just fix the underlying cause.
+   - If you do want to force-retry sooner, click "Resend" on the failed delivery.
 
 5. **Fix any users affected during the outage** (section 1).
+
+### Notes about idempotency (since 2026-04-28)
+
+- The webhook stores every successfully processed event in the `StripeEvent` table (Neon).
+- Duplicate deliveries of the same `event.id` are acked with `200 { idempotent: true }` and do NOT re-run side effects. Safe to manually resend an event from Stripe Dashboard at any time.
+- An event is recorded as processed ONLY after Clerk metadata is updated successfully. If Clerk fails, the event stays unrecorded and Stripe will retry.
 
 ---
 
@@ -189,6 +199,59 @@ The script:
 - Sends an email summary to the admin.
 
 Run whenever you suspect something is off or want a snapshot.
+
+---
+
+## 11. CI / tests are failing
+
+CI runs on every push and pull request to `master`: typecheck → tests → build, all on Linux. A red check blocks merge by convention (not branch-protection-enforced yet).
+
+### Steps
+
+1. **Reproduce locally.** From the project directory:
+   ```bash
+   npm run test:run
+   npm run typecheck
+   ```
+   If both pass locally but CI is red, the difference is environment (Linux vs Windows, env vars). Compare the CI log against your local output.
+
+2. **Read the CI log.** GitHub → repo → Actions → click the failed run → click the failed step. The error is almost always in the last 30 lines.
+
+3. **Common failures**
+   - `Cannot find module 'vitest'` → CI cache invalid. Re-run the workflow.
+   - Test snapshot mismatch → run `npm run test:run -- -u` locally to update, commit the new snapshot.
+   - Type error in a route file → `npm run typecheck` locally, fix, commit.
+   - Build fails with missing env var → check the `Build` step env block in `.github/workflows/ci.yml`. The dummy values must cover whatever the new code needs.
+
+4. **What the tests cover (so you know what changed if a test fails)**
+
+   | File | Tests | Audit hardening it protects |
+   |---|---|---|
+   | `src/__tests__/stripe-checkout.test.ts` | 4 | Allowlist of `priceId` (rejects anything outside `STRIPE_PRICE_*` env vars) |
+   | `src/__tests__/stripe-webhook.test.ts` | 5 | Signature verification, idempotency via `stripeEvent` table, retry-safe failure |
+   | `src/__tests__/rate-limit.test.ts` | 3 | In-memory fallback, Upstash pipeline call, fail-open on backend errors |
+
+5. **Do NOT ship a fix that just deletes the failing test.** The test is there because of a real audit finding. If the test is genuinely wrong (production code changed intentionally), update the test to match the new contract — but make that explicit in the commit message.
+
+---
+
+## 12. Upstash Redis is down or misconfigured
+
+**Symptom:** Vercel runtime logs show `[rate-limit] Upstash HTTP 5xx, allowing request` warnings, OR Upstash dashboard shows commands at 0 even with active users.
+
+### Steps
+
+1. **Check Upstash status.** [console.upstash.com](https://console.upstash.com) → open the database `alexandria-languages-prod` → **Details** tab. Endpoint should show no banner; **COMMANDS** counter should be > 0 if traffic is hitting AI endpoints.
+
+2. **Check the env vars in Vercel.** Settings → Environment Variables → confirm `UPSTASH_REDIS_REST_URL` and `UPSTASH_REDIS_REST_TOKEN` exist in Production. If absent or stale, the rate limiter falls back to in-memory (still works, but counters reset on every cold start).
+
+3. **Rotate the token if leaked.** Upstash Dashboard → database → **Details** → **Reset Token** → copy new token → update `UPSTASH_REDIS_REST_TOKEN` in Vercel → redeploy with `npx vercel --prod`.
+
+4. **Quota exceeded.** Free tier is 10k commands/day. If we hit the cap, traffic from that point falls open (still works, no rate limit applied). Either upgrade plan in Upstash, or accept the temporary degradation.
+
+5. **Catastrophic failure (database deleted, region down).** The code is fail-open: requests still go through, just without persistent rate limiting. Recreate the database, update env vars, redeploy.
+
+**Trade-off documented in the code:** rate limiter is fail-open by design. Better UX during outages, weaker abuse defense for the duration. Acceptable while traffic is low; revisit if abuse becomes a real signal.
 
 ---
 

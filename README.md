@@ -47,10 +47,12 @@ An instructional-design-first language learning platform built by [Dr. Charles M
 - **Auth:** [Clerk](https://clerk.com)
 - **Payments:** [Stripe](https://stripe.com)
 - **Database:** [Neon](https://neon.tech) (serverless Postgres) via [Prisma](https://prisma.io)
+- **Rate limiting:** [Upstash Redis](https://upstash.com) (sliding window) with in-memory fallback
 - **AI:** [OpenRouter](https://openrouter.ai) (Gemini, Gemma) + [Vercel AI Gateway](https://vercel.com/ai-gateway) fallback
 - **Audio:** Edge TTS for phrases, Web Speech API for letters
 - **Hosting:** [Vercel](https://vercel.com)
 - **Analytics:** Vercel Analytics + Speed Insights
+- **Tests:** [Vitest](https://vitest.dev) — 12 unit tests covering checkout allowlist, webhook idempotency, rate limiter
 
 ---
 
@@ -144,6 +146,16 @@ npm run dev
 
 Visit `http://localhost:3000`.
 
+### Running tests
+
+```bash
+npm run test:run          # one-shot, used in CI
+npm run test              # watch mode for development
+npm run test:coverage     # generates lcov coverage report
+```
+
+12 unit tests across `src/__tests__/`. All Stripe / Clerk / Prisma / fetch calls are mocked — no real services hit. CI runs `test:run` before `build` on every push and PR to `master`.
+
 ### Required environment variables
 
 A partial list — see [`docs/ARCHITECTURE.md`](./docs/ARCHITECTURE.md) for the full reference with purposes.
@@ -160,12 +172,15 @@ A partial list — see [`docs/ARCHITECTURE.md`](./docs/ARCHITECTURE.md) for the 
 | `NEXT_PUBLIC_SITE_URL` | Sitemap, OG images |
 | `OPENROUTER_API_KEY` | AI endpoints (tutor, pronunciation, personalize) |
 | `VERCEL_AI_GATEWAY_*` | AI fallback provider |
+| `UPSTASH_REDIS_REST_URL` · `_TOKEN` | Persistent rate limit for AI endpoints (falls back to in-memory if absent) |
 
 **Never commit** `.env*` files. `.gitignore` already excludes them.
 
 ---
 
 ## 🚢 Deployment
+
+Every push and PR to `master` runs CI on Linux: `typecheck` → `test:run` → `build`. CI must be green before deploying.
 
 Production deploys currently ship manually:
 

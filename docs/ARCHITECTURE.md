@@ -1,6 +1,6 @@
 # Architecture — Alexandria's Language Institute
 
-**Last updated:** 2026-04-22
+**Last updated:** 2026-04-29
 
 This document explains how the platform is wired together: which systems store what data, how they talk to each other, and what happens during critical flows (payment, access control, subscription expiration).
 
@@ -57,28 +57,41 @@ This is what the app reads at every request to decide lesson access. Clerk retur
 Stores (see `prisma/schema.prisma`):
 - **`LessonProgress`** — one row per (userId, lessonId). Tracks section states, quiz score, progress percentage.
 - **`ExamResult`** — one row per exam attempt. Tracks score, pass/fail, timestamp.
+- **`StripeEvent`** — one row per processed Stripe webhook event (id + type). Used for idempotency: if Stripe re-delivers the same event id, we ack 200 without re-processing.
 
 Progress is **preserved** even if a user downgrades. If they cancel → re-subscribe 6 months later, their progress is intact.
+
+### 2.4 Upstash Redis — rate limit state
+
+Sliding-window counters for the three AI endpoints (`/api/ai/tutor`, `/api/ai/pronunciation`, `/api/ai/personalize`). One sorted set per `userId`, TTL-bounded by the rate-limit window. Falls back to an in-memory Map if `UPSTASH_REDIS_REST_URL` / `UPSTASH_REDIS_REST_TOKEN` are absent. Both backends are fail-open on backend errors (allow the request rather than block).
 
 ---
 
 ## 3. Critical flow: a successful payment
 
 ```
-1. User lands on /#pricing → clicks "Start monthly"
-2. Browser → POST /api/stripe/checkout with priceId
-3. Server creates Stripe Customer (or finds existing) with metadata.clerkUserId
-4. Server creates Stripe Checkout Session with metadata.clerkUserId
-5. Browser → redirected to Stripe-hosted checkout page
-6. User enters card → Stripe charges card
-7. Stripe → POST /api/stripe/webhook with event "checkout.session.completed"
-8. Webhook verifies signature using STRIPE_WEBHOOK_SECRET
-9. Webhook extracts clerkUserId from session.metadata
-10. Webhook determines plan from priceId (monthly / yearly / lifetime)
-11. Webhook → PATCH api.clerk.com/users/{id}/metadata with new plan
-12. User → redirected to /checkout/success
-13. Next page load → Clerk JWT re-issued with updated plan
-14. User can now open any lesson up to maxLevel of their plan
+1.  User lands on /#pricing → clicks "Start monthly"
+2.  Browser → POST /api/stripe/checkout with priceId
+3.  Server validates priceId against ALLOWED_PRICE_IDS allowlist
+    (built from STRIPE_PRICE_PREMIUM_MONTHLY / _YEARLY / _LIFETIME).
+    Anything else → 400. Stripe is not called for invalid input.
+4.  Server creates Stripe Customer (or finds existing) with metadata.clerkUserId
+5.  Server creates Stripe Checkout Session with metadata.clerkUserId
+6.  Browser → redirected to Stripe-hosted checkout page
+7.  User enters card → Stripe charges card
+8.  Stripe → POST /api/stripe/webhook with event "checkout.session.completed"
+9.  Webhook verifies signature using STRIPE_WEBHOOK_SECRET
+10. Webhook checks the StripeEvent table for event.id (idempotency).
+    If already seen → ack 200 "{ idempotent: true }" without re-processing.
+11. Webhook extracts clerkUserId from session.metadata
+12. Webhook determines plan from priceId (monthly / yearly / lifetime)
+13. Webhook → PATCH api.clerk.com/users/{id}/metadata with new plan
+14. On success → upsert StripeEvent { id, type } so duplicate deliveries are ignored.
+    On Clerk failure → return 500 WITHOUT writing to StripeEvent, so Stripe
+    will retry with its built-in exponential backoff.
+15. User → redirected to /checkout/success
+16. Next page load → Clerk JWT re-issued with updated plan
+17. User can now open any lesson up to maxLevel of their plan
 ```
 
 **Critical env vars for this flow:**
@@ -161,6 +174,8 @@ All live in Vercel → Settings → Environment Variables (Production). Local mi
 | `NEXT_PUBLIC_SITE_URL` | Used by sitemap.ts, OG images | Domain changes |
 | `OPENROUTER_API_KEY` | AI tutor / pronunciation / personalize | Billing issue |
 | `VERCEL_AI_GATEWAY_*` | Fallback for AI endpoints | Provider change |
+| `UPSTASH_REDIS_REST_URL` | Rate limit backend | Database recreated / rotated |
+| `UPSTASH_REDIS_REST_TOKEN` | Auth for Upstash REST API | Leaked / rotated |
 
 ---
 
@@ -173,5 +188,7 @@ All live in Vercel → Settings → Environment Variables (Production). Local mi
 | Clerk | `dashboard.clerk.com` | Users, metadata, auth logs |
 | Neon | `console.neon.tech` | Database tables, queries, connection pool |
 | OpenRouter | `openrouter.ai/activity` | AI model usage, costs |
+| Upstash | `console.upstash.com` | Rate-limit Redis usage, command counts, keys |
+| GitHub Actions | `github.com/EiliSierra/spanish-courses-platform/actions` | CI runs (typecheck + tests + build) |
 
 See `RUNBOOK.md` for common operational tasks.
