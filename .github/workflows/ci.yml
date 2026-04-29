@@ -28,6 +28,23 @@ jobs:
       - name: Typecheck
         run: npm run typecheck
 
+      - name: Test
+        run: npm run test:run
+        env:
+          # Build-time only: clients are instantiated lazily, so dummy values
+          # let the bundler resolve modules without ever opening connections.
+          DATABASE_URL: postgresql://ci:ci@localhost:5432/ci
+          STRIPE_SECRET_KEY: sk_test_ci_dummy
+          STRIPE_WEBHOOK_SECRET: whsec_ci_dummy
+          STRIPE_PRICE_PREMIUM_MONTHLY: price_ci_monthly
+          STRIPE_PRICE_PREMIUM_YEARLY: price_ci_yearly
+          STRIPE_PRICE_LIFETIME: price_ci_lifetime
+          NEXT_PUBLIC_STRIPE_PRICE_PREMIUM_MONTHLY: price_ci_monthly
+          NEXT_PUBLIC_STRIPE_PRICE_PREMIUM_YEARLY: price_ci_yearly
+          NEXT_PUBLIC_STRIPE_PRICE_LIFETIME: price_ci_lifetime
+          CLERK_SECRET_KEY: sk_test_ci_dummy
+          NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY: pk_test_ci_dummy
+
       - name: Build
         run: npm run build
         env:
