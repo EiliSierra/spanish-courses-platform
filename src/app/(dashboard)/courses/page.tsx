@@ -377,7 +377,9 @@ export default async function CoursesPage() {
         }
       }
       // Find last accessed lesson that isn't 100% complete
-      const inProgress = rows.find(r => r.progressPct > 0 && r.progressPct < 100)
+      const inProgress = rows.find(
+        (r: (typeof rows)[number]) => r.progressPct > 0 && r.progressPct < 100
+      )
       if (inProgress) {
         lastAccessedLesson = { lessonId: inProgress.lessonId, progressPct: inProgress.progressPct }
       }
