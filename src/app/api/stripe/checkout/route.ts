@@ -2,6 +2,14 @@ import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@clerk/nextjs/server'
 import { stripe } from '@/lib/stripe'
 
+const ALLOWED_PRICE_IDS = new Set(
+  [
+    process.env.STRIPE_PRICE_PREMIUM_MONTHLY,
+    process.env.STRIPE_PRICE_PREMIUM_YEARLY,
+    process.env.STRIPE_PRICE_LIFETIME,
+  ].filter((id): id is string => typeof id === 'string' && id.length > 0)
+)
+
 export async function POST(req: NextRequest) {
   const { userId } = await auth()
   if (!userId) {
@@ -11,6 +19,9 @@ export async function POST(req: NextRequest) {
   const { priceId } = await req.json()
   if (!priceId || typeof priceId !== 'string') {
     return NextResponse.json({ error: 'Missing priceId' }, { status: 400 })
+  }
+  if (!ALLOWED_PRICE_IDS.has(priceId)) {
+    return NextResponse.json({ error: 'Invalid priceId' }, { status: 400 })
   }
 
   // Find existing Stripe customer or create one with clerkUserId metadata
