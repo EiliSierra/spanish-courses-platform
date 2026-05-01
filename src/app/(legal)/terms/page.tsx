@@ -9,12 +9,12 @@ export default function TermsOfServicePage() {
   return (
     <>
       <h1>Terms of Service</h1>
-      <p className="text-sm text-gray-400 dark:text-gray-500">Last Updated: April 10, 2026</p>
+      <p className="text-sm text-gray-400 dark:text-gray-500">Last Updated: May 1, 2026</p>
 
       <p>
         Welcome to Alexandria&apos;s Language Institute (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;), operated by
         Alexandria&apos;s Design LLC. By accessing or using our website and services at{' '}
-        <strong>spanish-courses-platform.vercel.app</strong> (the &quot;Platform&quot;), you agree to be bound by these
+        <strong>www.alexandriaslanguages.com</strong> (the &quot;Platform&quot;), you agree to be bound by these
         Terms of Service (&quot;Terms&quot;). If you do not agree, please do not use the Platform.
       </p>
 
@@ -25,7 +25,7 @@ export default function TermsOfServicePage() {
         tutor feature to supplement your learning experience.
       </p>
 
-      <h2>2. Account Registration</h2>
+      <h2>2. Account Registration and Age Requirements</h2>
       <p>
         To access certain features, you must create an account through our authentication provider, Clerk. You agree to:
       </p>
@@ -33,7 +33,22 @@ export default function TermsOfServicePage() {
         <li>Provide accurate and complete information during registration.</li>
         <li>Keep your login credentials confidential and secure.</li>
         <li>Notify us immediately of any unauthorized use of your account.</li>
-        <li>Be at least 13 years of age, or have parental consent if under 18.</li>
+      </ul>
+      <p>
+        <strong>Age requirements:</strong>
+      </p>
+      <ul>
+        <li>You must be at least <strong>13 years of age</strong> to create an account.</li>
+        <li>
+          If you are between <strong>13 and 17 years old</strong>, a parent or legal guardian must review and consent to
+          these Terms on your behalf and is responsible for any payment associated with your account.
+        </li>
+        <li>
+          We do not knowingly collect personal information from children under 13. If you become aware that a child
+          under 13 has registered, please contact us at{' '}
+          <a href="mailto:info@alexandriasdesign.com">info@alexandriasdesign.com</a> and we will promptly delete the
+          account.
+        </li>
       </ul>
       <p>
         You are solely responsible for all activity that occurs under your account. We reserve the right to suspend or
